@@ -99,7 +99,7 @@ pkgsearch::ps("Storopoli",size = 100) %>%
 scholar::get_publications("xGU7H1QAAAAJ") %>%
   as_tibble() %>% 
   filter(journal != "") %>% 
-  brief_entries(
+  detailed_entries(
     what = title,
     with = journal,
     when = year
