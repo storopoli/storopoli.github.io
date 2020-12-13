@@ -1,0 +1,107 @@
+---
+name: Jose
+surname: Storopoli
+qualifications: PhD
+position: "Associate Professor"
+address: "Universidade Nove de Julho - UNINOVE - São Paulo - Brazil"
+profilepic: pic.png
+phone: +55 11 3385-9219
+www: storopoli.github.io
+email: "josees@uni9.pro.br"
+twitter: JoseStoropoli
+github: storopoli
+linkedin: storopoli
+date: "`r format(Sys.time(), '%B %Y')`"
+headcolor: 414141
+output: vitae::awesomecv
+---
+
+```{r setup, include=FALSE}
+library(vitae)
+library(tidyverse)
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+orcid_data <- do.call("bind_rows",
+  rorcid::orcid_educations("0000-0002-0559-5176")$`0000-0002-0559-5176`$`affiliation-group`$summaries
+) %>% select_if(function(x){!all(is.na(x))})
+```
+
+# Professional Summary
+
+ * Associate Professor of Smart Cities of the Graduate School of Urban Planning at UNINOVE
+ * Current chair of Statistics and Machine Learning
+ * Certified RStudio Tidyverse Instructor
+
+# Education
+
+```{r education}
+orcid_data %>%
+  detailed_entries(
+    what = `education-summary.role-title`,
+    when = glue::glue("{`education-summary.start-date.year.value`} - {`education-summary.end-date.year.value`}"),
+    with = `education-summary.organization.name`,
+    where = `education-summary.organization.address.city`
+  )
+```
+
+# Courses
+
+```{r courses}
+tibble::tribble(
+  ~name, ~year,  ~link, ~language,
+  "Ciência de Dados - Data Science", 2020L, "https://github.com/storopoli/ciencia-de-dados", "Python",
+  "Estatística - Statistics", 2019L, "https://storopoli.github.io/Estatistica", "R",
+  "Estatística Bayesiana - Bayesian Statistics", 2020L,  "https://storopoli.github.io/Estatistica-Bayesiana", "R and RStan"
+) %>% 
+  detailed_entries(
+    what = language,
+    when = year,
+    with = name,
+    why = link
+  )
+```
+
+# Talks
+
+```{r talks}
+tibble::tribble(
+  ~title, ~link, ~year,
+  "Qual é o papel das universidades no desenvolvimento de cidades inteligentes e sustentáveis?", "https://youtu.be/BAqBTlfBvP8", 2019L,
+  "O que é a Ciência de Dados", "https://youtu.be/08uZiJSX_0E", 2020L,
+  "Ensinando Data Science no Ensino Superior com Python", "https://youtu.be/Aktd_TFYhvI", 2020L,
+  "Gestão urbana e o papel da ciência de dados", "https://youtu.be/qS3xT1e-3F4", 2020L
+) %>% 
+  detailed_entries(
+    what = title,
+    when = year,
+    why = link
+  )
+```
+
+
+# Software
+
+```{r softwares}
+pkgsearch::ps("Storopoli",size = 100) %>%
+  filter(map_lgl(package_data, ~ grepl("Storopoli", .x$Author, fixed = TRUE))) %>% 
+  as_tibble() %>%
+  detailed_entries(
+    with = package,
+    what = title, 
+    when = lubridate::year(date),
+    why = downloads_last_month
+  )
+```
+
+
+# Publications
+
+```{r publications}
+scholar::get_publications("xGU7H1QAAAAJ") %>%
+  as_tibble() %>% 
+  filter(journal != "") %>% 
+  brief_entries(
+    what = title,
+    with = journal,
+    when = year
+  )
+```
