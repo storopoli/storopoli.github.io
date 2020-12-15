@@ -27,8 +27,9 @@ orcid_data <- do.call("bind_rows",
 
 # Professional Summary
 
- * Associate Professor of Smart Cities of the Graduate School of Urban Planning at UNINOVE
- * Current chair of Statistics and Machine Learning
+ * Chief Data Scientist, Associate Professor and Researcher at Universidade Nove de Julho - UNINOVE located in São Paulo - Brazil.
+ * Teaches undergraduate and graduate courses in Statistics, Bayesian Statistics, Machine Learning, Deep Learning and Data Science using R, Python and Julia.
+ * Researches, publishes and advises PhD candidates on topics about Smart Cities and Urban Planning.
  * Certified RStudio Tidyverse Instructor
 
 # Education
@@ -91,6 +92,30 @@ pkgsearch::ps("Storopoli",size = 100) %>%
     when = lubridate::year(date),
     why = downloads_last_month
   )
+```
+
+# Certifications
+
+```{r certifications}
+tibble::tribble(
+                            ~certification,               ~issuer, ~year,
+      "Tidyverse Instructor Certification",             "RStudio", 2020L,
+  "Generative Adversarial Networks (GANs)",            "Coursera", 2020L,
+               "Machine Learning Engineer",             "Udacity", 2020L,
+                     "Python Data Analyst",            "DataCamp", 2019L,
+                       "Python Programmer",            "DataCamp", 2018L,
+                        "R Data Scientist",            "DataCamp", 2018L,
+               "Improving Neural Networks",            "Coursera", 2018L,
+       "Neural Networks and Deep Learning",            "Coursera", 2018L,
+                        "Machine Learning", "Stanford University", 2018L,
+      "Structural Equation Modeling (SEM)",                 "FGV", 2018L
+  ) %>% 
+  detailed_entries(
+    what = issuer,
+    with = certification,
+    when = year
+  )
+
 ```
 
 
