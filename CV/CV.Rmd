@@ -61,6 +61,30 @@ tibble::tribble(
   )
 ```
 
+# Certifications
+
+```{r certifications}
+tibble::tribble(
+                            ~certification,               ~issuer, ~year,
+      "Tidyverse Instructor Certification",             "RStudio", 2020L,
+  "Generative Adversarial Networks (GANs)",            "Coursera", 2020L,
+               "Machine Learning Engineer",             "Udacity", 2020L,
+                     "Python Data Analyst",            "DataCamp", 2019L,
+                       "Python Programmer",            "DataCamp", 2018L,
+                        "R Data Scientist",            "DataCamp", 2018L,
+               "Improving Neural Networks",            "Coursera", 2018L,
+       "Neural Networks and Deep Learning",            "Coursera", 2018L,
+                        "Machine Learning", "Stanford University", 2018L,
+      "Structural Equation Modeling (SEM)",                 "FGV", 2018L
+  ) %>% 
+  detailed_entries(
+    what = issuer,
+    with = certification,
+    when = year
+  )
+```
+
+
 # Talks
 
 ```{r talks}
@@ -70,7 +94,8 @@ tibble::tribble(
   "O que é a Ciência de Dados", "https://youtu.be/08uZiJSX_0E", 2020L,
   "Ensinando Data Science no Ensino Superior com Python", "https://youtu.be/Aktd_TFYhvI", 2020L,
   "Gestão urbana e o papel da ciência de dados", "https://youtu.be/qS3xT1e-3F4", 2020L,
-  "Vida familiar durante la pandemia del coronavirus en América Latina", "https://youtu.be/0thhpSKt5BM", 2020L
+  "Vida familiar durante la pandemia del coronavirus en América Latina", "https://youtu.be/0thhpSKt5BM", 2020L,
+  "Observatório de Políticas Públicas", "https://www.youtube.com/watch?v=FUSnGUWKZJs", 2020L
 ) %>% 
   detailed_entries(
     what = title,
@@ -93,31 +118,6 @@ pkgsearch::ps("Storopoli",size = 100) %>%
     why = downloads_last_month
   )
 ```
-
-# Certifications
-
-```{r certifications}
-tibble::tribble(
-                            ~certification,               ~issuer, ~year,
-      "Tidyverse Instructor Certification",             "RStudio", 2020L,
-  "Generative Adversarial Networks (GANs)",            "Coursera", 2020L,
-               "Machine Learning Engineer",             "Udacity", 2020L,
-                     "Python Data Analyst",            "DataCamp", 2019L,
-                       "Python Programmer",            "DataCamp", 2018L,
-                        "R Data Scientist",            "DataCamp", 2018L,
-               "Improving Neural Networks",            "Coursera", 2018L,
-       "Neural Networks and Deep Learning",            "Coursera", 2018L,
-                        "Machine Learning", "Stanford University", 2018L,
-      "Structural Equation Modeling (SEM)",                 "FGV", 2018L
-  ) %>% 
-  detailed_entries(
-    what = issuer,
-    with = certification,
-    when = year
-  )
-
-```
-
 
 # Publications
 
