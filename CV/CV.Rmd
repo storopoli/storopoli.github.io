@@ -19,6 +19,7 @@ output: vitae::awesomecv
 ```{r setup, include=FALSE}
 library(vitae)
 library(tidyverse)
+library(lubridate)
 knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
 orcid_data <- do.call("bind_rows",
   rorcid::orcid_educations("0000-0002-0559-5176")$`0000-0002-0559-5176`$`affiliation-group`$summaries
@@ -30,7 +31,8 @@ orcid_data <- do.call("bind_rows",
  * Chief Data Scientist, Associate Professor and Researcher at Universidade Nove de Julho - UNINOVE located in São Paulo - Brazil.
  * Teaches undergraduate and graduate courses in Statistics, Bayesian Statistics, Machine Learning, Deep Learning and Data Science using R, Python and Julia.
  * Researches, publishes and advises PhD candidates on topics about Smart Cities and Urban Planning.
- * Certified RStudio Tidyverse Instructor
+ * Certified RStudio Tidyverse Instructor.
+ * Editor-in-Chief of the [Iberoamerican Journal of Strategic Management (IJSM)](https://periodicos.uninove.br/riae) in 2020.
 
 # Education
 
@@ -94,8 +96,9 @@ tibble::tribble(
   "O que é a Ciência de Dados", "https://youtu.be/08uZiJSX_0E", 2020L,
   "Ensinando Data Science no Ensino Superior com Python", "https://youtu.be/Aktd_TFYhvI", 2020L,
   "Gestão urbana e o papel da ciência de dados", "https://youtu.be/qS3xT1e-3F4", 2020L,
-  "Vida familiar durante la pandemia del coronavirus en América Latina", "https://youtu.be/0thhpSKt5BM", 2020L,
-  "Observatório de Políticas Públicas", "https://www.youtube.com/watch?v=FUSnGUWKZJs", 2020L
+  "Inteligência Artificial e Desenvolvimento Urbano Sustentável", "https://youtu.be/QBbgTOHHdZI?t=5631", 2020L,
+  "Observatório de Políticas Públicas", "https://www.youtube.com/watch?v=FUSnGUWKZJs", 2020L,
+  "Vida familiar durante la pandemia del coronavirus en América Latina", "https://youtu.be/0thhpSKt5BM", 2020L
 ) %>% 
   detailed_entries(
     what = title,
@@ -107,6 +110,32 @@ tibble::tribble(
 
 # Software
 
+```{r github-contribs, echo=FALSE, message=FALSE, warning=FALSE, results='hide'}
+today <- today()
+year_before <- as_date(today - years(1))
+token <- Sys.getenv("GITHUB_PAT")
+con <- ghql::GraphqlClient$new(
+  url = "https://api.github.com/graphql",
+  headers = list(Authorization = paste0("Bearer ", token))
+)
+qry <- ghql::Query$new()
+query_text <- glue::glue('{user(login: "storopoli") {
+    email
+    createdAt
+    contributionsCollection(from: "<< str_c(year_before, "T00:00:00Z") >>", to: "<< str_c(today, "T00:00:00Z")>> ") {
+      contributionCalendar {
+        totalContributions
+      }
+    }
+  }
+}', .open = "<<", .close = ">>")
+qry$query('mycontrib', query_text)
+(contribs <- con$exec(qry$queries$mycontrib))
+total_contribs <- jsonlite::fromJSON(contribs)$data$user$contributionsCollection$contributionCalendar$totalContributions
+```
+
+* Total GitHub Contributions: `r total_contribs`
+
 ```{r softwares}
 pkgsearch::ps("Storopoli",size = 100) %>%
   filter(map_lgl(package_data, ~ grepl("Storopoli", .x$Author, fixed = TRUE))) %>% 
@@ -114,7 +143,7 @@ pkgsearch::ps("Storopoli",size = 100) %>%
   detailed_entries(
     with = package,
     what = title, 
-    when = lubridate::year(date),
+    when = year(date),
     why = downloads_last_month
   )
 ```
