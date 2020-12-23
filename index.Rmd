@@ -1,0 +1,23 @@
+---
+title: "Jose Storopoli"
+image: "CV/pic.png"
+color1: "#5A59A3"
+color2: "#C66060"
+angle: 130
+links:
+  - label: CV
+    url: "https://storopoli.github.io/CV/CV.pdf"
+  - label: GitHub
+    url: "https://github.com/storopoli"
+  - label: Twitter
+    url: "https://twitter.com/JoseStoropoli"
+  - label: LinkedIn
+    url: "https://www.linkedin.com/in/storopoli/"
+  - label: Email
+    url: "mailto:thestoropoli@gmail.com"
+output:
+  postcards::onofre
+---
+ 
+Chief Data Scientist, Associate Professor and Researcher at Universidade Nove de Julho - UNINOVE located in São Paulo - Brazil. Teaches undergraduate and graduate courses in Statistics, Bayesian Statistics, Machine Learning, Deep Learning and Data Science using R, Python and Julia. Researches, publishes and advises PhD candidates on topics about Smart Cities and Urban Planning. Certified RStudio Tidyverse Instructor.
+
