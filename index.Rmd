@@ -15,8 +15,12 @@ links:
     url: "https://www.linkedin.com/in/storopoli/"
   - label: '`r fontawesome::fa("paper-plane", height = "2em", fill="white")`'
     url: "mailto:thestoropoli@gmail.com"
+  - label: <i class="ai ai-orcid ai-2x"></i>
+    url: https://orcid.org/0000-0002-0559-5176
   - label: <i class="ai ai-google-scholar ai-2x"></i>
     url: https://scholar.google.com/citations?user=xGU7H1QAAAAJ&hl=en
+  - label: <i class="ai ai-lattes ai-2x"></i>
+    url: http://lattes.cnpq.br/2281909649311607
   - label: '`r fontawesome::fa("r-project", height = "1.33em", fill="steelblue")`<br>Estatística com R'
     url: "https://storopoli.github.io/Estatistica"
   - label: '`r fontawesome::fa("r-project", height = "1.33em", fill="steelblue")`<br>Estatística Bayesiana<br>com R e Stan'
