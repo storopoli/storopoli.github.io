@@ -7,28 +7,35 @@ angle: 130
 links:
   - label: <i class="ai ai-cv ai-2x"></i>
     url: "https://storopoli.github.io/CV/CV.pdf"
-  - label: <i class="fa-github fa-2x"></i>
+  - label: '`r fontawesome::fa("github", height = "2em", fill="white")`'
     url: "https://github.com/storopoli"
-  - label: <i class="fa-twitter fa-2x"></i>
+  - label: '`r fontawesome::fa("twitter", height = "2em", fill="white")`'
     url: "https://twitter.com/JoseStoropoli"
-  - label: <i class="fa-linkedin fa-2x"></i>
+  - label: '`r fontawesome::fa("linkedin", height = "2em", fill="white")`'
     url: "https://www.linkedin.com/in/storopoli/"
-  - label: <i class="fa-paper-plane fa-2x"></i>
+  - label: '`r fontawesome::fa("paper-plane", height = "2em", fill="white")`'
     url: "mailto:thestoropoli@gmail.com"
   - label: <i class="ai ai-google-scholar ai-2x"></i>
     url: https://scholar.google.com/citations?user=xGU7H1QAAAAJ&hl=en
-  - label: "Estatística com R"
+  - label: '`r fontawesome::fa("r-project", height = "1.33em", fill="steelblue")`<br>Estatística com R'
     url: "https://storopoli.github.io/Estatistica"
-  - label: "Estatística Bayesiana<br>com R e Stan"
+  - label: '`r fontawesome::fa("r-project", height = "1.33em", fill="steelblue")`<br>Estatística Bayesiana<br>com R e Stan'
     url: "https://storopoli.github.io/Estatistica-Bayesiana"
 output:
-  postcards::onofre:
-    includes:
-      in_header: myheader.html
+  postcards::onofre
 ---
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-76W12M6ZTG"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-76W12M6ZTG');
+</script>
 
 <!--Academicons Icons-->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
 
 Chief Data Scientist, Associate Professor and Researcher at Universidade Nove de Julho - UNINOVE located in São Paulo - Brazil. Teaches undergraduate and graduate courses in Statistics, Bayesian Statistics, Machine Learning, Deep Learning and Data Science using R, Python and Julia. Researches, publishes and advises PhD candidates on topics about Smart Cities and Urban Planning. Certified RStudio Tidyverse Instructor.
-
