@@ -26,7 +26,7 @@ links:
   - label: '`r fontawesome::fa("r-project", height = "1.33em", fill="steelblue")`<br>Estatística Bayesiana<br>com R e Stan'
     url: "https://storopoli.github.io/Estatistica-Bayesiana"
   - label: '`r fontawesome::fa("python", height = "1.33em", fill="#ffd343")`<br>Ciência de Dados<br>pandas, scikit-learn<br>e tensorflow'
-    url: "https://github.com/storopoli/ciencia-de-dados"
+    url: "https://storopoli.github.io/ciencia-de-dados/"
 output:
   postcards::onofre
 ---
