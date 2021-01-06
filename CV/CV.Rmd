@@ -6,7 +6,7 @@ position: "Associate Professor"
 address: "Universidade Nove de Julho - UNINOVE - São Paulo - Brazil"
 profilepic: pic.png
 phone: +55 11 3385-9219
-www: storopoli.github.io
+www: storopoli.io
 email: "josees@uni9.pro.br"
 twitter: JoseStoropoli
 github: storopoli
@@ -51,9 +51,9 @@ orcid_data %>%
 ```{r courses}
 tibble::tribble(
   ~name, ~year,  ~link, ~language,
-  "Ciência de Dados - Data Science", 2020L, "https://github.com/storopoli/ciencia-de-dados", "Python",
-  "Estatística - Statistics", 2019L, "https://storopoli.github.io/Estatistica", "R",
-  "Estatística Bayesiana - Bayesian Statistics", 2020L,  "https://storopoli.github.io/Estatistica-Bayesiana", "R and RStan"
+  "Ciência de Dados - Data Science", 2020L, "https://storopoli.io/ciencia-de-dados", "Python",
+  "Estatística - Statistics", 2019L, "https://storopoli.io/Estatistica", "R",
+  "Estatística Bayesiana - Bayesian Statistics", 2020L,  "https://storopoli.io/Estatistica-Bayesiana", "R and RStan"
 ) %>% 
   detailed_entries(
     what = language,
