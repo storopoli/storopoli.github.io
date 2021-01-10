@@ -23,6 +23,8 @@ links:
     url: http://lattes.cnpq.br/2281909649311607
   - label: '`r fontawesome::fa("r-project", height = "1.33em", fill="steelblue")`<br>Estatística com R'
     url: "https://storopoli.github.io/Estatistica"
+  - label: '`r fontawesome::fa("r-project", height = "1.33em", fill="steelblue")`<br>Rcpp'
+    url: "https://storopoli.github.io/Rcpp"
   - label: '`r fontawesome::fa("r-project", height = "1.33em", fill="steelblue")`<br>Estatística Bayesiana<br>com R e Stan'
     url: "https://storopoli.github.io/Estatistica-Bayesiana"
   - label: '`r fontawesome::fa("python", height = "1.33em", fill="#ffd343")`<br>Ciência de Dados<br>pandas, scikit-learn<br>e tensorflow'
