@@ -23,6 +23,7 @@ jobs:
         uses: actions/checkout@v2
       - name: Install Packages
         run: |
+          R -e '.libPaths()'
           R -e 'install.packages("tinytex", lib = Sys.getenv("R_LIBS_USER"))'
           R -e 'tinytex::install_tinytex()'
           R -e 'install.packages("tidyverse", lib = Sys.getenv("R_LIBS_USER"))'
