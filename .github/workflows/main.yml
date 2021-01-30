@@ -17,9 +17,10 @@ jobs:
     steps:
       - name: Set up Git repository
         uses: actions/checkout@v2
-      - name: Install Packages
+      - name: Setup r-lib Environment
         uses: r-lib/actions/setup-r@v1
-      - run: |
+      - name: Install Packages
+        run: |
           R -e 'install.packages("vitae")'
           R -e 'install.packages("rorcid")'
           R -e 'install.packages("pkgsearch")'
@@ -27,9 +28,7 @@ jobs:
           R -e 'install.packages("ghql")'
           R -e 'install.packages("jsonlite")'
       - name: Render document
-        uses: lc5415/rmarkdown-action@v1
-        with:
-          input_file: CV/CV.Rmd
+        run: R -e 'rmarkdown::render("CV/CV.Rmd")
       - name: Commit files
         run: |
           git config --local core.autocrlf false
