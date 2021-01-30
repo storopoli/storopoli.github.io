@@ -20,10 +20,27 @@ jobs:
         uses: actions/checkout@v2
       - name: Setup R
         uses: r-lib/actions/setup-r@v1
+        with:
+          install-r: false
+      - name: Setup tinytex
+        uses: r-lib/actions/setup-tinytex@v1
       - name: Setup pandoc
         uses: r-lib/actions/setup-pandoc@v1
+        with:
+          pandoc-version: 2.11.4
       - name: Install Packages and Render CV
-        run: Rscript CV/render.R
+        #run: Rscript CV/render.R
+        run: |
+          if (!requireNamespace("tidyverse", quietly = TRUE)) install.packages("tidyverse")
+          if (!requireNamespace("rmarkdown", quietly = TRUE)) install.packages("rmarkdown")
+          install.packages("vitae")
+          install.packages("rorcid")
+          install.packages("pkgsearch")
+          install.packages("scholar")
+          install.packages("ghql")
+          install.packages("jsonlite")
+          rmarkdown::render("CV/CV.Rmd")
+        shell: Rscript {0}
       - name: Commit files
         run: |
           git config --local core.autocrlf false
