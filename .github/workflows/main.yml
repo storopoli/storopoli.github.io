@@ -23,6 +23,8 @@ jobs:
         uses: actions/checkout@v2
       - name: Install Packages
         run: |
+          echo $ORCID_CLIENT_ID
+          echo $R_LIBS_USER
           R -e 'install.packages("tinytex")'
           R -e 'tinytex::install_tinytex()'
           R -e 'install.packages("tidyverse")'
