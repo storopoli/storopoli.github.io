@@ -11,7 +11,7 @@ jobs:
   render_document:
     runs-on: macOS-latest
     env:
-      GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
+      GITHUB_PAT: ${{ secrets.GH_TOKEN }}
       ORCID_CLIENT_ID: ${{ secrets.ORCID_CLIENT_ID }}
       ORCID_CLIENT_SECRET: ${{ secrets.ORCID_CLIENT_SECRET }}
       ORCID_TOKEN: ${{ secrets.ORCID_TOKEN }}
