@@ -1,6 +1,0 @@
-install.packages("vitae")
-install.packages("rorcid")
-install.packages("pkgsearch")
-install.packages("scholar")
-install.packages("ghql")
-install.packages("jsonlite")
