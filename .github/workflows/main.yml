@@ -16,11 +16,10 @@ jobs:
         uses: lc5415/rmarkdown-action@v1
         with:
           env:
-            ORCID_CLIENT_ID: ${{ ORCID_CLIENT_ID }}
-            ORCID_CLIENT_SECRET: ${{ ORCID_CLIENT_SECRET }}
-            ORCID_TOKEN: ${{ ORCID_TOKEN }}
+            ORCID_CLIENT_ID: ${{ secrets.ORCID_CLIENT_ID }}
+            ORCID_CLIENT_SECRET: ${{ secrets.ORCID_CLIENT_SECRET }}
+            ORCID_TOKEN: ${{ secrets.ORCID_TOKEN }}
           input_file: CV/CV.Rmd
-	        output_format: pdf_document
       - name: Commit files
         run: |
           git config --local core.autocrlf false
