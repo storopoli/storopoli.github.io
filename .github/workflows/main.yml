@@ -22,19 +22,8 @@ jobs:
         uses: r-lib/actions/setup-r@v1
       - name: Setup pandoc
         uses: r-lib/actions/setup-pandoc@v1
-      - name: Install Packages
-        run: |
-          R -e 'install.packages("tinytex")'
-          R -e 'tinytex::install_tinytex()'
-          R -e 'install.packages("tidyverse")'
-          R -e 'install.packages("vitae")'
-          R -e 'install.packages("rorcid")'
-          R -e 'install.packages("pkgsearch")'
-          R -e 'install.packages("scholar")'
-          R -e 'install.packages("ghql")'
-          R -e 'install.packages("jsonlite")'
-      - name: Render document
-        run: R -e 'rmarkdown::render("CV/CV.Rmd")'
+      - name: Install Packages and Render CV
+        run: Rscript CV/render.R
       - name: Commit files
         run: |
           git config --local core.autocrlf false
