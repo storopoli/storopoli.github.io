@@ -28,19 +28,42 @@ jobs:
         uses: r-lib/actions/setup-pandoc@v1
         with:
           pandoc-version: 2.11.4
-      - name: Install Packages and Render CV
-        #run: Rscript CV/render.R
+      - name: Install Packages
         run: |
-          if (!requireNamespace("tidyverse", quietly = TRUE)) install.packages("tidyverse")
-          if (!requireNamespace("rmarkdown", quietly = TRUE)) install.packages("rmarkdown")
-          install.packages("vitae")
-          install.packages("rorcid")
-          install.packages("pkgsearch")
-          install.packages("scholar")
-          install.packages("ghql")
-          install.packages("jsonlite")
-          rmarkdown::render("CV/CV.Rmd")
-        shell: Rscript {0}
+          Rscript -e 'if (!requireNamespace("magrittr", quietly = TRUE)) install.packages("magrittr")'
+          Rscript -e 'if (!requireNamespace("dlyr", quietly = TRUE)) install.packages("dplyr")'
+          Rscript -e 'if (!requireNamespace("purrr", quietly = TRUE)) install.packages("purrr")'
+          Rscript -e 'if (!requireNamespace("stringr", quietly = TRUE)) install.packages("stringr")'
+          Rscript -e 'if (!requireNamespace("lubridate", quietly = TRUE)) install.packages("lubridate")'
+          Rscript -e 'if (!requireNamespace("glue", quietly = TRUE)) install.packages("glue")'
+          Rscript -e 'if (!requireNamespace("rmarkdown", quietly = TRUE)) install.packages("rmarkdown")'
+          Rscript -e 'install.packages("vitae")'
+          Rscript -e 'install.packages("rorcid")'
+          Rscript -e 'install.packages("pkgsearch")'
+          Rscript -e 'install.packages("scholar")'
+          Rscript -e 'install.packages("ghql")'
+          Rscript -e 'install.packages("jsonlite")'
+          
+      - name: Install LaTeX Packages
+        run: |
+          Rscript -e 'system2("tlmgr", "--repository http://www.preining.info/tlgpg/ install tlgpg")'
+          Rscript -e 'tinytex::tlmgr_install("enumitem")'
+          Rscript -e 'tinytex::tlmgr_install("ragged2e")'
+          Rscript -e 'tinytex::tlmgr_install("everysel")'
+          Rscript -e 'tinytex::tlmgr_install("fancyhdr")'
+          Rscript -e 'tinytex::tlmgr_install("xifthen")'
+          Rscript -e 'tinytex::tlmgr_install("ifmtarg")'
+          Rscript -e 'tinytex::tlmgr_install("setspace")'
+          Rscript -e 'tinytex::tlmgr_install("fontawesome")'
+          Rscript -e 'tinytex::tlmgr_install("academicons")'
+          Rscript -e 'tinytex::tlmgr_install("sourcesanspro")'
+          Rscript -e 'tinytex::tlmgr_install("tcolorbox")'
+          Rscript -e 'tinytex::tlmgr_install("pgf")'
+          Rscript -e 'tinytex::tlmgr_install("environ")'
+          Rscript -e 'tinytex::tlmgr_install("parskip")'
+      - name: Render CV
+        run: |
+          Rscript -e 'rmarkdown::render("CV/CV.Rmd")'
       - name: Commit files
         run: |
           git config --local core.autocrlf false
