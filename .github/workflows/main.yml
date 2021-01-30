@@ -15,7 +15,7 @@ jobs:
       ORCID_CLIENT_ID: ${{ secrets.ORCID_CLIENT_ID }}
       ORCID_CLIENT_SECRET: ${{ secrets.ORCID_CLIENT_SECRET }}
       ORCID_TOKEN: ${{ secrets.ORCID_TOKEN }}
-      R_LIBS_USER: tempdir/Library
+      R_LIBS_USER: /usr/local/lib/R/site-library
       _R_CHECK_SYSTEM_CLOCK_: FALSE
       TZ: UTC
     steps:
