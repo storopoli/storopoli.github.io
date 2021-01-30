@@ -1,0 +1,42 @@
+name: Update CV every Sunday
+on:
+  schedule:
+    - cron: '0 0 * * 0'
+jobs:
+  render_document:
+    runs-on: ubuntu-latest
+    env:
+      GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
+      ORCID_CLIENT_ID: ${{ secrets.ORCID_CLIENT_ID }}
+      ORCID_CLIENT_SECRET: ${{ secrets.ORCID_CLIENT_SECRET }}
+      ORCID_TOKEN: ${{ secrets.ORCID_TOKEN }}
+    steps:
+      - name: Set up Git repository
+        uses: actions/checkout@v2
+      - name: Install Packages
+        uses: r-lib/actions/setup-r@v1
+      - run: |
+          R -e 'install.packages("vitae")'
+          R -e 'install.packages("rorcid")'
+          R -e 'install.packages("pkgsearch")'
+          R -e 'install.packages("scholar")'
+          R -e 'install.packages("ghql")'
+          R -e 'install.packages("jsonlite")'
+      - name: Render document
+        uses: lc5415/rmarkdown-action@v1
+        with:
+          input_file: CV/CV.Rmd
+      - name: Commit files
+        run: |
+          git config --local core.autocrlf false
+          git config --local user.email "${{ github.actor }}@users.noreply.github.com"
+          git config --local user.name "${{ github.actor }}"
+          git add . && git add --renormalize .
+          git pull origin ${{ github.head_ref }} --autostash --rebase -X ours
+          git commit --allow-empty -am "AUTO-GH ACTION: ${{ github.workflow }}"
+          NO_PAGER=1 git --no-pager diff HEAD^
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          branch: ${{ github.head_ref }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
