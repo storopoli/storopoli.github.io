@@ -32,7 +32,7 @@ jobs:
           R -e 'install.packages("ghql")'
           R -e 'install.packages("jsonlite")'
       - name: Render document
-        run: R -e 'rmarkdown::render("CV/CV.Rmd")
+        run: R -e 'rmarkdown::render("CV/CV.Rmd")'
       - name: Commit files
         run: |
           git config --local core.autocrlf false
