@@ -9,7 +9,7 @@ on:
   workflow_dispatch:
 jobs:
   render_document:
-    runs-on: ubuntu-latest
+    runs-on: macOS-latest
     env:
       GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
       ORCID_CLIENT_ID: ${{ secrets.ORCID_CLIENT_ID }}
