@@ -24,7 +24,7 @@ library(stringr)
 knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
 orcid_data <- do.call("bind_rows",
   rorcid::orcid_educations("0000-0002-0559-5176")$`0000-0002-0559-5176`$`affiliation-group`$summaries
-) %>% dplyr::select_if(function(x){!all(is.na(x))})
+) %>% dplyr::select_if(function(x) {!all(is.na(x))})
 ```
 
 # Professional Summary
@@ -55,7 +55,7 @@ tibble::tribble(
   "Ciência de Dados - Data Science", 2020L, "https://storopoli.io/ciencia-de-dados", "Python",
   "Estatística - Statistics", 2019L, "https://storopoli.io/Estatistica", "R",
   "Estatística Bayesiana - Bayesian Statistics", 2020L,  "https://storopoli.io/Estatistica-Bayesiana", "R and RStan"
-) %>% 
+) %>%
   detailed_entries(
     what = language,
     when = year,
@@ -79,7 +79,7 @@ tibble::tribble(
        "Neural Networks and Deep Learning",            "Coursera", 2018L,
                         "Machine Learning", "Stanford University", 2018L,
       "Structural Equation Modeling (SEM)",                 "FGV", 2018L
-  ) %>% 
+  ) %>%
   detailed_entries(
     what = issuer,
     with = certification,
@@ -99,8 +99,9 @@ tibble::tribble(
   "Gestão urbana e o papel da ciência de dados", "https://youtu.be/qS3xT1e-3F4", 2020L,
   "Inteligência Artificial e Desenvolvimento Urbano Sustentável", "https://youtu.be/QBbgTOHHdZI?t=5631", 2020L,
   "Observatório de Políticas Públicas", "https://www.youtube.com/watch?v=FUSnGUWKZJs", 2020L,
-  "Vida familiar durante la pandemia del coronavirus en América Latina", "https://youtu.be/0thhpSKt5BM", 2020L
-) %>% 
+  "Vida familiar durante la pandemia del coronavirus en América Latina", "https://youtu.be/0thhpSKt5BM", 2020L,
+  "Fluência de Dados e Carreira Profissional", "https://youtu.be/nAo1GS82Jv0", 2021,
+) %>%
   detailed_entries(
     what = title,
     when = year,
@@ -130,7 +131,7 @@ query_text <- glue::glue('{user(login: "storopoli") {
     }
   }
 }', .open = "<<", .close = ">>")
-qry$query('mycontrib', query_text)
+qry$query("mycontrib", query_text)
 (contribs <- con$exec(qry$queries$mycontrib))
 total_contribs <- jsonlite::fromJSON(contribs)$data$user$contributionsCollection$contributionCalendar$totalContributions
 ```
@@ -138,12 +139,12 @@ total_contribs <- jsonlite::fromJSON(contribs)$data$user$contributionsCollection
 * Total GitHub Contributions: `r total_contribs`
 
 ```{r softwares}
-pkgsearch::ps("Storopoli",size = 100) %>%
-  filter(purrr::map_lgl(package_data, ~ grepl("Storopoli", .x$Author, fixed = TRUE))) %>% 
+pkgsearch::ps("Storopoli", size = 100) %>%
+  filter(purrr::map_lgl(package_data, ~ grepl("Storopoli", .x$Author, fixed = TRUE))) %>%
   dplyr::as_tibble() %>%
   detailed_entries(
     with = package,
-    what = title, 
+    what = title,
     when = lubridate::year(date),
     why = downloads_last_month
   )
@@ -153,8 +154,8 @@ pkgsearch::ps("Storopoli",size = 100) %>%
 
 ```{r publications}
 scholar::get_publications("xGU7H1QAAAAJ") %>%
-  dplyr::as_tibble() %>% 
-  filter(journal != "") %>% 
+  dplyr::as_tibble() %>%
+  filter(journal != "") %>%
   detailed_entries(
     what = title,
     with = journal,
