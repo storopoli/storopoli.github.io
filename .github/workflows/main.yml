@@ -37,12 +37,14 @@ jobs:
           Rscript -e 'if (!requireNamespace("lubridate", quietly = TRUE)) install.packages("lubridate")'
           Rscript -e 'if (!requireNamespace("glue", quietly = TRUE)) install.packages("glue")'
           Rscript -e 'if (!requireNamespace("rmarkdown", quietly = TRUE)) install.packages("rmarkdown")'
-          Rscript -e 'install.packages("vitae")'
+          Rscript -e '#install.packages("vitae")'
           Rscript -e 'install.packages("rorcid")'
           Rscript -e 'install.packages("pkgsearch")'
           Rscript -e 'install.packages("scholar")'
           Rscript -e 'install.packages("ghql")'
           Rscript -e 'install.packages("jsonlite")'
+          Rscript -e 'install.packages("remotes")'
+          Rscript -e 'remotes::install_github("mitchelloharawild/vitae")'
           
       - name: Install LaTeX Packages
         run: |
