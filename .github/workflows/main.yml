@@ -37,13 +37,13 @@ jobs:
           Rscript -e 'if (!requireNamespace("lubridate", quietly = TRUE)) install.packages("lubridate")'
           Rscript -e 'if (!requireNamespace("glue", quietly = TRUE)) install.packages("glue")'
           Rscript -e 'if (!requireNamespace("rmarkdown", quietly = TRUE)) install.packages("rmarkdown")'
-          Rscript -e '#install.packages("vitae")'
+          Rscript -e 'install.packages("vitae")'
           Rscript -e 'install.packages("rorcid")'
           Rscript -e 'install.packages("pkgsearch")'
           Rscript -e 'install.packages("scholar")'
           Rscript -e 'install.packages("ghql")'
           Rscript -e 'install.packages("jsonlite")'
-          
+
       - name: Install LaTeX Packages
         run: |
           Rscript -e 'system2("tlmgr", "--repository http://www.preining.info/tlgpg/ install tlgpg")'
