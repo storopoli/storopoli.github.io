@@ -29,11 +29,11 @@ orcid_data <- do.call("bind_rows",
 
 # Professional Summary
 
- * Chief Data Scientist, Associate Professor and Researcher at Universidade Nove de Julho - UNINOVE located in São Paulo - Brazil.
- * Teaches undergraduate and graduate courses in Statistics, Bayesian Statistics, Machine Learning, Deep Learning and Data Science using R, Python and Julia.
+ * Associate Professor and Researcher at Universidade Nove de Julho - UNINOVE located in São Paulo - Brazil.
+ * Teaches undergraduate and graduate courses in Statistics, Bayesian Statistics, Machine Learning, Deep Learning and Data Science using R, Python, Julia, Stan and Turing.
  * Researches, publishes and advises PhD candidates on topics about Smart Cities and Urban Planning.
  * Certified RStudio Tidyverse Instructor.
- * Editor-in-Chief of the [Iberoamerican Journal of Strategic Management (IJSM)](https://periodicos.uninove.br/riae) in 2020.
+ * Former Editor-in-Chief of the [Iberoamerican Journal of Strategic Management (IJSM)](https://periodicos.uninove.br/riae) in 2020.
 
 # Education
 
@@ -72,6 +72,7 @@ tibble::tribble(
       "Tidyverse Instructor Certification",             "RStudio", 2020L,
   "Generative Adversarial Networks (GANs)",            "Coursera", 2020L,
                "Machine Learning Engineer",             "Udacity", 2020L,
+       "Computational Modeling with Julia",       "Julia Academy", 2020L,
                      "Python Data Analyst",            "DataCamp", 2019L,
                        "Python Programmer",            "DataCamp", 2018L,
                         "R Data Scientist",            "DataCamp", 2018L,
@@ -93,14 +94,14 @@ tibble::tribble(
 ```{r talks}
 tibble::tribble(
   ~title, ~link, ~year,
-  "Qual é o papel das universidades no desenvolvimento de cidades inteligentes e sustentáveis?", "https://youtu.be/BAqBTlfBvP8", 2019L,
-  "O que é a Ciência de Dados", "https://youtu.be/08uZiJSX_0E", 2020L,
-  "Ensinando Data Science no Ensino Superior com Python", "https://youtu.be/Aktd_TFYhvI", 2020L,
-  "Gestão urbana e o papel da ciência de dados", "https://youtu.be/qS3xT1e-3F4", 2020L,
-  "Inteligência Artificial e Desenvolvimento Urbano Sustentável", "https://youtu.be/QBbgTOHHdZI?t=5631", 2020L,
-  "Observatório de Políticas Públicas", "https://www.youtube.com/watch?v=FUSnGUWKZJs", 2020L,
-  "Vida familiar durante la pandemia del coronavirus en América Latina", "https://youtu.be/0thhpSKt5BM", 2020L,
   "Fluência de Dados e Carreira Profissional", "https://youtu.be/nAo1GS82Jv0", 2021,
+  "Vida familiar durante la pandemia del coronavirus en América Latina", "https://youtu.be/0thhpSKt5BM", 2020L,
+  "Observatório de Políticas Públicas", "https://www.youtube.com/watch?v=FUSnGUWKZJs", 2020L,
+  "Gestão urbana e o papel da ciência de dados", "https://youtu.be/qS3xT1e-3F4", 2020L,
+  "Ensinando Data Science no Ensino Superior com Python", "https://youtu.be/Aktd_TFYhvI", 2020L,
+  "Inteligência Artificial e Desenvolvimento Urbano Sustentável", "https://youtu.be/QBbgTOHHdZI?t=5631", 2020L,
+  "O que é a Ciência de Dados", "https://youtu.be/08uZiJSX_0E", 2020L,
+  "Qual é o papel das universidades no desenvolvimento de cidades inteligentes e sustentáveis?", "https://youtu.be/BAqBTlfBvP8", 2019L
 ) %>%
   detailed_entries(
     what = title,
