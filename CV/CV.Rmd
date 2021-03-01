@@ -54,7 +54,7 @@ tibble::tribble(
   ~name, ~year,  ~link, ~language,
   "Ciência de Dados - Data Science", 2020L, "https://storopoli.io/ciencia-de-dados", "Python",
   "Estatística - Statistics", 2019L, "https://storopoli.io/Estatistica", "R",
-  "Estatística Bayesiana - Bayesian Statistics", 2020L,  "https://storopoli.io/Estatistica-Bayesiana", "R and RStan"
+  "Estatística Bayesiana - Bayesian Statistics", 2020L,  "https://storopoli.io/Estatistica-Bayesiana", "R and Stan"
 ) %>%
   detailed_entries(
     what = language,
