@@ -94,7 +94,8 @@ tibble::tribble(
 ```{r talks}
 tibble::tribble(
   ~title, ~link, ~year,
-  "Fluência de Dados e Carreira Profissional", "https://youtu.be/nAo1GS82Jv0", 2021,
+  "Stakeholders e Cidades Inteligentes", "https://youtu.be/KoTZazPWpKA", 2021L,
+  "Fluência de Dados e Carreira Profissional", "https://youtu.be/nAo1GS82Jv0", 2021L,
   "Vida familiar durante la pandemia del coronavirus en América Latina", "https://youtu.be/0thhpSKt5BM", 2020L,
   "Observatório de Políticas Públicas", "https://www.youtube.com/watch?v=FUSnGUWKZJs", 2020L,
   "Gestão urbana e o papel da ciência de dados", "https://youtu.be/qS3xT1e-3F4", 2020L,
