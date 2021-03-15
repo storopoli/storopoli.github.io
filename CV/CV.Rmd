@@ -140,7 +140,7 @@ total_contribs <- jsonlite::fromJSON(contribs)$data$user$contributionsCollection
 ```
 
 * Total GitHub Contributions: `r total_contribs`
-* Featured Github Contributions:
+* Featured GitHub Contributions:
   * `NetworkX`: New Panther and Panther++ Fast top-k similarity search on large networks[^1].
   * `Stan`: CI/CD GitHub Actions and Documentation.
   * `SciPy`: Documentation.
