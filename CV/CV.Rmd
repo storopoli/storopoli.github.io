@@ -2,7 +2,7 @@
 name: Jose
 surname: Storopoli
 qualifications: PhD
-position: "Associate Professor"
+position: "Chief Data Scientist and Associate Professor"
 address: "Universidade Nove de Julho - UNINOVE - São Paulo - Brazil"
 profilepic: pic.png
 phone: +55 11 3385-9219
@@ -29,6 +29,7 @@ orcid_data <- do.call("bind_rows",
 
 # Professional Summary
 
+ * Chief Data Scientist at UUniversidade Nove de Julho - UNINOVE located in São Paulo - Brazil.
  * Associate Professor and Researcher at Universidade Nove de Julho - UNINOVE located in São Paulo - Brazil.
  * Teaches undergraduate and graduate courses in Statistics, Bayesian Statistics, Machine Learning, Deep Learning and Data Science using R, Python, Julia, Stan and Turing.
  * Researches, publishes and advises PhD candidates on topics about Smart Cities and Urban Planning.
@@ -139,6 +140,12 @@ total_contribs <- jsonlite::fromJSON(contribs)$data$user$contributionsCollection
 ```
 
 * Total GitHub Contributions: `r total_contribs`
+* Featured Github Contributions:
+  * `NetworkX`: New Panther and Panther++ Fast top-k similarity search on large networks[^1].
+  * `Stan`: CI/CD GitHub Actions and Documentation.
+  * `SciPy`: Documentation.
+
+[^1]: Zhang, J., Tang, J., Ma, C., Tong, H., Jing, Y., & Li, J. (2015). Panther: Fast top-k similarity search on large networks. In Proceedings of the ACM SIGKDD International Conference on Knowledge Discovery and Data Mining (Vol. 2015-August, pp. 1445–1454). Association for Computing Machinery. https://doi.org/10.1145/2783258.2783267
 
 ```{r softwares}
 pkgsearch::ps("Storopoli", size = 100) %>%
