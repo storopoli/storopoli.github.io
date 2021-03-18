@@ -31,7 +31,7 @@ orcid_data <- do.call("bind_rows",
 
  * Chief Data Scientist at Universidade Nove de Julho - UNINOVE located in São Paulo - Brazil.
  * Associate Professor and Researcher at Universidade Nove de Julho - UNINOVE located in São Paulo - Brazil.
- * Teaches undergraduate and graduate courses in Statistics, Bayesian Statistics, Machine Learning, Deep Learning and Data Science using R, Python, Julia, Stan and Turing.
+ * Teaches undergraduate and graduate courses in Statistics, Bayesian Statistics, Machine Learning, Deep Learning and Data Science using R, Stan, C++, Python, Julia.
  * Researches, publishes and advises PhD candidates on topics about Smart Cities and Urban Planning.
  * Certified RStudio Tidyverse Instructor.
  * Former Editor-in-Chief of the [Iberoamerican Journal of Strategic Management (IJSM)](https://periodicos.uninove.br/riae) in 2020.
