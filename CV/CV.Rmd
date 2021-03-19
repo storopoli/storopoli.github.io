@@ -140,12 +140,6 @@ total_contribs <- jsonlite::fromJSON(contribs)$data$user$contributionsCollection
 ```
 
 * Total GitHub Contributions: `r total_contribs`
-* Featured GitHub Contributions:
-  * `NetworkX`: New Panther and Panther++ Fast top-k similarity search on large networks[^1].
-  * `Stan`: CI/CD GitHub Actions and Documentation.
-  * `SciPy`: Documentation.
-
-[^1]: Zhang, J., Tang, J., Ma, C., Tong, H., Jing, Y., & Li, J. (2015). Panther: Fast top-k similarity search on large networks. In Proceedings of the ACM SIGKDD International Conference on Knowledge Discovery and Data Mining (Vol. 2015-August, pp. 1445–1454). Association for Computing Machinery. https://doi.org/10.1145/2783258.2783267
 
 ```{r softwares}
 pkgsearch::ps("Storopoli", size = 100) %>%
