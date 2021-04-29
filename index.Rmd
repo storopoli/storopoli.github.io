@@ -21,15 +21,15 @@ links:
     url: https://scholar.google.com/citations?user=xGU7H1QAAAAJ&hl=en
   - label: <i class="ai ai-lattes ai-2x"></i>
     url: http://lattes.cnpq.br/2281909649311607
-  - label: '`r icons::icon_style(icons::simple_icons("julia"), scale = 1.33, fill = "#9558B2")`<br>Bayesian Statistics<br> using Julia and Turing'
+  - label: '`r icons::icon_style(icons::simple_icons("julia"), scale = 1.33, fill = "#B452CD")`<br>Bayesian Statistics<br> using Julia and Turing'
     url: "https://storopoli.io/Bayesian-Julia"
-  - label: '`r fontawesome::fa("r-project", height = "1.33em", fill="steelblue")`<br>Estatística com R'
+  - label: '`r icons::icon_style(icons::fontawesome("r-project"), scale = 1.33, fill = "steelblue")`<br>Estatística com R'
     url: "https://storopoli.io/Estatistica"
-  - label: '`r fontawesome::fa("r-project", height = "1.33em", fill="steelblue")`<br>Estatística Bayesiana<br>com R e Stan'
+  - label: '`r icons::icon_style(icons::fontawesome("r-project"), scale = 1.33, fill = "steelblue")`<br>Estatística Bayesiana<br>com R e Stan'
     url: "https://storopoli.io/Estatistica-Bayesiana"
-  - label: '`r fontawesome::fa("r-project", height = "1.33em", fill="steelblue")`<br>Rcpp'
+  - label: '`r icons::icon_style(icons::fontawesome("r-project"), scale = 1.33, fill = "steelblue")`<br>Rcpp'
     url: "https://storopoli.io/Rcpp"
-  - label: '`r fontawesome::fa("python", height = "1.33em", fill="#ffd343")`<br>Ciência de Dados<br>pandas, Scikit-Learn,<br>TensorFlow e PyTorch'
+  - label: '`r icons::icon_style(icons::fontawesome("python"), scale = 1.33, fill = "#FFD343")`<br>Ciência de Dados<br>pandas, Scikit-Learn,<br>TensorFlow e PyTorch'
     url: "https://storopoli.io/ciencia-de-dados"
 output:
   postcards::onofre
