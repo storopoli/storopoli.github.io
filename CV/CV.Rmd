@@ -53,6 +53,7 @@ orcid_data %>%
 ```{r courses}
 tibble::tribble(
   ~name, ~year,  ~link, ~language,
+  "Bayesian Statistics", 2021L,  "https://storopoli.io/Bayesian-Julia", "Julia",
   "Ciência de Dados - Data Science", 2020L, "https://storopoli.io/ciencia-de-dados", "Python",
   "Estatística - Statistics", 2019L, "https://storopoli.io/Estatistica", "R",
   "Estatística Bayesiana - Bayesian Statistics", 2020L,  "https://storopoli.io/Estatistica-Bayesiana", "R and Stan"
