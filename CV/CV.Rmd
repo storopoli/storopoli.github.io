@@ -29,12 +29,10 @@ orcid_data <- do.call("bind_rows",
 
 # Professional Summary
 
- * Chief Data Scientist at Universidade Nove de Julho - UNINOVE located in São Paulo - Brazil.
- * Associate Professor and Researcher at Universidade Nove de Julho - UNINOVE located in São Paulo - Brazil.
- * Teaches undergraduate and graduate courses in Statistics, Bayesian Statistics, Machine Learning, Deep Learning and Data Science using R, Stan, C++, Python, Julia.
- * Researches, publishes and advises PhD candidates on topics about Smart Cities and Urban Planning.
+  * Associate Professor and Researcher at Universidade Nove de Julho - UNINOVE located in São Paulo - Brazil.
+ * Teaches undergraduate and graduate courses in Statistics, Bayesian Statistics, Machine Learning, Deep Learning and Data Science using Julia, R, Python, Stan and C++.
+ * Researches, publishes and advises PhD candidates on topics about Bayesian Statistical Modeling and Machine Learning applied to Decision Making.
  * Certified RStudio Tidyverse Instructor.
- * Former Editor-in-Chief of the [Iberoamerican Journal of Strategic Management (IJSM)](https://periodicos.uninove.br/riae) in 2020.
 
 # Education
 
@@ -53,10 +51,11 @@ orcid_data %>%
 ```{r courses}
 tibble::tribble(
   ~name, ~year,  ~link, ~language,
+  "Estatística Bayesiana - Bayesian Statistics", 2021L,  "https://storopoli.io/Estatistica-Bayesiana", "R and Stan",
   "Bayesian Statistics", 2021L,  "https://storopoli.io/Bayesian-Julia", "Julia",
-  "Ciência de Dados - Data Science", 2020L, "https://storopoli.io/ciencia-de-dados", "Python",
-  "Estatística - Statistics", 2019L, "https://storopoli.io/Estatistica", "R",
-  "Estatística Bayesiana - Bayesian Statistics", 2020L,  "https://storopoli.io/Estatistica-Bayesiana", "R and Stan"
+  "Computação Científica", 2021L, "https://storopoli.io/Computacao-Julia", "Julia",
+  "Ciência de Dados - Data Science", 2021L, "https://storopoli.io/ciencia-de-dados", "Python",
+  "Estatística - Statistics", 2020L, "https://storopoli.io/Estatistica", "R",
 ) %>%
   detailed_entries(
     what = language,
