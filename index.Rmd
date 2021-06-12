@@ -13,6 +13,8 @@ links:
     url: "https://twitter.com/JoseStoropoli"
   - label: '`r fontawesome::fa("linkedin", height = "2em", fill="white")`'
     url: "https://www.linkedin.com/in/storopoli/"
+  - label: '`r fontawesome::fa("youtube", height = "2em", fill="white")`'
+    url: "https://www.youtube.com/channel/UCXJBhNvt4HUtPr0tR7w1r0g"
   - label: '`r fontawesome::fa("paper-plane", height = "2em", fill="white")`'
     url: "mailto:thestoropoli@gmail.com"
   - label: <i class="ai ai-orcid ai-2x"></i>

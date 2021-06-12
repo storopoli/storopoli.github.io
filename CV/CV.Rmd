@@ -95,6 +95,8 @@ tibble::tribble(
 ```{r talks}
 tibble::tribble(
   ~title, ~link, ~year,
+  "Bayesian Statistics using Turing.jl and Julia Language
+", "https://youtu.be/CKSxxJ7RdAU", 2021L,
   "O Futuro da Educação", "https://youtu.be/RVMG5SYKM2I", 2021L,
   "Stakeholders e Cidades Inteligentes", "https://youtu.be/KoTZazPWpKA", 2021L,
   "Fluência de Dados e Carreira Profissional", "https://youtu.be/nAo1GS82Jv0", 2021L,
