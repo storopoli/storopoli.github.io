@@ -35,6 +35,8 @@ links:
     url: "https://storopoli.io/Rcpp"
   - label: '`r icons::icon_style(icons::fontawesome("python"), scale = 1.33, fill = "#FFD343")`<br>Ciência de Dados<br>pandas, Scikit-Learn,<br>TensorFlow e PyTorch'
     url: "https://storopoli.io/ciencia-de-dados"
+  - label: '`r icons::icon_style(icons::simple_icons("julia"), scale = 1.33, fill = "#9558B2")`<br>Workshop of Bayesian Inference<br> with Julia and Turing'
+    url: "https://storopoli.io/Turing-Workshop"
 output:
   postcards::jolla_blue
 ---
