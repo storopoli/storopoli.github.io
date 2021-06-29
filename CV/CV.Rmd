@@ -29,10 +29,11 @@ orcid_data <- do.call("bind_rows",
 
 # Professional Summary
 
-  * Associate Professor and Researcher at Universidade Nove de Julho - UNINOVE located in São Paulo - Brazil.
- * Teaches undergraduate and graduate courses in Statistics, Bayesian Statistics, Machine Learning, Deep Learning and Data Science using Julia, R, Python, Stan and C++.
+  * Associate Professor and Researcher of the Department of Computer Science at Universidade Nove de Julho - UNINOVE located in São Paulo - Brazil.
+ * Teaches undergraduate and graduate courses in Data Science, Statistics, Bayesian Statistics, Machine Learning and Deep Learning using Julia, R, Python, Stan and C++.
  * Researches, publishes and advises PhD candidates on topics about Bayesian Statistical Modeling and Machine Learning applied to Decision Making.
- * Certified RStudio Tidyverse Instructor.
+ * Certified RStudio Tidyverse Instructor.\
+ * Author of the upcoming open source and open access [Julia Data Science Book](https://juliadatascience.io). 
 
 # Education
 
@@ -51,9 +52,9 @@ orcid_data %>%
 ```{r courses}
 tibble::tribble(
   ~name, ~year,  ~link, ~language,
-  "Estatística Bayesiana - Bayesian Statistics", 2021L,  "https://storopoli.io/Estatistica-Bayesiana", "R and Stan",
+  "Ciência de Dados e Computação Científica", 2021L, "https://storopoli.io/Computacao-Julia", "Julia",
   "Bayesian Statistics", 2021L,  "https://storopoli.io/Bayesian-Julia", "Julia",
-  "Computação Científica", 2021L, "https://storopoli.io/Computacao-Julia", "Julia",
+  "Estatística Bayesiana - Bayesian Statistics", 2021L,  "https://storopoli.io/Estatistica-Bayesiana", "R and Stan",
   "Ciência de Dados - Data Science", 2021L, "https://storopoli.io/ciencia-de-dados", "Python",
   "Estatística - Statistics", 2020L, "https://storopoli.io/Estatistica", "R",
 ) %>%

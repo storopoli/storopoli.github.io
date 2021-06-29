@@ -23,20 +23,22 @@ links:
     url: https://scholar.google.com/citations?user=xGU7H1QAAAAJ&hl=en
   - label: <i class="ai ai-lattes ai-2x"></i>
     url: http://lattes.cnpq.br/2281909649311607
+  - label: '`r icons::icon_style(icons::simple_icons("julia"), scale = 1.33, fill = "#B452CD")`<br>Julia Data Science'
+    url: "https://juliadatascience.io"
   - label: '`r icons::icon_style(icons::simple_icons("julia"), scale = 1.33, fill = "#B452CD")`<br>Bayesian Statistics<br> using Julia and Turing'
     url: "https://storopoli.io/Bayesian-Julia"
-  - label: '`r icons::icon_style(icons::simple_icons("julia"), scale = 1.33, fill = "#9558B2")`<br>Computação Científica<br> com Julia'
+  - label: '`r icons::icon_style(icons::simple_icons("julia"), scale = 1.33, fill = "#9558B2")`<br>Ciência de Dados e<br>Computação Científica<br> com Julia'
     url: "https://storopoli.io/Computacao-Cientifica"
-  - label: '`r icons::icon_style(icons::fontawesome("r-project"), scale = 1.33, fill = "steelblue")`<br>Estatística com R'
-    url: "https://storopoli.io/Estatistica"
-  - label: '`r icons::icon_style(icons::fontawesome("r-project"), scale = 1.33, fill = "steelblue")`<br>Estatística Bayesiana<br>com R e Stan'
-    url: "https://storopoli.io/Estatistica-Bayesiana"
-  - label: '`r icons::icon_style(icons::fontawesome("r-project"), scale = 1.33, fill = "steelblue")`<br>Rcpp'
-    url: "https://storopoli.io/Rcpp"
-  - label: '`r icons::icon_style(icons::fontawesome("python"), scale = 1.33, fill = "#FFD343")`<br>Ciência de Dados<br>pandas, Scikit-Learn,<br>TensorFlow e PyTorch'
-    url: "https://storopoli.io/ciencia-de-dados"
   - label: '`r icons::icon_style(icons::simple_icons("julia"), scale = 1.33, fill = "#9558B2")`<br>Workshop of Bayesian Inference<br> with Julia and Turing'
     url: "https://storopoli.io/Turing-Workshop"
+  - label: '`r icons::icon_style(icons::fontawesome("r-project"), scale = 1.33, fill = "steelblue")`<br>Estatística Bayesiana<br>com R e Stan'
+    url: "https://storopoli.io/Estatistica-Bayesiana"
+  - label: '`r icons::icon_style(icons::fontawesome("python"), scale = 1.33, fill = "#FFD343")`<br>Ciência de Dados<br>pandas, Scikit-Learn,<br>TensorFlow e PyTorch'
+    url: "https://github.com/storopoli/ciencia-de-dados"
+  - label: '`r icons::icon_style(icons::fontawesome("r-project"), scale = 1.33, fill = "steelblue")`<br>Estatística com R'
+    url: "https://storopoli.io/Estatistica"
+  - label: '`r icons::icon_style(icons::fontawesome("r-project"), scale = 1.33, fill = "steelblue")`<br>Rcpp'
+    url: "https://storopoli.io/Rcpp"
 output:
   postcards::jolla_blue
 ---
@@ -54,4 +56,10 @@ output:
 <!--Academicons Icons-->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
 
-Associate Professor and Researcher at Universidade Nove de Julho - UNINOVE located in São Paulo - Brazil. Teaches undergraduate and graduate courses in Statistics, Bayesian Statistics, Machine Learning, Deep Learning and Data Science using Julia, R, Python, Stan and C++.  Researches, publishes and advises PhD candidates on topics about Bayesian Statistical Modeling and Machine Learning applied to Decision Making. Certified RStudio Tidyverse Instructor.
+Associate Professor and Researcher of the Department of Computer Science at Universidade Nove de Julho - UNINOVE located in São Paulo - Brazil.
+
+Teaches undergraduate and graduate courses in Data Science, Statistics, Bayesian Statistics, Machine Learning and Deep Learning using Julia, R, Python, Stan and C++.
+
+Researches, publishes and advises PhD candidates on topics about Bayesian Statistical Modeling and Machine Learning applied to Decision Making. Certified 
+
+RStudio Tidyverse Instructor.
