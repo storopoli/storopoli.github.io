@@ -32,7 +32,7 @@ orcid_data <- do.call("bind_rows",
   * Associate Professor and Researcher of the Department of Computer Science at Universidade Nove de Julho - UNINOVE located in São Paulo - Brazil.
  * Teaches undergraduate and graduate courses in Data Science, Statistics, Bayesian Statistics, Machine Learning and Deep Learning using Julia, R, Python, Stan and C++.
  * Researches, publishes and advises PhD candidates on topics about Bayesian Statistical Modeling and Machine Learning applied to Decision Making.
- * Certified RStudio Tidyverse Instructor.\
+ * Certified RStudio Tidyverse Instructor.
  * Author of the upcoming open source and open access [Julia Data Science Book](https://juliadatascience.io). 
 
 # Education
