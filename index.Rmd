@@ -37,6 +37,8 @@ links:
     url: "https://github.com/storopoli/ciencia-de-dados"
   - label: '`r icons::icon_style(icons::fontawesome("r-project"), scale = 1.33, fill = "steelblue")`<br>Estatística com R'
     url: "https://storopoli.io/Estatistica"
+  - label: '`r icons::icon_style(icons::fontawesome("r-project"), scale = 1.33, fill = "steelblue")`<br>Ciência de Dados<br>com R e tidyverse'
+    url: "https://storopoli.io/Linguagem-R"
   - label: '`r icons::icon_style(icons::fontawesome("r-project"), scale = 1.33, fill = "steelblue")`<br>Rcpp'
     url: "https://storopoli.io/Rcpp"
 output:
