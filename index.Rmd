@@ -23,7 +23,7 @@ links:
     url: https://scholar.google.com/citations?user=xGU7H1QAAAAJ&hl=en
   - label: <i class="ai ai-lattes ai-2x"></i>
     url: http://lattes.cnpq.br/2281909649311607
-  - label: '`r icons::icon_style(icons::simple_icons("julia"), scale = 1.33, fill = "#B452CD")`<br>Julia Data Science'
+  - label: '`r icons::icon_style(icons::simple_icons("julia"), scale = 1.33, fill = "#B452CD")`<br>Julia Data Science<br> Book'
     url: "https://juliadatascience.io"
   - label: '`r icons::icon_style(icons::simple_icons("julia"), scale = 1.33, fill = "#B452CD")`<br>Bayesian Statistics<br> using Julia and Turing'
     url: "https://storopoli.io/Bayesian-Julia"
@@ -64,4 +64,4 @@ Teaches undergraduate and graduate courses in Data Science, Statistics, Bayesian
 
 Researches, publishes and advises PhD candidates on topics about Bayesian Statistical Modeling and Machine Learning applied to Decision Making.
 
-Certified RStudio Tidyverse Instructor.
+Coauthor of Julia Data Science upcoming book. Certified RStudio Tidyverse Instructor.
