@@ -22,7 +22,7 @@ cover = true
   <!-- button CV academicons -->
   <a
     href="https://storopoli.github.io/CV/CV.pdf"
-    class="btn btn-outline-dark btn-lg btn-secondary fw-bold border-camb bg-oxb text-camb mb-2"
+    class="btn btn-outline-dark btn btn-secondary fw-bold border-camb bg-oxb text-camb mb-2"
   >
   <i class="ai ai-cv ai-2x"></i>
   </a>
@@ -30,35 +30,35 @@ cover = true
   <!-- buttons fontawesome -->
   <a
     href="https://github.com/storopoli"
-    class="btn btn-outline-dark btn-lg btn-secondary fw-bold border-camb bg-oxb text-camb mb-2"
+    class="btn btn-outline-dark btn btn-secondary fw-bold border-camb bg-oxb text-camb mb-2"
   >
   <i class="fab fa-github fa-2x"></i>
   </a>
 
   <a
     href="https://twitter.com/JoseStoropoli"
-    class="btn btn-outline-dark btn-lg btn-secondary fw-bold border-camb bg-oxb text-camb mb-2"
+    class="btn btn-outline-dark btn btn-secondary fw-bold border-camb bg-oxb text-camb mb-2"
   >
   <i class="fab fa-twitter fa-2x"></i>
   </a>
 
   <a
     href="https://www.linkedin.com/in/storopoli"
-    class="btn btn-outline-dark btn-lg btn-secondary fw-bold border-camb bg-oxb text-camb mb-2"
+    class="btn btn-outline-dark btn btn-secondary fw-bold border-camb bg-oxb text-camb mb-2"
   >
   <i class="fab fa-linkedin fa-2x"></i>
   </a>
 
   <a
     href="https://www.youtube.com/channel/UCXJBhNvt4HUtPr0tR7w1r0g"
-    class="btn btn-outline-dark btn-lg btn-secondary fw-bold border-camb bg-oxb text-camb mb-2"
+    class="btn btn-outline-dark btn btn-secondary fw-bold border-camb bg-oxb text-camb mb-2"
   >
   <i class="fab fa-youtube fa-2x"></i>
   </a>
 
   <a
     href="mailto:thestoropoli@gmail.com"
-    class="btn btn-outline-dark btn-lg btn-secondary fw-bold border-camb bg-oxb text-camb mb-2"
+    class="btn btn-outline-dark btn btn-secondary fw-bold border-camb bg-oxb text-camb mb-2"
   >
   <i class="fas fa-paper-plane fa-2x"></i>
   </a>
@@ -66,20 +66,20 @@ cover = true
   <!-- buttons academicons -->
   <a
     href="https://orcid.org/0000-0002-0559-5176"
-    class="btn btn-outline-dark btn-lg btn-secondary fw-bold border-camb bg-oxb text-camb mb-2"
+    class="btn btn-outline-dark btn btn-secondary fw-bold border-camb bg-oxb text-camb mb-2"
   >
   <i class="ai ai-orcid ai-2x"></i>
   </a>
 
   <a
     href="https://scholar.google.com/citations?user=xGU7H1QAAAAJ&hl=en"
-    class="btn btn-outline-dark btn-lg btn-secondary fw-bold border-camb bg-oxb text-camb mb-2"
+    class="btn btn-outline-dark btn btn-secondary fw-bold border-camb bg-oxb text-camb mb-2"
   >
   <i class="ai ai-google-scholar ai-2x"></i>
   </a>
   <a
     href="http://lattes.cnpq.br/2281909649311607"
-    class="btn btn-outline-dark btn-lg btn-secondary fw-bold border-camb bg-oxb text-camb mb-2"
+    class="btn btn-outline-dark btn btn-secondary fw-bold border-camb bg-oxb text-camb mb-2"
   >
   <i class="ai ai-lattes ai-2x"></i>
   </a>
@@ -92,64 +92,64 @@ cover = true
   <!-- buttons Julia -->
   <a
     href="https://juliadatascience.io"
-    class="btn btn-outline-dark btn-lg btn-secondary fw-bold border-camb bg-oxb text-camb mb-2"
+    class="btn btn-custom btn-outline-dark btn btn-secondary fw-bold border-camb bg-oxb text-camb mb-2"
   >
   <img src="../assets/icons/julia-dots.svg" height="30">
   </img><br>
-  Julia Data Science<br>Book
+  Julia for Data Science Book
   </a>
 
   <a
     href="https://storopoli.io/Bayesian-Julia"
-    class="btn btn-outline-dark btn-lg btn-secondary fw-bold border-camb bg-oxb text-camb mb-2"
+    class="btn btn-custom btn-outline-dark btn btn-secondary fw-bold border-camb bg-oxb text-camb mb-2"
   >
   <img src="../assets/icons/julia-dots.svg" height="30">
   </img><br>
-  Bayesian Statistics<br>using Julia and Turing
+  Bayesian Statistics using Julia and Turing
   </a>
 
   <a
     href="https://storopoli.io/Computacao-Cientifica"
-    class="btn btn-outline-dark btn-lg btn-secondary fw-bold border-camb bg-oxb text-camb mb-2"
+    class="btn btn-custom btn-outline-dark btn btn-secondary fw-bold border-camb bg-oxb text-camb mb-2"
   >
   <img src="../assets/icons/julia-dots.svg" height="30">
   </img><br>
-  Ciência de Dados e<br>Computação Científica<br>com Julia
+  Ciência de Dados e Computação Científica com Julia
   </a>
 
   <a
     href="https://storopoli.io/Turing-Workshop"
-    class="btn btn-outline-dark btn-lg btn-secondary fw-bold border-camb bg-oxb text-camb mb-2"
+    class="btn btn-custom btn-outline-dark btn btn-secondary fw-bold border-camb bg-oxb text-camb mb-2"
   >
   <img src="../assets/icons/julia-dots.svg" height="30">
   </img><br>
-  Workshop of Bayesian<br>Inference with<br>Julia and Turing
+  Workshop of Bayesian Inference with Julia and Turing
   </a>
 
   <!-- button R -->
   <a
     href="https://storopoli.io/Estatistica-Bayesiana"
-    class="btn btn-outline-dark btn-lg btn-secondary fw-bold border-camb bg-oxb text-camb mb-2"
+    class="btn btn-custom btn-outline-dark btn btn-secondary fw-bold border-camb bg-oxb text-camb mb-2"
   >
   <img src="../assets/icons/R.svg" height="30">
   </img><br>
-  Estatística Bayesiana<br>com R e Stan
+  Estatística Bayesiana com R e Stan
   </a>
 
   <!-- button Python -->
   <a
     href="https://github.com/storopoli/ciencia-de-dados"
-    class="btn btn-outline-dark btn-lg btn-secondary fw-bold border-camb bg-oxb text-camb mb-2"
+    class="btn btn-custom btn-outline-dark btn-secondary fw-bold border-camb bg-oxb text-camb mb-2"
   >
   <img src="../assets/icons/Python.svg" height="30">
   </img><br>
-  Ciência de Dados<br>pandas, Scikit-Learn,<br>TensorFlow e PyTorch
+  Ciência de Dados pandas, Scikit-Learn, TensorFlow e PyTorch
   </a>
 
   <!-- buttons R -->
   <a
     href="https://storopoli.io/Estatistica"
-    class="btn btn-outline-dark btn-lg btn-secondary fw-bold border-camb bg-oxb text-camb mb-2"
+    class="btn btn-custom btn-outline-dark btn-secondary fw-bold border-camb bg-oxb text-camb mb-2"
   >
   <img src="../assets/icons/R.svg" height="30">
   </img><br>
@@ -158,16 +158,16 @@ cover = true
 
   <a
     href="https://storopoli.io/Linguagem-R"
-    class="btn btn-outline-dark btn-lg btn-secondary fw-bold border-camb bg-oxb text-camb mb-2"
+    class="btn btn-custom btn-outline-dark btn-secondary fw-bold border-camb bg-oxb text-camb mb-2"
   >
   <img src="../assets/icons/R.svg" height="30">
   </img><br>
-  Ciência de Dados<br>com R e tidyverse
+  Ciência de Dados com R e tidyverse
   </a>
 
   <a
     href="https://storopoli.io/Rcpp"
-    class="btn btn-outline-dark btn-lg btn-secondary fw-bold border-camb bg-oxb text-camb mb-2"
+    class="btn btn-custom btn-outline-dark btn-secondary align-items-center fw-bold border-camb bg-oxb text-camb mb-2"
   >
   <img src="../assets/icons/R.svg" height="30">
   </img><br>

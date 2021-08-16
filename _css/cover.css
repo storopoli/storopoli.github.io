@@ -33,6 +33,17 @@ body {
   margin-right: auto;
 }
 
+.btn {
+    max-width:11.1em;
+    max-height: 8.5em;
+}
+
+.btn-custom {
+  height: 8.5em;
+  min-width: 11.1em;
+  text-align: center;
+}
+
 
 /*
  * Header
