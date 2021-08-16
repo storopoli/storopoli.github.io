@@ -8,11 +8,16 @@ on:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+    env:
+        JULIA_NUM_THREADS: 2
     steps:
     - name: Checkout
       uses: actions/checkout@v2
       with:
         persist-credentials: false
+    - name: Install Node
+      uses: actions/setup-node@v2
+    - run: npm install highlight.js
     # NOTE: Python is necessary for the pre-rendering (minification) step
     - name: Install python
       uses: actions/setup-python@v2
@@ -35,15 +40,15 @@ jobs:
     #   specific arguments, see the documentation or ?optimize in the REPL.
     - run: julia -e '
             using Pkg; Pkg.activate("."); Pkg.instantiate();
-            using NodeJS; run(`$(npm_cmd()) install highlight.js purgecss`);
-            Pkg.add(Pkg.PackageSpec(name="Franklin", rev="master"));
+            using NodeJS; run(`$(npm_cmd()) install highlight.js`);
             using Franklin;
-            optimize();
-            io = IOBuffer();
-            run(pipeline(`$(NodeJS.npm_cmd()) root`, stdout=io));
-            nodepath = String(take!(io));
-            run(`bash -c "$(strip(nodepath))/purgecss/bin/purgecss.js --css __site/css/bootstrap.min.css --content __site/index.html __site/about/*.html __site/tags/*.html  --output __site/css/bootstrap.min.css"`);
-            '
+            optimize(); verify_links();' > build.log
+      env:
+          # Allows the use of unicode characters in Plots.jl
+          GKS_ENCODING: "utf8"
+          # Fixes 'GKS: can't connect to GKS socket application' errors
+          # and quality of output plots in GR back end.
+          GKSwstype: "100"
     - name: Build and Deploy
       uses: JamesIves/github-pages-deploy-action@releases/v3
       with:
