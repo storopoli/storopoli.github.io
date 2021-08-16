@@ -1,0 +1,171 @@
+---
+name: Jose
+surname: Storopoli
+qualifications: PhD
+position: "Chief Data Scientist and Associate Professor"
+address: "Universidade Nove de Julho - UNINOVE - São Paulo - Brazil"
+profilepic: pic.png
+phone: +55 11 3385-9219
+www: storopoli.io
+email: "josees@uni9.pro.br"
+twitter: JoseStoropoli
+github: storopoli
+linkedin: storopoli
+date: "`r format(Sys.time(), '%B %Y')`"
+headcolor: 414141
+output: vitae::awesomecv
+---
+
+```{r setup, include=FALSE}
+library(magrittr)
+library(vitae)
+library(dplyr)
+library(stringr)
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+orcid_data <- do.call("bind_rows",
+  rorcid::orcid_educations("0000-0002-0559-5176")$`0000-0002-0559-5176`$`affiliation-group`$summaries
+) %>% dplyr::select_if(function(x) {!all(is.na(x))})
+```
+
+# Professional Summary
+
+  * Associate Professor and Researcher of the Department of Computer Science at Universidade Nove de Julho - UNINOVE located in São Paulo - Brazil.
+ * Teaches undergraduate and graduate courses in Data Science, Statistics, Bayesian Statistics, Machine Learning and Deep Learning using Julia, R, Python, Stan and C++.
+ * Researches, publishes and advises PhD candidates on topics about Bayesian Statistical Modeling and Machine Learning applied to Decision Making.
+ * Certified RStudio Tidyverse Instructor.
+ * Author of the upcoming open source and open access [Julia Data Science Book](https://juliadatascience.io). 
+
+# Education
+
+```{r education}
+orcid_data %>%
+  detailed_entries(
+    what = `education-summary.role-title`,
+    when = glue::glue("{`education-summary.start-date.year.value`} - {`education-summary.end-date.year.value`}"),
+    with = `education-summary.organization.name`,
+    where = `education-summary.organization.address.city`
+  )
+```
+
+# Courses
+
+```{r courses}
+tibble::tribble(
+  ~name, ~year,  ~link, ~language,
+  "Ciência de Dados e Computação Científica", 2021L, "https://storopoli.io/Computacao-Julia", "Julia",
+  "Bayesian Statistics", 2021L,  "https://storopoli.io/Bayesian-Julia", "Julia",
+  "Estatística Bayesiana - Bayesian Statistics", 2021L,  "https://storopoli.io/Estatistica-Bayesiana", "R and Stan",
+  "Ciência de Dados - Data Science", 2021L, "https://storopoli.io/ciencia-de-dados", "Python",
+  "Estatística - Statistics", 2020L, "https://storopoli.io/Estatistica", "R",
+) %>%
+  detailed_entries(
+    what = language,
+    when = year,
+    with = name,
+    why = link
+  )
+```
+
+# Certifications
+
+```{r certifications}
+tibble::tribble(
+                            ~certification,               ~issuer, ~year,
+      "Tidyverse Instructor Certification",             "RStudio", 2020L,
+  "Generative Adversarial Networks (GANs)",            "Coursera", 2020L,
+               "Machine Learning Engineer",             "Udacity", 2020L,
+       "Computational Modeling with Julia",       "Julia Academy", 2020L,
+                     "Python Data Analyst",            "DataCamp", 2019L,
+                       "Python Programmer",            "DataCamp", 2018L,
+                        "R Data Scientist",            "DataCamp", 2018L,
+               "Improving Neural Networks",            "Coursera", 2018L,
+       "Neural Networks and Deep Learning",            "Coursera", 2018L,
+                        "Machine Learning", "Stanford University", 2018L,
+      "Structural Equation Modeling (SEM)",                 "FGV", 2018L
+  ) %>%
+  detailed_entries(
+    what = issuer,
+    with = certification,
+    when = year
+  )
+```
+
+
+# Talks
+
+```{r talks}
+tibble::tribble(
+  ~title, ~link, ~year,
+  "Bayesian Statistics using Turing.jl and Julia Language
+", "https://youtu.be/CKSxxJ7RdAU", 2021L,
+  "O Futuro da Educação", "https://youtu.be/RVMG5SYKM2I", 2021L,
+  "Stakeholders e Cidades Inteligentes", "https://youtu.be/KoTZazPWpKA", 2021L,
+  "Fluência de Dados e Carreira Profissional", "https://youtu.be/nAo1GS82Jv0", 2021L,
+  "Vida familiar durante la pandemia del coronavirus en América Latina", "https://youtu.be/0thhpSKt5BM", 2020L,
+  "Observatório de Políticas Públicas", "https://www.youtube.com/watch?v=FUSnGUWKZJs", 2020L,
+  "Gestão urbana e o papel da ciência de dados", "https://youtu.be/qS3xT1e-3F4", 2020L,
+  "Ensinando Data Science no Ensino Superior com Python", "https://youtu.be/Aktd_TFYhvI", 2020L,
+  "Inteligência Artificial e Desenvolvimento Urbano Sustentável", "https://youtu.be/QBbgTOHHdZI?t=5631", 2020L,
+  "O que é a Ciência de Dados", "https://youtu.be/08uZiJSX_0E", 2020L,
+  "Qual é o papel das universidades no desenvolvimento de cidades inteligentes e sustentáveis?", "https://youtu.be/BAqBTlfBvP8", 2019L
+) %>%
+  detailed_entries(
+    what = title,
+    when = year,
+    why = link
+  )
+```
+
+
+# Software
+
+```{r github-contribs, echo=FALSE, message=FALSE, warning=FALSE, results='hide'}
+today <- lubridate::today()
+year_before <- lubridate::as_date(today - lubridate::years(1))
+token <- Sys.getenv("GITHUB_PAT")
+con <- ghql::GraphqlClient$new(
+  url = "https://api.github.com/graphql",
+  headers = list(Authorization = paste0("Bearer ", token))
+)
+qry <- ghql::Query$new()
+query_text <- glue::glue('{user(login: "storopoli") {
+    email
+    createdAt
+    contributionsCollection(from: "<< str_c(year_before, "T00:00:00Z") >>", to: "<< str_c(today, "T00:00:00Z")>> ") {
+      contributionCalendar {
+        totalContributions
+      }
+    }
+  }
+}', .open = "<<", .close = ">>")
+qry$query("mycontrib", query_text)
+(contribs <- con$exec(qry$queries$mycontrib))
+total_contribs <- jsonlite::fromJSON(contribs)$data$user$contributionsCollection$contributionCalendar$totalContributions
+```
+
+* Total GitHub Contributions: `r total_contribs`
+
+```{r softwares}
+pkgsearch::ps("Storopoli", size = 100) %>%
+  filter(purrr::map_lgl(package_data, ~ grepl("Storopoli", .x$Author, fixed = TRUE))) %>%
+  dplyr::as_tibble() %>%
+  detailed_entries(
+    with = package,
+    what = title,
+    when = lubridate::year(date),
+    why = downloads_last_month
+  )
+```
+
+# Publications
+
+```{r publications}
+scholar::get_publications("xGU7H1QAAAAJ") %>%
+  dplyr::as_tibble() %>%
+  filter(journal != "") %>%
+  detailed_entries(
+    what = title,
+    with = journal,
+    when = year
+  )
+```
