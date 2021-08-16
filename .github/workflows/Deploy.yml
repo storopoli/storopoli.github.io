@@ -13,6 +13,14 @@ jobs:
       uses: actions/checkout@v2
       with:
         persist-credentials: false
+    # NOTE: Python is necessary for the pre-rendering (minification) step
+    - name: Install python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.9'
+    # NOTE: Here you can install dependencies such as matplotlib if you use
+    # packages such as PyPlot.
+    #- run: pip install matplotlib
     - name: Install Julia
       uses: julia-actions/setup-julia@v1
       with:
@@ -34,7 +42,7 @@ jobs:
             io = IOBuffer();
             run(pipeline(`$(NodeJS.npm_cmd()) root`, stdout=io));
             nodepath = String(take!(io));
-            run(`bash -c "$(strip(nodepath))/purgecss/bin/purgecss.js --css __site/css/bootstrap.min.css --content __site/index.html __site/about/*.html __site/tags/*.html __site/posts/**/*.html  --output __site/css/bootstrap.min.css"`);
+            run(`bash -c "$(strip(nodepath))/purgecss/bin/purgecss.js --css __site/css/bootstrap.min.css --content __site/index.html __site/about/*.html __site/tags/*.html  --output __site/css/bootstrap.min.css"`);
             '
     - name: Build and Deploy
       uses: JamesIves/github-pages-deploy-action@releases/v3
