@@ -161,15 +161,15 @@
 %                Configuration for fonts
 %-------------------------------------------------------------------------------
 % Set the FontAwesome font to be up-to-date.
-\newfontfamily\FA[Path=\@fontdir]{FontAwesome}
+% \newfontfamily\FA[Path=\@fontdir]{FontAwesome}
 % Set font for header (default is Roboto)
-\newfontfamily\headerfont[
-  Path=\@fontdir,
-  UprightFont=*-Regular,
-  ItalicFont=*-Italic,
-  BoldFont=*-Bold,
-  BoldItalicFont=*-BoldItalic,
-]{Roboto}
+% \newfontfamily\headerfont[
+%   Path=\@fontdir,
+%   UprightFont=*-Regular,
+%   ItalicFont=*-Italic,
+%   BoldFont=*-Bold,
+%   BoldItalicFont=*-BoldItalic,
+% ]{Roboto}
 
 \newfontfamily\headerfontlight[
   Path=\@fontdir,
@@ -595,7 +595,7 @@
 }
 % Define an entry of cv information
 % Usage: \cventry{<position>}{<title>}{<location>}{<date>}{<description>}
-\newcommand*{\cventry}[5]{%
+\newcommand*{\cventry}[4]{%
   \vspace{-2.0mm}
   \setlength\tabcolsep{0pt}
   \setlength{\extrarowheight}{0pt}
@@ -604,7 +604,6 @@
       {\entrypositionstyle{#1} & \entrydatestyle{#4} \\}
       {\entrytitlestyle{#2} & \entrylocationstyle{#3} \\
       \entrypositionstyle{#1} & \entrydatestyle{#4} \\}
-    \multicolumn{2}{L{\textwidth}}{\descriptionstyle{#5}}
   \end{tabular*}%
 }
 
