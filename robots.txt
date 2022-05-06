@@ -1,4 +1,4 @@
-Sitemap: https://storopoli.io/sitemap.xml
+Sitemap: https://storopoli.github.io/sitemap.xml
 
 User-agent: *
 Disallow:
