@@ -1,4 +1,0 @@
-Sitemap: https://storopoli.github.io/sitemap.xml
-
-User-agent: *
-Disallow:
