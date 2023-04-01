@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Tags on Jose Storopoli, PhD</title>
+    <link>https://storopoli.io/tags/</link>
+    <description>Recent content in Tags on Jose Storopoli, PhD</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)</copyright><atom:link href="https://storopoli.io/tags/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

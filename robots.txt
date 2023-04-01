@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://storopoli.io/sitemap.xml
