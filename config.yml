@@ -76,7 +76,7 @@ params:
     - name: rss
       url: /index.xml
     - name: pgpkey
-      url: "publickey.txt"
+      url: "/assets/publickey.txt"
 
   cover:
     hidden: true # hide everywhere but not in structured data
