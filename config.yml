@@ -45,12 +45,13 @@ params:
   assets:
     disableHLJS: true
     disableFingerprinting: false
+    favicon: "/assets/favicon.ico"
   
   profileMode:
     enabled: true
     #Title: "Hi I am Jose Storopoli"
     Subtitle: "Computational Statistician, Pharmacometrician, STEM Educator, Opensource Contributor."
-    imageUrl: "pp.jpeg"
+    imageUrl: "/assets/pp.jpeg"
     imageTitle: "Profile Pic"
   
     buttons:
