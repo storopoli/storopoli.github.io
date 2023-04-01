@@ -10,7 +10,6 @@ buildFuture: false
 buildExpired: false
 enableGitInfo: true
 
-
 permalinks:
   posts: "/:filename"
 
@@ -47,9 +46,20 @@ params:
     disableHLJS: true
     disableFingerprinting: false
   
-  homeInfoParams:
-    Title: "Computational Statistician, Pharmacometrician, STEM Educator, Opensource Contributor."
-    Content: "Director of Training and Education at Pumas-AI and Associate Professor of Computer Science at Universidade Nove de Julho"
+  profileMode:
+    enabled: true
+    #Title: "Hi I am Jose Storopoli"
+    Subtitle: "Computational Statistician, Pharmacometrician, STEM Educator, Opensource Contributor."
+    imageUrl: "pp.jpeg"
+    imageTitle: "Profile Pic"
+  
+    buttons:
+      - name: "Posts"
+        url: "/posts"
+      - name: "Julia for Data Science"
+        url: "https://juliadatascience.io/"
+      - name: "Bayesian Statistics"
+        url: "https://github.com/storopoli/Bayesian-Statistics"
 
   socialIcons:
     - name: cv
@@ -101,15 +111,15 @@ markup:
 
 menu:
   main:
-    - identifier: tags
-      name: tags
-      url: /tags/
-      weight: 10
     - identifier: about
       name: about
       url: /about/
-      weight: 20
+      weight: 10
+    - identifier: cv
+      name: cv
+      url: https://github.com/storopoli/Bayesian-Statistics
+      weight: 10
     - identifier: Search
       name: search
       url: /search/
-      weight: 30
+      weight: 20

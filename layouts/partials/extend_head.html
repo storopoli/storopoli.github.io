@@ -1,1 +1,6 @@
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self'; script-src 'self'; font-src 'self'; style-src 'self'; connect-src 'self'; form-action 'none'; block-all-mixed-content; base-uri 'none'">
+<!-- this disables any javascript, including KaTeX -->
+<!-- <meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self'; script-src 'self'; font-src 'self'; style-src 'self'; connect-src 'self'; form-action 'none'; block-all-mixed-content; base-uri 'none'"> -->
+
+{{ if or .Params.math .Site.Params.math }}
+    {{ partial "math.html" . }}
+{{ end }}
