@@ -3,13 +3,11 @@ title: "About"
 hidemeta: true
 ---
 
-Associate Professor and Researcher of the [Department of Computer Science](https://uninove.br/ppgi) at [Universidade Nove de Julho - UNINOVE](https://uninove.br) located in São Paulo - Brazil.
 Director of Education and Training at [Pumas-AI](https://pumas.ai).
+Associate Professor at [Universidade Nove de Julho](https://uninove.br).
 
-Teaches undergraduate and graduate courses in Data Science, Statistics, Bayesian Statistics, Machine Learning and Deep Learning using `Julia`, `R`, `Python`, and `Stan`.
-Contributor to `Julia`, `R` and `Stan` ecosystems.
-
-Researches, publishes and advises PhD candidates on topics about Bayesian Statistical Modeling and Machine Learning applied to Decision Making.
+Open source and open access graduate course on
+[Bayesian Statistics](https://github.com/storopoli/Bayesian-Statistics) with `Stan` and `Turing.jl` code examples.
 
 Coauthor of [Julia Data Science book](https://juliadatascience.io/).
 Directs the development of education and training materials for Pumas users in Julia.
