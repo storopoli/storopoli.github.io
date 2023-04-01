@@ -118,7 +118,7 @@ menu:
       weight: 10
     - identifier: cv
       name: cv
-      url: https://github.com/storopoli/Bayesian-Statistics
+      url: https://github.com/storopoli/cv/raw/main/build/cv/cv.pdf
       weight: 10
     - identifier: Search
       name: search
