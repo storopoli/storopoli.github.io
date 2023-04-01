@@ -13,14 +13,13 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://storopoli.io/about/</guid>
-      <description>Associate Professor and Researcher of the Department of Computer Science at Universidade Nove de Julho - UNINOVE located in São Paulo - Brazil. Director of Education and Training at Pumas-AI.
-Teaches undergraduate and graduate courses in Data Science, Statistics, Bayesian Statistics, Machine Learning and Deep Learning using Julia, R, Python, and Stan. Contributor to Julia, R and Stan ecosystems.
-Researches, publishes and advises PhD candidates on topics about Bayesian Statistical Modeling and Machine Learning applied to Decision Making.</description>
-      <content:encoded><![CDATA[<p>Associate Professor and Researcher of the <a href="https://uninove.br/ppgi">Department of Computer Science</a> at <a href="https://uninove.br">Universidade Nove de Julho - UNINOVE</a> located in São Paulo - Brazil.
-Director of Education and Training at <a href="https://pumas.ai">Pumas-AI</a>.</p>
-<p>Teaches undergraduate and graduate courses in Data Science, Statistics, Bayesian Statistics, Machine Learning and Deep Learning using <code>Julia</code>, <code>R</code>, <code>Python</code>, and <code>Stan</code>.
-Contributor to <code>Julia</code>, <code>R</code> and <code>Stan</code> ecosystems.</p>
-<p>Researches, publishes and advises PhD candidates on topics about Bayesian Statistical Modeling and Machine Learning applied to Decision Making.</p>
+      <description>Director of Education and Training at Pumas-AI. Associate Professor at Universidade Nove de Julho.
+Open source and open access graduate course on Bayesian Statistics with Stan and Turing.jl code examples.
+Coauthor of Julia Data Science book. Directs the development of education and training materials for Pumas users in Julia. Member of the Turing.jl Developer Team. Certified RStudio Tidyverse Instructor.</description>
+      <content:encoded><![CDATA[<p>Director of Education and Training at <a href="https://pumas.ai">Pumas-AI</a>.
+Associate Professor at <a href="https://uninove.br">Universidade Nove de Julho</a>.</p>
+<p>Open source and open access graduate course on
+<a href="https://github.com/storopoli/Bayesian-Statistics">Bayesian Statistics</a> with <code>Stan</code> and <code>Turing.jl</code> code examples.</p>
 <p>Coauthor of <a href="https://juliadatascience.io/">Julia Data Science book</a>.
 Directs the development of education and training materials for Pumas users in Julia.
 Member of the <a href="https://turing.ml/dev/team/"><code>Turing.jl</code> Developer Team</a>.
