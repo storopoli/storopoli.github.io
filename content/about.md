@@ -4,7 +4,6 @@ hidemeta: true
 ---
 
 Director of Education and Training at [Pumas-AI](https://pumas.ai).
-Associate Professor at [Universidade Nove de Julho](https://uninove.br).
 
 Open source and open access graduate course on
 [Bayesian Statistics](https://github.com/storopoli/Bayesian-Statistics) with `Stan` and `Turing.jl` code examples.
