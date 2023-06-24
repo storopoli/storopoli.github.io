@@ -20,7 +20,7 @@ minify:
 params:
   env: production
   title: "Jose Storopoli, PhD"
-  description: "Computational Statistician, Pharmacometrician, STEM Educator, Opensource Contributor"
+  description: "Computational Statistician, STEM Educator, Opensource Contributor"
   keywords: [Statistics, Math, Blog, Research, Security, Privacy]
   author: "Jose Storopoli"
   DateFormat: "January 2, 2006"
@@ -50,7 +50,7 @@ params:
   profileMode:
     enabled: true
     #Title: "Hi I am Jose Storopoli"
-    Subtitle: "Computational Statistician, Pharmacometrician, STEM Educator, Opensource Contributor."
+    Subtitle: "Computational Statistician, STEM Educator, Opensource Contributor."
     imageUrl: "/assets/pp.jpeg"
     imageTitle: "Profile Pic"
   
