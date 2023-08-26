@@ -55,8 +55,6 @@ params:
     imageTitle: "Profile Pic"
   
     buttons:
-      - name: "Posts"
-        url: "/posts"
       - name: "Julia for Data Science"
         url: "https://juliadatascience.io/"
       - name: "Bayesian Statistics"
@@ -67,14 +65,8 @@ params:
       url: "https://github.com/storopoli/cv/raw/main/build/cv/cv.pdf"
     - name: github
       url: "https://github.com/storopoli"
-    - name: linkedin
-      url: "https://www.linkedin.com/in/storopoli"
-    - name: youtube
-      url: "https://www.youtube.com/channel/UCXJBhNvt4HUtPr0tR7w1r0g"
     - name: email
       url: "mailto:jose@storopoli.io"
-    - name: rss
-      url: /index.xml
     - name: pgpkey
       url: "/assets/publickey.txt"
 
@@ -120,7 +112,3 @@ menu:
       name: cv
       url: https://github.com/storopoli/cv/raw/main/build/cv/cv.pdf
       weight: 10
-    - identifier: Search
-      name: search
-      url: /search/
-      weight: 20
