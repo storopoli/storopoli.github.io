@@ -1,0 +1,32 @@
+[devshell]
+packages = ["hugo", "ltex-ls", "dprint"]
+
+[[commands]]
+name = "dprint_init"
+help = "instantiate dprint"
+command = "dprint init"
+
+[[commands]]
+name = "serve"
+help = "serves the website with drafts enabled"
+command = "hugo serve -D"
+
+[[commands]]
+name = "post"
+help = "new content in 'content/posts/date-<title>'"
+command = "hugo new -k post content/posts/$(date -u +%Y-%m-%d)-$1.md"
+
+[[commands]]
+name = "post_folder"
+help = "new content in 'content/posts/date-<title>/index.md' with a folder template to add external resources"
+command = "hugo new -k post content/posts/$(date -u +%Y-%m-%d)-$1/index.md"
+
+[[commands]]
+name = "math_post"
+help = "new content in 'content/posts/date-<title>' with the math template"
+command = "hugo new -k post_math content/posts/$(date -u +%Y-%m-%d)-$1.md"
+
+[[commands]]
+name = "math_post_folder"
+help = "new content in 'content/posts/date-<title>/index.md' with the math template and folder template to add external resources"
+command = "hugo new -k post_math content/posts/$(date -u +%Y-%m-%d)-$1/index.md"
