@@ -26,7 +26,7 @@ params:
   DateFormat: "January 2, 2006"
   defaultTheme: dark # dark, light
   disableThemeToggle: false
-  defaultTheme: auto
+  defaultTheme: dark
 
   ShowReadingTime: true
   ShowShareButtons: false
@@ -62,7 +62,7 @@ params:
 
   socialIcons:
     - name: cv
-      url: "https://github.com/storopoli/cv/raw/main/build/cv/cv.pdf"
+      url: "https://github.com/storopoli/cv/releases/latest/download/cv.pdf"
     - name: github
       url: "https://github.com/storopoli"
     - name: email
@@ -110,5 +110,5 @@ menu:
       weight: 10
     - identifier: cv
       name: cv
-      url: https://github.com/storopoli/cv/raw/main/build/cv/cv.pdf
+      url: https://github.com/storopoli/cv/releases/latest/download/cv.pdf
       weight: 10
