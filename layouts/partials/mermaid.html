@@ -1,0 +1,8 @@
+<!-- MermaidJS support -->
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js" crossorigin="anonymous"></script>
+<script>
+    mermaid.initialize({
+        startOnLoad: true,
+        theme: localStorage.getItem("pref-theme") === "dark" ? "dark" : "default"
+    });
+</script>
