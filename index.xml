@@ -13,7 +13,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://storopoli.io/about/</guid>
-      <description>I am a computational statistician and an ardent Bayesian. I like Julia, Rust and Nix. I love math, computer science, coding, stats, and teaching. I hate bloatware and soydevs. My natural habit is the terminal. Everything that I is either open source or has a permissive Creative Commons license.
+      <description>I am a computational statistician and an ardent Bayesian. I like Julia, Rust and Nix. I love math, computer science, coding, stats, and teaching. I hate bloatware and soydevs. My natural habit is the terminal. Everything that I do is either open source or has a permissive Creative Commons license.
 Here&amp;rsquo;s a list of some resources that I&amp;rsquo;ve made or contributed:
 Julia Data Science book. Graduate course on Bayesian Statistics with Stan and Turing.</description>
       <content:encoded><![CDATA[<p>I am a computational statistician and an ardent <a href="https://youtu.be/RMNwsdb5VU4">Bayesian</a>.
@@ -21,7 +21,7 @@ I like <a href="https://julialang.org">Julia</a>, <a href="https://rust-lang.org
 I love math, computer science, coding, stats, and teaching.
 I hate bloatware and soydevs.
 My natural habit is the terminal.
-Everything that I is either open source or has a permissive Creative Commons license.</p>
+Everything that I do is either open source or has a permissive Creative Commons license.</p>
 <p>Here&rsquo;s a list of some resources that I&rsquo;ve made or contributed:</p>
 <ul>
 <li><a href="https://juliadatascience.io/">Julia Data Science book</a>.</li>
