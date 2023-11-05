@@ -3,12 +3,32 @@ title: "About"
 hidemeta: true
 ---
 
-Director of Education and Training at [Pumas-AI](https://pumas.ai).
+I am a computational statistician and an ardent [Bayesian](https://youtu.be/RMNwsdb5VU4).
+I like [Julia](https://julialang.org),
+[Rust](https://rust-lang.org/),
+[Neovim](https://neovim.org/),
+and [Nix](https://nixos.org).
+I love math, computer science, coding, stats, and teaching.
+I hate bloatware and soydevs.
+My natural habitat is the terminal.
+Everything that I do is either open source or has a permissive Creative Commons license.
 
-Open source and open access graduate course on
-[Bayesian Statistics](https://github.com/storopoli/Bayesian-Statistics) with `Stan` and `Turing.jl` code examples.
+Here's a list of some resources that I've made or contributed:
 
-Coauthor of [Julia Data Science book](https://juliadatascience.io/).
-Directs the development of education and training materials for Pumas users in Julia.
-Member of the [`Turing.jl` Developer Team](https://turing.ml/dev/team/).
-Certified [RStudio Tidyverse Instructor](https://education.rstudio.com/trainers/people/storopoli+jose/).
+- [Julia Data Science book](https://juliadatascience.io/).
+- [Graduate course on Bayesian Statistics](https://github.com/storopoli/Bayesian-Statistics)
+  with [`Stan`](https://mc-stan.org) and
+  [`Turing.jl`](https://turinglang.org) code examples.
+- [Bayesian Statistics with Julia and `Turing.jl`](https://storopoli.io/Bayesian-Julia)
+- [`TuringGLM.jl`](https://github.com/TuringLang/TuringGLM.jl)
+- [Data Science and Scientific Computing with Julia (Portuguese)](https://storopoli.io/Computacao-Cientifica/)
+- [Undergraduate course on Data Science, Machine Learning and Deep Learning (Portuguese)](https://github.com/storopoli/ciencia-de-dados)
+- [Why Julia? A gentle pitch](https://storopoli.io/Why-Julia)
+- [Graduate course on Statistics (Portuguese)](https://storopoli.io/Estatistica/)
+  with `R`
+- [`Rcpp` tutorials (Portuguese)](https://storopoli.io/Rcpp/)
+- [Topic Modeling workshop (Portuguese)](https://storopoli.io/topic-modeling-workshop/)
+
+I don't have social media, since I think they are overrated
+and "they sell your data".
+If you want to contact me, please send an email.
