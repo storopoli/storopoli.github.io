@@ -21,12 +21,11 @@ params:
   env: production
   title: "Jose Storopoli, PhD"
   description: "Computational Statistician, STEM Educator, Opensource Contributor"
-  keywords: [Statistics, Math, Blog, Research, Security, Privacy]
+  keywords: [statistics, Bayesian statistics, Julia, Rust, math, blog, research, security, privacy]
   author: "Jose Storopoli"
   DateFormat: "January 2, 2006"
   defaultTheme: dark # dark, light
   disableThemeToggle: false
-  defaultTheme: dark
 
   ShowReadingTime: true
   ShowShareButtons: false
@@ -49,16 +48,11 @@ params:
   
   profileMode:
     enabled: true
-    #Title: "Hi I am Jose Storopoli"
+    # Title: "Hi I am Jose Storopoli"
     Subtitle: "Computational Statistician, STEM Educator, Opensource Contributor."
     imageUrl: "/assets/pp.jpeg"
     imageTitle: "Profile Pic"
-  
-    buttons:
-      - name: "Julia for Data Science"
-        url: "https://juliadatascience.io/"
-      - name: "Bayesian Statistics"
-        url: "https://github.com/storopoli/Bayesian-Statistics"
+ 
 
   socialIcons:
     - name: cv
@@ -105,10 +99,18 @@ markup:
 menu:
   main:
     - identifier: about
-      name: about
+      name: About
       url: /about/
       weight: 10
+    - identifier: blog
+      name: Blog
+      url: posts/
+      weight: 10
     - identifier: cv
-      name: cv
+      name: CV
       url: https://github.com/storopoli/cv/releases/latest/download/cv.pdf
       weight: 10
+    - identifier: search
+      name: Search
+      url: search/
+      weight: 20
