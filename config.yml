@@ -45,14 +45,14 @@ params:
     disableHLJS: true
     disableFingerprinting: false
     favicon: "/assets/favicon.ico"
-  
+
   profileMode:
     enabled: true
     # Title: "Hi I am Jose Storopoli"
     Subtitle: "Computational Statistician, STEM Educator, Opensource Contributor."
     imageUrl: "/assets/pp.jpeg"
     imageTitle: "Profile Pic"
- 
+
 
   socialIcons:
     - name: cv
@@ -63,6 +63,8 @@ params:
       url: "mailto:jose@storopoli.io"
     - name: pgpkey
       url: "/assets/publickey.txt"
+    - name: rss
+      url: "index.xml"
 
   cover:
     hidden: true # hide everywhere but not in structured data
