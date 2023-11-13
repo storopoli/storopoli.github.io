@@ -9,7 +9,7 @@ I like [Julia](https://julialang.org),
 [Neovim](https://neovim.org/),
 and [Nix](https://nixos.org).
 I love math, computer science, coding, stats, and teaching.
-I hate bloatware and soydevs.
+I hate bloatware and [soydevs](../2023-11-10-2023-11-13-soydev/).
 My natural habitat is the terminal.
 Everything that I do is either open source or has a permissive Creative Commons license.
 
