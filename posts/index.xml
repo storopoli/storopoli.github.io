@@ -7,5 +7,215 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)</copyright><atom:link href="https://storopoli.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>What is soydev? And why do I hate it</title>
+      <link>https://storopoli.io/2023-11-10-2023-11-13-soydev/</link>
+      <pubDate>Mon, 13 Nov 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://storopoli.io/2023-11-10-2023-11-13-soydev/</guid>
+      <description>Let&amp;rsquo;s dive into the concept of &amp;ldquo;soydev&amp;rdquo;, a term often used pejoratively to describe developers with a superficial understanding of technology. I provide my definition of what soydev is, why is bad, and how it came to be. To counteract soydev inclinations, I propose an abstract approach centered on timeless concepts, protocols, and first principles, fostering a mindset of exploration, resilience in the face of failure, and an insatiable hunger for knowledge.</description>
+      <content:encoded><![CDATA[<p><img loading="lazy" src="soydev.jpg" alt="soydev meme"  />
+</p>
+<p>Let&rsquo;s dive into the <strong>concept of &ldquo;soydev&rdquo;</strong>,
+a term often used pejoratively to describe developers with
+a superficial understanding of technology.
+I provide my definition of what soydev is,
+why is bad, and how it came to be.
+To counteract soydev inclinations,
+I propose an abstract approach centered on timeless concepts, protocols,
+and first principles, fostering a mindset of exploration,
+resilience in the face of failure, and an insatiable hunger for knowledge.</p>
+<p>While we&rsquo;ll start with a look at the soydev stereotype,
+our journey will lead us to a wider reflection on the importance of depth in
+technological understanding.</p>
+<h2 id="definition">Definition</h2>
+<p>First, let&rsquo;s tackle the definition of <em>soydev</em>.
+<a href="https://www.urbandictionary.com/define.php?term=Soydev">Urban Dictionary</a>
+provides two interesting definitions:</p>
+<p>Urban Dictionary definition 1:</p>
+<blockquote>
+<p>Soydev is a &ldquo;programmer&rdquo; that works at a bigh tech company and
+only knows JavaScript and HTML.
+They love IDEs like Visual Studio Code and inefficient frameworks
+that slow their code down.
+They represent the majority of &ldquo;programmers&rdquo; today and
+if their numbers continue growing,
+not one person on earth will know how a computer works by the year 2050
+when all the gigachad 1980s C and Unix programmers are gone.</p>
+</blockquote>
+<p>Urban Dictionary definition 2:</p>
+<blockquote>
+<p>Soydev is a type of most abundant Software Developer.
+The Software he/she makes is always inefficient and
+uses more CPU and RAM than it should.
+This person always prefers hard work to smart work,
+Has little or no knowledge of existing solutions of a problem,
+Comes up with very complex solution for a simple problem and
+has fear of native and fast programming languages like C, C++ and Rust</p>
+</blockquote>
+<p>These definitions give a glimpse of what a soydev is.
+However, they are loaded with pejorative language,
+and also are based on non-timeless technologies and tools.
+I, much prefer to rely on concepts and principles that are timeless.
+Hence, I will provide my own definition of soydev:</p>
+<p><strong>Soydev is someone who only has a superficial conception of technology
+and computers that is restricted to repeating patterns learned
+from popular workflows on the internet;
+but who doesn&rsquo;t dedicate time or effort to learning concepts in a deeper way.</strong></p>
+<p>Although soydev is a term with specific connotations,
+it opens the door to a larger conversation about the depth of our engagement
+with technology.
+This superficiality is not unique to soydevs
+but is a symptom of a broader trend in our relationship with technology.</p>
+<p>Most of us start our journey in a skill by having the superficial conception of it.
+However, some are not satisfied with this superficial conception,
+and strive to understand what lies beyond the surface.</p>
+<p>Understanding concepts from first principles allows us to achieve a deep graceful
+kind of mastery that when seems almost effortless to others.
+Deep down lies a lot of effort and time spent in learning and practicing.
+Innumerable hours of deep thinking and reflecting on
+why things are the way they are, and how they could be different if you
+tried to implement them from scratch yourself.</p>
+<p>There is also an inherently rare mixture of curiosity and creativity in the
+process of profoundly learning and understanding concepts in this way.
+You start not only to ask the &ldquo;Why?&rdquo; questions but also the &ldquo;What if?&rdquo; questions.
+I feel that this posture on understanding concepts paves the way for joyful mastery.</p>
+<p><a href="https://en.wikipedia.org/wiki/Richard_Feynman">Richard Feynman</a>
+once said &ldquo;What I cannot create, I do not understand&rdquo;.
+You cannot create anything that you don&rsquo;t know the underlying concepts.
+Therefore, by allying creativity and discovery with deep knowledge,
+Feynman&rsquo;s argument was that in order for you truly master something,
+you&rsquo;ll need to be able to recreate it from scratch.</p>
+<p>If you are struggling with my abstractations, I can provide some concrete examples.
+A soydev might be someone who:</p>
+<ol>
+<li>Instead of using a simple text editor like vim/emacs/nano,
+prefers a totally bloated IDE like VSCode to write even basic things in plaintext.
+Or cannot SSH into a remote server without a GUI.</li>
+<li>Instead of choosing a native solution like HTML for a simple web page section,
+prefers to overengineer with a JavaScript framework that has a lot of dependencies,
+and takes 3 seconds to render in the browser.</li>
+<li>Prefers to use black box abstractions instead of learning about basic tech
+primitives and protocols that would get the job done.</li>
+<li>Has no idea what about most concepts that are at the core of computing like
+bit, byte, heap, stack, garbage collector, async, parallel, CPU cycles,
+cache miss, L1/L2/L3 cache etc.</li>
+<li>Don&rsquo;t understand the math, or what is going on under the hood when
+using machine learning libraries.</li>
+</ol>
+<h2 id="why-soydev-is-bad">Why soydev is bad</h2>
+<p>First, let&rsquo;s understand that being a soydev is not necessarily bad,
+but is highly limited on his ability and curiosity.
+A soydev will never be able to achieve the same level of mastery
+as someone who is willing to go deep and learn concepts from first principles.</p>
+<p>Now, on the other hand,
+soydev is bad because it perpetuates a mindset of superficiality.
+The path of technology innovation is guided by curiosity and creativity.
+And paved with hard work and deep understanding.
+Imagine if all the great minds in technology took the easy path of mindless
+tooling and problem-solving?
+We would be in a stagnant and infertile scenario,
+where everyone would use the same technology and tools without
+questioning or thinking about the problems that they are trying to solve.</p>
+<p>Hence, the culture of soydev is bad for the future of technology,
+where most new developers will be highly limited in their ability to innovate.</p>
+<h2 id="why-soydev-is-on-the-rise">Why soydev is on the rise</h2>
+<p>I think that soydev culture is highly correlated with
+the increase of technology and
+decrease of barriers to access such technology.
+We live in an age that not only technology is everywhere,
+but also to interact with it is quite effortless.</p>
+<p>My computational statistician mind is always aware of cognitive
+and statistical bias.
+Whenever I see a correlation across time,
+I always take a step back and try to think about the assumptions
+and conceptual models behind it.</p>
+<p>Does the increase in technology usage and importance in daily life
+results in more people using technology from a professional point-of-view?
+Yes.
+Does the increase in people professionally using technology
+results in an increase of tooling and conceptual abstractions
+that allows superficial interactions without need to deeply understand
+the concepts behind such technology?
+I do think that this is true as well.</p>
+<p>These assumptions cover the constituents of the rise of soydev
+from a &ldquo;demand&rdquo; viewpoint.
+Nevertheless, there is also the analogous &ldquo;supply&rdquo; viewpoint.
+If these trends in demand are not met by trends in supply,
+we would not see the establishment of the soydev phenomenon.
+There is an emerging trend to standardize all the available tech
+into commodities.</p>
+<p>While commoditization of technological solutions has inherent advantages,
+such as scalability and lower opportunity costs,
+it has some disadvantages.
+The main disadvantage is the abrupt decrease of technological innovations.
+If we have strong standardization that are enforced by market and social forces,
+then why care to innovate?
+Why bring new solutions or new ways to solve problems if it will not be adopted
+and are doomed to oblivion?
+Why decide to try to do things different if there is such a high maintenance
+cost, especially when training and expanding human resources capable of
+dealing with such non-standard solutions?</p>
+<p>In this context, technological innovation can only be undertaken
+by big corporations that, not only have big budgets,
+but also big influence to push its innovations as industry standards.</p>
+<p>Don&rsquo;t get me wrong: I do think that industry standards are important.
+However, I much prefer a protocol standard than product standards.
+First, protocol standards are generally not tied to a single company or brand.
+Second, protocol standards have a higher propensity to expose its underlying
+concepts to developers.
+Think about TCP/IP versus your favorite front-end framework:
+Which one would result in deeper understanding of the underlying concepts?</p>
+<p>The rise of soydevs mirrors a societal shift towards immediate gratification and
+away from the pursuit of deep knowledge.</p>
+<h2 id="how-to-stop-being-a-soydev">How to stop being a soydev</h2>
+<p>Despite these unstoppable trends I do think that it is possible to use
+tools and shallow abstractions without being a soydev.
+Or, to stop being a soydev and advance towards deep understanding
+of what constitutes your craft.
+Moving beyond the &lsquo;soydev&rsquo; mindset is about embracing the richness that
+comes from a deep understanding of technology.
+Here is a short, not by any means exhaustive list of things that you can start doing:</p>
+<ol>
+<li><strong>Stop thinking about what is latest and greatest</strong>.
+The tools are not important as the problems they are solving.
+Understand what is the need that the tool tries to address,
+and the major concepts on how it works.</li>
+<li><strong>Focus on concepts, protocols and first principles</strong>.
+Forget about frameworks, languages, editors, apps, etc.
+Focus on what probably won&rsquo;t change in the next decade in technology.
+It is easy (and less uncertain) to think concepts and problems,
+than in tools and solutions.</li>
+<li><strong>Set aside some weekly time to explore new ideas</strong>.
+Time block it, make it a calendar event.
+Try to find a time slot that you can be free of distraction and worries.
+Free all of your working memory when you are starting a &ldquo;new idea&rdquo; session.
+Think about what problem is this idea trying to solve.
+Also don&rsquo;t be stuck to just using the &ldquo;problem-solving&rdquo; lens.
+Most concepts that are worth knowing in computer science and programming
+don&rsquo;t have a clear problem tied to them.</li>
+<li><strong>Tinker. Play around</strong>. Break something down and see if you can build from scratch.
+Remember Feynman&rsquo;s &ldquo;What I cannot create, I do not understand&rdquo;.</li>
+<li><strong>Failure is almost certain</strong>. Yes, you will definitely fail.
+I say to a lot of junior devs, interns, and students that the only advantage
+that I have compared to them is that I&rsquo;ve failed more times that they have tried.</li>
+<li><strong>Stay curious and hungry for knowledge</strong>.
+I am always impressed on how children are so curious.
+I feel sad that almost no one retains their childhood curiosity as an adult
+(Maybe that&rsquo;s why I love to interact with children).
+Also, I am amazed by how deprived of will to learn some are.
+That is an idea that for me, it is hard to grasp,
+since I feel the exactly opposite.
+Often I have to hold myself not diving into certain areas, ideas or concepts
+because I cannot afford the time to learn them.
+However, I am always tempted by them.</li>
+</ol>
+<h2 id="license">License</h2>
+<p>This post is licensed under <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International</a>.</p>
+<p><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img loading="lazy" src="https://licensebuttons.net/l/by-nc-sa/4.0/88x31.png" alt="CC BY-NC-SA 4.0"  />
+</a></p>
+]]></content:encoded>
+    </item>
+    
   </channel>
 </rss>

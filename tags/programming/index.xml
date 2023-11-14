@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Jose Storopoli, PhD</title>
-    <link>https://storopoli.io/</link>
-    <description>Recent content on Jose Storopoli, PhD</description>
+    <title>programming on Jose Storopoli, PhD</title>
+    <link>https://storopoli.io/tags/programming/</link>
+    <description>Recent content in programming on Jose Storopoli, PhD</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)</copyright>
-    <lastBuildDate>Mon, 13 Nov 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://storopoli.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 13 Nov 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://storopoli.io/tags/programming/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>What is soydev? And why do I hate it</title>
       <link>https://storopoli.io/2023-11-10-2023-11-13-soydev/</link>
@@ -217,47 +217,6 @@ However, I am always tempted by them.</li>
 </a></p>
 ]]></content:encoded>
     </item>
-    
-    <item>
-      <title>About</title>
-      <link>https://storopoli.io/about/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://storopoli.io/about/</guid>
-      <description>I am a computational statistician and an ardent Bayesian. I like Julia, Rust, Neovim, and Nix. I love math, computer science, coding, stats, and teaching. I hate bloatware and soydevs. My natural habitat is the terminal. Everything that I do is either open source or has a permissive Creative Commons license.
-Here&amp;rsquo;s a list of some resources that I&amp;rsquo;ve made or contributed:
-Julia Data Science book. Graduate course on Bayesian Statistics with Stan and Turing.</description>
-      <content:encoded><![CDATA[<p>I am a computational statistician and an ardent <a href="https://youtu.be/RMNwsdb5VU4">Bayesian</a>.
-I like <a href="https://julialang.org">Julia</a>,
-<a href="https://rust-lang.org/">Rust</a>,
-<a href="https://neovim.org/">Neovim</a>,
-and <a href="https://nixos.org">Nix</a>.
-I love math, computer science, coding, stats, and teaching.
-I hate bloatware and <a href="../2023-11-10-2023-11-13-soydev/">soydevs</a>.
-My natural habitat is the terminal.
-Everything that I do is either open source or has a permissive Creative Commons license.</p>
-<p>Here&rsquo;s a list of some resources that I&rsquo;ve made or contributed:</p>
-<ul>
-<li><a href="https://juliadatascience.io/">Julia Data Science book</a>.</li>
-<li><a href="https://github.com/storopoli/Bayesian-Statistics">Graduate course on Bayesian Statistics</a>
-with <a href="https://mc-stan.org"><code>Stan</code></a> and
-<a href="https://turinglang.org"><code>Turing.jl</code></a> code examples.</li>
-<li><a href="https://storopoli.io/Bayesian-Julia">Bayesian Statistics with Julia and <code>Turing.jl</code></a></li>
-<li><a href="https://github.com/TuringLang/TuringGLM.jl"><code>TuringGLM.jl</code></a></li>
-<li><a href="https://storopoli.io/Computacao-Cientifica/">Data Science and Scientific Computing with Julia (Portuguese)</a></li>
-<li><a href="https://github.com/storopoli/ciencia-de-dados">Undergraduate course on Data Science, Machine Learning and Deep Learning (Portuguese)</a></li>
-<li><a href="https://storopoli.io/Why-Julia">Why Julia? A gentle pitch</a></li>
-<li><a href="https://storopoli.io/Estatistica/">Graduate course on Statistics (Portuguese)</a>
-with <code>R</code></li>
-<li><a href="https://storopoli.io/Rcpp/"><code>Rcpp</code> tutorials (Portuguese)</a></li>
-<li><a href="https://storopoli.io/topic-modeling-workshop/">Topic Modeling workshop (Portuguese)</a></li>
-</ul>
-<p>I don&rsquo;t have social media, since I think they are overrated
-and &ldquo;they sell your data&rdquo;.
-If you want to contact me, please send an email.</p>
-]]></content:encoded>
-    </item>
-    
     
   </channel>
 </rss>

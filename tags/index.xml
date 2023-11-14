@@ -6,6 +6,37 @@
     <description>Recent content in Tags on Jose Storopoli, PhD</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)</copyright><atom:link href="https://storopoli.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)</copyright>
+    <lastBuildDate>Mon, 13 Nov 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://storopoli.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>programming</title>
+      <link>https://storopoli.io/tags/programming/</link>
+      <pubDate>Mon, 13 Nov 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://storopoli.io/tags/programming/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>rant</title>
+      <link>https://storopoli.io/tags/rant/</link>
+      <pubDate>Mon, 13 Nov 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://storopoli.io/tags/rant/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>soydev</title>
+      <link>https://storopoli.io/tags/soydev/</link>
+      <pubDate>Mon, 13 Nov 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://storopoli.io/tags/soydev/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
   </channel>
 </rss>
