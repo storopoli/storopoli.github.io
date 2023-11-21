@@ -53,7 +53,7 @@ in honor of <a href="https://en.wikipedia.org/wiki/Euclid">Euclid</a>, the &ldqu
 and the guy pictured in the image at the top of this post.
 The Euclidean distance is defined in trigonometry for 2-D and 3-D spaces.
 However, it can be generalized to any dimension $n &gt; 1$ by using vectors.</p>
-<p>Since every word is a represent by a $n$-dimensional vector,
+<p>Since every word is represented by an $n$-dimensional vector,
 we can use distances to compute a metric that represent similarity between vectors.
 And, more interesting, we can add and subtract words
 (or any other linear combination of one or more words) to generate new words.</p>
@@ -149,7 +149,8 @@ Let&rsquo;s see how a word is represented:</p>
 </span></span><span class="line"><span class="cl">  <span class="mf">0.0092753</span>
 </span></span><span class="line"><span class="cl"> <span class="o">-</span><span class="mf">0.60284</span>
 </span></span></code></pre></div><p>They are 50-dimensional vectors of <code>Float32</code>.</p>
-<p>Now, here&rsquo;s the fun part let&rsquo;s add words and check the similarity between the
+<p>Now, here&rsquo;s the fun part:
+let&rsquo;s add words and check the similarity between the
 result and some other word.
 A classical example is to start with the word &ldquo;king&rdquo;,
 subtract the word &ldquo;men&rdquo;,
