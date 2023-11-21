@@ -51,7 +51,7 @@ and the guy pictured in the image at the top of this post.
 The Euclidean distance is defined in trigonometry for 2-D and 3-D spaces.
 However, it can be generalized to any dimension $n > 1$ by using vectors.
 
-Since every word is a represent by a $n$-dimensional vector,
+Since every word is represented by an $n$-dimensional vector,
 we can use distances to compute a metric that represent similarity between vectors.
 And, more interesting, we can add and subtract words
 (or any other linear combination of one or more words) to generate new words.
@@ -168,7 +168,8 @@ julia> queen = glove.embeddings[:, 4]
 
 They are 50-dimensional vectors of `Float32`.
 
-Now, here's the fun part let's add words and check the similarity between the
+Now, here's the fun part:
+let's add words and check the similarity between the
 result and some other word.
 A classical example is to start with the word "king",
 subtract the word "men",
