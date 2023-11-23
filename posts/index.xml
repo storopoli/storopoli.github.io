@@ -165,11 +165,11 @@ we can decompose $P(\theta)$ into:</p>
 <p>The likelihood of the alternative hypothesis,
 $P(\theta \mid H_a)$,
 is just the CDF of all possible values of $\theta \ne 0.5$.</p>
-<p>$P(H_0 \mid k) &gt; 0.95$.
-And we fail to reject the null hypothesis, in frequentist terms.
+<p>$$P(H_0 \mid \text{data}) = P \left( \theta = 0.5 \mid \mu = 49,225.5, \sigma = \sqrt{24.612.75} \right) &gt; 0.95$$</p>
+<p>And we fail to reject the null hypothesis, in frequentist terms.
 However, we can also say in Bayesian terms, that we strongly favor $H_0$
 over $H_a$.</p>
-<p>Quick! Grab the Bayesian cigar!
+<p>Quick! Grab the Bayesian celebratory cigar!
 The null is back on the game!</p>
 <h3 id="computational-solutional">Computational Solutional</h3>
 <p>For the computational solution, we&rsquo;ll use <a href="https://julialang.org">Julia</a>
