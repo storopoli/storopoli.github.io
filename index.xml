@@ -80,7 +80,7 @@ $\frac{49,581}{98,451} \approx 0.5036$.</p>
 <p>We assume that the birth of a child is independent with a certain probability
 $\theta$.
 Since our data is a sequence of $n$ independent <a href="https://en.wikipedia.org/wiki/Bernoulli_trial">Bernoulli trials</a>,
-i.e. $n$ independent random experiment with exactly two possible outcomes,
+i.e. $n$ independent random experiments with exactly two possible outcomes,
 &ldquo;success&rdquo; and &ldquo;failure&rdquo;,
 in which the probability of success is the same every time the
 experiment is conducted;
