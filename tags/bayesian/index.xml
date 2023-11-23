@@ -208,7 +208,7 @@ we still reject the null.</p>
 <h4 id="computational-solutions----bayesian-approach">Computational Solutions &ndash; Bayesian Approach</h4>
 <p>Now, for the Bayesian computational approach,
 I&rsquo;m going to use a generative modeling approach,
-and one of my favorites probabilistic programming languages:
+and one of my favorites probabilistic programming languages,
 <code>Turing.jl</code>:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-julia" data-lang="julia"><span class="line"><span class="cl"><span class="n">julia</span><span class="o">&gt;</span> <span class="k">using</span> <span class="n">Turing</span>
 </span></span><span class="line"><span class="cl">
