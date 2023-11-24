@@ -15,7 +15,7 @@
       
       <guid>https://storopoli.io/2023-11-23-lindley_paradox/</guid>
       <description>Warning: This post has KaTeX enabled, so if you want to view the rendered math formulas, you&amp;rsquo;ll have to unfortunately enable JavaScript.
-Dennis Lindley, one of my many heroes, was an English statistician, decision theorist and leading advocate of Bayesian statistics. He published a pivotal book, Understanding Urcertainty, that changed my view on what is and how to handle uncertainty in a coherent1 way. He is responsible for one of my favorites quotes: &amp;ldquo;Inside every non-Bayesian there is a Bayesian struggling to get out&amp;rdquo;; and one of my favorite heuristics around prior probabilities: Cromwell&amp;rsquo;s Rule2.</description>
+Dennis Lindley, one of my many heroes, was an English statistician, decision theorist and leading advocate of Bayesian statistics. He published a pivotal book, Understanding Uncertainty, that changed my view on what is and how to handle uncertainty in a coherent1 way. He is responsible for one of my favorites quotes: &amp;ldquo;Inside every non-Bayesian there is a Bayesian struggling to get out&amp;rdquo;; and one of my favorite heuristics around prior probabilities: Cromwell&amp;rsquo;s Rule2.</description>
       <content:encoded><![CDATA[<blockquote>
 <p>Warning: This post has <a href="https://katex.org/">KaTeX</a> enabled,
 so if you want to view the rendered math formulas,
@@ -28,7 +28,7 @@ one of my many heroes,
 was an English statistician,
 decision theorist and leading advocate of Bayesian statistics.
 He published a pivotal book,
-<a href="https://onlinelibrary.wiley.com/doi/book/10.1002/9781118650158">Understanding Urcertainty</a>,
+<a href="https://onlinelibrary.wiley.com/doi/book/10.1002/9781118650158">Understanding Uncertainty</a>,
 that changed my view on what is and how to handle uncertainty in a
 coherent<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> way.
 He is responsible for one of my favorites quotes:
@@ -60,7 +60,8 @@ which indicates sufficient evidence to reject $H_0$, at a certain threshold of
 probability<sup id="fnref:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">4</a></sup>.</li>
 <li>The posterior probability (Bayesian approach) of $H_0 \mid \theta$
 (null hypothesis given $\theta$) is high,
-which indicates strong evidence that $H_0$ should be favored than $H_a$.</li>
+which indicates strong evidence that $H_0$ should be favored over $H_a$,
+that is, to <em>not</em> reject $H_0$.</li>
 </ol>
 <p>These results can occur at the same time when $H_0$ is very specific,
 $H_a$ more diffuse,
@@ -80,11 +81,11 @@ $\frac{49,581}{98,451} \approx 0.5036$.</p>
 <p>We assume that the birth of a child is independent with a certain probability
 $\theta$.
 Since our data is a sequence of $n$ independent <a href="https://en.wikipedia.org/wiki/Bernoulli_trial">Bernoulli trials</a>,
-i.e. $n$ independent random experiments with exactly two possible outcomes,
+i.e., $n$ independent random experiments with exactly two possible outcomes:
 &ldquo;success&rdquo; and &ldquo;failure&rdquo;,
 in which the probability of success is the same every time the
-experiment is conducted;
-we can safely assume that it follows a <a href="https://en.wikipedia.org/wiki/Binomial_distribution">binomial distribution</a>
+experiment is conducted.
+We can safely assume that it follows a <a href="https://en.wikipedia.org/wiki/Binomial_distribution">binomial distribution</a>
 with parameters:</p>
 <ul>
 <li>$n$: the number of &ldquo;trials&rdquo; (or the total number of births).</li>
@@ -96,8 +97,8 @@ with parameters:</p>
 <li>$H_a$: $\theta \ne 0.5$.</li>
 </ol>
 <h3 id="analytical-solution">Analytical Solution</h3>
-<p>This is a toy-problem and, like most toy problems<sup id="fnref:5"><a href="#fn:5" class="footnote-ref" role="doc-noteref">5</a></sup>, we can solve it analytically;
-both the frequentist and the Bayesian approaches.</p>
+<p>This is a toy-problem and, like most toy problems,
+we can solve it analytically<sup id="fnref:5"><a href="#fn:5" class="footnote-ref" role="doc-noteref">5</a></sup> for both the frequentist and the Bayesian approaches.</p>
 <h4 id="analytical-solutions----frequentist-approach">Analytical Solutions &ndash; Frequentist Approach</h4>
 <p>The frequentist approach to testing $H_0$ is to compute a $p$-value<sup id="fnref1:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">4</a></sup>,
 the probability of observing births of boys at least as large as 49,581
@@ -122,8 +123,8 @@ $\sigma = \sqrt{n \theta (1 - \theta)} = \sqrt{98,451 \cdot \frac{1}{2} \cdot (1
 <a href="https://en.wikipedia.org/wiki/Cumulative_distribution_function">cumulative distribution function (CDF)</a>
 of $X$ on the interval $[49,225.5, 98,451]$:</p>
 <p>$$\int_{49,225.5}^{98,451} \frac{1}{\sqrt{2 \pi \sigma^2}} e^{- \frac{\left( \frac{x - \mu}{\sigma} \right)^2}{2}} dx$$</p>
-<p>After trivial plugging in values and some calculations,
-our answer is approximate $0.0117$.
+<p>After inserting the values and doing some arithmetic,
+our answer is approximately $0.0117$.
 Note that this is a one-sided test,
 since it is symmetrical,
 the two-sided test would be
@@ -132,7 +133,7 @@ Since we don&rsquo;t deviate from the Fisher&rsquo;s canon,
 this is well below the 5% threshold.
 Hooray! We rejected the null hypothesis!
 Quick! Grab a frequentist celebratory cigar!
-Not so fast! Let&rsquo;s check the Bayesian approach.</p>
+But, wait. Let&rsquo;s check the Bayesian approach.</p>
 <h4 id="analytical-solutions----bayesian-approach">Analytical Solutions &ndash; Bayesian Approach</h4>
 <p>For the Bayesian approach, we need to set prior probabilities on both hypotheses.
 Since we do not favor one from another, let&rsquo;s set equal prior probabilities:</p>
@@ -261,9 +262,8 @@ i.e. an $\alpha = 0.05$:</p>
 $\theta = 0.5$ at $\alpha = 0.05$ which is in accordance with the analytical
 solution.</p>
 <h2 id="why-the-frequentist-and-bayesian-approaches-disagree">Why the Frequentist and Bayesian Approaches Disagree</h2>
-<p>How the hell the approaches disagree?
-What is going on under the hood?
-What evil sorcery is at work here?</p>
+<p>Why do the approaches disagree?
+What is going on under the hood?</p>
 <p>The answer is disappointing<sup id="fnref:8"><a href="#fn:8" class="footnote-ref" role="doc-noteref">8</a></sup>.
 The main problem is that the frequentist approach only allows fixed significance
 levels with respect to sample size.
