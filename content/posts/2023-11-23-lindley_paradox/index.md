@@ -19,7 +19,7 @@ one of my many heroes,
 was an English statistician,
 decision theorist and leading advocate of Bayesian statistics.
 He published a pivotal book,
-[Understanding Urcertainty](https://onlinelibrary.wiley.com/doi/book/10.1002/9781118650158),
+[Understanding Uncertainty](https://onlinelibrary.wiley.com/doi/book/10.1002/9781118650158),
 that changed my view on what is and how to handle uncertainty in a
 coherent[^bayesian] way.
 He is responsible for one of my favorites quotes:
@@ -54,7 +54,8 @@ The paradox occurs when two conditions are met:
    probability[^pvalue].
 1. The posterior probability (Bayesian approach) of $H_0 \mid \theta$
    (null hypothesis given $\theta$) is high,
-   which indicates strong evidence that $H_0$ should be favored than $H_a$.
+   which indicates strong evidence that $H_0$ should be favored over $H_a$,
+   that is, to _not_ reject $H_0$.
 
 These results can occur at the same time when $H_0$ is very specific,
 $H_a$ more diffuse,
@@ -78,11 +79,11 @@ $\frac{49,581}{98,451} \approx 0.5036$.
 We assume that the birth of a child is independent with a certain probability
 $\theta$.
 Since our data is a sequence of $n$ independent [Bernoulli trials](https://en.wikipedia.org/wiki/Bernoulli_trial),
-i.e. $n$ independent random experiments with exactly two possible outcomes,
+i.e., $n$ independent random experiments with exactly two possible outcomes:
 "success" and "failure",
 in which the probability of success is the same every time the
-experiment is conducted;
-we can safely assume that it follows a [binomial distribution](https://en.wikipedia.org/wiki/Binomial_distribution)
+experiment is conducted.
+We can safely assume that it follows a [binomial distribution](https://en.wikipedia.org/wiki/Binomial_distribution)
 with parameters:
 
 - $n$: the number of "trials" (or the total number of births).
@@ -95,8 +96,8 @@ We then set up our two competing hypotheses:
 
 ### Analytical Solution
 
-This is a toy-problem and, like most toy problems[^toy problems], we can solve it analytically;
-both the frequentist and the Bayesian approaches.
+This is a toy-problem and, like most toy problems,
+we can solve it analytically[^toy problems] for both the frequentist and the Bayesian approaches.
 
 #### Analytical Solutions -- Frequentist Approach
 
@@ -129,8 +130,8 @@ of $X$ on the interval $[49,225.5, 98,451]$:
 
 $$\int_{49,225.5}^{98,451} \frac{1}{\sqrt{2 \pi \sigma^2}} e^{- \frac{\left( \frac{x - \mu}{\sigma} \right)^2}{2}} dx$$
 
-After trivial plugging in values and some calculations,
-our answer is approximate $0.0117$.
+After inserting the values and doing some arithmetic,
+our answer is approximately $0.0117$.
 Note that this is a one-sided test,
 since it is symmetrical,
 the two-sided test would be
@@ -139,7 +140,7 @@ Since we don't deviate from the Fisher's canon,
 this is well below the 5% threshold.
 Hooray! We rejected the null hypothesis!
 Quick! Grab a frequentist celebratory cigar!
-Not so fast! Let's check the Bayesian approach.
+But, wait. Let's check the Bayesian approach.
 
 #### Analytical Solutions -- Bayesian Approach
 
@@ -303,9 +304,8 @@ solution.
 
 ## Why the Frequentist and Bayesian Approaches Disagree
 
-How the hell the approaches disagree?
+Why do the approaches disagree?
 What is going on under the hood?
-What evil sorcery is at work here?
 
 The answer is disappointing[^frequentist disappointment].
 The main problem is that the frequentist approach only allows fixed significance
