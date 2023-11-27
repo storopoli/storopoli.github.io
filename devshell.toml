@@ -1,5 +1,5 @@
 [devshell]
-packages = ["hugo", "ltex-ls", "dprint"]
+packages = ["git", "hugo", "ltex-ls", "dprint", "pre-commit", "typos"]
 
 [[commands]]
 name = "dprint_init"
