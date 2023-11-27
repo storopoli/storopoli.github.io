@@ -753,17 +753,18 @@ However, I am always tempted by them.</li>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://storopoli.io/about/</guid>
-      <description>I am a computational statistician and an ardent Bayesian. I like Julia, Rust, Neovim, and Nix. I love math, computer science, coding, stats, and teaching. I hate bloatware and soydevs. My natural habitat is the terminal. Everything that I do is either open source or has a permissive Creative Commons license.
+      <description>I am a computational statistician, data scientist, machine learning engineer; and an ardent Bayesian. I like Julia, Rust, Neovim, and Nix. I love math, computer science, coding, stats, and teaching. I hate bloatware and soydevs. My natural habitat is the terminal. Everything that I do is either open source or has a permissive Creative Commons license.
 Here&amp;rsquo;s a list of some resources that I&amp;rsquo;ve made or contributed:
-Julia Data Science book. Graduate course on Bayesian Statistics with Stan and Turing.</description>
-      <content:encoded><![CDATA[<p>I am a computational statistician and an ardent <a href="https://youtu.be/RMNwsdb5VU4">Bayesian</a>.
+Julia Data Science book.</description>
+      <content:encoded><![CDATA[<p>I am a computational statistician, data scientist, machine learning engineer;
+and an ardent <a href="https://youtu.be/RMNwsdb5VU4">Bayesian</a>.
 I like <a href="https://julialang.org">Julia</a>,
 <a href="https://rust-lang.org/">Rust</a>,
 <a href="https://neovim.org/">Neovim</a>,
 and <a href="https://nixos.org">Nix</a>.
 I love math, computer science, coding, stats, and teaching.
 I hate bloatware and <a href="../2023-11-10-2023-11-13-soydev/">soydevs</a>.
-My natural habitat is the terminal.
+My natural habitat is the <a href="https://github.com/storopoli/flakes">terminal</a>.
 Everything that I do is either open source or has a permissive Creative Commons license.</p>
 <p>Here&rsquo;s a list of some resources that I&rsquo;ve made or contributed:</p>
 <ul>
@@ -773,6 +774,7 @@ with <a href="https://mc-stan.org"><code>Stan</code></a> and
 <a href="https://turinglang.org"><code>Turing.jl</code></a> code examples.</li>
 <li><a href="https://storopoli.io/Bayesian-Julia">Bayesian Statistics with Julia and <code>Turing.jl</code></a></li>
 <li><a href="https://github.com/TuringLang/TuringGLM.jl"><code>TuringGLM.jl</code></a></li>
+<li><a href="https://youtu.be/uiQpwMQZBTA">Introduction to Julia (JuliaCon 2022 Workshop)</a></li>
 <li><a href="https://storopoli.io/Computacao-Cientifica/">Data Science and Scientific Computing with Julia (Portuguese)</a></li>
 <li><a href="https://github.com/storopoli/ciencia-de-dados">Undergraduate course on Data Science, Machine Learning and Deep Learning (Portuguese)</a></li>
 <li><a href="https://storopoli.io/Why-Julia">Why Julia? A gentle pitch</a></li>
