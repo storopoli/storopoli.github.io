@@ -10,10 +10,10 @@
     <lastBuildDate>Tue, 28 Nov 2023 18:19:36 -0300</lastBuildDate><atom:link href="https://storopoli.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Zero-cost Abstractions</title>
-      <link>https://storopoli.io/2023-11-28-2023-11-28-zero_cost_abstractions/</link>
+      <link>https://storopoli.io/2023-11-28-zero_cost_abstractions/</link>
       <pubDate>Tue, 28 Nov 2023 18:19:36 -0300</pubDate>
       
-      <guid>https://storopoli.io/2023-11-28-2023-11-28-zero_cost_abstractions/</guid>
+      <guid>https://storopoli.io/2023-11-28-zero_cost_abstractions/</guid>
       <description>In programming language circles there&amp;rsquo;s a recently trend of discussing a concept called zero-cost abstractions: the ability to use higher-levels abstractions without suffering any loss of performance.
 Zero-cost abstractions allows you to write performant code without having to give up a single drop of convenience and expressiveness:
 You want for-loops? You can have it. Generics? Yeah, why not? Data structures? Sure, keep&amp;rsquo;em coming. Async operations? You bet ya! Multi-threading? Hell yes!</description>
