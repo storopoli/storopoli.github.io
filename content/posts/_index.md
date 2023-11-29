@@ -1,5 +1,5 @@
 ---
 title: Blog
-summary: Random thoughts and ideas
-description: Random thoughts and ideas
+summary: Braindump of erratic thoughts and ideas.
+description: Braindump of erratic thoughts and ideas.
 ---
