@@ -267,7 +267,7 @@ Take for example this simple Rust code:</p>
 </span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">fn</span> <span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="fm">println!</span><span class="p">(</span><span class="s">&#34;sum_10: </span><span class="si">{}</span><span class="s">&#34;</span><span class="p">,</span><span class="w"> </span><span class="n">sum_10</span><span class="p">());</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
-</span></span></span></code></pre></div><p>We can inspect both LLVM IR code machine instructions with the
+</span></span></span></code></pre></div><p>We can inspect both LLVM IR code and machine instructions with the
 <a href="https://github.com/pacak/cargo-show-asm"><code>cargo-show-asm</code></a> crate:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ cargo asm --llvm <span class="s2">&#34;sum_10::main&#34;</span> <span class="p">|</span> grep <span class="m">55</span>
 </span></span><span class="line"><span class="cl">    Finished release <span class="o">[</span>optimized<span class="o">]</span> target<span class="o">(</span>s<span class="o">)</span> in 0.00s
