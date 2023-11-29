@@ -112,7 +112,7 @@ Even if Python is the main language used in these codebases<sup id="fnref:4"><a 
 I still think that this is not the case due to the nature of the Python code:
 <strong>all docstrings are written in Python</strong>.
 If you have a very fast C function in your codebase that takes 50 lines of code,
-follower by a Python wrapper function that calls it using 10 lines of code,
+followed by a Python wrapper function that calls it using 10 lines of code,
 <em>but</em> with a docstring that is 50 lines of code;
 you have a &ldquo;Python&rdquo;-majority codebase.</p>
 <p>In a sense the most efficient Python programmer is a C/C++ programmer&hellip;</p>
