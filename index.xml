@@ -1103,14 +1103,14 @@ However, I am always tempted by them.</li>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://storopoli.io/about/</guid>
-      <description>I am a computational statistician, data scientist, machine learning engineer; and an ardent Bayesian. I like Julia, Rust, Neovim, and Nix. I love math, computer science, coding, stats, and teaching. I hate bloatware and soydevs. My natural habitat is the terminal. Everything that I do is either open source or has a permissive Creative Commons license.
+      <description>I am a computational statistician, data scientist, machine learning engineer; and an ardent Bayesian. I like Julia, Rust, Vim, and Nix. I love math, computer science, coding, stats, and teaching. I hate bloatware and soydevs. My natural habitat is the terminal. Everything that I do is either open source or has a permissive Creative Commons license.
 Here&amp;rsquo;s a list of some resources that I&amp;rsquo;ve made or contributed:
 Julia Data Science book.</description>
       <content:encoded><![CDATA[<p>I am a computational statistician, data scientist, machine learning engineer;
 and an ardent <a href="https://youtu.be/RMNwsdb5VU4">Bayesian</a>.
 I like <a href="https://julialang.org">Julia</a>,
 <a href="https://rust-lang.org/">Rust</a>,
-<a href="https://neovim.org/">Neovim</a>,
+<a href="https://www.vim.org/">Vim</a>,
 and <a href="https://nixos.org">Nix</a>.
 I love math, computer science, coding, stats, and teaching.
 I hate bloatware and <a href="../2023-11-10-2023-11-13-soydev/">soydevs</a>.
