@@ -7,7 +7,7 @@ I am a computational statistician, data scientist, machine learning engineer;
 and an ardent [Bayesian](https://youtu.be/RMNwsdb5VU4).
 I like [Julia](https://julialang.org),
 [Rust](https://rust-lang.org/),
-[Neovim](https://neovim.org/),
+[Vim](https://www.vim.org/),
 and [Nix](https://nixos.org).
 I love math, computer science, coding, stats, and teaching.
 I hate bloatware and [soydevs](../2023-11-10-2023-11-13-soydev/).
