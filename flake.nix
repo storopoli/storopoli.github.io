@@ -30,6 +30,12 @@
             src = ./.;
             hooks = {
               typos.enable = true;
+              treefmt = {
+                enable = true;
+              };
+            };
+            settings = {
+              treefmt.package = treefmtEval.config.build.wrapper;
             };
           };
         };
