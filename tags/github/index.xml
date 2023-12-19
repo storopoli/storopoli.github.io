@@ -184,7 +184,7 @@ takes all the above as inputs and outputs a couple of things:</p>
 </span></span><span class="line"><span class="cl">      <span class="n">checks</span> <span class="o">=</span> <span class="o">...</span>
 </span></span><span class="line"><span class="cl">      <span class="n">devShells</span> <span class="o">=</span> <span class="o">...</span>
 </span></span><span class="line"><span class="cl">      <span class="n">packages</span> <span class="o">=</span> <span class="o">...</span>
-</span></span><span class="line"><span class="cl">   <span class="p">});</span> 
+</span></span><span class="line"><span class="cl">   <span class="p">});</span>
 </span></span></code></pre></div><ul>
 <li><code>checks</code> things that are executed/built when you run <code>nix flake check</code></li>
 <li><code>devShells</code> things that are executed/built when you run <code>nix develop</code></li>
@@ -367,7 +367,7 @@ CI job:</p>
 </span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="s2">&#34;13-model_comparison-roaches.jl&#34;</span><span class="p">,</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="p">]</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">steps</span><span class="p">:</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c"># ...</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="c"># ...</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">Test ${{ matrix.jl-file }}</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="p">|</span><span class="sd">
 </span></span></span><span class="line"><span class="cl"><span class="sd">          nix develop -L . --command bash -c &#34;julia -e &#39;using Pkg; Pkg.instantiate()&#39;&#34;
@@ -423,14 +423,19 @@ file is defined the Stan model testing CI job:</p>
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">runs-on</span><span class="p">:</span><span class="w"> </span><span class="l">ubuntu-latest</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">strategy</span><span class="p">:</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">matrix</span><span class="p">:</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">stan</span><span class="p">:</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="p">[</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">            </span>{<span class="w"> </span><span class="nt">model</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;01-predictive_checks-posterior&#34;</span><span class="nt">, data</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;coin_flip.data.json&#34;</span><span class="w"> </span>}<span class="p">,</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">stan</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span>{<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">              </span><span class="nt">model</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;01-predictive_checks-posterior&#34;</span><span class="p">,</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">              </span><span class="nt">data</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;coin_flip.data.json&#34;</span><span class="p">,</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span>}<span class="p">,</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="c"># ...</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">            </span>{<span class="w"> </span><span class="nt">model</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;13-model_comparison-zero_inflated-poisson&#34;</span><span class="nt">, data</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;roaches.data.json&#34;</span><span class="w"> </span>}<span class="p">,</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span>{<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">              </span><span class="nt">model</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;13-model_comparison-zero_inflated-poisson&#34;</span><span class="p">,</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">              </span><span class="nt">data</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;roaches.data.json&#34;</span><span class="p">,</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span>}<span class="p">,</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="p">]</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">steps</span><span class="p">:</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c"># ...</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="c"># ...</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">Test ${{ matrix.stan.model }}</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="p">|</span><span class="sd">
 </span></span></span><span class="line"><span class="cl"><span class="sd">          echo &#34;Compiling: ${{ matrix.stan.model }}&#34;

@@ -184,7 +184,7 @@ takes all the above as inputs and outputs a couple of things:</p>
 </span></span><span class="line"><span class="cl">      <span class="n">checks</span> <span class="o">=</span> <span class="o">...</span>
 </span></span><span class="line"><span class="cl">      <span class="n">devShells</span> <span class="o">=</span> <span class="o">...</span>
 </span></span><span class="line"><span class="cl">      <span class="n">packages</span> <span class="o">=</span> <span class="o">...</span>
-</span></span><span class="line"><span class="cl">   <span class="p">});</span> 
+</span></span><span class="line"><span class="cl">   <span class="p">});</span>
 </span></span></code></pre></div><ul>
 <li><code>checks</code> things that are executed/built when you run <code>nix flake check</code></li>
 <li><code>devShells</code> things that are executed/built when you run <code>nix develop</code></li>
@@ -367,7 +367,7 @@ CI job:</p>
 </span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="s2">&#34;13-model_comparison-roaches.jl&#34;</span><span class="p">,</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="p">]</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">steps</span><span class="p">:</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c"># ...</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="c"># ...</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">Test ${{ matrix.jl-file }}</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="p">|</span><span class="sd">
 </span></span></span><span class="line"><span class="cl"><span class="sd">          nix develop -L . --command bash -c &#34;julia -e &#39;using Pkg; Pkg.instantiate()&#39;&#34;
@@ -423,14 +423,19 @@ file is defined the Stan model testing CI job:</p>
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">runs-on</span><span class="p">:</span><span class="w"> </span><span class="l">ubuntu-latest</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">strategy</span><span class="p">:</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">matrix</span><span class="p">:</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">stan</span><span class="p">:</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="p">[</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">            </span>{<span class="w"> </span><span class="nt">model</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;01-predictive_checks-posterior&#34;</span><span class="nt">, data</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;coin_flip.data.json&#34;</span><span class="w"> </span>}<span class="p">,</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">stan</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span>{<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">              </span><span class="nt">model</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;01-predictive_checks-posterior&#34;</span><span class="p">,</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">              </span><span class="nt">data</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;coin_flip.data.json&#34;</span><span class="p">,</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span>}<span class="p">,</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="c"># ...</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">            </span>{<span class="w"> </span><span class="nt">model</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;13-model_comparison-zero_inflated-poisson&#34;</span><span class="nt">, data</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;roaches.data.json&#34;</span><span class="w"> </span>}<span class="p">,</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span>{<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">              </span><span class="nt">model</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;13-model_comparison-zero_inflated-poisson&#34;</span><span class="p">,</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">              </span><span class="nt">data</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;roaches.data.json&#34;</span><span class="p">,</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span>}<span class="p">,</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="p">]</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">steps</span><span class="p">:</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c"># ...</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="c"># ...</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">Test ${{ matrix.stan.model }}</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="p">|</span><span class="sd">
 </span></span></span><span class="line"><span class="cl"><span class="sd">          echo &#34;Compiling: ${{ matrix.stan.model }}&#34;
@@ -571,7 +576,7 @@ and common in traditional null-hypothesis significance testing approaches.</p>
 <p>This is a duel of frequentist versus Bayesian approaches,
 and one of the many in which Bayesian emerges as the most coherent.
 Let&rsquo;s give a example and go over the analytical result with a ton of math,
-but also a computational result with <a href="https://julia-lang.org">Julia</a>.</p>
+but also a computational result with <a href="https://julialang.org">Julia</a>.</p>
 <h2 id="example">Example</h2>
 <p>Here&rsquo;s the setup for the example.
 In a certain city 49,581 boys and 48,870 girls have been
@@ -653,7 +658,8 @@ and by the <a href="https://en.wikipedia.org/wiki/Chain_rule_(probability)">prod
 we can decompose $P(\theta)$ into:</p>
 <p>$$P(\theta) = P(\theta \mid H_0) P(H_0) + P(\theta \mid H_a) P(H_a)$$</p>
 <p>Again, we&rsquo;ll use the normal approximation:</p>
-<p>$$\begin{aligned}
+<p>$$
+\begin{aligned}
 &amp;P \left( \theta = 0.5 \mid \mu = 49,225.5, \sigma = \sqrt{24.612.75} \right) \\
 &amp;= \frac{
 \frac{1}{\sqrt{2 \pi \sigma^2}} e^{- \left( \frac{(\mu - \mu \cdot 0.5)}{2 \sigma} \right)^2} \cdot 0.5
@@ -663,7 +669,8 @@ we can decompose $P(\theta)$ into:</p>
 \int_0^1 \frac {1}{\sqrt{2 \pi \sigma^2} } e^{- \left( \frac{\mu - \mu \cdot \theta)}{2 \sigma} \right)^2}d \theta \cdot 0.5
 } \\
 &amp;= 0.9505
-\end{aligned}$$</p>
+\end{aligned}
+$$</p>
 <p>The likelihood of the alternative hypothesis,
 $P(\theta \mid H_a)$,
 is just the CDF of all possible values of $\theta \ne 0.5$.</p>
@@ -829,7 +836,7 @@ or <a href="https://en.wikipedia.org/wiki/Approximate_Bayesian_computation">appr
 <li id="fn:6">
 <p>if you are curious about how this approximation works,
 check the backup slides of my
-<a href="https://github.com/storopoli/Bayesian-Statistic">open access and open source graduate course on Bayesian statistics</a>.&#160;<a href="#fnref:6" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+<a href="https://github.com/storopoli/Bayesian-Statistics">open access and open source graduate course on Bayesian statistics</a>.&#160;<a href="#fnref:6" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 <li id="fn:7">
 <p>Bayes&rsquo; theorem is officially called Bayes-Price-Laplace theorem.

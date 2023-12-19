@@ -71,7 +71,7 @@ and common in traditional null-hypothesis significance testing approaches.</p>
 <p>This is a duel of frequentist versus Bayesian approaches,
 and one of the many in which Bayesian emerges as the most coherent.
 Let&rsquo;s give a example and go over the analytical result with a ton of math,
-but also a computational result with <a href="https://julia-lang.org">Julia</a>.</p>
+but also a computational result with <a href="https://julialang.org">Julia</a>.</p>
 <h2 id="example">Example</h2>
 <p>Here&rsquo;s the setup for the example.
 In a certain city 49,581 boys and 48,870 girls have been
@@ -153,7 +153,8 @@ and by the <a href="https://en.wikipedia.org/wiki/Chain_rule_(probability)">prod
 we can decompose $P(\theta)$ into:</p>
 <p>$$P(\theta) = P(\theta \mid H_0) P(H_0) + P(\theta \mid H_a) P(H_a)$$</p>
 <p>Again, we&rsquo;ll use the normal approximation:</p>
-<p>$$\begin{aligned}
+<p>$$
+\begin{aligned}
 &amp;P \left( \theta = 0.5 \mid \mu = 49,225.5, \sigma = \sqrt{24.612.75} \right) \\
 &amp;= \frac{
 \frac{1}{\sqrt{2 \pi \sigma^2}} e^{- \left( \frac{(\mu - \mu \cdot 0.5)}{2 \sigma} \right)^2} \cdot 0.5
@@ -163,7 +164,8 @@ we can decompose $P(\theta)$ into:</p>
 \int_0^1 \frac {1}{\sqrt{2 \pi \sigma^2} } e^{- \left( \frac{\mu - \mu \cdot \theta)}{2 \sigma} \right)^2}d \theta \cdot 0.5
 } \\
 &amp;= 0.9505
-\end{aligned}$$</p>
+\end{aligned}
+$$</p>
 <p>The likelihood of the alternative hypothesis,
 $P(\theta \mid H_a)$,
 is just the CDF of all possible values of $\theta \ne 0.5$.</p>
@@ -329,7 +331,7 @@ or <a href="https://en.wikipedia.org/wiki/Approximate_Bayesian_computation">appr
 <li id="fn:6">
 <p>if you are curious about how this approximation works,
 check the backup slides of my
-<a href="https://github.com/storopoli/Bayesian-Statistic">open access and open source graduate course on Bayesian statistics</a>.&#160;<a href="#fnref:6" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+<a href="https://github.com/storopoli/Bayesian-Statistics">open access and open source graduate course on Bayesian statistics</a>.&#160;<a href="#fnref:6" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 <li id="fn:7">
 <p>Bayes&rsquo; theorem is officially called Bayes-Price-Laplace theorem.
