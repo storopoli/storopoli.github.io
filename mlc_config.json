@@ -1,9 +1,5 @@
 {
-  "aliveStatusCodes": [
-    429,
-    403,
-    200
-  ]
+  "aliveStatusCodes": [429, 403, 200],
   "httpHeaders": [
     {
       "urls": [
