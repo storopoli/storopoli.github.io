@@ -66,7 +66,7 @@ and common in traditional null-hypothesis significance testing approaches.
 This is a duel of frequentist versus Bayesian approaches,
 and one of the many in which Bayesian emerges as the most coherent.
 Let's give a example and go over the analytical result with a ton of math,
-but also a computational result with [Julia](https://julia-lang.org).
+but also a computational result with [Julia](https://julialang.org).
 
 ## Example
 
@@ -378,7 +378,7 @@ or [approximate Bayesian computation (ABC)](https://en.wikipedia.org/wiki/Approx
 
 [^normal approx]: if you are curious about how this approximation works,
 check the backup slides of my
-[open access and open source graduate course on Bayesian statistics](https://github.com/storopoli/Bayesian-Statistic).
+[open access and open source graduate course on Bayesian statistics](https://github.com/storopoli/Bayesian-Statistics).
 
 [^bayes theorem]: Bayes' theorem is officially called Bayes-Price-Laplace theorem.
 Bayes was trying to disprove David Hume's argument that miracles did not exist
