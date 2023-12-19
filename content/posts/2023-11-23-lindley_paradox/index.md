@@ -66,7 +66,7 @@ and common in traditional null-hypothesis significance testing approaches.
 This is a duel of frequentist versus Bayesian approaches,
 and one of the many in which Bayesian emerges as the most coherent.
 Let's give a example and go over the analytical result with a ton of math,
-but also a computational result with [Julia](https://julia-lang.org).
+but also a computational result with [Julia](https://julialang.org).
 
 ## Example
 
@@ -165,14 +165,15 @@ Now again let's plug in all the values:
 $$P(H_0 \mid \theta) = \frac{P(\theta \mid H_0) P(H_0)}{P(\theta)}$$
 
 Note that by the [axioms of probability](https://en.wikipedia.org/wiki/Probability_axioms)
-and by the [product rule of probability](https://en.wikipedia.org/wiki/Chain_rule_(probability))
+and by the [product rule of probability](<https://en.wikipedia.org/wiki/Chain_rule_(probability)>)
 we can decompose $P(\theta)$ into:
 
 $$P(\theta) = P(\theta \mid H_0) P(H_0) + P(\theta \mid H_a) P(H_a)$$
 
 Again, we'll use the normal approximation:
 
-$$\begin{aligned}
+$$
+\begin{aligned}
 &P \left( \theta = 0.5 \mid \mu = 49,225.5, \sigma = \sqrt{24.612.75} \right) \\\
 &= \frac{
 \frac{1}{\sqrt{2 \pi \sigma^2}} e^{- \left( \frac{(\mu - \mu \cdot 0.5)}{2 \sigma} \right)^2} \cdot 0.5
@@ -182,7 +183,8 @@ $$\begin{aligned}
 \int_0^1 \frac {1}{\sqrt{2 \pi \sigma^2} } e^{- \left( \frac{\mu - \mu \cdot \theta)}{2 \sigma} \right)^2}d \theta \cdot 0.5
 } \\\
 &= 0.9505
-\end{aligned}$$
+\end{aligned}
+$$
 
 The likelihood of the alternative hypothesis,
 $P(\theta \mid H_a)$,
@@ -331,36 +333,40 @@ This post is licensed under [Creative Commons Attribution-NonCommercial-ShareAli
 Lindley, Dennis V. "The future of statistics: A Bayesian 21st century".
 _Advances in Applied Probability_ 7 (1975): 106-115.
 
-[^bayesian]: as far as I know there's only one coherent approach to uncertainty,
-and it is the Bayesian approach.
-Otherwise, as de Finetti and Ramsey proposed,
-you are susceptible to a [Dutch book](https://en.wikipedia.org/wiki/Dutch_book).
-This is a topic for another blog post...
+[^bayesian]:
+    as far as I know there's only one coherent approach to uncertainty,
+    and it is the Bayesian approach.
+    Otherwise, as de Finetti and Ramsey proposed,
+    you are susceptible to a [Dutch book](https://en.wikipedia.org/wiki/Dutch_book).
+    This is a topic for another blog post...
 
-[^cromwell]: Cromwell's rule states that the use of prior probabilities of 1
-("the event will definitely occur") or 0 ("the event will definitely not occur")
-should be avoided, except when applied to statements that are logically true or false.
-Hence, anything that is not a math theorem should have priors in $(0,1)$.
-The reference comes from [Oliver Cromwell](https://en.wikipedia.org/wiki/Oliver_Cromwell),
-asking, very politely, for the Church of Scotland to consider that their prior probability
-might be wrong.
-This footnote also deserves a whole blog post...
+[^cromwell]:
+    Cromwell's rule states that the use of prior probabilities of 1
+    ("the event will definitely occur") or 0 ("the event will definitely not occur")
+    should be avoided, except when applied to statements that are logically true or false.
+    Hence, anything that is not a math theorem should have priors in $(0,1)$.
+    The reference comes from [Oliver Cromwell](https://en.wikipedia.org/wiki/Oliver_Cromwell),
+    asking, very politely, for the Church of Scotland to consider that their prior probability
+    might be wrong.
+    This footnote also deserves a whole blog post...
 
-[^stigler]: [Stigler's law of eponymy](https://en.wikipedia.org/wiki/Stigler%27s_law_of_eponymy)
-states that no scientific discovery is named after its original discoverer.
-The paradox was already was discussed in [Harold Jeffreys](https://en.wikipedia.org/wiki/Harold_Jeffreys)'
-1939 textbook.
-Also, fun fact, Stigler's is not the original creator of such law...
-Now that's a self-referential paradox, and a broad version of the [Halting problem](https://en.wikipedia.org/wiki/Halting_problem),
-which should earn its own footnote.
-Nevertheless, we are getting into self-referential danger zone here with
-footnotes' of footnotes' of footnotes'...
+[^stigler]:
+    [Stigler's law of eponymy](https://en.wikipedia.org/wiki/Stigler%27s_law_of_eponymy)
+    states that no scientific discovery is named after its original discoverer.
+    The paradox was already was discussed in [Harold Jeffreys](https://en.wikipedia.org/wiki/Harold_Jeffreys)'
+    1939 textbook.
+    Also, fun fact, Stigler's is not the original creator of such law...
+    Now that's a self-referential paradox, and a broad version of the [Halting problem](https://en.wikipedia.org/wiki/Halting_problem),
+    which should earn its own footnote.
+    Nevertheless, we are getting into self-referential danger zone here with
+    footnotes' of footnotes' of footnotes'...
 
-[^pvalue]: this is called $p$-value and can be easily defined as
-"the probability of sampling data from a target population given that $H_0$
-is true as the number of sampling procedures $\to \infty$".
-Yes, it is not that intuitive, and it deserves not a blog post,
-but a full curriculum to hammer it home.
+[^pvalue]:
+    this is called $p$-value and can be easily defined as
+    "the probability of sampling data from a target population given that $H_0$
+    is true as the number of sampling procedures $\to \infty$".
+    Yes, it is not that intuitive, and it deserves not a blog post,
+    but a full curriculum to hammer it home.
 
 [^toy problems]: that is not true for most of the real-world problems.
 For Bayesian approaches,
@@ -372,7 +378,7 @@ or [approximate Bayesian computation (ABC)](https://en.wikipedia.org/wiki/Approx
 
 [^normal approx]: if you are curious about how this approximation works,
 check the backup slides of my
-[open access and open source graduate course on Bayesian statistics](https://github.com/storopoli/Bayesian-Statistic).
+[open access and open source graduate course on Bayesian statistics](https://github.com/storopoli/Bayesian-Statistics).
 
 [^bayes theorem]: Bayes' theorem is officially called Bayes-Price-Laplace theorem.
 Bayes was trying to disprove David Hume's argument that miracles did not exist

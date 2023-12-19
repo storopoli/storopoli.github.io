@@ -2,7 +2,7 @@ baseURL: https://storopoli.io/
 languageCode: en-us
 theme: WonderMod
 title: "Jose Storopoli, PhD"
-copyright: '[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)'
+copyright: "[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)"
 
 enableRobotsTXT: true
 buildDrafts: false
@@ -21,7 +21,18 @@ params:
   env: production
   title: "Jose Storopoli, PhD"
   description: "Computational Statistician, Data Scientist, Machine Learning Engineer, STEM Educator, Opensource Contributor"
-  keywords: [statistics, Bayesian statistics, Julia, Rust, math, blog, research, security, privacy]
+  keywords:
+    [
+      statistics,
+      Bayesian statistics,
+      Julia,
+      Rust,
+      math,
+      blog,
+      research,
+      security,
+      privacy,
+    ]
   author: "Jose Storopoli"
   DateFormat: "January 2, 2006"
   defaultTheme: dark # dark, light
@@ -52,7 +63,6 @@ params:
     Subtitle: "Computational Statistician, Data Scientist, Machine Learning Engineer, STEM Educator, Opensource Contributor"
     imageUrl: "/assets/pp.jpeg"
     imageTitle: "Profile Pic"
-
 
   socialIcons:
     - name: cv

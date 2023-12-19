@@ -7,9 +7,7 @@ then
       then "git+file"
       else "path";
   in
-    (builtins.getFlake "${scheme}://${toString ./.}")
-    .devShell
-    .${builtins.currentSystem}
+  (builtins.getFlake "${scheme}://${toString ./.}").devShell.${builtins.currentSystem}
 
 # Otherwise we'll use the flake-compat shim
 else

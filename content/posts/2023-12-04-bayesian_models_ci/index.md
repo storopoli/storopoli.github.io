@@ -15,22 +15,26 @@ It is available in GitHub through the repo [`storopoli/Bayesian-Statistics`](htt
 I've taught it many times and every time was such a joy.
 It is composed of:
 
-[^open]: the code is MIT-licensed and the content is CreativeCommons
-Non-Commercial 4.0
+[^open]:
+    the code is MIT-licensed and the content is CreativeCommons
+    Non-Commercial 4.0
 
 - a set of 300+ slides[^slides] covering the theoretical part
 - [Stan](https://mc-stan.org)[^stan] models
 - [Turing.jl](https://turinglang.org)[^turing] models
 
-[^slides]: I am also planning to go over the slides for every lecture
-in a YouTube playlist in the near future.
-This would make it the experience complete: slides, lectures, and code.
+[^slides]:
+    I am also planning to go over the slides for every lecture
+    in a YouTube playlist in the near future.
+    This would make it the experience complete: slides, lectures, and code.
 
-[^stan]: a probabilistic programming language and suite of MCMC samplers written in C++.
-It is today's gold standard in Bayesian stats.
+[^stan]:
+    a probabilistic programming language and suite of MCMC samplers written in C++.
+    It is today's gold standard in Bayesian stats.
 
-[^turing]: is an ecosystem of Julia packages for Bayesian inference using probabilistic
-programming.
+[^turing]:
+    is an ecosystem of Julia packages for Bayesian inference using probabilistic
+    programming.
 
 Now and then I receive emails from someone saying that the materials helped
 them to understand Bayesian statistics.
@@ -41,12 +45,13 @@ I decided to make the repository fully reproducible and testable in CI[^ci] usin
 [Nix](https://nixos.org)
 and [GitHub actions](https://docs.github.com/en/actions).
 
-[^ci]: CI stands for **c**ontinuous **i**ntegration,
-sometimes also known as CI/CD, **c**ontinuous **i**ntegration and **c**ontinuous
-**d**elivery.
-[CI/CD](https://en.wikipedia.org/wiki/CI/CD) is a wide "umbrella" term
-for "everything that is tested in all parts of the development cicle",
-and these tests commonly take place in a cloud machine.
+[^ci]:
+    CI stands for **c**ontinuous **i**ntegration,
+    sometimes also known as CI/CD, **c**ontinuous **i**ntegration and **c**ontinuous
+    **d**elivery.
+    [CI/CD](https://en.wikipedia.org/wiki/CI/CD) is a wide "umbrella" term
+    for "everything that is tested in all parts of the development cicle",
+    and these tests commonly take place in a cloud machine.
 
 Here's what I am testing on every new change to the main repository
 and every new pull request (PR):
@@ -54,7 +59,7 @@ and every new pull request (PR):
 1. **slides in LaTeX** are built and released as PDF in CI
 1. **typos** in content and code are tested
 1. **Turing.jl models** are run and tested in CI using the latest version of Julia,
-  Turing.jl and dependencies
+   Turing.jl and dependencies
 1. **Stan models** are run and test in CI using the latest version of Stan
 
 ## Nix
@@ -212,7 +217,7 @@ outputs = { self, nixpkgs, flake-utils, pre-commit-hooks }:
       checks = ...
       devShells = ...
       packages = ...
-   }); 
+   });
 ```
 
 - `checks` things that are executed/built when you run `nix flake check`
@@ -328,11 +333,11 @@ Here we use a set of actions to:
 
 1. install Nix
 1. build the slides' PDF file using `nix build`
-  (the `-L` flag is to have more verbose logs)
+   (the `-L` flag is to have more verbose logs)
 1. upload the built slides' PDF file as an artifact of the CI run.
-  This is useful for inspection and debugging.
-  There is also the caveat that if the PDF file is not found the whole workflow
-  should error.
+   This is useful for inspection and debugging.
+   There is also the caveat that if the PDF file is not found the whole workflow
+   should error.
 
 The last one is the
 [`release-slides.yml`](https://github.com/storopoli/Bayesian-Statistics/blob/main/.github/workflows/release-slides.yml),
@@ -430,7 +435,7 @@ jobs:
             "13-model_comparison-roaches.jl",
           ]
     steps:
-    # ...
+      # ...
       - name: Test ${{ matrix.jl-file }}
         run: |
           nix develop -L . --command bash -c "julia -e 'using Pkg; Pkg.instantiate()'"
@@ -444,7 +449,7 @@ Next, we install the latest Julia version.
 Finally, we run everything in parallel using the YAML string interpolation
 `${{ matrix.jl-file }}`.
 This expands the expression into `N` parallel jobs,
-where `N` is the `jl-file` list length. 
+where `N` is the `jl-file` list length.
 
 If any of these parallel jobs error out, then the whole workflow will error.
 Hence, we are always certain that the models are up-to-date with the latest Julia
@@ -486,9 +491,9 @@ devShells.default = pkgs.mkShell {
 ```
 
 Here I am also defining an environment variable in the `shellHook`,
-`CMDSTAN_HOME` because that is useful for local development. 
+`CMDSTAN_HOME` because that is useful for local development.
 
-In the same GitHub action workflow 
+In the same GitHub action workflow
 [`models.yml`](https://github.com/storopoli/Bayesian-Statistics/blob/main/.github/workflows/models.yml)
 file is defined the Stan model testing CI job:
 
@@ -499,14 +504,19 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        stan:
-          [
-            { model: "01-predictive_checks-posterior", data: "coin_flip.data.json" },
+        stan: [
+            {
+              model: "01-predictive_checks-posterior",
+              data: "coin_flip.data.json",
+            },
             # ...
-            { model: "13-model_comparison-zero_inflated-poisson", data: "roaches.data.json" },
+            {
+              model: "13-model_comparison-zero_inflated-poisson",
+              data: "roaches.data.json",
+            },
           ]
     steps:
-    # ...
+      # ...
       - name: Test ${{ matrix.stan.model }}
         run: |
           echo "Compiling: ${{ matrix.stan.model }}"

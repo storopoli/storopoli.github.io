@@ -1,9 +1,5 @@
 {
-  "aliveStatusCodes": [
-    429,
-    403,
-    200
-  ]
+  "aliveStatusCodes": [403, 200, 206],
   "httpHeaders": [
     {
       "urls": [
@@ -15,6 +11,15 @@
       "headers": {
         "Accept-Encoding": "zstd, br, gzip, deflate"
       }
+    }
+  ],
+  "retryOn429": true,
+  "ignorePatterns": [
+    {
+      "pattern": "../.*"
+    },
+    {
+      "pattern": "/github/workspace/.*"
     }
   ]
 }
