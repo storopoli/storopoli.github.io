@@ -1626,13 +1626,10 @@ Everything that I do is either open source or has a permissive Creative Commons 
 <p>Here&rsquo;s a list of some resources that I&rsquo;ve made or contributed:</p>
 <ul>
 <li><a href="https://juliadatascience.io/">Julia Data Science book</a>.</li>
-<li><a href="https://github.com/storopoli/Bayesian-Statistics">Graduate course on Bayesian Statistics</a>
-<ul>
-<li><a href="https://www.youtube.com/playlist?list=PLpTXaEnTpmwPa1lx7VCbmqsSbXb2gg2PS">online lectures</a>
+<li><a href="https://github.com/storopoli/Bayesian-Statistics">Graduate course on Bayesian Statistics</a> +
+<a href="https://www.youtube.com/playlist?list=PLpTXaEnTpmwPa1lx7VCbmqsSbXb2gg2PS">online lectures</a>
 with <a href="https://mc-stan.org"><code>Stan</code></a> and
 <a href="https://turinglang.org"><code>Turing.jl</code></a> code examples.</li>
-</ul>
-</li>
 <li><a href="https://storopoli.io/Bayesian-Julia">Bayesian Statistics with Julia and <code>Turing.jl</code></a></li>
 <li><a href="https://github.com/TuringLang/TuringGLM.jl"><code>TuringGLM.jl</code></a></li>
 <li><a href="https://youtu.be/uiQpwMQZBTA">Introduction to Julia (JuliaCon 2022 Workshop)</a></li>
