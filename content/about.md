@@ -17,7 +17,8 @@ Everything that I do is either open source or has a permissive Creative Commons 
 Here's a list of some resources that I've made or contributed:
 
 - [Julia Data Science book](https://juliadatascience.io/).
-- [Graduate course on Bayesian Statistics](https://github.com/storopoli/Bayesian-Statistics)
+- [Graduate course on Bayesian Statistics](https://github.com/storopoli/Bayesian-Statistics) +
+  [online lectures](https://www.youtube.com/playlist?list=PLpTXaEnTpmwPa1lx7VCbmqsSbXb2gg2PS)
   with [`Stan`](https://mc-stan.org) and
   [`Turing.jl`](https://turinglang.org) code examples.
 - [Bayesian Statistics with Julia and `Turing.jl`](https://storopoli.io/Bayesian-Julia)
