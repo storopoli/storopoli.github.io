@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>programming on Jose Storopoli, PhD</title>
     <link>https://storopoli.io/tags/programming/</link>
@@ -7,12 +7,12 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)</copyright>
-    <lastBuildDate>Tue, 28 Nov 2023 18:19:36 -0300</lastBuildDate><atom:link href="https://storopoli.io/tags/programming/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 28 Nov 2023 18:19:36 -0300</lastBuildDate>
+    <atom:link href="https://storopoli.io/tags/programming/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Zero-cost Abstractions</title>
       <link>https://storopoli.io/2023-11-28-zero_cost_abstractions/</link>
       <pubDate>Tue, 28 Nov 2023 18:19:36 -0300</pubDate>
-      
       <guid>https://storopoli.io/2023-11-28-zero_cost_abstractions/</guid>
       <description>In programming language circles there&amp;rsquo;s a recently trend of discussing a concept called zero-cost abstractions: the ability to use higher-levels abstractions without suffering any loss of performance.
 Zero-cost abstractions allows you to write performant code without having to give up a single drop of convenience and expressiveness:
@@ -357,12 +357,10 @@ Yes, I am talking to you <a href="https://github.com/numpy/numpy/blob/06d7bdfbb5
 </div>
 ]]></content:encoded>
     </item>
-    
     <item>
       <title>What is soydev? And why do I hate it</title>
       <link>https://storopoli.io/2023-11-10-2023-11-13-soydev/</link>
       <pubDate>Mon, 13 Nov 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://storopoli.io/2023-11-10-2023-11-13-soydev/</guid>
       <description>Let&amp;rsquo;s dive into the concept of &amp;ldquo;soydev&amp;rdquo;, a term often used pejoratively to describe developers with a superficial understanding of technology. I provide my definition of what soydev is, why is bad, and how it came to be. To counteract soydev inclinations, I propose an abstract approach centered on timeless concepts, protocols, and first principles, fostering a mindset of exploration, resilience in the face of failure, and an insatiable hunger for knowledge.</description>
       <content:encoded><![CDATA[<p><img loading="lazy" src="soydev.jpg" alt="soydev meme"  />
@@ -567,6 +565,5 @@ However, I am always tempted by them.</li>
 </a></p>
 ]]></content:encoded>
     </item>
-    
   </channel>
 </rss>

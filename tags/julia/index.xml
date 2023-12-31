@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>julia on Jose Storopoli, PhD</title>
     <link>https://storopoli.io/tags/julia/</link>
@@ -7,12 +7,12 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)</copyright>
-    <lastBuildDate>Tue, 28 Nov 2023 18:19:36 -0300</lastBuildDate><atom:link href="https://storopoli.io/tags/julia/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 28 Nov 2023 18:19:36 -0300</lastBuildDate>
+    <atom:link href="https://storopoli.io/tags/julia/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Zero-cost Abstractions</title>
       <link>https://storopoli.io/2023-11-28-zero_cost_abstractions/</link>
       <pubDate>Tue, 28 Nov 2023 18:19:36 -0300</pubDate>
-      
       <guid>https://storopoli.io/2023-11-28-zero_cost_abstractions/</guid>
       <description>In programming language circles there&amp;rsquo;s a recently trend of discussing a concept called zero-cost abstractions: the ability to use higher-levels abstractions without suffering any loss of performance.
 Zero-cost abstractions allows you to write performant code without having to give up a single drop of convenience and expressiveness:
@@ -357,12 +357,10 @@ Yes, I am talking to you <a href="https://github.com/numpy/numpy/blob/06d7bdfbb5
 </div>
 ]]></content:encoded>
     </item>
-    
     <item>
       <title>Lindley&#39;s Paradox, or The consistency of Bayesian Thinking</title>
       <link>https://storopoli.io/2023-11-23-lindley_paradox/</link>
       <pubDate>Wed, 22 Nov 2023 07:06:59 -0300</pubDate>
-      
       <guid>https://storopoli.io/2023-11-23-lindley_paradox/</guid>
       <description>Warning: This post has KaTeX enabled, so if you want to view the rendered math formulas, you&amp;rsquo;ll have to unfortunately enable JavaScript.
 Dennis Lindley, one of my many heroes, was an English statistician, decision theorist and leading advocate of Bayesian statistics. He published a pivotal book, Understanding Uncertainty, that changed my view on what is and how to handle uncertainty in a coherent1 way. He is responsible for one of my favorites quotes: &amp;ldquo;Inside every non-Bayesian there is a Bayesian struggling to get out&amp;rdquo;; and one of my favorite heuristics around prior probabilities: Cromwell&amp;rsquo;s Rule2.</description>
@@ -711,12 +709,10 @@ published scientific studies suffer from this flaw.&#160;<a href="#fnref:8" clas
 </div>
 ]]></content:encoded>
     </item>
-    
     <item>
       <title>Word Embeddings</title>
       <link>https://storopoli.io/2023-11-20-word_embeddings/</link>
       <pubDate>Sun, 19 Nov 2023 22:49:51 -0300</pubDate>
-      
       <guid>https://storopoli.io/2023-11-20-word_embeddings/</guid>
       <description>Warning: This post has KaTeX enabled, so if you want to view the rendered math formulas, you&amp;rsquo;ll have to unfortunately enable JavaScript.
 I wish I could go back in time and tell my younger self that you can make a machine understand human language with trigonometry. That would definitely have made me more aware and interested in the subject during my school years. I would have looked at triangles, circles, sines, cosines, and tangents in a whole different way.</description>
@@ -888,6 +884,5 @@ and <a href="https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8
 </a></p>
 ]]></content:encoded>
     </item>
-    
   </channel>
 </rss>

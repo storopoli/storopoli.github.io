@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>stats on Jose Storopoli, PhD</title>
     <link>https://storopoli.io/tags/stats/</link>
@@ -7,12 +7,12 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)</copyright>
-    <lastBuildDate>Wed, 22 Nov 2023 07:06:59 -0300</lastBuildDate><atom:link href="https://storopoli.io/tags/stats/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 22 Nov 2023 07:06:59 -0300</lastBuildDate>
+    <atom:link href="https://storopoli.io/tags/stats/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Lindley&#39;s Paradox, or The consistency of Bayesian Thinking</title>
       <link>https://storopoli.io/2023-11-23-lindley_paradox/</link>
       <pubDate>Wed, 22 Nov 2023 07:06:59 -0300</pubDate>
-      
       <guid>https://storopoli.io/2023-11-23-lindley_paradox/</guid>
       <description>Warning: This post has KaTeX enabled, so if you want to view the rendered math formulas, you&amp;rsquo;ll have to unfortunately enable JavaScript.
 Dennis Lindley, one of my many heroes, was an English statistician, decision theorist and leading advocate of Bayesian statistics. He published a pivotal book, Understanding Uncertainty, that changed my view on what is and how to handle uncertainty in a coherent1 way. He is responsible for one of my favorites quotes: &amp;ldquo;Inside every non-Bayesian there is a Bayesian struggling to get out&amp;rdquo;; and one of my favorite heuristics around prior probabilities: Cromwell&amp;rsquo;s Rule2.</description>
@@ -361,6 +361,5 @@ published scientific studies suffer from this flaw.&#160;<a href="#fnref:8" clas
 </div>
 ]]></content:encoded>
     </item>
-    
   </channel>
 </rss>

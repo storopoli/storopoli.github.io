@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>natural language processing on Jose Storopoli, PhD</title>
     <link>https://storopoli.io/tags/natural-language-processing/</link>
@@ -7,12 +7,12 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)</copyright>
-    <lastBuildDate>Sun, 19 Nov 2023 22:49:51 -0300</lastBuildDate><atom:link href="https://storopoli.io/tags/natural-language-processing/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 19 Nov 2023 22:49:51 -0300</lastBuildDate>
+    <atom:link href="https://storopoli.io/tags/natural-language-processing/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Word Embeddings</title>
       <link>https://storopoli.io/2023-11-20-word_embeddings/</link>
       <pubDate>Sun, 19 Nov 2023 22:49:51 -0300</pubDate>
-      
       <guid>https://storopoli.io/2023-11-20-word_embeddings/</guid>
       <description>Warning: This post has KaTeX enabled, so if you want to view the rendered math formulas, you&amp;rsquo;ll have to unfortunately enable JavaScript.
 I wish I could go back in time and tell my younger self that you can make a machine understand human language with trigonometry. That would definitely have made me more aware and interested in the subject during my school years. I would have looked at triangles, circles, sines, cosines, and tangents in a whole different way.</description>
@@ -184,6 +184,5 @@ and <a href="https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8
 </a></p>
 ]]></content:encoded>
     </item>
-    
   </channel>
 </rss>
