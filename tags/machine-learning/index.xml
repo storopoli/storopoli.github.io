@@ -1,22 +1,27 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>machine learning on Jose Storopoli, PhD</title>
-    <link>https://storopoli.io/tags/machine-learning/</link>
-    <description>Recent content in machine learning on Jose Storopoli, PhD</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)</copyright>
-    <lastBuildDate>Sun, 19 Nov 2023 22:49:51 -0300</lastBuildDate>
-    <atom:link href="https://storopoli.io/tags/machine-learning/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Word Embeddings</title>
-      <link>https://storopoli.io/2023-11-20-word_embeddings/</link>
-      <pubDate>Sun, 19 Nov 2023 22:49:51 -0300</pubDate>
-      <guid>https://storopoli.io/2023-11-20-word_embeddings/</guid>
-      <description>Warning: This post has KaTeX enabled, so if you want to view the rendered math formulas, you&amp;rsquo;ll have to unfortunately enable JavaScript.
-I wish I could go back in time and tell my younger self that you can make a machine understand human language with trigonometry. That would definitely have made me more aware and interested in the subject during my school years. I would have looked at triangles, circles, sines, cosines, and tangents in a whole different way.</description>
-      <content:encoded><![CDATA[<blockquote>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>machine learning on Jose Storopoli, PhD</title>
+  <link rel="alternate" href="https://storopoli.io/tags/machine-learning/" />
+  <link rel="self" href="https://storopoli.io/tags/machine-learning/index.xml" />
+  <subtitle>Recent content in machine learning on Jose Storopoli, PhD</subtitle>
+  <id>https://storopoli.io/tags/machine-learning/</id>
+  <generator uri="http://gohugo.io" version="0.121.1">Hugo</generator>
+  <language>en-us</language>
+  <updated>2023-11-19T22:49:51-03:00</updated>
+  <author>
+    <name>Jose Storopoli</name>
+    
+  </author>
+  <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)</rights>
+      <entry>
+        <title>Word Embeddings</title>
+        <link rel="alternate" href="https://storopoli.io/2023-11-20-word_embeddings/" />
+        <id>https://storopoli.io/2023-11-20-word_embeddings/</id>
+        <published>2023-11-19T22:49:51-03:00</published>
+        <updated>2023-11-21T13:13:27+01:00</updated>
+        <summary type="html">Warning: This post has KaTeX enabled, so if you want to view the rendered math formulas, you&amp;rsquo;ll have to unfortunately enable JavaScript.
+I wish I could go back in time and tell my younger self that you can make a machine understand human language with trigonometry. That would definitely have made me more aware and interested in the subject during my school years. I would have looked at triangles, circles, sines, cosines, and tangents in a whole different way.</summary>
+          <content type="html"><![CDATA[<blockquote>
 <p>Warning: This post has <a href="https://katex.org/">KaTeX</a> enabled,
 so if you want to view the rendered math formulas,
 you&rsquo;ll have to unfortunately enable JavaScript.</p>
@@ -182,7 +187,9 @@ and <a href="https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8
 <p>This post is licensed under <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International</a>.</p>
 <p><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img loading="lazy" src="https://licensebuttons.net/l/by-nc-sa/4.0/88x31.png" alt="CC BY-NC-SA 4.0"  />
 </a></p>
-]]></content:encoded>
-    </item>
-  </channel>
-</rss>
+]]></content>
+      </entry>
+
+</feed>
+
+

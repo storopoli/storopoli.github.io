@@ -1,149 +1,172 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Tags on Jose Storopoli, PhD</title>
-    <link>https://storopoli.io/tags/</link>
-    <description>Recent content in Tags on Jose Storopoli, PhD</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)</copyright>
-    <lastBuildDate>Mon, 04 Dec 2023 17:43:03 -0300</lastBuildDate>
-    <atom:link href="https://storopoli.io/tags/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>bayesian</title>
-      <link>https://storopoli.io/tags/bayesian/</link>
-      <pubDate>Mon, 04 Dec 2023 17:43:03 -0300</pubDate>
-      <guid>https://storopoli.io/tags/bayesian/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    <item>
-      <title>ci</title>
-      <link>https://storopoli.io/tags/ci/</link>
-      <pubDate>Mon, 04 Dec 2023 17:43:03 -0300</pubDate>
-      <guid>https://storopoli.io/tags/ci/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    <item>
-      <title>github</title>
-      <link>https://storopoli.io/tags/github/</link>
-      <pubDate>Mon, 04 Dec 2023 17:43:03 -0300</pubDate>
-      <guid>https://storopoli.io/tags/github/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    <item>
-      <title>github actions</title>
-      <link>https://storopoli.io/tags/github-actions/</link>
-      <pubDate>Mon, 04 Dec 2023 17:43:03 -0300</pubDate>
-      <guid>https://storopoli.io/tags/github-actions/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    <item>
-      <title>nix</title>
-      <link>https://storopoli.io/tags/nix/</link>
-      <pubDate>Mon, 04 Dec 2023 17:43:03 -0300</pubDate>
-      <guid>https://storopoli.io/tags/nix/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    <item>
-      <title>stan</title>
-      <link>https://storopoli.io/tags/stan/</link>
-      <pubDate>Mon, 04 Dec 2023 17:43:03 -0300</pubDate>
-      <guid>https://storopoli.io/tags/stan/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    <item>
-      <title>turing</title>
-      <link>https://storopoli.io/tags/turing/</link>
-      <pubDate>Mon, 04 Dec 2023 17:43:03 -0300</pubDate>
-      <guid>https://storopoli.io/tags/turing/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    <item>
-      <title>julia</title>
-      <link>https://storopoli.io/tags/julia/</link>
-      <pubDate>Tue, 28 Nov 2023 18:19:36 -0300</pubDate>
-      <guid>https://storopoli.io/tags/julia/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    <item>
-      <title>programming</title>
-      <link>https://storopoli.io/tags/programming/</link>
-      <pubDate>Tue, 28 Nov 2023 18:19:36 -0300</pubDate>
-      <guid>https://storopoli.io/tags/programming/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    <item>
-      <title>python</title>
-      <link>https://storopoli.io/tags/python/</link>
-      <pubDate>Tue, 28 Nov 2023 18:19:36 -0300</pubDate>
-      <guid>https://storopoli.io/tags/python/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    <item>
-      <title>rust</title>
-      <link>https://storopoli.io/tags/rust/</link>
-      <pubDate>Tue, 28 Nov 2023 18:19:36 -0300</pubDate>
-      <guid>https://storopoli.io/tags/rust/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    <item>
-      <title>stats</title>
-      <link>https://storopoli.io/tags/stats/</link>
-      <pubDate>Wed, 22 Nov 2023 07:06:59 -0300</pubDate>
-      <guid>https://storopoli.io/tags/stats/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    <item>
-      <title>machine learning</title>
-      <link>https://storopoli.io/tags/machine-learning/</link>
-      <pubDate>Sun, 19 Nov 2023 22:49:51 -0300</pubDate>
-      <guid>https://storopoli.io/tags/machine-learning/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    <item>
-      <title>math</title>
-      <link>https://storopoli.io/tags/math/</link>
-      <pubDate>Sun, 19 Nov 2023 22:49:51 -0300</pubDate>
-      <guid>https://storopoli.io/tags/math/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    <item>
-      <title>natural language processing</title>
-      <link>https://storopoli.io/tags/natural-language-processing/</link>
-      <pubDate>Sun, 19 Nov 2023 22:49:51 -0300</pubDate>
-      <guid>https://storopoli.io/tags/natural-language-processing/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    <item>
-      <title>rant</title>
-      <link>https://storopoli.io/tags/rant/</link>
-      <pubDate>Mon, 13 Nov 2023 00:00:00 +0000</pubDate>
-      <guid>https://storopoli.io/tags/rant/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    <item>
-      <title>soydev</title>
-      <link>https://storopoli.io/tags/soydev/</link>
-      <pubDate>Mon, 13 Nov 2023 00:00:00 +0000</pubDate>
-      <guid>https://storopoli.io/tags/soydev/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-  </channel>
-</rss>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Tags on Jose Storopoli, PhD</title>
+  <link rel="alternate" href="https://storopoli.io/tags/" />
+  <link rel="self" href="https://storopoli.io/tags/index.xml" />
+  <subtitle>Recent content in Tags on Jose Storopoli, PhD</subtitle>
+  <id>https://storopoli.io/tags/</id>
+  <generator uri="http://gohugo.io" version="0.121.1">Hugo</generator>
+  <language>en-us</language>
+  <updated>2023-12-04T17:43:03-03:00</updated>
+  <author>
+    <name>Jose Storopoli</name>
+    
+  </author>
+  <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)</rights>
+      <entry>
+        <title>bayesian</title>
+        <link rel="alternate" href="https://storopoli.io/tags/bayesian/" />
+        <id>https://storopoli.io/tags/bayesian/</id>
+        <published>2023-12-04T17:43:03-03:00</published>
+        <updated>2023-12-19T08:24:55-03:00</updated>
+        <summary type="html"></summary>
+          <content type="html"><![CDATA[]]></content>
+      </entry>
+      <entry>
+        <title>ci</title>
+        <link rel="alternate" href="https://storopoli.io/tags/ci/" />
+        <id>https://storopoli.io/tags/ci/</id>
+        <published>2023-12-04T17:43:03-03:00</published>
+        <updated>2023-12-19T08:24:55-03:00</updated>
+        <summary type="html"></summary>
+          <content type="html"><![CDATA[]]></content>
+      </entry>
+      <entry>
+        <title>github</title>
+        <link rel="alternate" href="https://storopoli.io/tags/github/" />
+        <id>https://storopoli.io/tags/github/</id>
+        <published>2023-12-04T17:43:03-03:00</published>
+        <updated>2023-12-19T08:24:55-03:00</updated>
+        <summary type="html"></summary>
+          <content type="html"><![CDATA[]]></content>
+      </entry>
+      <entry>
+        <title>github actions</title>
+        <link rel="alternate" href="https://storopoli.io/tags/github-actions/" />
+        <id>https://storopoli.io/tags/github-actions/</id>
+        <published>2023-12-04T17:43:03-03:00</published>
+        <updated>2023-12-19T08:24:55-03:00</updated>
+        <summary type="html"></summary>
+          <content type="html"><![CDATA[]]></content>
+      </entry>
+      <entry>
+        <title>nix</title>
+        <link rel="alternate" href="https://storopoli.io/tags/nix/" />
+        <id>https://storopoli.io/tags/nix/</id>
+        <published>2023-12-04T17:43:03-03:00</published>
+        <updated>2023-12-19T08:24:55-03:00</updated>
+        <summary type="html"></summary>
+          <content type="html"><![CDATA[]]></content>
+      </entry>
+      <entry>
+        <title>stan</title>
+        <link rel="alternate" href="https://storopoli.io/tags/stan/" />
+        <id>https://storopoli.io/tags/stan/</id>
+        <published>2023-12-04T17:43:03-03:00</published>
+        <updated>2023-12-19T08:24:55-03:00</updated>
+        <summary type="html"></summary>
+          <content type="html"><![CDATA[]]></content>
+      </entry>
+      <entry>
+        <title>turing</title>
+        <link rel="alternate" href="https://storopoli.io/tags/turing/" />
+        <id>https://storopoli.io/tags/turing/</id>
+        <published>2023-12-04T17:43:03-03:00</published>
+        <updated>2023-12-19T08:24:55-03:00</updated>
+        <summary type="html"></summary>
+          <content type="html"><![CDATA[]]></content>
+      </entry>
+      <entry>
+        <title>julia</title>
+        <link rel="alternate" href="https://storopoli.io/tags/julia/" />
+        <id>https://storopoli.io/tags/julia/</id>
+        <published>2023-11-28T18:19:36-03:00</published>
+        <updated>2023-12-19T08:24:55-03:00</updated>
+        <summary type="html"></summary>
+          <content type="html"><![CDATA[]]></content>
+      </entry>
+      <entry>
+        <title>programming</title>
+        <link rel="alternate" href="https://storopoli.io/tags/programming/" />
+        <id>https://storopoli.io/tags/programming/</id>
+        <published>2023-11-28T18:19:36-03:00</published>
+        <updated>2023-12-19T08:24:55-03:00</updated>
+        <summary type="html"></summary>
+          <content type="html"><![CDATA[]]></content>
+      </entry>
+      <entry>
+        <title>python</title>
+        <link rel="alternate" href="https://storopoli.io/tags/python/" />
+        <id>https://storopoli.io/tags/python/</id>
+        <published>2023-11-28T18:19:36-03:00</published>
+        <updated>2023-12-19T08:24:55-03:00</updated>
+        <summary type="html"></summary>
+          <content type="html"><![CDATA[]]></content>
+      </entry>
+      <entry>
+        <title>rust</title>
+        <link rel="alternate" href="https://storopoli.io/tags/rust/" />
+        <id>https://storopoli.io/tags/rust/</id>
+        <published>2023-11-28T18:19:36-03:00</published>
+        <updated>2023-12-19T08:24:55-03:00</updated>
+        <summary type="html"></summary>
+          <content type="html"><![CDATA[]]></content>
+      </entry>
+      <entry>
+        <title>stats</title>
+        <link rel="alternate" href="https://storopoli.io/tags/stats/" />
+        <id>https://storopoli.io/tags/stats/</id>
+        <published>2023-11-22T07:06:59-03:00</published>
+        <updated>2023-12-19T08:24:55-03:00</updated>
+        <summary type="html"></summary>
+          <content type="html"><![CDATA[]]></content>
+      </entry>
+      <entry>
+        <title>machine learning</title>
+        <link rel="alternate" href="https://storopoli.io/tags/machine-learning/" />
+        <id>https://storopoli.io/tags/machine-learning/</id>
+        <published>2023-11-19T22:49:51-03:00</published>
+        <updated>2023-11-21T13:13:27+01:00</updated>
+        <summary type="html"></summary>
+          <content type="html"><![CDATA[]]></content>
+      </entry>
+      <entry>
+        <title>math</title>
+        <link rel="alternate" href="https://storopoli.io/tags/math/" />
+        <id>https://storopoli.io/tags/math/</id>
+        <published>2023-11-19T22:49:51-03:00</published>
+        <updated>2023-11-21T13:13:27+01:00</updated>
+        <summary type="html"></summary>
+          <content type="html"><![CDATA[]]></content>
+      </entry>
+      <entry>
+        <title>natural language processing</title>
+        <link rel="alternate" href="https://storopoli.io/tags/natural-language-processing/" />
+        <id>https://storopoli.io/tags/natural-language-processing/</id>
+        <published>2023-11-19T22:49:51-03:00</published>
+        <updated>2023-11-21T13:13:27+01:00</updated>
+        <summary type="html"></summary>
+          <content type="html"><![CDATA[]]></content>
+      </entry>
+      <entry>
+        <title>rant</title>
+        <link rel="alternate" href="https://storopoli.io/tags/rant/" />
+        <id>https://storopoli.io/tags/rant/</id>
+        <published>2023-11-13T00:00:00Z</published>
+        <updated>2023-11-14T06:52:00-06:00</updated>
+        <summary type="html"></summary>
+          <content type="html"><![CDATA[]]></content>
+      </entry>
+      <entry>
+        <title>soydev</title>
+        <link rel="alternate" href="https://storopoli.io/tags/soydev/" />
+        <id>https://storopoli.io/tags/soydev/</id>
+        <published>2023-11-13T00:00:00Z</published>
+        <updated>2023-11-14T06:52:00-06:00</updated>
+        <summary type="html"></summary>
+          <content type="html"><![CDATA[]]></content>
+      </entry>
+
+</feed>
+
+

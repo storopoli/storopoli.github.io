@@ -1,23 +1,28 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>rust on Jose Storopoli, PhD</title>
-    <link>https://storopoli.io/tags/rust/</link>
-    <description>Recent content in rust on Jose Storopoli, PhD</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)</copyright>
-    <lastBuildDate>Tue, 28 Nov 2023 18:19:36 -0300</lastBuildDate>
-    <atom:link href="https://storopoli.io/tags/rust/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Zero-cost Abstractions</title>
-      <link>https://storopoli.io/2023-11-28-zero_cost_abstractions/</link>
-      <pubDate>Tue, 28 Nov 2023 18:19:36 -0300</pubDate>
-      <guid>https://storopoli.io/2023-11-28-zero_cost_abstractions/</guid>
-      <description>In programming language circles there&amp;rsquo;s a recently trend of discussing a concept called zero-cost abstractions: the ability to use higher-levels abstractions without suffering any loss of performance.
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>rust on Jose Storopoli, PhD</title>
+  <link rel="alternate" href="https://storopoli.io/tags/rust/" />
+  <link rel="self" href="https://storopoli.io/tags/rust/index.xml" />
+  <subtitle>Recent content in rust on Jose Storopoli, PhD</subtitle>
+  <id>https://storopoli.io/tags/rust/</id>
+  <generator uri="http://gohugo.io" version="0.121.1">Hugo</generator>
+  <language>en-us</language>
+  <updated>2023-11-28T18:19:36-03:00</updated>
+  <author>
+    <name>Jose Storopoli</name>
+    
+  </author>
+  <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)</rights>
+      <entry>
+        <title>Zero-cost Abstractions</title>
+        <link rel="alternate" href="https://storopoli.io/2023-11-28-zero_cost_abstractions/" />
+        <id>https://storopoli.io/2023-11-28-zero_cost_abstractions/</id>
+        <published>2023-11-28T18:19:36-03:00</published>
+        <updated>2023-12-19T08:24:55-03:00</updated>
+        <summary type="html">In programming language circles there&amp;rsquo;s a recently trend of discussing a concept called zero-cost abstractions: the ability to use higher-levels abstractions without suffering any loss of performance.
 Zero-cost abstractions allows you to write performant code without having to give up a single drop of convenience and expressiveness:
-You want for-loops? You can have it. Generics? Yeah, why not? Data structures? Sure, keep&amp;rsquo;em coming. Async operations? You bet ya! Multi-threading? Hell yes!</description>
-      <content:encoded><![CDATA[<p>In programming language circles there&rsquo;s a recently trend of discussing a concept
+You want for-loops? You can have it. Generics? Yeah, why not? Data structures? Sure, keep&amp;rsquo;em coming. Async operations? You bet ya! Multi-threading? Hell yes!</summary>
+          <content type="html"><![CDATA[<p>In programming language circles there&rsquo;s a recently trend of discussing a concept
 called <strong>zero-cost abstractions</strong>:
 the ability to use higher-levels abstractions without suffering any loss of performance.</p>
 <p>Zero-cost abstractions allows you to write performant code without having to
@@ -355,7 +360,9 @@ Yes, I am talking to you <a href="https://github.com/numpy/numpy/blob/06d7bdfbb5
 </li>
 </ol>
 </div>
-]]></content:encoded>
-    </item>
-  </channel>
-</rss>
+]]></content>
+      </entry>
+
+</feed>
+
+

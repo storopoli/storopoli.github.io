@@ -1,21 +1,27 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Blog on Jose Storopoli, PhD</title>
-    <link>https://storopoli.io/posts/</link>
-    <description>Recent content in Blog on Jose Storopoli, PhD</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)</copyright>
-    <atom:link href="https://storopoli.io/posts/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Testing Bayesian Models with Nix and GitHub Actions</title>
-      <link>https://storopoli.io/2023-12-04-bayesian_models_ci/</link>
-      <pubDate>Mon, 04 Dec 2023 17:43:03 -0300</pubDate>
-      <guid>https://storopoli.io/2023-12-04-bayesian_models_ci/</guid>
-      <description>I have an open access and open source1 graduate-level course on Bayesian statistics. It is available in GitHub through the repo storopoli/Bayesian-Statistics. I&amp;rsquo;ve taught it many times and every time was such a joy. It is composed of:
-a set of 300+ slides2 covering the theoretical part Stan3 models Turing.jl4 models Now and then I receive emails from someone saying that the materials helped them to understand Bayesian statistics. These kind messages really make my day, and that&amp;rsquo;s why I strive to keep the content up-to-date and relevant.</description>
-      <content:encoded><![CDATA[<p><img loading="lazy" src="bayesian-models-go-brrrrr.png#center" alt="bayesian-models-go-brrrrr"  />
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Blog on Jose Storopoli, PhD</title>
+  <link rel="alternate" href="https://storopoli.io/posts/" />
+  <link rel="self" href="https://storopoli.io/posts/index.xml" />
+  <subtitle>Recent content in Blog on Jose Storopoli, PhD</subtitle>
+  <id>https://storopoli.io/posts/</id>
+  <generator uri="http://gohugo.io" version="0.121.1">Hugo</generator>
+  <language>en-us</language>
+  <updated>0001-01-01T00:00:00Z</updated>
+  <author>
+    <name>Jose Storopoli</name>
+    
+  </author>
+  <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)</rights>
+      <entry>
+        <title>Testing Bayesian Models with Nix and GitHub Actions</title>
+        <link rel="alternate" href="https://storopoli.io/2023-12-04-bayesian_models_ci/" />
+        <id>https://storopoli.io/2023-12-04-bayesian_models_ci/</id>
+        <published>2023-12-04T17:43:03-03:00</published>
+        <updated>2023-12-19T08:24:55-03:00</updated>
+        <summary type="html">I have an open access and open source1 graduate-level course on Bayesian statistics. It is available in GitHub through the repo storopoli/Bayesian-Statistics. I&amp;rsquo;ve taught it many times and every time was such a joy. It is composed of:
+a set of 300+ slides2 covering the theoretical part Stan3 models Turing.jl4 models Now and then I receive emails from someone saying that the materials helped them to understand Bayesian statistics. These kind messages really make my day, and that&amp;rsquo;s why I strive to keep the content up-to-date and relevant.</summary>
+          <content type="html"><![CDATA[<p><img loading="lazy" src="bayesian-models-go-brrrrr.png#center" alt="bayesian-models-go-brrrrr"  />
 </p>
 <p>I have an open access and open source<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> graduate-level course on Bayesian statistics.
 It is available in GitHub through the repo <a href="https://github.com/storopoli/Bayesian-Statistics"><code>storopoli/Bayesian-Statistics</code></a>.
@@ -509,17 +515,18 @@ and these tests commonly take place in a cloud machine.&#160;<a href="#fnref:5" 
 </li>
 </ol>
 </div>
-]]></content:encoded>
-    </item>
-    <item>
-      <title>Zero-cost Abstractions</title>
-      <link>https://storopoli.io/2023-11-28-zero_cost_abstractions/</link>
-      <pubDate>Tue, 28 Nov 2023 18:19:36 -0300</pubDate>
-      <guid>https://storopoli.io/2023-11-28-zero_cost_abstractions/</guid>
-      <description>In programming language circles there&amp;rsquo;s a recently trend of discussing a concept called zero-cost abstractions: the ability to use higher-levels abstractions without suffering any loss of performance.
+]]></content>
+      </entry>
+      <entry>
+        <title>Zero-cost Abstractions</title>
+        <link rel="alternate" href="https://storopoli.io/2023-11-28-zero_cost_abstractions/" />
+        <id>https://storopoli.io/2023-11-28-zero_cost_abstractions/</id>
+        <published>2023-11-28T18:19:36-03:00</published>
+        <updated>2023-12-19T08:24:55-03:00</updated>
+        <summary type="html">In programming language circles there&amp;rsquo;s a recently trend of discussing a concept called zero-cost abstractions: the ability to use higher-levels abstractions without suffering any loss of performance.
 Zero-cost abstractions allows you to write performant code without having to give up a single drop of convenience and expressiveness:
-You want for-loops? You can have it. Generics? Yeah, why not? Data structures? Sure, keep&amp;rsquo;em coming. Async operations? You bet ya! Multi-threading? Hell yes!</description>
-      <content:encoded><![CDATA[<p>In programming language circles there&rsquo;s a recently trend of discussing a concept
+You want for-loops? You can have it. Generics? Yeah, why not? Data structures? Sure, keep&amp;rsquo;em coming. Async operations? You bet ya! Multi-threading? Hell yes!</summary>
+          <content type="html"><![CDATA[<p>In programming language circles there&rsquo;s a recently trend of discussing a concept
 called <strong>zero-cost abstractions</strong>:
 the ability to use higher-levels abstractions without suffering any loss of performance.</p>
 <p>Zero-cost abstractions allows you to write performant code without having to
@@ -857,16 +864,17 @@ Yes, I am talking to you <a href="https://github.com/numpy/numpy/blob/06d7bdfbb5
 </li>
 </ol>
 </div>
-]]></content:encoded>
-    </item>
-    <item>
-      <title>Lindley&#39;s Paradox, or The consistency of Bayesian Thinking</title>
-      <link>https://storopoli.io/2023-11-23-lindley_paradox/</link>
-      <pubDate>Wed, 22 Nov 2023 07:06:59 -0300</pubDate>
-      <guid>https://storopoli.io/2023-11-23-lindley_paradox/</guid>
-      <description>Warning: This post has KaTeX enabled, so if you want to view the rendered math formulas, you&amp;rsquo;ll have to unfortunately enable JavaScript.
-Dennis Lindley, one of my many heroes, was an English statistician, decision theorist and leading advocate of Bayesian statistics. He published a pivotal book, Understanding Uncertainty, that changed my view on what is and how to handle uncertainty in a coherent1 way. He is responsible for one of my favorites quotes: &amp;ldquo;Inside every non-Bayesian there is a Bayesian struggling to get out&amp;rdquo;; and one of my favorite heuristics around prior probabilities: Cromwell&amp;rsquo;s Rule2.</description>
-      <content:encoded><![CDATA[<blockquote>
+]]></content>
+      </entry>
+      <entry>
+        <title>Lindley&#39;s Paradox, or The consistency of Bayesian Thinking</title>
+        <link rel="alternate" href="https://storopoli.io/2023-11-23-lindley_paradox/" />
+        <id>https://storopoli.io/2023-11-23-lindley_paradox/</id>
+        <published>2023-11-22T07:06:59-03:00</published>
+        <updated>2023-12-19T08:24:55-03:00</updated>
+        <summary type="html">Warning: This post has KaTeX enabled, so if you want to view the rendered math formulas, you&amp;rsquo;ll have to unfortunately enable JavaScript.
+Dennis Lindley, one of my many heroes, was an English statistician, decision theorist and leading advocate of Bayesian statistics. He published a pivotal book, Understanding Uncertainty, that changed my view on what is and how to handle uncertainty in a coherent1 way. He is responsible for one of my favorites quotes: &amp;ldquo;Inside every non-Bayesian there is a Bayesian struggling to get out&amp;rdquo;; and one of my favorite heuristics around prior probabilities: Cromwell&amp;rsquo;s Rule2.</summary>
+          <content type="html"><![CDATA[<blockquote>
 <p>Warning: This post has <a href="https://katex.org/">KaTeX</a> enabled,
 so if you want to view the rendered math formulas,
 you&rsquo;ll have to unfortunately enable JavaScript.</p>
@@ -1209,16 +1217,17 @@ published scientific studies suffer from this flaw.&#160;<a href="#fnref:8" clas
 </li>
 </ol>
 </div>
-]]></content:encoded>
-    </item>
-    <item>
-      <title>Word Embeddings</title>
-      <link>https://storopoli.io/2023-11-20-word_embeddings/</link>
-      <pubDate>Sun, 19 Nov 2023 22:49:51 -0300</pubDate>
-      <guid>https://storopoli.io/2023-11-20-word_embeddings/</guid>
-      <description>Warning: This post has KaTeX enabled, so if you want to view the rendered math formulas, you&amp;rsquo;ll have to unfortunately enable JavaScript.
-I wish I could go back in time and tell my younger self that you can make a machine understand human language with trigonometry. That would definitely have made me more aware and interested in the subject during my school years. I would have looked at triangles, circles, sines, cosines, and tangents in a whole different way.</description>
-      <content:encoded><![CDATA[<blockquote>
+]]></content>
+      </entry>
+      <entry>
+        <title>Word Embeddings</title>
+        <link rel="alternate" href="https://storopoli.io/2023-11-20-word_embeddings/" />
+        <id>https://storopoli.io/2023-11-20-word_embeddings/</id>
+        <published>2023-11-19T22:49:51-03:00</published>
+        <updated>2023-11-21T13:13:27+01:00</updated>
+        <summary type="html">Warning: This post has KaTeX enabled, so if you want to view the rendered math formulas, you&amp;rsquo;ll have to unfortunately enable JavaScript.
+I wish I could go back in time and tell my younger self that you can make a machine understand human language with trigonometry. That would definitely have made me more aware and interested in the subject during my school years. I would have looked at triangles, circles, sines, cosines, and tangents in a whole different way.</summary>
+          <content type="html"><![CDATA[<blockquote>
 <p>Warning: This post has <a href="https://katex.org/">KaTeX</a> enabled,
 so if you want to view the rendered math formulas,
 you&rsquo;ll have to unfortunately enable JavaScript.</p>
@@ -1384,15 +1393,16 @@ and <a href="https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8
 <p>This post is licensed under <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International</a>.</p>
 <p><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img loading="lazy" src="https://licensebuttons.net/l/by-nc-sa/4.0/88x31.png" alt="CC BY-NC-SA 4.0"  />
 </a></p>
-]]></content:encoded>
-    </item>
-    <item>
-      <title>What is soydev? And why do I hate it</title>
-      <link>https://storopoli.io/2023-11-10-2023-11-13-soydev/</link>
-      <pubDate>Mon, 13 Nov 2023 00:00:00 +0000</pubDate>
-      <guid>https://storopoli.io/2023-11-10-2023-11-13-soydev/</guid>
-      <description>Let&amp;rsquo;s dive into the concept of &amp;ldquo;soydev&amp;rdquo;, a term often used pejoratively to describe developers with a superficial understanding of technology. I provide my definition of what soydev is, why is bad, and how it came to be. To counteract soydev inclinations, I propose an abstract approach centered on timeless concepts, protocols, and first principles, fostering a mindset of exploration, resilience in the face of failure, and an insatiable hunger for knowledge.</description>
-      <content:encoded><![CDATA[<p><img loading="lazy" src="soydev.jpg" alt="soydev meme"  />
+]]></content>
+      </entry>
+      <entry>
+        <title>What is soydev? And why do I hate it</title>
+        <link rel="alternate" href="https://storopoli.io/2023-11-10-2023-11-13-soydev/" />
+        <id>https://storopoli.io/2023-11-10-2023-11-13-soydev/</id>
+        <published>2023-11-13T00:00:00Z</published>
+        <updated>2023-11-14T06:52:00-06:00</updated>
+        <summary type="html">Let&amp;rsquo;s dive into the concept of &amp;ldquo;soydev&amp;rdquo;, a term often used pejoratively to describe developers with a superficial understanding of technology. I provide my definition of what soydev is, why is bad, and how it came to be. To counteract soydev inclinations, I propose an abstract approach centered on timeless concepts, protocols, and first principles, fostering a mindset of exploration, resilience in the face of failure, and an insatiable hunger for knowledge.</summary>
+          <content type="html"><![CDATA[<p><img loading="lazy" src="soydev.jpg" alt="soydev meme"  />
 </p>
 <p>Let&rsquo;s dive into the <strong>concept of &ldquo;soydev&rdquo;</strong>,
 a term often used pejoratively to describe developers with
@@ -1592,7 +1602,9 @@ However, I am always tempted by them.</li>
 <p>This post is licensed under <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International</a>.</p>
 <p><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img loading="lazy" src="https://licensebuttons.net/l/by-nc-sa/4.0/88x31.png" alt="CC BY-NC-SA 4.0"  />
 </a></p>
-]]></content:encoded>
-    </item>
-  </channel>
-</rss>
+]]></content>
+      </entry>
+
+</feed>
+
+

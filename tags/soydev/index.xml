@@ -1,21 +1,26 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>soydev on Jose Storopoli, PhD</title>
-    <link>https://storopoli.io/tags/soydev/</link>
-    <description>Recent content in soydev on Jose Storopoli, PhD</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)</copyright>
-    <lastBuildDate>Mon, 13 Nov 2023 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://storopoli.io/tags/soydev/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>What is soydev? And why do I hate it</title>
-      <link>https://storopoli.io/2023-11-10-2023-11-13-soydev/</link>
-      <pubDate>Mon, 13 Nov 2023 00:00:00 +0000</pubDate>
-      <guid>https://storopoli.io/2023-11-10-2023-11-13-soydev/</guid>
-      <description>Let&amp;rsquo;s dive into the concept of &amp;ldquo;soydev&amp;rdquo;, a term often used pejoratively to describe developers with a superficial understanding of technology. I provide my definition of what soydev is, why is bad, and how it came to be. To counteract soydev inclinations, I propose an abstract approach centered on timeless concepts, protocols, and first principles, fostering a mindset of exploration, resilience in the face of failure, and an insatiable hunger for knowledge.</description>
-      <content:encoded><![CDATA[<p><img loading="lazy" src="soydev.jpg" alt="soydev meme"  />
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>soydev on Jose Storopoli, PhD</title>
+  <link rel="alternate" href="https://storopoli.io/tags/soydev/" />
+  <link rel="self" href="https://storopoli.io/tags/soydev/index.xml" />
+  <subtitle>Recent content in soydev on Jose Storopoli, PhD</subtitle>
+  <id>https://storopoli.io/tags/soydev/</id>
+  <generator uri="http://gohugo.io" version="0.121.1">Hugo</generator>
+  <language>en-us</language>
+  <updated>2023-11-13T00:00:00Z</updated>
+  <author>
+    <name>Jose Storopoli</name>
+    
+  </author>
+  <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)</rights>
+      <entry>
+        <title>What is soydev? And why do I hate it</title>
+        <link rel="alternate" href="https://storopoli.io/2023-11-10-2023-11-13-soydev/" />
+        <id>https://storopoli.io/2023-11-10-2023-11-13-soydev/</id>
+        <published>2023-11-13T00:00:00Z</published>
+        <updated>2023-11-14T06:52:00-06:00</updated>
+        <summary type="html">Let&amp;rsquo;s dive into the concept of &amp;ldquo;soydev&amp;rdquo;, a term often used pejoratively to describe developers with a superficial understanding of technology. I provide my definition of what soydev is, why is bad, and how it came to be. To counteract soydev inclinations, I propose an abstract approach centered on timeless concepts, protocols, and first principles, fostering a mindset of exploration, resilience in the face of failure, and an insatiable hunger for knowledge.</summary>
+          <content type="html"><![CDATA[<p><img loading="lazy" src="soydev.jpg" alt="soydev meme"  />
 </p>
 <p>Let&rsquo;s dive into the <strong>concept of &ldquo;soydev&rdquo;</strong>,
 a term often used pejoratively to describe developers with
@@ -215,7 +220,9 @@ However, I am always tempted by them.</li>
 <p>This post is licensed under <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International</a>.</p>
 <p><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img loading="lazy" src="https://licensebuttons.net/l/by-nc-sa/4.0/88x31.png" alt="CC BY-NC-SA 4.0"  />
 </a></p>
-]]></content:encoded>
-    </item>
-  </channel>
-</rss>
+]]></content>
+      </entry>
+
+</feed>
+
+

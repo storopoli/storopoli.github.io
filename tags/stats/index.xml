@@ -1,22 +1,27 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>stats on Jose Storopoli, PhD</title>
-    <link>https://storopoli.io/tags/stats/</link>
-    <description>Recent content in stats on Jose Storopoli, PhD</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)</copyright>
-    <lastBuildDate>Wed, 22 Nov 2023 07:06:59 -0300</lastBuildDate>
-    <atom:link href="https://storopoli.io/tags/stats/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Lindley&#39;s Paradox, or The consistency of Bayesian Thinking</title>
-      <link>https://storopoli.io/2023-11-23-lindley_paradox/</link>
-      <pubDate>Wed, 22 Nov 2023 07:06:59 -0300</pubDate>
-      <guid>https://storopoli.io/2023-11-23-lindley_paradox/</guid>
-      <description>Warning: This post has KaTeX enabled, so if you want to view the rendered math formulas, you&amp;rsquo;ll have to unfortunately enable JavaScript.
-Dennis Lindley, one of my many heroes, was an English statistician, decision theorist and leading advocate of Bayesian statistics. He published a pivotal book, Understanding Uncertainty, that changed my view on what is and how to handle uncertainty in a coherent1 way. He is responsible for one of my favorites quotes: &amp;ldquo;Inside every non-Bayesian there is a Bayesian struggling to get out&amp;rdquo;; and one of my favorite heuristics around prior probabilities: Cromwell&amp;rsquo;s Rule2.</description>
-      <content:encoded><![CDATA[<blockquote>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>stats on Jose Storopoli, PhD</title>
+  <link rel="alternate" href="https://storopoli.io/tags/stats/" />
+  <link rel="self" href="https://storopoli.io/tags/stats/index.xml" />
+  <subtitle>Recent content in stats on Jose Storopoli, PhD</subtitle>
+  <id>https://storopoli.io/tags/stats/</id>
+  <generator uri="http://gohugo.io" version="0.121.1">Hugo</generator>
+  <language>en-us</language>
+  <updated>2023-11-22T07:06:59-03:00</updated>
+  <author>
+    <name>Jose Storopoli</name>
+    
+  </author>
+  <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)</rights>
+      <entry>
+        <title>Lindley&#39;s Paradox, or The consistency of Bayesian Thinking</title>
+        <link rel="alternate" href="https://storopoli.io/2023-11-23-lindley_paradox/" />
+        <id>https://storopoli.io/2023-11-23-lindley_paradox/</id>
+        <published>2023-11-22T07:06:59-03:00</published>
+        <updated>2023-12-19T08:24:55-03:00</updated>
+        <summary type="html">Warning: This post has KaTeX enabled, so if you want to view the rendered math formulas, you&amp;rsquo;ll have to unfortunately enable JavaScript.
+Dennis Lindley, one of my many heroes, was an English statistician, decision theorist and leading advocate of Bayesian statistics. He published a pivotal book, Understanding Uncertainty, that changed my view on what is and how to handle uncertainty in a coherent1 way. He is responsible for one of my favorites quotes: &amp;ldquo;Inside every non-Bayesian there is a Bayesian struggling to get out&amp;rdquo;; and one of my favorite heuristics around prior probabilities: Cromwell&amp;rsquo;s Rule2.</summary>
+          <content type="html"><![CDATA[<blockquote>
 <p>Warning: This post has <a href="https://katex.org/">KaTeX</a> enabled,
 so if you want to view the rendered math formulas,
 you&rsquo;ll have to unfortunately enable JavaScript.</p>
@@ -359,7 +364,9 @@ published scientific studies suffer from this flaw.&#160;<a href="#fnref:8" clas
 </li>
 </ol>
 </div>
-]]></content:encoded>
-    </item>
-  </channel>
-</rss>
+]]></content>
+      </entry>
+
+</feed>
+
+
