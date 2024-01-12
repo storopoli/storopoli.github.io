@@ -10,6 +10,7 @@ I like [Julia](https://julialang.org),
 [Vim](https://www.vim.org/),
 and [Nix](https://nixos.org).
 I love math, computer science, coding, stats, and teaching.
+I practice [Stoic Philosophy](https://stoicquotes.io) daily.
 I hate bloatware and [soydevs](../2023-11-10-2023-11-13-soydev/).
 My natural habitat is the [terminal](https://github.com/storopoli/flakes).
 Everything that I do is either open source or has a permissive Creative Commons license.
