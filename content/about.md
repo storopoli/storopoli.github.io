@@ -7,24 +7,20 @@ I am a computational statistician, data scientist, machine learning engineer;
 and an ardent [Bayesian](https://youtu.be/RMNwsdb5VU4).
 I like [Julia](https://julialang.org),
 [Rust](https://rust-lang.org/),
-[Vim](https://www.vim.org/),
-and [Nix](https://nixos.org).
+[Nix](https://nixos.org),
+[Neovim](https://neovim.io),
+and [htmx](https://htmx.org).
 I love math, computer science, coding, stats, and teaching.
 I practice [Stoic Philosophy](https://stoicquotes.io) daily.
-I hate bloatware and [soydevs](../2023-11-10-2023-11-13-soydev/).
-My natural habitat is the [terminal](https://github.com/storopoli/flakes).
+I hate bloatware and [soydevs](https://storopoli.io/2023-11-10-2023-11-13-soydev/).
 Everything that I do is either open source or has a permissive Creative Commons license.
 
 Here's a list of some resources that I've made or contributed:
 
 - [Julia Data Science book](https://juliadatascience.io/).
-- [Graduate course on Bayesian Statistics](https://github.com/storopoli/Bayesian-Statistics) +
-  [online lectures](https://www.youtube.com/playlist?list=PLpTXaEnTpmwPa1lx7VCbmqsSbXb2gg2PS)
-  with [`Stan`](https://mc-stan.org) and
-  [`Turing.jl`](https://turinglang.org) code examples.
-- [Bayesian Statistics with Julia and `Turing.jl`](https://storopoli.io/Bayesian-Julia)
+- [Graduate course on Bayesian Statistics](https://github.com/storopoli/Bayesian-Statistics)
+- [Bayesian Statistics with Julia and Turing](https://storopoli.io/Bayesian-Julia)
 - [`TuringGLM.jl`](https://github.com/TuringLang/TuringGLM.jl)
-- [Introduction to Julia (JuliaCon 2022 Workshop)](https://youtu.be/uiQpwMQZBTA)
 - [Data Science and Scientific Computing with Julia (Portuguese)](https://storopoli.io/Computacao-Cientifica/)
 - [Undergraduate course on Data Science, Machine Learning and Deep Learning (Portuguese)](https://github.com/storopoli/ciencia-de-dados)
 - [Why Julia? A gentle pitch](https://storopoli.io/Why-Julia)
