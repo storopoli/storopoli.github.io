@@ -1,5 +1,5 @@
 [devshell]
-packages = ["git", "hugo", "ltex-ls", "dprint", "pre-commit", "typos"]
+packages = ["git", "hugo", "dprint", "pre-commit", "typos"]
 
 [[commands]]
 name = "dprint_init"
@@ -13,7 +13,7 @@ command = "hugo serve -D"
 
 [[commands]]
 name = "post"
-help = "new content in 'content/posts/date-<title>'"
+help = "new content in 'content/posts/date-<title>'.md"
 command = "hugo new -k post content/posts/$(date -u +%Y-%m-%d)-$1.md"
 
 [[commands]]
@@ -23,7 +23,7 @@ command = "hugo new -k post content/posts/$(date -u +%Y-%m-%d)-$1/index.md"
 
 [[commands]]
 name = "math_post"
-help = "new content in 'content/posts/date-<title>' with the math template"
+help = "new content in 'content/posts/date-<title>.md' with the math template"
 command = "hugo new -k post_math content/posts/$(date -u +%Y-%m-%d)-$1.md"
 
 [[commands]]
