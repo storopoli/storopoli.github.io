@@ -48,6 +48,12 @@ and you can specify diagrams and charts with the shortcode:
 
 ```md
 {{<mermaid>}}
+<!-- dprint-ignore-start -->
+---
+title: My Flowchart
+---
+<!-- dprint-ignore-end -->
+
 flowchart LR
 a --> b & c --> d
 {{</mermaid>}}
