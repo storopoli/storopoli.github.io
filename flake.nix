@@ -1,7 +1,7 @@
 {
   description = "virtual environments";
 
-  inputs.nixpkgs.url = "github:NixOS/nixpkgs?rev=f5eea362ada3b6afce3f51daef485daed9ca0009";
+  inputs.nixpkgs.url = "github:NixOS/nixpkgs";
   inputs.devshell.url = "github:numtide/devshell";
   inputs.flake-utils.url = "github:numtide/flake-utils";
   inputs.pre-commit-hooks.url = "github:cachix/pre-commit-hooks.nix";
