@@ -1878,15 +1878,16 @@ However, I am always tempted by them.</li>
         <link rel="alternate" href="https://storopoli.io/about/" />
         <id>https://storopoli.io/about/</id>
         <published>0001-01-01T00:00:00Z</published>
-        <updated>2024-01-14T16:48:03-03:00</updated>
-        <summary type="html">I am a computational statistician, data scientist, machine learning engineer; and an ardent Bayesian. I like Julia, Rust, Nix, and htmx. I love math, computer science, coding, stats, and teaching. I practice Stoic Philosophy daily. I hate bloatware and soydevs. Everything that I do is either open source or has a permissive Creative Commons license.
+        <updated>2024-01-14T16:23:02-03:00</updated>
+        <summary type="html">I am a computational statistician, data scientist, machine learning engineer; and an ardent Bayesian. I like Julia, Rust, Nix, Neovim, and htmx. I love math, computer science, coding, stats, and teaching. I practice Stoic Philosophy daily. I hate bloatware and soydevs. Everything that I do is either open source or has a permissive Creative Commons license.
 Here&amp;rsquo;s a list of some resources that I&amp;rsquo;ve made or contributed:
-Julia Data Science book. Graduate course on Bayesian Statistics Bayesian Statistics with Julia and Turing TuringGLM.</summary>
+Julia Data Science book.</summary>
           <content type="html"><![CDATA[<p>I am a computational statistician, data scientist, machine learning engineer;
 and an ardent <a href="https://youtu.be/RMNwsdb5VU4">Bayesian</a>.
 I like <a href="https://julialang.org">Julia</a>,
 <a href="https://rust-lang.org/">Rust</a>,
 <a href="https://nixos.org">Nix</a>,
+<a href="https://neovim.io">Neovim</a>,
 and <a href="https://htmx.org">htmx</a>.
 I love math, computer science, coding, stats, and teaching.
 I practice <a href="https://stoicquotes.io">Stoic Philosophy</a> daily.
