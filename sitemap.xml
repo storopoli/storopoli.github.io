@@ -2,6 +2,24 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://storopoli.io/tags/htmx/</loc>
+    <lastmod>2024-01-14T08:39:28-03:00</lastmod>
+  </url><url>
+    <loc>https://storopoli.io/2024-01-14-htmx/</loc>
+    <lastmod>2024-01-14T08:39:28-03:00</lastmod>
+  </url><url>
+    <loc>https://storopoli.io/tags/javascript/</loc>
+    <lastmod>2024-01-14T08:39:28-03:00</lastmod>
+  </url><url>
+    <loc>https://storopoli.io/</loc>
+    <lastmod>2024-01-14T08:39:28-03:00</lastmod>
+  </url><url>
+    <loc>https://storopoli.io/tags/rust/</loc>
+    <lastmod>2024-01-14T08:39:28-03:00</lastmod>
+  </url><url>
+    <loc>https://storopoli.io/tags/</loc>
+    <lastmod>2024-01-14T08:39:28-03:00</lastmod>
+  </url><url>
     <loc>https://storopoli.io/tags/bayesian/</loc>
     <lastmod>2024-01-14T06:37:31-03:00</lastmod>
   </url><url>
@@ -14,16 +32,10 @@
     <loc>https://storopoli.io/tags/github-actions/</loc>
     <lastmod>2024-01-14T06:37:31-03:00</lastmod>
   </url><url>
-    <loc>https://storopoli.io/</loc>
-    <lastmod>2024-01-14T06:37:31-03:00</lastmod>
-  </url><url>
     <loc>https://storopoli.io/tags/nix/</loc>
     <lastmod>2024-01-14T06:37:31-03:00</lastmod>
   </url><url>
     <loc>https://storopoli.io/tags/stan/</loc>
-    <lastmod>2024-01-14T06:37:31-03:00</lastmod>
-  </url><url>
-    <loc>https://storopoli.io/tags/</loc>
     <lastmod>2024-01-14T06:37:31-03:00</lastmod>
   </url><url>
     <loc>https://storopoli.io/2023-12-04-bayesian_models_ci/</loc>
@@ -39,9 +51,6 @@
     <lastmod>2024-01-14T06:37:31-03:00</lastmod>
   </url><url>
     <loc>https://storopoli.io/tags/python/</loc>
-    <lastmod>2024-01-14T06:37:31-03:00</lastmod>
-  </url><url>
-    <loc>https://storopoli.io/tags/rust/</loc>
     <lastmod>2024-01-14T06:37:31-03:00</lastmod>
   </url><url>
     <loc>https://storopoli.io/2023-11-28-zero_cost_abstractions/</loc>

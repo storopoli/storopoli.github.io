@@ -7,12 +7,281 @@
   <id>https://storopoli.io/tags/rust/</id>
   <generator uri="http://gohugo.io" version="0.121.2">Hugo</generator>
   <language>en-us</language>
-  <updated>2023-11-28T18:19:36-03:00</updated>
+  <updated>2024-01-14T06:13:19-03:00</updated>
   <author>
     <name>Jose Storopoli</name>
     
   </author>
   <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)</rights>
+      <entry>
+        <title>htmx: an Oasis in a Desert of Soy</title>
+        <link rel="alternate" href="https://storopoli.io/2024-01-14-htmx/" />
+        <id>https://storopoli.io/2024-01-14-htmx/</id>
+        <published>2024-01-14T06:13:19-03:00</published>
+        <updated>2024-01-14T08:39:28-03:00</updated>
+        <summary type="html">Warning: This post has mermaid.js enabled, so if you want to view the rendered diagrams, you&amp;rsquo;ll have to unfortunately enable JavaScript.
+I love to learn new things and I&amp;rsquo;m passionate about Stoic philosophy. So, when I acquired the domain stoicquotes.io1, I&amp;rsquo;ve decided to give htmx a try.
+What is htmx? htmx is a small JavaScript library that allows you to enhance your HTML with attributes to perform AJAX (Asynchronous JavaScript and XML) without writing JavaScript2.</summary>
+          <content type="html"><![CDATA[<blockquote>
+<p>Warning: This post has <a href="https://mermaid.js.org"><code>mermaid.js</code></a> enabled,
+so if you want to view the rendered diagrams,
+you&rsquo;ll have to unfortunately enable JavaScript.</p>
+</blockquote>
+<p><img loading="lazy" src="bellcurve.png#center" alt="htmx bell curve"  />
+</p>
+<p>I love to learn new things and I&rsquo;m passionate about Stoic philosophy.
+So, when I acquired the domain
+<a href="https://stoicquotes.io"><code>stoicquotes.io</code></a><sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>,
+I&rsquo;ve decided to give <a href="https://htmx.org"><code>htmx</code></a> a try.</p>
+<h2 id="what-is-htmx">What is <code>htmx</code>?</h2>
+<p><strong><code>htmx</code></strong> is a small JavaScript library that allows you to enhance your HTML with
+attributes to perform AJAX (Asynchronous JavaScript and XML) without writing
+JavaScript<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>. It focuses on extending HTML by adding custom attributes
+that describe how to perform common dynamic web page behaviors like partial page
+updates, form submission, etc. <code>htmx</code> is designed to be easy to use, requiring
+minimal JavaScript knowledge, so that you can add interactivity<sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup> to web pages
+with just HTML.</p>
+<p>Let&rsquo;s contrast this with the <a href="../2023-11-10-2023-11-13-soydev/">Soy stuff</a>
+like the notorious React framework. <strong>React</strong>, on the other hand, is a JavaScript
+library for building user interfaces, primarily through a component-based
+architecture. It manages the creation of user interface elements, updates the UI
+efficiently when data changes, and helps keep your UI in sync with the state of
+your application. React requires a deeper knowledge of JavaScript and understanding
+of its principles, such as components, state, and props.</p>
+<p><strong>In simple terms:</strong></p>
+<ul>
+<li><strong><code>htmx</code></strong> enhances plain HTML by letting you add attributes for dynamic
+behaviors, so you can make webpages interactive with no JavaScript coding;
+you can think of it as boosting your HTML to do more.</li>
+<li><strong>React</strong> is more like building a complex machine from customizable parts that
+you program with JavaScript, giving you full control over how your application
+looks and behaves but also requiring more from you in terms of code complexity
+and architecture.</li>
+</ul>
+<p>Additionally, React can be slower and less performant than <code>htmx</code>.
+This is due to <code>htmx</code> manipulating the actual
+<a href="https://en.wikipedia.org/wiki/Document_Object_Model">DOM</a> itself,
+while React updates objects in the Virtual DOM. Afterward, React compares the
+new Virtual DOM with a pre-update version and calculates the
+most efficient way to make these changes to the real DOM.
+So React has to do this whole trip around diff&rsquo;ing all the time the Virtual DOM
+against the actual DOM for <strong>every fucking change</strong>.</p>
+<p>Finally, <code>htmx</code> receives pure HTML from the server.
+React needs to the <strong>JSON busboy thing</strong>: the server sends JSON, React parses
+JSON into JavaScript code, then it parses it again to HTML for the browser.</p>
+<p>Here are some <a href="https://mermaid.js.org/"><code>mermaid.js</code></a> diagrams to illustrate
+what is going on under the hood:</p>
+<div class="mermaid" style="text-align: center">
+
+<!-- dprint-ignore-start -->
+---
+title: htmx
+---
+<!-- dprint-ignore-end -->
+
+flowchart LR
+HTML --> DOM
+</div>
+
+<div class="mermaid" style="text-align: center">
+
+<!-- dprint-ignore-start -->
+---
+title: React
+---
+<!-- dprint-ignore-end -->
+
+flowchart LR
+JSON --> JavaScript --> HTML --> VDOM[Virtual DOM] --> DOM
+</div>
+
+<p>A consequence of these different paradigms is that <code>htmx</code> don&rsquo;t care about
+what the server sends back and will happily include in the DOM.
+Hence, front-end and back-end are decoupled and less complex.
+Whereas in Reactland, we need to have a tight synchronicity between front-end
+and back-end. If the JSON that the server sends doesn&rsquo;t conform to the exact
+specifications of the front-end, the application <del>becomes a dumpster fire</del>
+breaks.</p>
+<h2 id="hypermedia">Hypermedia</h2>
+<p>When the web was created it was based on the concept of
+<a href="https://en.wikipedia.org/wiki/Hypermedia"><strong>Hypermedia</strong></a>.
+Hypermedia refers to a system of interconnected multimedia elements, which can
+include text, graphics, audio, video, and hyperlinks. It allows users to
+navigate between related pieces of content across the web or within
+applications, creating a non-linear way of accessing information.</p>
+<p>HTML follows the Hypermedia protocol. HTML is the native language of browsers<sup id="fnref:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">4</a></sup>.
+That&rsquo;s why all the React-like frameworks have to convert JavaScript into HTML.
+So it&rsquo;s only natural to rely primarily on HTML to deliver content and sprinkle
+JavaScript sparingly when you need something that HTML cannot offer.</p>
+<p>Unfortunately, HTML has stopped in time. Despite all the richness of
+<a href="https://en.wikipedia.org/wiki/HTTP">HTTP</a> with the diverse request methods:
+<code>GET</code>, <code>HEAD</code>, <code>POST</code>, <code>PUT</code>, <code>DELETE</code>, <code>CONNECT</code>, <code>OPTIONS</code>, <code>TRACE</code>, <code>PATCH</code>;
+HTML only has <em>two</em> elements that interact with the server:</p>
+<ul>
+<li><code>&lt;a&gt;</code>: sends a <code>GET</code> request to fetch new data.</li>
+<li><code>&lt;form&gt;</code>: sends a <code>POST</code> request to create new data.</li>
+</ul>
+<p>That&rsquo;s the main purpose of <code>htmx</code>: allowing HTML elements to leverage all the
+capabilities of HTTP.</p>
+<h2 id="htmx-in-practice"><code>htmx</code> in Practice</h2>
+<p>OK, enough of abstract and theoretical concepts. Let&rsquo;s see how <code>htmx</code> works in
+practice.</p>
+<p>First, the only thing you need to do enable <code>htmx</code> is to insert this <code>&lt;script&gt;</code>
+tag in your HTML:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://unpkg.com/htmx.org@{version}&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span></code></pre></div><p>where <code>{version}</code> is the desired <code>htmx</code> version that you&rsquo;ll want to use.
+I has around 40kb of size.</p>
+<p>Inside the code behind <a href="https://stoicquotes.io"><code>stoicquotes.io</code></a><sup id="fnref1:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>,
+we have the following HTML<sup id="fnref:5"><a href="#fn:5" class="footnote-ref" role="doc-noteref">5</a></sup>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">blockquote</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;quote&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        Some nice Stoic quote...
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">blockquote</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">button</span> <span class="na">hx-get</span><span class="o">=</span><span class="s">&#34;/quote&#34;</span> <span class="na">hx-trigger</span><span class="o">=</span><span class="s">&#34;click&#34;</span> <span class="na">hx-target</span><span class="o">=</span><span class="s">&#34;#quote&#34;</span> <span class="na">hx-swap</span><span class="o">=</span><span class="s">&#34;outerHTML&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    New
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+</span></span></code></pre></div><p>When the user clicks (<code>hx-trigger</code>) in the &ldquo;New&rdquo; button, <code>htmx</code> sends a <code>GET</code>
+request to the <code>/quote</code> endpoint (<code>hx-get</code>). Then it swaps the whole HTML
+(<code>hx-swap</code>) of the element that has id &ldquo;quote&rdquo; (<code>hx-target</code>).
+This is accomplished without a single character of JavaScript.
+Instead we extend HTML by adding new attributes to the HTML elements:</p>
+<ul>
+<li><code>hx-get</code></li>
+<li><code>hx-trigger</code></li>
+<li><code>hx-target</code></li>
+<li><code>hx-swap</code></li>
+</ul>
+<p>The server replies with a new <code>&lt;blockquote&gt;</code> element every time it gets a <code>GET</code>
+request in the <code>/quote</code> endpoint.</p>
+<p>This is truly amazing. We just used one line of <code>htmx</code>.</p>
+<p><img loading="lazy" src="4-lines.png#center" alt="htmx 4 lines"  />
+</p>
+<p><code>htmx</code> adheres to my trifecta of amazing tools<sup id="fnref:6"><a href="#fn:6" class="footnote-ref" role="doc-noteref">6</a></sup>:</p>
+<ul>
+<li>powerful</li>
+<li>expressive</li>
+<li>concise</li>
+</ul>
+<p>Here&rsquo;s a breakdown of what the trifecta of amazing tools means:</p>
+<ol>
+<li>
+<p><strong>Powerful:</strong>
+A powerful tool has the capability to handle complex, demanding tasks with
+relative ease. It possesses the strength, performance, and features necessary to
+accomplish a wide range of functions.</p>
+</li>
+<li>
+<p><strong>Expressive:</strong>
+An expressive tool gives users the ability to articulate complex ideas,
+designs, or concepts with simplicity and nuance. It provides a rich set of
+capabilities that allow for diverse and sophisticated forms of expression.</p>
+</li>
+<li>
+<p><strong>Concise:</strong>
+A concise tool allows for achieving goals with minimal effort or complexity.
+It focuses on efficiency and effectiveness, often through simplification and the
+removal of unnecessary components. It should be capable of performing tasks
+without requiring verbose instructions or processes.</p>
+</li>
+</ol>
+<h3 id="how-we-would-do-this-in-react">How we would do this in React?</h3>
+<p>Now compare this with React.</p>
+<p>First, we need to install React.
+This is not simple, but here&rsquo;s a breakdown:</p>
+<ol>
+<li>
+<p>install Node.js</p>
+</li>
+<li>
+<p>install React: <code>npm install react react-dom</code></p>
+</li>
+<li>
+<p>create an <code>index.js</code> file with some variant of:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kr">import</span> <span class="p">{</span> <span class="nx">createRoot</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;react-dom/client&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="s1">&#39;&lt;div id=&#34;app&#34;&gt;&lt;/div&gt;&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">root</span> <span class="o">=</span> <span class="nx">createRoot</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;app&#39;</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl"><span class="nx">root</span><span class="p">.</span><span class="nx">render</span><span class="p">(</span><span class="o">&lt;</span><span class="nx">h1</span><span class="o">&gt;</span><span class="nx">Hello</span><span class="p">,</span> <span class="nx">world</span><span class="o">&lt;</span><span class="err">/h1&gt;);</span>
+</span></span></code></pre></div></li>
+</ol>
+<p>And now here&rsquo;s the code for the <code>Quote</code> component:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-jsx" data-lang="jsx"><span class="line"><span class="cl"><span class="kr">import</span> <span class="nx">React</span><span class="p">,</span> <span class="p">{</span> <span class="nx">useState</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;react&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">Quote</span> <span class="o">=</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="p">[</span><span class="nx">quote</span><span class="p">,</span> <span class="nx">setQuote</span><span class="p">]</span> <span class="o">=</span> <span class="nx">useState</span><span class="p">(</span><span class="s1">&#39;Some nice Stoic quote...&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">fetchNewQuote</span> <span class="o">=</span> <span class="kr">async</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">try</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="kr">const</span> <span class="nx">response</span> <span class="o">=</span> <span class="kr">await</span> <span class="nx">fetch</span><span class="p">(</span><span class="s1">&#39;/quote&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">      <span class="kr">const</span> <span class="nx">newQuote</span> <span class="o">=</span> <span class="kr">await</span> <span class="nx">response</span><span class="p">.</span><span class="nx">text</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">setQuote</span><span class="p">(</span><span class="nx">newQuote</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="s1">&#39;Error fetching new quote:&#39;</span><span class="p">,</span> <span class="nx">error</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">blockquote</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;quote&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">{</span><span class="nx">quote</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;/</span><span class="nt">blockquote</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">button</span> <span class="na">onClick</span><span class="o">=</span><span class="p">{</span><span class="nx">fetchNewQuote</span><span class="p">}&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">New</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kr">export</span> <span class="k">default</span> <span class="nx">Quote</span><span class="p">;</span>
+</span></span></code></pre></div><p>That&rsquo;s a LOT of JavaScript code.
+The Soy Gods must be smiling upon you, my friend.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>I highly recommend that you check out <a href="https://htmx.org"><code>htmx</code></a>,
+especially the free <a href="https://htmx.org/#book">Hypermedia systems book</a> which
+goes into details and it is way more comprehensive than this short blog post.</p>
+<p><code>htmx</code> is a fresh and elegant approach to build simple reactive web pages.
+It extends HTML to be able to use all of the capabilities of any JavaScript-based
+reactive framework without a single drop of JavaScript.
+You just add some new HTML attributes to your HTML elements.</p>
+<p>I&rsquo;ve had such joy using <code>htmx</code> lately.
+It made me go back into my early teens, when I was doing HTML pages in
+<a href="https://en.wikipedia.org/wiki/GeoCities">GeoCities</a>.
+Good times, no JavaScript-bloated code.</p>
+<h2 id="license">License</h2>
+<p>This post is licensed under <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International</a>.</p>
+<p><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img loading="lazy" src="https://licensebuttons.net/l/by-nc-sa/4.0/88x31.png" alt="CC BY-NC-SA 4.0"  />
+</a></p>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p>you can find the source code at
+<a href="https://github.com/storopoli/stoic-quotes"><code>storopoli/stoic-quotes</code></a>.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a>&#160;<a href="#fnref1:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2">
+<p>YES, yes, no YavaScript. Hooray!&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:3">
+<p><code>htmx</code> can do much more, such as lazy loading, infinite scroll,
+or submitting forms without a full page reload, etc.&#160;<a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:4">
+<p>actually we also have <a href="https://webassembly.org">WASM</a>.&#160;<a href="#fnref:4" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:5">
+<p>I&rsquo;ve simplified a bit removing some styling for the purpose of clarity.&#160;<a href="#fnref:5" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:6">
+<p>there are some other tools that I use that adhere to the trifecta.
+Most notoriously is <a href="https://julialang.org">Julia</a> and
+<a href="https://rust-lang.org">Rust</a>.&#160;<a href="#fnref:6" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
+]]></content>
+      </entry>
       <entry>
         <title>Zero-cost Abstractions</title>
         <link rel="alternate" href="https://storopoli.io/2023-11-28-zero_cost_abstractions/" />

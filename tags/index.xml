@@ -7,12 +7,39 @@
   <id>https://storopoli.io/tags/</id>
   <generator uri="http://gohugo.io" version="0.121.2">Hugo</generator>
   <language>en-us</language>
-  <updated>2023-12-04T17:43:03-03:00</updated>
+  <updated>2024-01-14T06:13:19-03:00</updated>
   <author>
     <name>Jose Storopoli</name>
     
   </author>
   <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)</rights>
+      <entry>
+        <title>htmx</title>
+        <link rel="alternate" href="https://storopoli.io/tags/htmx/" />
+        <id>https://storopoli.io/tags/htmx/</id>
+        <published>2024-01-14T06:13:19-03:00</published>
+        <updated>2024-01-14T08:39:28-03:00</updated>
+        <summary type="html"></summary>
+          <content type="html"><![CDATA[]]></content>
+      </entry>
+      <entry>
+        <title>javascript</title>
+        <link rel="alternate" href="https://storopoli.io/tags/javascript/" />
+        <id>https://storopoli.io/tags/javascript/</id>
+        <published>2024-01-14T06:13:19-03:00</published>
+        <updated>2024-01-14T08:39:28-03:00</updated>
+        <summary type="html"></summary>
+          <content type="html"><![CDATA[]]></content>
+      </entry>
+      <entry>
+        <title>rust</title>
+        <link rel="alternate" href="https://storopoli.io/tags/rust/" />
+        <id>https://storopoli.io/tags/rust/</id>
+        <published>2024-01-14T06:13:19-03:00</published>
+        <updated>2024-01-14T08:39:28-03:00</updated>
+        <summary type="html"></summary>
+          <content type="html"><![CDATA[]]></content>
+      </entry>
       <entry>
         <title>bayesian</title>
         <link rel="alternate" href="https://storopoli.io/tags/bayesian/" />
@@ -98,15 +125,6 @@
         <title>python</title>
         <link rel="alternate" href="https://storopoli.io/tags/python/" />
         <id>https://storopoli.io/tags/python/</id>
-        <published>2023-11-28T18:19:36-03:00</published>
-        <updated>2024-01-14T06:37:31-03:00</updated>
-        <summary type="html"></summary>
-          <content type="html"><![CDATA[]]></content>
-      </entry>
-      <entry>
-        <title>rust</title>
-        <link rel="alternate" href="https://storopoli.io/tags/rust/" />
-        <id>https://storopoli.io/tags/rust/</id>
         <published>2023-11-28T18:19:36-03:00</published>
         <updated>2024-01-14T06:37:31-03:00</updated>
         <summary type="html"></summary>
