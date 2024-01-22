@@ -21,6 +21,7 @@ Here's a list of some resources that I've made or contributed:
 - [Graduate course on Bayesian Statistics](https://github.com/storopoli/Bayesian-Statistics)
 - [Bayesian Statistics with Julia and Turing](https://storopoli.io/Bayesian-Julia)
 - [`TuringGLM.jl`](https://github.com/TuringLang/TuringGLM.jl)
+- [`poweranalyses.org` Online calculator for Sample Size, Significance Level, Power, and Effect Size](https://poweranalyses.org)
 - [Data Science and Scientific Computing with Julia (Portuguese)](https://storopoli.io/Computacao-Cientifica/)
 - [Undergraduate course on Data Science, Machine Learning and Deep Learning (Portuguese)](https://github.com/storopoli/ciencia-de-dados)
 - [Why Julia? A gentle pitch](https://storopoli.io/Why-Julia)
