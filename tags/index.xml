@@ -7,12 +7,48 @@
   <id>https://storopoli.io/tags/</id>
   <generator uri="http://gohugo.io" version="0.122.0">Hugo</generator>
   <language>en-us</language>
-  <updated>2024-01-14T06:13:19-03:00</updated>
+  <updated>2024-01-30T08:57:33Z</updated>
   <author>
     <name>Jose Storopoli</name>
     
   </author>
   <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)</rights>
+      <entry>
+        <title>dioxus</title>
+        <link rel="alternate" href="https://storopoli.io/tags/dioxus/" />
+        <id>https://storopoli.io/tags/dioxus/</id>
+        <published>2024-01-30T08:57:33Z</published>
+        <updated>2024-01-30T08:43:42-03:00</updated>
+        <summary type="html"></summary>
+          <content type="html"><![CDATA[]]></content>
+      </entry>
+      <entry>
+        <title>fullstack</title>
+        <link rel="alternate" href="https://storopoli.io/tags/fullstack/" />
+        <id>https://storopoli.io/tags/fullstack/</id>
+        <published>2024-01-30T08:57:33Z</published>
+        <updated>2024-01-30T08:43:42-03:00</updated>
+        <summary type="html"></summary>
+          <content type="html"><![CDATA[]]></content>
+      </entry>
+      <entry>
+        <title>pwa</title>
+        <link rel="alternate" href="https://storopoli.io/tags/pwa/" />
+        <id>https://storopoli.io/tags/pwa/</id>
+        <published>2024-01-30T08:57:33Z</published>
+        <updated>2024-01-30T08:43:42-03:00</updated>
+        <summary type="html"></summary>
+          <content type="html"><![CDATA[]]></content>
+      </entry>
+      <entry>
+        <title>rust</title>
+        <link rel="alternate" href="https://storopoli.io/tags/rust/" />
+        <id>https://storopoli.io/tags/rust/</id>
+        <published>2024-01-30T08:57:33Z</published>
+        <updated>2024-01-30T08:43:42-03:00</updated>
+        <summary type="html"></summary>
+          <content type="html"><![CDATA[]]></content>
+      </entry>
       <entry>
         <title>htmx</title>
         <link rel="alternate" href="https://storopoli.io/tags/htmx/" />
@@ -26,15 +62,6 @@
         <title>javascript</title>
         <link rel="alternate" href="https://storopoli.io/tags/javascript/" />
         <id>https://storopoli.io/tags/javascript/</id>
-        <published>2024-01-14T06:13:19-03:00</published>
-        <updated>2024-01-14T08:39:28-03:00</updated>
-        <summary type="html"></summary>
-          <content type="html"><![CDATA[]]></content>
-      </entry>
-      <entry>
-        <title>rust</title>
-        <link rel="alternate" href="https://storopoli.io/tags/rust/" />
-        <id>https://storopoli.io/tags/rust/</id>
         <published>2024-01-14T06:13:19-03:00</published>
         <updated>2024-01-14T08:39:28-03:00</updated>
         <summary type="html"></summary>
