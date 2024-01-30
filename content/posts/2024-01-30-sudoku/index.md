@@ -56,7 +56,7 @@ Have you ever gone into your project and ran `npm audit`?
 
 ![npm_vulnerabilities](npm_vulnerabilities.png#center)
 
-This is solveable with Rust.
+This is solvable with Rust.
 
 ## Runtime Errors
 
@@ -213,7 +213,7 @@ Here's the code, and I took the liberty of adding the docstrings (the `///` comm
 ///
 /// ## Returns
 ///
-/// Retuns a `Vec<u8>` representing all cell's indices that are conflicting
+/// Returns a `Vec<u8>` representing all cell's indices that are conflicting
 /// with the current Sudoku board.
 pub fn get_all_conflicting_cells(current_sudoku: &SudokuState) -> Vec<u8> {
     let filled: Vec<u8> = current_sudoku
