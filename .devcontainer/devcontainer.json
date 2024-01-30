@@ -6,6 +6,7 @@
 	"forwardPorts": [
 		1313
 	],
+	"postCreateCommand": "git submodule update --init --recursive",
 	"customizations": {
 		"vscode": {
 			"settings": {
