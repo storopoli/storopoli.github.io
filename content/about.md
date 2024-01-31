@@ -5,14 +5,17 @@ hidemeta: true
 
 I am a computational statistician, data scientist, machine learning engineer;
 and an ardent [Bayesian](https://youtu.be/RMNwsdb5VU4).
-I like [Julia](https://julialang.org),
-[Rust](https://rust-lang.org/),
+I'm at the interface of computer science and scientific computing.
+In other words, I make computers go faster while crunching big numbers
+(which is almost everything that they do).
+I like [Rust](https://rust-lang.org/),
+[Julia](https://julialang.org),
 [Nix](https://nixos.org),
-[Neovim](https://neovim.io),
+[Vim](https://www.vim.org),
 and [htmx](https://htmx.org).
 I love math, computer science, coding, stats, and teaching.
 I practice [Stoic Philosophy](https://stoicquotes.io) daily.
-I hate bloatware and [soydevs](https://storopoli.io/2023-11-10-2023-11-13-soydev/).
+I hate [bloatware and the soydev phenomenon](https://storopoli.io/2023-11-10-2023-11-13-soydev/).
 Everything that I do is either open source or has a permissive Creative Commons license.
 
 Here's a list of some resources that I've made or contributed:
@@ -34,3 +37,8 @@ Here's a list of some resources that I've made or contributed:
 I don't have social media, since I think they are overrated
 and "they sell your data".
 If you want to contact me, please send an email.
+
+For career opportunities, check my [CV](https://github.com/storopoli/cv/releases/latest/download/cv.pdf)
+and my website [storopoli.io](https://storopoli.io/);
+where I keep a blog with technical aspects and backstages behind my projects
+and milestones.
