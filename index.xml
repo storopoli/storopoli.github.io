@@ -2204,7 +2204,7 @@ However, I am always tempted by them.</li>
         <link rel="alternate" href="https://storopoli.io/about/" />
         <id>https://storopoli.io/about/</id>
         <published>0001-01-01T00:00:00Z</published>
-        <updated>2024-01-22T05:32:22-03:00</updated>
+        <updated>2024-01-31T14:48:09-03:00</updated>
         <summary type="html">I am a computational statistician, data scientist, machine learning engineer; and an ardent Bayesian. I like Julia, Rust, Nix, Neovim, and htmx. I love math, computer science, coding, stats, and teaching. I practice Stoic Philosophy daily. I hate bloatware and soydevs. Everything that I do is either open source or has a permissive Creative Commons license.
 Here&amp;rsquo;s a list of some resources that I&amp;rsquo;ve made or contributed:
 Julia Data Science book.</summary>
@@ -2226,6 +2226,7 @@ Everything that I do is either open source or has a permissive Creative Commons 
 <li><a href="https://storopoli.io/Bayesian-Julia">Bayesian Statistics with Julia and Turing</a></li>
 <li><a href="https://github.com/TuringLang/TuringGLM.jl"><code>TuringGLM.jl</code></a></li>
 <li><a href="https://poweranalyses.org"><code>poweranalyses.org</code> Online calculator for Sample Size, Significance Level, Power, and Effect Size</a></li>
+<li><a href="https://storopoli.io/sudoku">Sudoku PWA WebAssembly Game in Rust</a> (code at <a href="https://github.com/storopoli/sudoku"><code>storopoli/sudoku</code></a>)</li>
 <li><a href="https://storopoli.io/Computacao-Cientifica/">Data Science and Scientific Computing with Julia (Portuguese)</a></li>
 <li><a href="https://github.com/storopoli/ciencia-de-dados">Undergraduate course on Data Science, Machine Learning and Deep Learning (Portuguese)</a></li>
 <li><a href="https://storopoli.io/Why-Julia">Why Julia? A gentle pitch</a></li>
