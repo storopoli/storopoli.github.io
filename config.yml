@@ -20,7 +20,7 @@ minify:
 params:
   env: production
   title: "Jose Storopoli, PhD"
-  description: "Computational Statistician, Data Scientist, Machine Learning Engineer, STEM Educator, Opensource Contributor"
+  description: "I make computers go brrr faster with Rust, Julia and Nix"
   keywords:
     [
       statistics,
@@ -60,7 +60,7 @@ params:
   profileMode:
     enabled: true
     # Title: "Hi I am Jose Storopoli"
-    Subtitle: "Computational Statistician, Data Scientist, Machine Learning Engineer, STEM Educator, Opensource Contributor"
+    Subtitle: "I make computers go brrr faster with Rust, Julia and Nix"
     imageUrl: "/assets/pp.jpeg"
     imageTitle: "Profile Pic"
 
