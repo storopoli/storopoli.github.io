@@ -1,8 +1,6 @@
-FROM cgr.dev/chainguard/wolfi-base
+FROM mcr.microsoft.com/devcontainers/base:alpine
 
 # Install the required packages
-RUN apk update && apk add build-base git openssh go-1.20 hugo
+RUN apk update && apk add build-base git openssh hugo just
 
 EXPOSE 1313
-
-USER nonroot

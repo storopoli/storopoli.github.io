@@ -1,22 +1,21 @@
 // For format details, see https://aka.ms/devcontainer.json. For config options, see the
 // README at: https://github.com/devcontainers/templates/tree/main/src/ubuntu
 {
-	"name": "Hugo",
-	"dockerFile": "Dockerfile",
-	"forwardPorts": [
-		1313
-	],
-	"postCreateCommand": "git submodule update --init --recursive",
-	"customizations": {
-		"vscode": {
-			"settings": {
-				"html.format.templating": true
-			},
-			"extensions": [
-				"tamasfe.even-better-toml",
-				"davidanson.vscode-markdownlint",
-				"GitHub.copilot"
-			]
-		}
-	}
+  "name": "Hugo",
+  "dockerFile": "Dockerfile",
+  "forwardPorts": [1313],
+  "postCreateCommand": "git submodule update --init --recursive",
+  "remoteUser": "vscode",
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "html.format.templating": true
+      },
+      "extensions": [
+        "tamasfe.even-better-toml",
+        "davidanson.vscode-markdownlint",
+        "GitHub.copilot"
+      ]
+    }
+  }
 }
