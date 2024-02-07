@@ -344,7 +344,7 @@ Just add <code>pedantic = &quot;deny&quot;</code> inside your <code>Cargo.toml</
         <link rel="alternate" href="https://storopoli.io/2024-01-14-htmx/" />
         <id>https://storopoli.io/2024-01-14-htmx/</id>
         <published>2024-01-14T06:13:19-03:00</published>
-        <updated>2024-01-14T08:39:28-03:00</updated>
+        <updated>2024-02-07T06:40:59-03:00</updated>
         <summary type="html">Warning: This post has mermaid.js enabled, so if you want to view the rendered diagrams, you&amp;rsquo;ll have to unfortunately enable JavaScript.
 I love to learn new things and I&amp;rsquo;m passionate about Stoic philosophy. So, when I acquired the domain stoicquotes.io1, I&amp;rsquo;ve decided to give htmx a try.
 What is htmx? htmx is a small JavaScript library that allows you to enhance your HTML with attributes to perform AJAX (Asynchronous JavaScript and XML) without writing JavaScript2.</summary>
@@ -399,11 +399,10 @@ JSON into JavaScript code, then it parses it again to HTML for the browser.</p>
 what is going on under the hood:</p>
 <div class="mermaid" style="text-align: center">
 
-<!-- dprint-ignore-start -->
 ---
+
 title: htmx
 ---
-<!-- dprint-ignore-end -->
 
 flowchart LR
 HTML --> DOM
@@ -411,11 +410,10 @@ HTML --> DOM
 
 <div class="mermaid" style="text-align: center">
 
-<!-- dprint-ignore-start -->
 ---
+
 title: React
 ---
-<!-- dprint-ignore-end -->
 
 flowchart LR
 JSON --> JavaScript --> HTML --> VDOM[Virtual DOM] --> DOM
