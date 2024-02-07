@@ -442,30 +442,81 @@ Here's how you can sign a message using DSA:
 
 And here's how you can verify the signature:
 
-1. Compute $w = s^{-1} \mod q$
-1. Compute $u_1 = H{m} \cdot w \mod q$
-1. Compute $u_2 = K \cdot w \mod q$
-1. Compute $K^\* = {g^{u_1} P^{u_2}_k \mod p} \mod q$
-1. Assert $K = K^\*$
+1. Compute $w = s^{-1} \mod q$.
+1. Compute $u_1 = H{m} \cdot w \mod q$.
+1. Compute $u_2 = K \cdot w \mod q$.
+1. Compute $K^\* = {g^{u_1} P^{u_2}_k \mod p} \mod q$.
+1. Assert $K = K^\*$.
 
 How this works?
 Let's go through a proof of correctness.
 I added some comments to every operation in parentheses to make it easier to follow.
 
-1. $s = k^{-1} \cdot {H + S_k K} \mod q$ ($\mod p$ and $H(m)$ implicit)
-1. $k = s^{-1} \cdot {H + S_k K} \mod q$ (move $s$ to $k$)
-1. $k = H \cdot s^{-1} + S_k K \cdot s^{-1} \mod q$ (distribute $s^{-1}$)
-1. $k = H \cdot w + S_k K \cdot w \mod q$ ($w = s^{-1}$)
-1. $g^k = g^{H \cdot w + S_k K \cdot w \mod q}$ (put $g$ in both sides)
-1. $g^k = g^{H \cdot w \mod q} \cdot g^{S_k K \cdot w \mod q}$ (product of the exponents)
-1. $g^k = g^{H \cdot w \mod q} \cdot P^{K \cdot w \mod q}_k$ ($P_k = g^{S_k}$)
-1. $g^k = g^{u_1} \cdot P^{u_2}_k$ (replace $u_1$ and $u_2$)
-1. $K = K^\*$ (replace $K$ and $K^*$)
+1. $s = k^{-1} \cdot {H + S_k K} \mod q$ ($\mod p$ and $H(m)$ implicit).
+1. $k = s^{-1} \cdot {H + S_k K} \mod q$ (move $s$ to $k$).
+1. $k = H \cdot s^{-1} + S_k K \cdot s^{-1} \mod q$ (distribute $s^{-1}$).
+1. $k = H \cdot w + S_k K \cdot w \mod q$ ($w = s^{-1}$).
+1. $g^k = g^{H \cdot w + S_k K \cdot w \mod q}$ (put $g$ in both sides).
+1. $g^k = g^{H \cdot w \mod q} \cdot g^{S_k K \cdot w \mod q}$ (product of the exponents).
+1. $g^k = g^{H \cdot w \mod q} \cdot P^{K \cdot w \mod q}_k$ ($P_k = g^{S_k}$).
+1. $g^k = g^{u_1} \cdot P^{u_2}_k$ (replace $u_1$ and $u_2$).
+1. $K = K^\*$ (replace $K$ and $K^*$).
 
 There you go.
 This attest that the signature is correct and the message was signed by the owner of the private key.
 
 ## Schnorr
+
+Schnorr is a very similar algorithm to DSA.
+It was proposed by Claus-Peter Schnorr in 1989.
+It is considered to be more secure than DSA and is also more efficient.
+The patent for Schnorr signatures expired in 2008,
+just in time for Satoshi to include it in Bitcoin.
+However, it was probably not included due to the fact that there wasn't
+good battle-tested software implementations of it at the time.
+However, it was added to Bitcoin in the Taproot upgrade[^taproot].
+
+[^taproot]: Taproot is a proposed Bitcoin protocol upgrade that was deployed
+as a forward-compatible soft fork.
+The validation of Taproot is based on Schnorr signatures.
+You can find more in BIPS
+[340](https://github.com/bitcoin/bips/blob/master/bip-0340.mediawiki),
+[341](https://github.com/bitcoin/bips/blob/master/bip-0341.mediawiki), and
+[342](https://github.com/bitcoin/bips/blob/master/bip-0342.mediawiki).
+
+Schnorr is a marvelous algorithm.
+It is so much simpler than DSA.
+Here's how you sign a message using Schnorr:
+
+1. Choose a prime number $p$.
+1. Choose your private key $S_k$ as a random integer $\in [1, p-1]$.
+1. Choose a generator $g$.
+1. Compute your public key $P_k$: $g^{S_k}$.
+1. Choose your nonce $k$: as a random integer $\in [1, p-1]$.
+1. Compute your "public nonce" $K$: $g^k \mod p$ (also known as $r$).
+1. Get your message ($m$) through a cryptographic hash function $H$ concatenating with $K$: $e = H(K || m)$.
+1. Compute your signature $s$: $k - S_k e$.
+1. Send to your buddy $(p, g)$, $P_k$, and $(K, s)$.
+
+And here's how you can verify the signature:
+
+1. Compute $e = H(K || m)$.
+1. Compute $K^\* = g^s P_k^e$.
+1. Compute $e^\* = H(K^* || m)$.
+1. Assert $e = e^\*$.
+
+How this works?
+Let's go through a proof of correctness.
+As before, I added some comments to every operation in parentheses to make it easier to follow.
+
+1. $K^\* = g^s P_k^e$ ($\mod p$ implicit).
+1. $K^\* = g^{k - S_k e} g^{S_k e}$ ($s = k - S_k e$ and $P_k = g^{S_k}$).
+1. $K^\* = g^k$ (cancel $S_k e$ in the exponent of $g$).
+1. $K^\* = K$ ($K = g^k$).
+1. Hence $H(K^* || m) = H(K || m)$.
+
+There you go.
+This attest that the signature is correct and the message was signed by the owner of the private key.
 
 ## Why we don't reuse nonces?
 
