@@ -3,11 +3,12 @@ title: "About"
 hidemeta: true
 ---
 
-I am a computational statistician, data scientist, machine learning engineer;
-and an ardent [Bayesian](https://youtu.be/RMNwsdb5VU4).
-I'm at the interface of computer science and scientific computing.
+I am a software developer with a background in computational statististics,
+scienfitic computing, data science, machine learning/deep learning,
+backend development, and full-stack web development.
 In other words, I make computers go faster while crunching big numbers
 (which is almost everything that they do).
+I am also an ardent [Bayesian](https://youtu.be/RMNwsdb5VU4).
 I like [Rust](https://rust-lang.org/),
 [Julia](https://julialang.org),
 [Nix](https://nixos.org),
