@@ -424,6 +424,47 @@ and the Schnorr signature algorithm.
 
 ## DSA
 
+DSA stands for [Digital Signature Algorithm](https://en.wikipedia.org/wiki/Digital_Signature_Algorithm).
+It was first proposed by the National Institute of Standards and Technology (NIST) in 1991.
+Note that [OpenSSH announced that DSA is scheduled for removal in 2025](https://lwn.net/Articles/958048/).
+
+Here's how you can sign a message using DSA:
+
+1. Choose two prime numbers $p, q$ such that $p - 1 \mod q = 0$ (e.g., 1279 and 71).
+1. Choose your private key $S_k$ as a random integer $\in [1, q-1]$.
+1. Choose a generator $g$.
+1. Compute your public key $P_k$: $g^{S_k} \mod p$.
+1. Choose your nonce $k$: as a random integer $\in [1, q-1]$.
+1. Compute your "public nonce" $K$: $(g^k \mod p) \mod q$ (also known as $r$).
+1. Get your message ($m$) through a cryptographic hash function $H$: $H(m)$.
+1. Compute your signature $s$: $(k^{-1} (H(m) + S_k K)) \mod q$.
+1. Send to your buddy $(p, q, g)$, $P_k$, and $(K, s)$.
+
+And here's how you can verify the signature:
+
+1. Compute $w = s^{-1} \mod q$
+1. Compute $u_1 = H{m} \cdot w \mod q$
+1. Compute $u_2 = K \cdot w \mod q$
+1. Compute $K^\* = {g^{u_1} P^{u_2}_k \mod p} \mod q$
+1. Assert $K = K^\*$
+
+How this works?
+Let's go through a proof of correctness.
+I added some comments to every operation in parentheses to make it easier to follow.
+
+1. $s = k^{-1} \cdot {H + S_k K} \mod q$ ($\mod p$ and $H(m)$ implicit)
+1. $k = s^{-1} \cdot {H + S_k K} \mod q$ (move $s$ to $k$)
+1. $k = H \cdot s^{-1} + S_k K \cdot s^{-1} \mod q$ (distribute $s^{-1}$)
+1. $k = H \cdot w + S_k K \cdot w \mod q$ ($w = s^{-1}$)
+1. $g^k = g^{H \cdot w + S_k K \cdot w \mod q}$ (put $g$ in both sides)
+1. $g^k = g^{H \cdot w \mod q} \cdot g^{S_k K \cdot w \mod q}$ (product of the exponents)
+1. $g^k = g^{H \cdot w \mod q} \cdot P^{K \cdot w \mod q}_k$ ($P_k = g^{S_k}$)
+1. $g^k = g^{u_1} \cdot P^{u_2}_k$ (replace $u_1$ and $u_2$)
+1. $K = K^\*$ (replace $K$ and $K^*$)
+
+There you go.
+This attest that the signature is correct and the message was signed by the owner of the private key.
+
 ## Schnorr
 
 ## Why we don't reuse nonces?
