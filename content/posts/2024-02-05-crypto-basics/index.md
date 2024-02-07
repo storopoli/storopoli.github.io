@@ -521,7 +521,113 @@ This attest that the signature is correct and the message was signed by the owne
 
 ## Why we don't reuse nonces?
 
+Never, ever, reuse a nonce.
+Why?
+First, because nonce is short for "number used once".
+It is supposed to be used only once.
+Because if you reuse a nonce, then you are pretty much screwed.
+An attacker can derive your private key from two signatures with the same nonce.
+This is called the "nonce reuse attack".
+
+Fun fact: this is what happened to the
+[PlayStation 3](https://en.wikipedia.org/wiki/PlayStation_3_homebrew#Private_key_compromised).
+
+Let's see how we can derive the private key from two signatures with the same nonce.
+Here we are in a context that we have two signatures $s$ and $s^\prime$,
+both using the same nonce $k = k^\prime$.
+
+First, let's do the ~~ugly~~ DSA math:
+
+$$\begin{aligned}
+s^\prime - s &= (k^{\prime {-1}} (H(m_1) + S_k K')) - (k^{-1} (H(m_2) + S_k K)) \\\
+s^\prime - s &= k^{-1} (H(m_1) - H(m_2)) \\\
+k &= (H(m_1) - H(m_2)) (s^\prime - s)^{-1}
+\end{aligned}$$
+
+Now remember you know $s$, $s^\prime$, $H(m_1)$, $H(m_2)$ $K$, and $K^\prime$.
+Let's do the final step and solve for $S_k$:
+
+$$S_k = K^{-1}  (k s - H(m_1))$$
+
+Now let's do the Schnorr math.
+But in Schnorr, everything is simpler.
+Even nonce reuse attacks.
+
+$$s\^\prime - s = (k\^\prime - k) - S_k (e\^\prime - e)$$
+
+If $k\^\prime = k$ (nonce reuse) then you can easily isolate $S_k$ with simple algebra.
+
+Remember: you know $s\^\prime, s, e, e\^\prime$ and $k\^\prime - k = 0$.
+
 ## Why we can combine Schnorr Signatures and not DSA?
+
+In Bitcoin, we can combine Schnorr signatures and not DSA.
+Why?
+Because Schnorr signatures are linear.
+This means that you can add two Schnorr signatures and get a valid signature for the sum of the messages.
+This is not possible with DSA.
+This is called the "linearity property" of Schnorr signatures.
+
+Remember that in $Z_p$ addition, multiplication, and exponentiation,
+i.e anything with $+, \cdot, -$, are linear operations
+However, division (modular inverse),
+.i.e anything that is $^{-1}$, is not linear.
+That is:
+
+$$x^{-1} + y^{-1} != (x + y)^{-1}.$$
+
+Here's a trivial python code that shows that modular inverse is not linear:
+
+```Python
+>>> p = 71; x = 13; y = 17;
+>>> pow(x, -1, p) + pow(y, -1, p) == pow(x + y, -1, p)
+False
+```
+
+Let's revisit the signature step of DSA and Schnorr:
+
+- DSA: $s = k^{-1} (H(m) + S_k K)$
+- Schnorr: $s = k - S_k H(K || m)$
+
+So if you have two Schnorr signatures $s_1$ and $s_2$ for two messages $m_1$ and $m_2$,
+then you can easily compute a valid signature for the sum of the messages $m_1 + m_2$:
+
+$$s = s_1 + s_2$$
+
+Also note that we can combine Schnorr public keys:
+
+$$P^\prime_k + P_k = g^{S^\prime_k} + g^{S_k} = g^{S_k^\prime + S_k}$$
+
+And the signature $s$ for the sum of the messages $m_1 + m_2$
+can be verified with the public key $P^\prime_k + P_k$.
+
+This is not possible with DSA.
+
+Because the signature step in DSA is not linear,
+it has a $k^{-1}$ in it.
+
+## Technical Interlude: Elliptic Curves
+
+Technically speaking, Bitcoin uses the Elliptic Curve Digital Signature Algorithm (ECDSA),
+and the Schnorr signature algorithm is based on the same elliptic curve (EC) as ECDSA.
+
+And trivially speaking EC public-key cryptography in the end is just a finite field
+on $\mathbb{Z}_p$.
+It has everything that we've seen so far:
+
+- Addition
+- Subtraction
+- Multiplication
+- Division
+- Exponentiation
+- Generators
+- Discrete Logarithm Problem
+
+## Conclusion
+
+I hope you enjoyed this companion post to the
+[cryptography workshop](https://github.com/storopoli/cryptography-workshop).
+Remember don't reuse nonces.
 
 ## License
 
