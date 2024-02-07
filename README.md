@@ -1,3 +1,7 @@
+# storopoli.io
+
+![CC-BI-NC-SA 4.0][cc-by-nc-sa-shield]
+
 This is my personal site at [storopoli.io](https://storopoli.io).
 
 It is built with [Hugo](https://gohugo.io/)
@@ -48,11 +52,9 @@ and you can specify diagrams and charts with the shortcode:
 
 ```md
 {{<mermaid>}}
-<!-- dprint-ignore-start -->
 ---
 title: My Flowchart
 ---
-<!-- dprint-ignore-end -->
 
 flowchart LR
 a --> b & c --> d

@@ -1,10 +1,5 @@
 [devshell]
-packages = ["git", "hugo", "dprint", "pre-commit", "typos"]
-
-[[commands]]
-name = "dprint_init"
-help = "instantiate dprint"
-command = "dprint init"
+packages = ["git", "hugo", "pre-commit", "typos"]
 
 [[commands]]
 name = "serve"

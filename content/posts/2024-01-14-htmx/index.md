@@ -72,11 +72,10 @@ what is going on under the hood:
 
 {{<mermaid>}}
 
-<!-- dprint-ignore-start -->
 ---
+
 title: htmx
 ---
-<!-- dprint-ignore-end -->
 
 flowchart LR
 HTML --> DOM
@@ -84,11 +83,10 @@ HTML --> DOM
 
 {{<mermaid>}}
 
-<!-- dprint-ignore-start -->
 ---
+
 title: React
 ---
-<!-- dprint-ignore-end -->
 
 flowchart LR
 JSON --> JavaScript --> HTML --> VDOM[Virtual DOM] --> DOM
