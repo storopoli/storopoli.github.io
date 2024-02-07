@@ -467,7 +467,8 @@ This attest that the signature is correct and the message was signed by the owne
 
 ## Schnorr
 
-Schnorr is a very similar algorithm to DSA.
+[Schnorr signature algorithm](https://en.wikipedia.org/wiki/Schnorr_signature)
+is a very similar algorithm to DSA.
 It was proposed by Claus-Peter Schnorr in 1989.
 It is considered to be more secure than DSA and is also more efficient.
 The patent for Schnorr signatures expired in 2008,
