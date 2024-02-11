@@ -55,11 +55,10 @@ disableHLJS = true
 disableFingerprinting = false
 favicon = "/assets/favicon.ico"
 
-[params.profileMode]
+[params.homeInfoParams]
 enabled = true
-Subtitle = "I make computers go brrr faster with Rust, Julia and Nix"
-imageUrl = "/assets/pp.jpeg"
-imageTitle = "Profile Pic"
+title = "Jose Storopoli, PhD"
+content = "I make computers go brrr faster with Rust, Julia and Nix"
 
 [[params.socialIcons]]
 name = "cv"
@@ -101,7 +100,11 @@ minMatchCharLength = 0
 keys = ["title", "summary"]
 
 [outputs]
-home = ["HTML", "RSS", "JSON"]
+home = [
+  "HTML",
+  "RSS",
+  "JSON", # is necessary
+]
 
 [markup.highlight]
 style = "dracula"
@@ -115,16 +118,16 @@ url = "/about/"
 weight = 10
 
 [[menu.main]]
-identifier = "blog"
-name = "Blog"
-url = "posts/"
+identifier = "tags"
+name = "Tags"
+url = "tags/"
 weight = 10
 
 [[menu.main]]
 identifier = "cv"
 name = "CV"
 url = "https://github.com/storopoli/cv/releases/latest/download/cv.pdf"
-weight = 10
+weight = 15
 
 [[menu.main]]
 identifier = "search"
