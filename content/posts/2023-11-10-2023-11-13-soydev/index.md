@@ -1,7 +1,7 @@
 +++
 title = "What is soydev? And why do I hate it"
 date = "2023-11-13"
-tags = ["programming", "soydev", "rant"]
+tags = ["web development"]
 categories = []
 javascript = false
 math = false

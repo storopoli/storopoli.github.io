@@ -1,7 +1,7 @@
 +++
 title = "Cryptography Basics"
 date = "2024-02-05T18:53:28-03:00"
-tags = ["math", "cryptography", "number theory", "bitcoin"]
+tags = ["cryptography", "bitcoin"]
 categories = []
 javascript = true
 math = true

@@ -1,7 +1,7 @@
 +++
 title = "Zero-cost Abstractions"
 date = "2023-11-28T18:19:36-03:00"
-tags = ["programming", "julia", "rust", "python"]
+tags = ["julia", "rust", "python"]
 categories = []
 javascript = false
 math = false

@@ -1,7 +1,7 @@
 +++
 title = "Lindley's Paradox, or The consistency of Bayesian Thinking"
 date = "2023-11-22T07:06:59-03:00"
-tags = ["bayesian", "stats", "julia"]
+tags = ["bayesian", "probability", "julia"]
 categories = []
 javascript = true
 math = true

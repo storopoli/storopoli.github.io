@@ -1,7 +1,7 @@
 +++
 title = "Word Embeddings"
 date = "2023-11-19T22:49:51-03:00"
-tags = ["math", "julia", "machine learning", "natural language processing"]
+tags = ["julia", "machine learning"]
 categories = []
 javascript = true
 math = true

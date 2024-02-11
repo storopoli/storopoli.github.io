@@ -1,7 +1,7 @@
 +++
 title = "Testing Bayesian Models with Nix and GitHub Actions"
 date = "2023-12-04T17:43:03-03:00"
-tags = ["bayesian", "stan", "turing", "nix", "github", "ci", "github actions"]
+tags = ["bayesian", "nix", "CI/CD"]
 categories = []
 javascript = false
 math = false

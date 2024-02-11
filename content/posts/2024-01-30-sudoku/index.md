@@ -1,7 +1,7 @@
 +++
 title = "Fullstack and Progressive Web Apps in Rust: A Tale of a Sudoku Spyware"
 date = "2024-01-30T08:57:33Z"
-tags = ["rust", "dioxus", "fullstack", "pwa"]
+tags = ["rust", "dioxus", "web development"]
 categories = []
 javascript = false
 math = false
