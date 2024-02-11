@@ -1,12 +1,12 @@
----
-title: "Lindley's Paradox, or The consistency of Bayesian Thinking"
-date: 2023-11-22T07:06:59-03:00
-tags: ["bayesian", "stats", "julia"]
-categories: []
-javascript: true
-math: true
-mermaid: false
----
++++
+title = "Lindley's Paradox, or The consistency of Bayesian Thinking"
+date = "2023-11-22T07:06:59-03:00"
+tags = ["bayesian", "stats", "julia"]
+categories = []
+javascript = true
+math = true
+mermaid = false
++++
 
 > Warning: This post has [KaTeX](https://katex.org/) enabled,
 > so if you want to view the rendered math formulas,

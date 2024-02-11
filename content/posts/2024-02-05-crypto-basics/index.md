@@ -1,12 +1,12 @@
----
-title: "Cryptography Basics"
-date: 2024-02-05T18:53:28-03:00
-tags: ["math", "cryptography", "number theory", "bitcoin"]
-categories: []
-javascript: true
-math: true
-mermaid: false
----
++++
+title = "Cryptography Basics"
+date = "2024-02-05T18:53:28-03:00"
+tags = ["math", "cryptography", "number theory", "bitcoin"]
+categories = []
+javascript = true
+math = true
+mermaid = false
++++
 
 {{< figure src="euclid.webp" alt="Euclid's one-way function" caption="Euclid's one-way function" >}}
 

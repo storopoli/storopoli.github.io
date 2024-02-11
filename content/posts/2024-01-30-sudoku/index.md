@@ -1,12 +1,12 @@
----
-title: "Fullstack and Progressive Web Apps in Rust: A Tale of a Sudoku Spyware"
-date: 2024-01-30T08:57:33Z
-tags: ["rust", "dioxus", "fullstack", "pwa"]
-categories: []
-javascript: false
-math: false
-mermaid: false
----
++++
+title = "Fullstack and Progressive Web Apps in Rust: A Tale of a Sudoku Spyware"
+date = "2024-01-30T08:57:33Z"
+tags = ["rust", "dioxus", "fullstack", "pwa"]
+categories = []
+javascript = false
+math = false
+mermaid = false
++++
 
 ![rust webdev meme](rust_webdev_meme.jpg#center)
 
