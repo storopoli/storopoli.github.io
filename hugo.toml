@@ -53,7 +53,7 @@ tocopen = false
 [params.assets]
 disableHLJS = true
 disableFingerprinting = false
-favicon = "/assets/favicon.ico"
+favicon = "/assets/favicon.svg"
 
 [params.homeInfoParams]
 enabled = true
