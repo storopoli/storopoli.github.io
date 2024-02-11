@@ -8,11 +8,11 @@ math = true
 mermaid = false
 +++
 
+![Euclid of Alexandria](euclid.jpg#center)
+
 > Warning: This post has [KaTeX](https://katex.org/) enabled,
 > so if you want to view the rendered math formulas,
 > you'll have to unfortunately enable JavaScript.
-
-![Euclid of Alexandria](euclid.jpg#center)
 
 I wish I could go back in time and tell my younger self
 that you can make a machine understand human language with trigonometry.

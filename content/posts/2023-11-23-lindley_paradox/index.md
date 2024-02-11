@@ -8,11 +8,11 @@ math = true
 mermaid = false
 +++
 
+![Dennis Lindley](lindley.jpg#center)
+
 > Warning: This post has [KaTeX](https://katex.org/) enabled,
 > so if you want to view the rendered math formulas,
 > you'll have to unfortunately enable JavaScript.
-
-![Dennis Lindley](lindley.jpg#center)
 
 [Dennis Lindley](https://en.wikipedia.org/wiki/Dennis_Lindley),
 one of my many heroes,

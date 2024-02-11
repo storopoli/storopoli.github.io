@@ -8,11 +8,11 @@ math = false
 mermaid = true
 +++
 
+![htmx bell curve](bellcurve.png#center)
+
 > Warning: This post has [`mermaid.js`](https://mermaid.js.org) enabled,
 > so if you want to view the rendered diagrams,
 > you'll have to unfortunately enable JavaScript.
-
-![htmx bell curve](bellcurve.png#center)
 
 I love to learn new things and I'm passionate about Stoic philosophy.
 So, when I acquired the domain
