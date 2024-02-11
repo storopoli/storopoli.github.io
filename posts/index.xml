@@ -929,17 +929,17 @@ Just add <code>pedantic = &quot;deny&quot;</code> inside your <code>Cargo.toml</
         <link rel="alternate" href="https://storopoli.io/2024-01-14-htmx/" />
         <id>https://storopoli.io/2024-01-14-htmx/</id>
         <published>2024-01-14T06:13:19-03:00</published>
-        <updated>2024-02-11T10:34:49-03:00</updated>
+        <updated>2024-02-11T16:17:52Z</updated>
         <summary type="html">Warning: This post has mermaid.js enabled, so if you want to view the rendered diagrams, you&amp;rsquo;ll have to unfortunately enable JavaScript.
 I love to learn new things and I&amp;rsquo;m passionate about Stoic philosophy. So, when I acquired the domain stoicquotes.io1, I&amp;rsquo;ve decided to give htmx a try.
 What is htmx? htmx is a small JavaScript library that allows you to enhance your HTML with attributes to perform AJAX (Asynchronous JavaScript and XML) without writing JavaScript2.</summary>
-          <content type="html"><![CDATA[<blockquote>
+          <content type="html"><![CDATA[<p><img loading="lazy" src="bellcurve.png#center" alt="htmx bell curve"  />
+</p>
+<blockquote>
 <p>Warning: This post has <a href="https://mermaid.js.org"><code>mermaid.js</code></a> enabled,
 so if you want to view the rendered diagrams,
 you&rsquo;ll have to unfortunately enable JavaScript.</p>
 </blockquote>
-<p><img loading="lazy" src="bellcurve.png#center" alt="htmx bell curve"  />
-</p>
 <p>I love to learn new things and I&rsquo;m passionate about Stoic philosophy.
 So, when I acquired the domain
 <a href="https://stoicquotes.io"><code>stoicquotes.io</code></a><sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>,
@@ -2049,16 +2049,16 @@ Yes, I am talking to you <a href="https://github.com/numpy/numpy/blob/06d7bdfbb5
         <link rel="alternate" href="https://storopoli.io/2023-11-23-lindley_paradox/" />
         <id>https://storopoli.io/2023-11-23-lindley_paradox/</id>
         <published>2023-11-22T07:06:59-03:00</published>
-        <updated>2024-02-11T10:34:49-03:00</updated>
+        <updated>2024-02-11T16:17:52Z</updated>
         <summary type="html">Warning: This post has KaTeX enabled, so if you want to view the rendered math formulas, you&amp;rsquo;ll have to unfortunately enable JavaScript.
 Dennis Lindley, one of my many heroes, was an English statistician, decision theorist and leading advocate of Bayesian statistics. He published a pivotal book, Understanding Uncertainty, that changed my view on what is and how to handle uncertainty in a coherent1 way. He is responsible for one of my favorites quotes: &amp;ldquo;Inside every non-Bayesian there is a Bayesian struggling to get out&amp;rdquo;; and one of my favorite heuristics around prior probabilities: Cromwell&amp;rsquo;s Rule2.</summary>
-          <content type="html"><![CDATA[<blockquote>
+          <content type="html"><![CDATA[<p><img loading="lazy" src="lindley.jpg#center" alt="Dennis Lindley"  />
+</p>
+<blockquote>
 <p>Warning: This post has <a href="https://katex.org/">KaTeX</a> enabled,
 so if you want to view the rendered math formulas,
 you&rsquo;ll have to unfortunately enable JavaScript.</p>
 </blockquote>
-<p><img loading="lazy" src="lindley.jpg#center" alt="Dennis Lindley"  />
-</p>
 <p><a href="https://en.wikipedia.org/wiki/Dennis_Lindley">Dennis Lindley</a>,
 one of my many heroes,
 was an English statistician,
@@ -2402,16 +2402,16 @@ published scientific studies suffer from this flaw.&#160;<a href="#fnref:8" clas
         <link rel="alternate" href="https://storopoli.io/2023-11-20-word_embeddings/" />
         <id>https://storopoli.io/2023-11-20-word_embeddings/</id>
         <published>2023-11-19T22:49:51-03:00</published>
-        <updated>2024-02-11T10:34:49-03:00</updated>
+        <updated>2024-02-11T16:17:52Z</updated>
         <summary type="html">Warning: This post has KaTeX enabled, so if you want to view the rendered math formulas, you&amp;rsquo;ll have to unfortunately enable JavaScript.
 I wish I could go back in time and tell my younger self that you can make a machine understand human language with trigonometry. That would definitely have made me more aware and interested in the subject during my school years. I would have looked at triangles, circles, sines, cosines, and tangents in a whole different way.</summary>
-          <content type="html"><![CDATA[<blockquote>
+          <content type="html"><![CDATA[<p><img loading="lazy" src="euclid.jpg#center" alt="Euclid of Alexandria"  />
+</p>
+<blockquote>
 <p>Warning: This post has <a href="https://katex.org/">KaTeX</a> enabled,
 so if you want to view the rendered math formulas,
 you&rsquo;ll have to unfortunately enable JavaScript.</p>
 </blockquote>
-<p><img loading="lazy" src="euclid.jpg#center" alt="Euclid of Alexandria"  />
-</p>
 <p>I wish I could go back in time and tell my younger self
 that you can make a machine understand human language with trigonometry.
 That would definitely have made me more aware and interested in the
