@@ -2787,9 +2787,14 @@ However, I am always tempted by them.</li>
         <link rel="alternate" href="https://storopoli.io/about/" />
         <id>https://storopoli.io/about/</id>
         <published>0001-01-01T00:00:00Z</published>
-        <updated>2024-02-11T10:34:49-03:00</updated>
+        <updated>2024-02-11T11:33:08-03:00</updated>
         <summary type="html">I am a software developer with a background in computational statististics, scienfitic computing, data science, machine learning/deep learning, backend development, and full-stack web development. In other words, I make computers go faster while crunching big numbers (which is almost everything that they do). I am also an ardent Bayesian. I like Rust, Julia, Nix, Vim, and htmx. I love math, computer science, coding, stats, and teaching. I practice Stoic Philosophy daily.</summary>
-          <content type="html"><![CDATA[<p>I am a software developer with a background in computational statististics,
+          <content type="html"><![CDATA[<figure>
+    <img loading="lazy" src="/assets/pp.jpeg#center"
+         alt="Profile Pic" width="150" height="150"/> 
+</figure>
+
+<p>I am a software developer with a background in computational statististics,
 scienfitic computing, data science, machine learning/deep learning,
 backend development, and full-stack web development.
 In other words, I make computers go faster while crunching big numbers
