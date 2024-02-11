@@ -1,7 +1,7 @@
----
-title: "About"
-hidemeta: true
----
++++
+title = "About"
+hidemeta = true
++++
 
 I am a software developer with a background in computational statististics,
 scienfitic computing, data science, machine learning/deep learning,

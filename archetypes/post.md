@@ -1,13 +1,13 @@
----
-title: "{{ replace .Name "-" " " | title }}"
-date: {{ .Date }}
-draft: true
-tags: []
-categories: []
-javascript: false
-math: false
-mermaid: false
----
++++
+title = "{{ replace .Name "-" " " | title }}"
+date = "{{ .Date }}"
+draft = true
+tags = []
+categories = []
+javascript = false
+math = false
+mermaid = false
++++
 
 ## License
 

@@ -1,12 +1,12 @@
----
-title: "Word Embeddings"
-date: 2023-11-19T22:49:51-03:00
-tags: ["math", "julia", "machine learning", "natural language processing"]
-categories: []
-javascript: true
-math: true
-mermaid: false
----
++++
+title = "Word Embeddings"
+date = "2023-11-19T22:49:51-03:00"
+tags = ["math", "julia", "machine learning", "natural language processing"]
+categories = []
+javascript = true
+math = true
+mermaid = false
++++
 
 > Warning: This post has [KaTeX](https://katex.org/) enabled,
 > so if you want to view the rendered math formulas,

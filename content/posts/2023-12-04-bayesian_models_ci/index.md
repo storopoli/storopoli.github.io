@@ -1,12 +1,12 @@
----
-title: "Testing Bayesian Models with Nix and GitHub Actions"
-date: 2023-12-04T17:43:03-03:00
-tags: ["bayesian", "stan", "turing", "nix", "github", "ci", "github actions"]
-categories: []
-javascript: false
-math: false
-mermaid: false
----
++++
+title = "Testing Bayesian Models with Nix and GitHub Actions"
+date = "2023-12-04T17:43:03-03:00"
+tags = ["bayesian", "stan", "turing", "nix", "github", "ci", "github actions"]
+categories = []
+javascript = false
+math = false
+mermaid = false
++++
 
 ![bayesian-models-go-brrrrr](bayesian-models-go-brrrrr.png#center)
 
@@ -284,7 +284,7 @@ special directory which serves as the output directory for the derivation.
 This is really nice because anyone with Nix installed can run:
 
 ```shell
-$ nix build github:storopoli/Bayesian-Statistics
+nix build github:storopoli/Bayesian-Statistics
 ```
 
 and bingo! You have my slides as PDF built from LaTeX files without having to

@@ -1,12 +1,12 @@
----
-title: "What is soydev? And why do I hate it"
-date: 2023-11-13
-tags: ["programming", "soydev", "rant"]
-categories: []
-javascript: false
-math: false
-mermaid: false
----
++++
+title = "What is soydev? And why do I hate it"
+date = "2023-11-13"
+tags = ["programming", "soydev", "rant"]
+categories = []
+javascript = false
+math = false
+mermaid = false
++++
 
 ![soydev meme](soydev.jpg)
 

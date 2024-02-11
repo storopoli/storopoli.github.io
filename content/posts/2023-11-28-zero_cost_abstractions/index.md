@@ -1,12 +1,12 @@
----
-title: "Zero-cost Abstractions"
-date: 2023-11-28T18:19:36-03:00
-tags: ["programming", "julia", "rust", "python"]
-categories: []
-javascript: false
-math: false
-mermaid: false
----
++++
+title = "Zero-cost Abstractions"
+date = "2023-11-28T18:19:36-03:00"
+tags = ["programming", "julia", "rust", "python"]
+categories = []
+javascript = false
+math = false
+mermaid = false
++++
 
 In programming language circles there's a recently trend of discussing a concept
 called **zero-cost abstractions**:

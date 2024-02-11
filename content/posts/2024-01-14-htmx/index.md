@@ -1,12 +1,12 @@
----
-title: "htmx: an Oasis in a Desert of Soy"
-date: 2024-01-14T06:13:19-03:00
-tags: ["htmx", "javascript", "rust"]
-categories: []
-javascript: true
-math: false
-mermaid: true
----
++++
+title = "htmx: an Oasis in a Desert of Soy"
+date = "2024-01-14T06:13:19-03:00"
+tags = ["htmx", "javascript", "rust"]
+categories = []
+javascript = true
+math = false
+mermaid = true
++++
 
 > Warning: This post has [`mermaid.js`](https://mermaid.js.org) enabled,
 > so if you want to view the rendered diagrams,
