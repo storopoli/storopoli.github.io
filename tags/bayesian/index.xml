@@ -18,7 +18,7 @@
         <link rel="alternate" href="https://storopoli.io/2023-12-04-bayesian_models_ci/" />
         <id>https://storopoli.io/2023-12-04-bayesian_models_ci/</id>
         <published>2023-12-04T17:43:03-03:00</published>
-        <updated>2024-02-11T10:34:49-03:00</updated>
+        <updated>2024-02-11T15:55:02-03:00</updated>
         <summary type="html">I have an open access and open source1 graduate-level course on Bayesian statistics. It is available in GitHub through the repo storopoli/Bayesian-Statistics. I&amp;rsquo;ve taught it many times and every time was such a joy. It is composed of:
 a set of 300+ slides2 covering the theoretical part Stan3 models Turing.jl4 models Now and then I receive emails from someone saying that the materials helped them to understand Bayesian statistics. These kind messages really make my day, and that&amp;rsquo;s why I strive to keep the content up-to-date and relevant.</summary>
           <content type="html"><![CDATA[<p><img loading="lazy" src="bayesian-models-go-brrrrr.png#center" alt="bayesian-models-go-brrrrr"  />
@@ -522,7 +522,7 @@ and these tests commonly take place in a cloud machine.&#160;<a href="#fnref:5" 
         <link rel="alternate" href="https://storopoli.io/2023-11-23-lindley_paradox/" />
         <id>https://storopoli.io/2023-11-23-lindley_paradox/</id>
         <published>2023-11-22T07:06:59-03:00</published>
-        <updated>2024-02-11T16:17:52Z</updated>
+        <updated>2024-02-11T15:55:02-03:00</updated>
         <summary type="html">Warning: This post has KaTeX enabled, so if you want to view the rendered math formulas, you&amp;rsquo;ll have to unfortunately enable JavaScript.
 Dennis Lindley, one of my many heroes, was an English statistician, decision theorist and leading advocate of Bayesian statistics. He published a pivotal book, Understanding Uncertainty, that changed my view on what is and how to handle uncertainty in a coherent1 way. He is responsible for one of my favorites quotes: &amp;ldquo;Inside every non-Bayesian there is a Bayesian struggling to get out&amp;rdquo;; and one of my favorite heuristics around prior probabilities: Cromwell&amp;rsquo;s Rule2.</summary>
           <content type="html"><![CDATA[<p><img loading="lazy" src="lindley.jpg#center" alt="Dennis Lindley"  />

@@ -289,7 +289,7 @@ They were created to be easy to use with 6-sided dice.&#160;<a href="#fnref:5" c
         <link rel="alternate" href="https://storopoli.io/2024-02-05-crypto-basics/" />
         <id>https://storopoli.io/2024-02-05-crypto-basics/</id>
         <published>2024-02-05T18:53:28-03:00</published>
-        <updated>2024-02-11T10:34:49-03:00</updated>
+        <updated>2024-02-11T15:55:02-03:00</updated>
         <summary type="html">Euclid&amp;rsquo;s one-way function
 Warning: This post has KaTeX enabled, so if you want to view the rendered math formulas, you&amp;rsquo;ll have to unfortunately enable JavaScript.
 This is the companion post to the cryptography workshop that I gave at a local BitDevs. Let&amp;rsquo;s explore the basics of cryptography. We&amp;rsquo;ll go through the following topics:
@@ -874,7 +874,7 @@ You can find more in BIPS
         <link rel="alternate" href="https://storopoli.io/2024-01-30-sudoku/" />
         <id>https://storopoli.io/2024-01-30-sudoku/</id>
         <published>2024-01-30T08:57:33Z</published>
-        <updated>2024-02-11T10:34:49-03:00</updated>
+        <updated>2024-02-11T15:55:02-03:00</updated>
         <summary type="html">It all started when I had to accompany my mom to the hospital. It was just a routine checkup, but I had to wait for a few hours. I brought my laptop with me, since they have good WiFi and I could work on my projects. Then I realized that my mom was playing a Sudoku1 game on her phone. I couln&amp;rsquo;t help but notice that the game was full of ads and it was asking for a lot of permissions, like location and sensor data.</summary>
           <content type="html"><![CDATA[<p><img loading="lazy" src="rust_webdev_meme.jpg#center" alt="rust webdev meme"  />
 </p>
@@ -1200,7 +1200,7 @@ Just add <code>pedantic = &quot;deny&quot;</code> inside your <code>Cargo.toml</
         <link rel="alternate" href="https://storopoli.io/2024-01-14-htmx/" />
         <id>https://storopoli.io/2024-01-14-htmx/</id>
         <published>2024-01-14T06:13:19-03:00</published>
-        <updated>2024-02-11T16:17:52Z</updated>
+        <updated>2024-02-11T15:55:02-03:00</updated>
         <summary type="html">Warning: This post has mermaid.js enabled, so if you want to view the rendered diagrams, you&amp;rsquo;ll have to unfortunately enable JavaScript.
 I love to learn new things and I&amp;rsquo;m passionate about Stoic philosophy. So, when I acquired the domain stoicquotes.io1, I&amp;rsquo;ve decided to give htmx a try.
 What is htmx? htmx is a small JavaScript library that allows you to enhance your HTML with attributes to perform AJAX (Asynchronous JavaScript and XML) without writing JavaScript2.</summary>
@@ -1467,7 +1467,7 @@ Most notoriously is <a href="https://julialang.org">Julia</a> and
         <link rel="alternate" href="https://storopoli.io/2023-12-04-bayesian_models_ci/" />
         <id>https://storopoli.io/2023-12-04-bayesian_models_ci/</id>
         <published>2023-12-04T17:43:03-03:00</published>
-        <updated>2024-02-11T10:34:49-03:00</updated>
+        <updated>2024-02-11T15:55:02-03:00</updated>
         <summary type="html">I have an open access and open source1 graduate-level course on Bayesian statistics. It is available in GitHub through the repo storopoli/Bayesian-Statistics. I&amp;rsquo;ve taught it many times and every time was such a joy. It is composed of:
 a set of 300+ slides2 covering the theoretical part Stan3 models Turing.jl4 models Now and then I receive emails from someone saying that the materials helped them to understand Bayesian statistics. These kind messages really make my day, and that&amp;rsquo;s why I strive to keep the content up-to-date and relevant.</summary>
           <content type="html"><![CDATA[<p><img loading="lazy" src="bayesian-models-go-brrrrr.png#center" alt="bayesian-models-go-brrrrr"  />
@@ -1971,7 +1971,7 @@ and these tests commonly take place in a cloud machine.&#160;<a href="#fnref:5" 
         <link rel="alternate" href="https://storopoli.io/2023-11-28-zero_cost_abstractions/" />
         <id>https://storopoli.io/2023-11-28-zero_cost_abstractions/</id>
         <published>2023-11-28T18:19:36-03:00</published>
-        <updated>2024-02-11T10:34:49-03:00</updated>
+        <updated>2024-02-11T15:55:02-03:00</updated>
         <summary type="html">In programming language circles there&amp;rsquo;s a recently trend of discussing a concept called zero-cost abstractions: the ability to use higher-levels abstractions without suffering any loss of performance.
 Zero-cost abstractions allows you to write performant code without having to give up a single drop of convenience and expressiveness:
 You want for-loops? You can have it. Generics? Yeah, why not? Data structures? Sure, keep&amp;rsquo;em coming. Async operations? You bet ya! Multi-threading? Hell yes!</summary>
@@ -2320,7 +2320,7 @@ Yes, I am talking to you <a href="https://github.com/numpy/numpy/blob/06d7bdfbb5
         <link rel="alternate" href="https://storopoli.io/2023-11-23-lindley_paradox/" />
         <id>https://storopoli.io/2023-11-23-lindley_paradox/</id>
         <published>2023-11-22T07:06:59-03:00</published>
-        <updated>2024-02-11T16:17:52Z</updated>
+        <updated>2024-02-11T15:55:02-03:00</updated>
         <summary type="html">Warning: This post has KaTeX enabled, so if you want to view the rendered math formulas, you&amp;rsquo;ll have to unfortunately enable JavaScript.
 Dennis Lindley, one of my many heroes, was an English statistician, decision theorist and leading advocate of Bayesian statistics. He published a pivotal book, Understanding Uncertainty, that changed my view on what is and how to handle uncertainty in a coherent1 way. He is responsible for one of my favorites quotes: &amp;ldquo;Inside every non-Bayesian there is a Bayesian struggling to get out&amp;rdquo;; and one of my favorite heuristics around prior probabilities: Cromwell&amp;rsquo;s Rule2.</summary>
           <content type="html"><![CDATA[<p><img loading="lazy" src="lindley.jpg#center" alt="Dennis Lindley"  />
@@ -2673,7 +2673,7 @@ published scientific studies suffer from this flaw.&#160;<a href="#fnref:8" clas
         <link rel="alternate" href="https://storopoli.io/2023-11-20-word_embeddings/" />
         <id>https://storopoli.io/2023-11-20-word_embeddings/</id>
         <published>2023-11-19T22:49:51-03:00</published>
-        <updated>2024-02-11T16:17:52Z</updated>
+        <updated>2024-02-11T15:55:02-03:00</updated>
         <summary type="html">Warning: This post has KaTeX enabled, so if you want to view the rendered math formulas, you&amp;rsquo;ll have to unfortunately enable JavaScript.
 I wish I could go back in time and tell my younger self that you can make a machine understand human language with trigonometry. That would definitely have made me more aware and interested in the subject during my school years. I would have looked at triangles, circles, sines, cosines, and tangents in a whole different way.</summary>
           <content type="html"><![CDATA[<p><img loading="lazy" src="euclid.jpg#center" alt="Euclid of Alexandria"  />
@@ -2849,7 +2849,7 @@ and <a href="https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8
         <link rel="alternate" href="https://storopoli.io/2023-11-10-2023-11-13-soydev/" />
         <id>https://storopoli.io/2023-11-10-2023-11-13-soydev/</id>
         <published>2023-11-13T00:00:00Z</published>
-        <updated>2024-02-11T10:34:49-03:00</updated>
+        <updated>2024-02-11T15:55:02-03:00</updated>
         <summary type="html">Let&amp;rsquo;s dive into the concept of &amp;ldquo;soydev&amp;rdquo;, a term often used pejoratively to describe developers with a superficial understanding of technology. I provide my definition of what soydev is, why is bad, and how it came to be. To counteract soydev inclinations, I propose an abstract approach centered on timeless concepts, protocols, and first principles, fostering a mindset of exploration, resilience in the face of failure, and an insatiable hunger for knowledge.</summary>
           <content type="html"><![CDATA[<p><img loading="lazy" src="soydev.jpg" alt="soydev meme"  />
 </p>

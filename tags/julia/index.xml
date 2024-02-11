@@ -18,7 +18,7 @@
         <link rel="alternate" href="https://storopoli.io/2023-11-28-zero_cost_abstractions/" />
         <id>https://storopoli.io/2023-11-28-zero_cost_abstractions/</id>
         <published>2023-11-28T18:19:36-03:00</published>
-        <updated>2024-02-11T10:34:49-03:00</updated>
+        <updated>2024-02-11T15:55:02-03:00</updated>
         <summary type="html">In programming language circles there&amp;rsquo;s a recently trend of discussing a concept called zero-cost abstractions: the ability to use higher-levels abstractions without suffering any loss of performance.
 Zero-cost abstractions allows you to write performant code without having to give up a single drop of convenience and expressiveness:
 You want for-loops? You can have it. Generics? Yeah, why not? Data structures? Sure, keep&amp;rsquo;em coming. Async operations? You bet ya! Multi-threading? Hell yes!</summary>
@@ -367,7 +367,7 @@ Yes, I am talking to you <a href="https://github.com/numpy/numpy/blob/06d7bdfbb5
         <link rel="alternate" href="https://storopoli.io/2023-11-23-lindley_paradox/" />
         <id>https://storopoli.io/2023-11-23-lindley_paradox/</id>
         <published>2023-11-22T07:06:59-03:00</published>
-        <updated>2024-02-11T16:17:52Z</updated>
+        <updated>2024-02-11T15:55:02-03:00</updated>
         <summary type="html">Warning: This post has KaTeX enabled, so if you want to view the rendered math formulas, you&amp;rsquo;ll have to unfortunately enable JavaScript.
 Dennis Lindley, one of my many heroes, was an English statistician, decision theorist and leading advocate of Bayesian statistics. He published a pivotal book, Understanding Uncertainty, that changed my view on what is and how to handle uncertainty in a coherent1 way. He is responsible for one of my favorites quotes: &amp;ldquo;Inside every non-Bayesian there is a Bayesian struggling to get out&amp;rdquo;; and one of my favorite heuristics around prior probabilities: Cromwell&amp;rsquo;s Rule2.</summary>
           <content type="html"><![CDATA[<p><img loading="lazy" src="lindley.jpg#center" alt="Dennis Lindley"  />
@@ -720,7 +720,7 @@ published scientific studies suffer from this flaw.&#160;<a href="#fnref:8" clas
         <link rel="alternate" href="https://storopoli.io/2023-11-20-word_embeddings/" />
         <id>https://storopoli.io/2023-11-20-word_embeddings/</id>
         <published>2023-11-19T22:49:51-03:00</published>
-        <updated>2024-02-11T16:17:52Z</updated>
+        <updated>2024-02-11T15:55:02-03:00</updated>
         <summary type="html">Warning: This post has KaTeX enabled, so if you want to view the rendered math formulas, you&amp;rsquo;ll have to unfortunately enable JavaScript.
 I wish I could go back in time and tell my younger self that you can make a machine understand human language with trigonometry. That would definitely have made me more aware and interested in the subject during my school years. I would have looked at triangles, circles, sines, cosines, and tangents in a whole different way.</summary>
           <content type="html"><![CDATA[<p><img loading="lazy" src="euclid.jpg#center" alt="Euclid of Alexandria"  />
