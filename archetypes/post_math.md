@@ -1,13 +1,13 @@
----
-title: "{{ replace .Name "-" " " | title }}"
-date: {{ .Date }}
-draft: true
-tags: []
-categories: []
-javascript: true
-math: true
-mermaid: false
----
++++
+title = "{{ replace .Name "-" " " | title }}"
+date = "{{ .Date }}"
+draft = true
+tags = []
+categories = []
+javascript = true
+math = true
+mermaid = false
++++
 
 > Warning: This post has [KaTeX](https://katex.org/) enabled,
 > so if you want to view the rendered math formulas,
