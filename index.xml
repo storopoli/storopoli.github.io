@@ -7,12 +7,278 @@
   <id>https://storopoli.io/</id>
   <generator uri="http://gohugo.io" version="0.122.0">Hugo</generator>
   <language>en-us</language>
-  <updated>2024-02-05T18:53:28-03:00</updated>
+  <updated>2024-02-11T15:59:02Z</updated>
   <author>
     <name>Jose Storopoli</name>
     
   </author>
   <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)</rights>
+      <entry>
+        <title>Mnemonic phrases and Entropy</title>
+        <link rel="alternate" href="https://storopoli.io/2024-02-11-mnemonic/" />
+        <id>https://storopoli.io/2024-02-11-mnemonic/</id>
+        <published>2024-02-11T15:59:02Z</published>
+        <updated>2024-02-11T17:11:57Z</updated>
+        <summary type="html">Warning: This post has KaTeX enabled, so if you want to view the rendered math formulas, you&amp;rsquo;ll have to unfortunately enable JavaScript.
+In this post, let&amp;rsquo;s dive into a topic that is very important for anyone who uses the internet: passwords. We&amp;rsquo;ll cover what the hell is entropy, good password practices, and how it relates to bitcoin &amp;ldquo;seed phrases&amp;rdquo;1.
+Entropy Before we go into passwords, I&amp;rsquo;ll introduce the concept of Entropy.</summary>
+          <content type="html"><![CDATA[<p><img loading="lazy" src="password_strength.png#center" alt="Password Meme"  />
+</p>
+<blockquote>
+<p>Warning: This post has <a href="https://katex.org/">KaTeX</a> enabled,
+so if you want to view the rendered math formulas,
+you&rsquo;ll have to unfortunately enable JavaScript.</p>
+</blockquote>
+<p>In this post, let&rsquo;s dive into a topic that is very important for anyone who uses the internet: <strong>passwords</strong>.
+We&rsquo;ll cover what the hell is entropy,
+good password practices,
+and how it relates to bitcoin &ldquo;seed phrases&rdquo;<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>.</p>
+<h2 id="entropy">Entropy</h2>
+<p>Before we go into passwords,
+I&rsquo;ll introduce the concept of <em>Entropy</em>.</p>
+<p><a href="https://en.wikipedia.org/wiki/Entropy">Entropy</a>
+is a measure of the amount of disorder in a system.
+It has its origins in Thermodynamics,
+where it&rsquo;s used to measure the amount of energy in a system that is not available to do work.</p>
+<p>The etymology of the word &ldquo;entropy&rdquo; is after the Greek word for &ldquo;transformation&rdquo;.</p>
+<p>It was given a proper statistical definition by <a href="https://en.wikipedia.org/wiki/Ludwig_Boltzmann">Ludwig Boltzmann</a> in 1870s.
+while establishing the field of <a href="https://en.wikipedia.org/wiki/Statistical_dynamics">Statistical Dynamics</a>,
+a field of physics that studies the behavior of large collections of particles.</p>
+<figure>
+    <img loading="lazy" src="boltzmann.jpg#center"
+         alt="Ludwig Boltzmann" width="300"/> <figcaption>
+            Ludwig Boltzmann
+        </figcaption>
+</figure>
+
+<p>In the context of Statistical Dynamics,
+Entropy is a measure of the number of ways a system can be arranged.
+The more ways a system can be arranged,
+the higher its Entropy.
+Specifically, Entropy is a logarithmic measure of the number of system states with significant probability of being occupied:</p>
+<p>$$S = -k \cdot \sum_i p_i \ln p_i$$</p>
+<p>Where:</p>
+<ul>
+<li>$S$: entropy.</li>
+<li>$k$: Boltzmann&rsquo;s constant, a physical constant that relates temperature to energy.</li>
+<li>$p_i$: probability of the system being in state $i$.</li>
+</ul>
+<p>In this formula, if all states are equally likely,
+i.e $p_i = 1/N$,
+where $N$ is the number of states,
+then the entropy is maximized.
+You can see this since a probability $p$ is a real number between 0 and 1,
+and as $N$ approaches infinity,
+the sum of the logarithms approaches negative infinity.
+Then, multiplying by $-k$ gives positive infinity.</p>
+<h3 id="how-the-hell-physics-came-to-passwords">How the hell Physics came to Passwords?</h3>
+<p>There&rsquo;s once a great men called <a href="https://en.wikipedia.org/wiki/Claude_Shannon">Claude Shannon</a>,
+who single-handedly founded the field of <a href="https://en.wikipedia.org/wiki/Information_theory">Information Theory</a>,
+invented the concept of a <a href="https://en.wikipedia.org/wiki/Bit">Bit</a>,
+and was the first to think about Boolean algebra in the context of electrical circuits.
+He laid the foundation for the <a href="https://en.wikipedia.org/wiki/Digital_Revolution">Digital Revolution</a>.</p>
+<p>If you are happy using your smartphone, laptop, or any other digital device,
+in you high speed fiber internet connection,
+through a wireless router to send cats pictures to your friends,
+then you should thank Claude Shannon.</p>
+<figure>
+    <img loading="lazy" src="shannon.jpg#center"
+         alt="Claude Shannon" width="300"/> <figcaption>
+            Claude Shannon
+        </figcaption>
+</figure>
+
+<p>He was trying to find a formula to quantify the amount of information in a message.
+He wanted three things:</p>
+<ol>
+<li>The measure should be a function of the probability of the message.
+Messages that are more likely should have less information.</li>
+<li>The measure should be additive.
+The information in a message should be the sum of the information in its parts.</li>
+<li>The measure should be continuous.
+Small changes in the message should result in small changes in the measure.</li>
+</ol>
+<p>He pretty much found that the formula for entropy in statistical mechanics
+was a good measure of information.
+He called it <em>Entropy</em> to honor Boltzmann&rsquo;s work.
+To differentiate it from the Statistical Dynamics&rsquo; Entropy,
+he changed the letter to $H$,
+in honor of <a href="https://en.wikipedia.org/wiki/H-theorem">Boltzmann&rsquo;s $H$-theorem</a>.
+So the formula for the Entropy of a message is:</p>
+<p>$$H(X) = −\Sigma_{x \in X} P(x_i​) \log ​P(x_i​)$$</p>
+<p>Where:</p>
+<ul>
+<li>$X$: random discrete variable.</li>
+<li>$H(X)$: Entropy of $X$</li>
+<li>$P(x_i)$: probability of the random variable $X$ taking the value $x_i$.
+Also known as the probability mass function (PMF) of the discrete random variable $X$.</li>
+<li>$\log$: base 2 logarithm, to measure the Entropy in bits.</li>
+</ul>
+<p>In information theory,
+the entropy of a random variable is the average level of &ldquo;information&rdquo;, &ldquo;surprise&rdquo;,
+or &ldquo;uncertainty&rdquo; inherent to the variable&rsquo;s possible outcomes.</p>
+<p>Let&rsquo;s take the simple example of a fair coin.
+The entropy of the random variable $X$ that represents the outcome of a fair coin flip is:</p>
+<p>$$H(X) = −\Sigma_{x \in X} P(x_i​) \log ​P(x_i​) = -\left(\frac{1}{2} \log \frac{1}{2} + \frac{1}{2} \log \frac{1}{2}\right) = 1 \text{ bit}$$</p>
+<p>So the outcome of a fair coin flip has 1 bit of entropy.
+This means that the outcome of a fair coin flip has 1 bit of information,
+or 1 bit of uncertainty.
+Once the message is received,
+that the coin flip was heads or tails,
+the receiver has 1 bit of information about the outcome.</p>
+<p>Alternatively, we only need 1 bit to encode the outcome of a fair coin flip.
+Hence, there&rsquo;s a connection between entropy, search space, and information.</p>
+<p>Another good example is the outcome of a fair 6-sided die.
+The entropy of the random variable $X$ that represents the outcome of a fair 6-sided die is:</p>
+<p>$$H(X) = −\Sigma_{x \in X} P(x_i​) \log ​P(x_i​) = - \sum_{i=1}^6\left(\frac{1}{6} * \log \frac{1}{6} \right) \approx 2.58 \text{ bits}$$</p>
+<p>This means that the outcome of a fair 6-sided die has 2.58 bits of entropy.
+we need $\operatorname{ceil}(2.58) = 3$ bits to encode the outcome of a fair 6-sided die.</p>
+<h3 id="entropy-and-passwords">Entropy and Passwords</h3>
+<p>Ok now we come full circle.
+Let&rsquo;s talk, finally, about passwords.</p>
+<p>In the context of passwords, <strong>entropy</strong> is a measure of how unpredictable a password is.
+The higher the entropy, the harder it is to guess the password.
+The entropy of a password is measured in bits,
+and it&rsquo;s calculated using the formula:</p>
+<p>$$H = L \cdot \log_2(N)$$</p>
+<p>Where:</p>
+<ul>
+<li>$H$: entropy in bits</li>
+<li>$N$: number of possible characters in the password</li>
+<li>$L$: length of the password</li>
+<li>$\log_2$:​ (N) calculates how many bits are needed to represent each character from the set.</li>
+</ul>
+<p>For example,
+if we have a password with 8 characters and each character can be any of the 26 lowercase letters,
+the standard english alphabet,
+the entropy would be:</p>
+<p>$$H = 8 \cdot \log_2(26) \approx 37.6 \text{ bits}$$</p>
+<p>This means that an attacker would need to try $2^{37.6} \approx 2.01 \cdot 10^{11}$ combinations<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup> to guess the password.</p>
+<p>If the password were to include uppercase letters, numbers, and symbols
+(let&rsquo;s assume 95 possible characters in total),
+the entropy for an 8-character password would be:</p>
+<p>$$H = 8 \cdot \log_2(95) \approx 52.6 \text{ bits}$$</p>
+<p>This means that an attacker would need to try $2^{52.6} \approx 6.8 \cdot 10^{15}$ combinations to guess the password.</p>
+<p>This sounds a lot but it&rsquo;s not that much.</p>
+<p>For the calculations below, we&rsquo;ll assume that the attacker now your dictionary set,
+i.e. the set of characters you use to create your password,
+and the password length.</p>
+<p>If an attacker get a hold of an NVIDIA RTX 4090,
+MSRP USD 1,599, which can do
+<a href="https://www.tomshardware.com/news/rtx-4090-password-cracking-comparison">300 GH/s (300,000,000,000 hashes/second)</a>,
+i.e. $3 \cdot 10^{11}$ hashes/second,
+it would take:</p>
+<ol>
+<li>8-length lowercase-only password:</li>
+</ol>
+<p>$$\frac{2.01 \cdot 10^{11}}{3 \cdot 10^{11}} \approx 0.67 \text{ seconds}$$</p>
+<ol>
+<li>8-length password with uppercase letters, numbers, and symbols:</li>
+</ol>
+<p>$$\frac{6.8 \cdot 10^{15}}{3 \cdot 10^{11}} \approx 22114 \text{ seconds} \approx 6.14 \text{ hours}$$</p>
+<p>So, the first password would be cracked in less than a second,
+while the second would take a few hours.
+This with just one 1.5k USD GPU.</p>
+<h2 id="bitcoin-seed-phrases">Bitcoin Seed Phrases</h2>
+<p>Now that we understand entropy and how it relates to passwords,
+let&rsquo;s talk about bitcoin seed phrases<sup id="fnref1:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>.</p>
+<p>Remember that our private key is a big-fucking number?
+If not, check my <a href="../2024-02-05-crypto-basics/">post on cryptographics basics</a>.</p>
+<p><a href="https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki">BIP-39</a>
+specifies how to use easy-to-remember seed phrases to store and recover
+private keys.
+The <a href="https://github.com/bitcoin/bips/blob/master/bip-0039/english.txt">wordlist</a>
+adheres to the following principles:</p>
+<ol>
+<li><strong>smart selection of words</strong>:
+the wordlist is created in such a way that it&rsquo;s enough to type the first four
+letters to unambiguously identify the word.</li>
+<li><strong>similar words avoided</strong>:
+word pairs like &ldquo;build&rdquo; and &ldquo;built&rdquo;, &ldquo;woman&rdquo; and &ldquo;women&rdquo;, or &ldquo;quick&rdquo; and &ldquo;quickly&rdquo;
+not only make remembering the sentence difficult but are also more error
+prone and more difficult to guess.</li>
+</ol>
+<p>Here is a simple 7-word seed phrase: <code>brave sadness grocery churn wet mammal tube</code>.
+Surprisingly enough, this badboy here gives you $77$ bits of entropy,
+while also being easy to remember.
+This is due to the fact that the wordlist has 2048 words,
+so each word gives you $\log_2(2048) = 11$ bits of entropy<sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup>.</p>
+<p>There&rsquo;s a minor caveat to cover here.
+The last word in the seed phrase is a checksum,
+which is used to verify that the phrase is valid.</p>
+<p>So, if you have a 12-word seed phrase,
+you have $11 \cdot 11 = 121$ bits of entropy.
+And for a 24-word seed phrase,
+you have $23 \cdot 11 = 253$ bits of entropy.</p>
+<p>The National Institute of Standards and Technology (NIST) recommends a
+<a href="https://crypto.stackexchange.com/a/87059">minimum of 112 bits of entropy for all things cryptographic</a>.
+And Bitcoin has a <a href="https://bitcoin.stackexchange.com/a/118929">minimum of 128 bits of entropy</a>.</p>
+<p>Depending on your threat model,
+<a href="https://www.nytimes.com/2013/08/18/magazine/laura-poitras-snowden.html">&ldquo;Assume that your adversary is capable of a trillion guesses per second&rdquo;</a>,
+it can take a few years to crack a 121-bit entropy seed phrase:</p>
+<p>$$\frac{2^{121}}{10^{12}} \approx 2.66 \cdot 10^{24} \text{ seconds} \approx 3.08 \cdot 10^{19} \text{ days} \approx 8.43 \cdot 10^{16} \text{ years}$$</p>
+<p>That&rsquo;s a lot of years.
+Now for a 253-bit entropy seed phrase:</p>
+<p>$$\frac{2^{253}}{10^{12}} \approx 1.45 \cdot 10^{64} \text{ seconds} \approx 1.68 \cdot 10^{59} \text{ days} \approx 4.59 \cdot 10^{56} \text{ years}$$</p>
+<p>That&rsquo;s another huge number of years.</p>
+<h2 id="seed-phrases-and-passwords">Seed Phrases and Passwords</h2>
+<p>You can also use a seed phrase as a password.
+The bonus point is that you don&rsquo;t need to use the last word as a checksum,
+so you get 11 bits of entropy free, compared to a Bitcoin seed phrase.</p>
+<p>Remember the 7-words badboy seed phrase we generated earlier?
+<code>brave sadness grocery churn wet mammal tube</code>.</p>
+<p>It has $66$ bits of entropy.
+This would take, assuming
+<a href="https://www.nytimes.com/2013/08/18/magazine/laura-poitras-snowden.html">&ldquo;that your adversary is capable of a trillion guesses per second&rdquo;</a>:</p>
+<p>$$\frac{2^{77}}{10^{12}} \approx 1.51 \cdot 10^{11} \text{ seconds} \approx 1.75 \cdot 10^{6} \text{ days} \approx 4.79 \cdot 10^{3} \text{ years}$$</p>
+<p>That&rsquo;s why tons of people use seed phrases as passwords.
+Even if you know the dictionary set and the length of the password,
+i.e. the number of words in the seed phrase,
+it would take a lot of years to crack it.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>Entropy is a measure of the amount of disorder in a system.
+In the context of passwords, it&rsquo;s a measure of how unpredictable a password is.
+The higher the entropy, the harder it is to guess the password.</p>
+<p>Bitcoin seed phrases are a great way to store and recover private keys.
+They are easy to remember and have a high amount of entropy.
+You can even use a seed phrase as a password.</p>
+<p>Even it your attacker is capable of a trillion guesses per second,
+like the <a href="https://www.nytimes.com/2013/08/18/magazine/laura-poitras-snowden.html">NSA</a>,
+it would take them a lot of years to crack even a 7-word seed phrase.</p>
+<p>If you want to generate a seed phrase,
+you can use <a href="https://keepassxc.org/">KeePassXC</a>,
+which is a great open-source <strong><em>offline</em></strong> password manager that supports seed phrases<sup id="fnref:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">4</a></sup>.</p>
+<h2 id="license">License</h2>
+<p>This post is licensed under <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International</a>.</p>
+<p><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img loading="lazy" src="https://licensebuttons.net/l/by-nc-sa/4.0/88x31.png" alt="CC BY-NC-SA 4.0"  />
+</a></p>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p>seed phrases are technically called &ldquo;mnemonic phrases&rdquo;,
+but I&rsquo;ll use the term &ldquo;seed phrases&rdquo; for the rest of the post.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a>&#160;<a href="#fnref1:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2">
+<p>technically, we need to divide the number of combinations by 2,
+since we are assuming that the attacker is using a brute-force attack,
+which means that the attacker is trying all possible combinations,
+and the password could be at the beginning or at the end of the search space.
+This is called the <a href="https://en.wikipedia.org/wiki/Birthday_problem">birthday paradox</a>,
+and it assumes that the password is uniformly distributed in the search space.&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:3">
+<p>remember that $2^{11} = 2048$.&#160;<a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:4">
+<p>technically, KeePassXC uses the <a href="https://www.eff.org/files/2016/07/18/eff_large_wordlist.txt">EFF wordlist</a>,
+which has 7,776 words, so each word gives you $\log_2(7776) \approx 12.9$ bits of entropy.
+They were created to be easy to use with 6-sided dice.&#160;<a href="#fnref:4" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
+]]></content>
+      </entry>
       <entry>
         <title>Cryptography Basics</title>
         <link rel="alternate" href="https://storopoli.io/2024-02-05-crypto-basics/" />
