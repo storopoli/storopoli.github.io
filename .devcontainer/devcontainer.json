@@ -12,9 +12,9 @@
         "html.format.templating": true
       },
       "extensions": [
+        "redhat.vscode-yaml",
         "tamasfe.even-better-toml",
-        "davidanson.vscode-markdownlint",
-        "GitHub.copilot"
+        "davidanson.vscode-markdownlint"
       ]
     }
   }
