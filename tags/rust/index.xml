@@ -18,7 +18,7 @@
         <link rel="alternate" href="https://storopoli.io/2024-01-30-sudoku/" />
         <id>https://storopoli.io/2024-01-30-sudoku/</id>
         <published>2024-01-30T08:57:33Z</published>
-        <updated>2024-01-30T08:43:42-03:00</updated>
+        <updated>2024-02-11T10:34:49-03:00</updated>
         <summary type="html">It all started when I had to accompany my mom to the hospital. It was just a routine checkup, but I had to wait for a few hours. I brought my laptop with me, since they have good WiFi and I could work on my projects. Then I realized that my mom was playing a Sudoku1 game on her phone. I couln&amp;rsquo;t help but notice that the game was full of ads and it was asking for a lot of permissions, like location and sensor data.</summary>
           <content type="html"><![CDATA[<p><img loading="lazy" src="rust_webdev_meme.jpg#center" alt="rust webdev meme"  />
 </p>
@@ -344,7 +344,7 @@ Just add <code>pedantic = &quot;deny&quot;</code> inside your <code>Cargo.toml</
         <link rel="alternate" href="https://storopoli.io/2024-01-14-htmx/" />
         <id>https://storopoli.io/2024-01-14-htmx/</id>
         <published>2024-01-14T06:13:19-03:00</published>
-        <updated>2024-02-07T06:40:59-03:00</updated>
+        <updated>2024-02-11T10:34:49-03:00</updated>
         <summary type="html">Warning: This post has mermaid.js enabled, so if you want to view the rendered diagrams, you&amp;rsquo;ll have to unfortunately enable JavaScript.
 I love to learn new things and I&amp;rsquo;m passionate about Stoic philosophy. So, when I acquired the domain stoicquotes.io1, I&amp;rsquo;ve decided to give htmx a try.
 What is htmx? htmx is a small JavaScript library that allows you to enhance your HTML with attributes to perform AJAX (Asynchronous JavaScript and XML) without writing JavaScript2.</summary>
@@ -611,7 +611,7 @@ Most notoriously is <a href="https://julialang.org">Julia</a> and
         <link rel="alternate" href="https://storopoli.io/2023-11-28-zero_cost_abstractions/" />
         <id>https://storopoli.io/2023-11-28-zero_cost_abstractions/</id>
         <published>2023-11-28T18:19:36-03:00</published>
-        <updated>2024-01-14T06:37:31-03:00</updated>
+        <updated>2024-02-11T10:34:49-03:00</updated>
         <summary type="html">In programming language circles there&amp;rsquo;s a recently trend of discussing a concept called zero-cost abstractions: the ability to use higher-levels abstractions without suffering any loss of performance.
 Zero-cost abstractions allows you to write performant code without having to give up a single drop of convenience and expressiveness:
 You want for-loops? You can have it. Generics? Yeah, why not? Data structures? Sure, keep&amp;rsquo;em coming. Async operations? You bet ya! Multi-threading? Hell yes!</summary>

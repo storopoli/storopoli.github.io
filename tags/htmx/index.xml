@@ -18,7 +18,7 @@
         <link rel="alternate" href="https://storopoli.io/2024-01-14-htmx/" />
         <id>https://storopoli.io/2024-01-14-htmx/</id>
         <published>2024-01-14T06:13:19-03:00</published>
-        <updated>2024-02-07T06:40:59-03:00</updated>
+        <updated>2024-02-11T10:34:49-03:00</updated>
         <summary type="html">Warning: This post has mermaid.js enabled, so if you want to view the rendered diagrams, you&amp;rsquo;ll have to unfortunately enable JavaScript.
 I love to learn new things and I&amp;rsquo;m passionate about Stoic philosophy. So, when I acquired the domain stoicquotes.io1, I&amp;rsquo;ve decided to give htmx a try.
 What is htmx? htmx is a small JavaScript library that allows you to enhance your HTML with attributes to perform AJAX (Asynchronous JavaScript and XML) without writing JavaScript2.</summary>

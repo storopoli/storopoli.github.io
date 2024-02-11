@@ -18,7 +18,7 @@
         <link rel="alternate" href="https://storopoli.io/2024-02-05-crypto-basics/" />
         <id>https://storopoli.io/2024-02-05-crypto-basics/</id>
         <published>2024-02-05T18:53:28-03:00</published>
-        <updated>2024-02-07T20:04:14-03:00</updated>
+        <updated>2024-02-11T10:34:49-03:00</updated>
         <summary type="html">Euclid&amp;rsquo;s one-way function
 Warning: This post has KaTeX enabled, so if you want to view the rendered math formulas, you&amp;rsquo;ll have to unfortunately enable JavaScript.
 This is the companion post to the cryptography workshop that I gave at a local BitDevs. Let&amp;rsquo;s explore the basics of cryptography. We&amp;rsquo;ll go through the following topics:

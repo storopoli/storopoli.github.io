@@ -18,7 +18,7 @@
         <link rel="alternate" href="https://storopoli.io/2023-11-28-zero_cost_abstractions/" />
         <id>https://storopoli.io/2023-11-28-zero_cost_abstractions/</id>
         <published>2023-11-28T18:19:36-03:00</published>
-        <updated>2024-01-14T06:37:31-03:00</updated>
+        <updated>2024-02-11T10:34:49-03:00</updated>
         <summary type="html">In programming language circles there&amp;rsquo;s a recently trend of discussing a concept called zero-cost abstractions: the ability to use higher-levels abstractions without suffering any loss of performance.
 Zero-cost abstractions allows you to write performant code without having to give up a single drop of convenience and expressiveness:
 You want for-loops? You can have it. Generics? Yeah, why not? Data structures? Sure, keep&amp;rsquo;em coming. Async operations? You bet ya! Multi-threading? Hell yes!</summary>
@@ -367,7 +367,7 @@ Yes, I am talking to you <a href="https://github.com/numpy/numpy/blob/06d7bdfbb5
         <link rel="alternate" href="https://storopoli.io/2023-11-10-2023-11-13-soydev/" />
         <id>https://storopoli.io/2023-11-10-2023-11-13-soydev/</id>
         <published>2023-11-13T00:00:00Z</published>
-        <updated>2023-11-14T06:52:00-06:00</updated>
+        <updated>2024-02-11T10:34:49-03:00</updated>
         <summary type="html">Let&amp;rsquo;s dive into the concept of &amp;ldquo;soydev&amp;rdquo;, a term often used pejoratively to describe developers with a superficial understanding of technology. I provide my definition of what soydev is, why is bad, and how it came to be. To counteract soydev inclinations, I propose an abstract approach centered on timeless concepts, protocols, and first principles, fostering a mindset of exploration, resilience in the face of failure, and an insatiable hunger for knowledge.</summary>
           <content type="html"><![CDATA[<p><img loading="lazy" src="soydev.jpg" alt="soydev meme"  />
 </p>
