@@ -5,8 +5,8 @@ hidemeta = true
 
 {{< figure src="/assets/pp.jpeg#center" alt="Profile Pic" height="150" width="150" >}}
 
-I am a software developer with a background in computational statististics,
-scienfitic computing, data science, machine learning/deep learning,
+I am a software developer with a background in computational statistics,
+scientific computing, data science, machine learning/deep learning,
 backend development, and full-stack web development.
 In other words, I make computers go faster while crunching big numbers
 (which is almost everything that they do).
