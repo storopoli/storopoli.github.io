@@ -3058,16 +3058,10 @@ However, I am always tempted by them.</li>
         <link rel="alternate" href="https://storopoli.io/about/" />
         <id>https://storopoli.io/about/</id>
         <published>0001-01-01T00:00:00Z</published>
-        <updated>2024-02-12T09:54:04Z</updated>
-        <summary type="html">I am a software developer with a background in computational statistics, scientific computing, data science, machine learning/deep learning, backend development, and full-stack web development. In other words, I make computers go faster while crunching big numbers (which is almost everything that they do). I am also an ardent Bayesian. I like Rust, Julia, Nix, Vim, and htmx. I love math, computer science, coding, stats, and teaching. I practice Stoic Philosophy daily.</summary>
-          <content type="html"><![CDATA[<figure>
-    <img loading="lazy" src="/assets/pp.jpeg#center"
-         alt="Profile Pic" width="150" height="150"/> 
-</figure>
-
-<p>I am a software developer with a background in computational statistics,
-scientific computing, data science, machine learning/deep learning,
-backend development, and full-stack web development.
+        <updated>2024-02-15T07:26:44Z</updated>
+        <summary type="html">I am a software developer with a background in computational statistics, scientific computing, and computer science. In other words, I make computers go faster while crunching big numbers (which is almost everything that they do). I am also an ardent Bayesian. I like Rust, Julia, Nix, Vim, and htmx. I practice Stoic Philosophy daily. I hate bloatware and the soydev phenomenon. Everything that I do is either open source or has a permissive Creative Commons license.</summary>
+          <content type="html"><![CDATA[<p>I am a software developer with a background in computational statistics,
+scientific computing, and computer science.
 In other words, I make computers go faster while crunching big numbers
 (which is almost everything that they do).
 I am also an ardent <a href="https://youtu.be/RMNwsdb5VU4">Bayesian</a>.
@@ -3076,33 +3070,12 @@ I like <a href="https://rust-lang.org/">Rust</a>,
 <a href="https://nixos.org">Nix</a>,
 <a href="https://www.vim.org">Vim</a>,
 and <a href="https://htmx.org">htmx</a>.
-I love math, computer science, coding, stats, and teaching.
 I practice <a href="https://stoicquotes.io">Stoic Philosophy</a> daily.
 I hate <a href="https://storopoli.io/2023-11-10-2023-11-13-soydev/">bloatware and the soydev phenomenon</a>.
 Everything that I do is either open source or has a permissive Creative Commons license.</p>
-<p>Here&rsquo;s a list of some resources that I&rsquo;ve made or contributed:</p>
-<ul>
-<li><a href="https://juliadatascience.io/">Julia Data Science book</a>.</li>
-<li><a href="https://github.com/storopoli/Bayesian-Statistics">Graduate course on Bayesian Statistics</a></li>
-<li><a href="https://storopoli.io/Bayesian-Julia">Bayesian Statistics with Julia and Turing</a></li>
-<li><a href="https://github.com/TuringLang/TuringGLM.jl"><code>TuringGLM.jl</code></a></li>
-<li><a href="https://poweranalyses.org"><code>poweranalyses.org</code> Online calculator for Sample Size, Significance Level, Power, and Effect Size</a></li>
-<li><a href="https://storopoli.io/sudoku">Sudoku PWA WebAssembly Game in Rust</a> (code at <a href="https://github.com/storopoli/sudoku"><code>storopoli/sudoku</code></a>)</li>
-<li><a href="https://storopoli.io/Computacao-Cientifica/">Data Science and Scientific Computing with Julia (Portuguese)</a></li>
-<li><a href="https://github.com/storopoli/ciencia-de-dados">Undergraduate course on Data Science, Machine Learning and Deep Learning (Portuguese)</a></li>
-<li><a href="https://storopoli.io/Why-Julia">Why Julia? A gentle pitch</a></li>
-<li><a href="https://storopoli.io/Estatistica/">Graduate course on Statistics (Portuguese)</a>
-with <code>R</code></li>
-<li><a href="https://storopoli.io/Rcpp/"><code>Rcpp</code> tutorials (Portuguese)</a></li>
-<li><a href="https://storopoli.io/topic-modeling-workshop/">Topic Modeling workshop (Portuguese)</a></li>
-</ul>
 <p>I don&rsquo;t have social media, since I think they are overrated
 and &ldquo;they sell your data&rdquo;.
 If you want to contact me, please send an email.</p>
-<p>For career opportunities, check my <a href="https://github.com/storopoli/cv/releases/latest/download/cv.pdf">CV</a>
-and my website <a href="https://storopoli.io/">storopoli.io</a>;
-where I keep a blog with technical aspects and backstages behind my projects
-and milestones.</p>
 ]]></content>
       </entry>
 
