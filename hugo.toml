@@ -20,7 +20,7 @@ minifyOutput = true
 [params]
 env = "production"
 title = "Jose Storopoli, PhD"
-description = "I make computers go brrr faster with Rust, Julia and Nix"
+description = "I make computers go brrr faster"
 keywords = [
   "statistics",
   "Bayesian statistics",
@@ -58,11 +58,7 @@ favicon = "/assets/favicon.svg"
 [params.homeInfoParams]
 enabled = true
 title = "Jose Storopoli, PhD"
-content = "I make computers go brrr faster with Rust, Julia and Nix"
-
-[[params.socialIcons]]
-name = "cv"
-url = "https://github.com/storopoli/cv/releases/latest/download/cv.pdf"
+content = "I make computers go brrr faster"
 
 [[params.socialIcons]]
 name = "github"
@@ -122,12 +118,6 @@ identifier = "tags"
 name = "Tags"
 url = "tags/"
 weight = 10
-
-[[menu.main]]
-identifier = "cv"
-name = "CV"
-url = "https://github.com/storopoli/cv/releases/latest/download/cv.pdf"
-weight = 15
 
 [[menu.main]]
 identifier = "search"
