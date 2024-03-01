@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>bayesian on Jose Storopoli, PhD</title>
+  <title>Bayesian on Jose Storopoli, PhD</title>
   <link rel="alternate" href="https://storopoli.io/tags/bayesian/" />
   <link rel="self" href="https://storopoli.io/tags/bayesian/index.xml" />
-  <subtitle>Recent content in bayesian on Jose Storopoli, PhD</subtitle>
+  <subtitle>Recent content in Bayesian on Jose Storopoli, PhD</subtitle>
   <id>https://storopoli.io/tags/bayesian/</id>
-  <generator uri="http://gohugo.io" version="0.122.0">Hugo</generator>
+  <generator uri="http://gohugo.io" version="0.123.6">Hugo</generator>
   <language>en-us</language>
   <updated>2023-12-04T17:43:03-03:00</updated>
   <author>

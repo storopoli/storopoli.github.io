@@ -5,7 +5,7 @@
   <link rel="self" href="https://storopoli.io/tags/index.xml" />
   <subtitle>Recent content in Tags on Jose Storopoli, PhD</subtitle>
   <id>https://storopoli.io/tags/</id>
-  <generator uri="http://gohugo.io" version="0.122.0">Hugo</generator>
+  <generator uri="http://gohugo.io" version="0.123.6">Hugo</generator>
   <language>en-us</language>
   <updated>2024-02-11T15:59:02Z</updated>
   <author>
@@ -14,7 +14,7 @@
   </author>
   <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)</rights>
       <entry>
-        <title>bitcoin</title>
+        <title>Bitcoin</title>
         <link rel="alternate" href="https://storopoli.io/tags/bitcoin/" />
         <id>https://storopoli.io/tags/bitcoin/</id>
         <published>2024-02-11T15:59:02Z</published>
@@ -23,7 +23,7 @@
           <content type="html"><![CDATA[]]></content>
       </entry>
       <entry>
-        <title>cryptography</title>
+        <title>Cryptography</title>
         <link rel="alternate" href="https://storopoli.io/tags/cryptography/" />
         <id>https://storopoli.io/tags/cryptography/</id>
         <published>2024-02-11T15:59:02Z</published>
@@ -32,7 +32,7 @@
           <content type="html"><![CDATA[]]></content>
       </entry>
       <entry>
-        <title>probability</title>
+        <title>Probability</title>
         <link rel="alternate" href="https://storopoli.io/tags/probability/" />
         <id>https://storopoli.io/tags/probability/</id>
         <published>2024-02-11T15:59:02Z</published>
@@ -41,7 +41,7 @@
           <content type="html"><![CDATA[]]></content>
       </entry>
       <entry>
-        <title>dioxus</title>
+        <title>Dioxus</title>
         <link rel="alternate" href="https://storopoli.io/tags/dioxus/" />
         <id>https://storopoli.io/tags/dioxus/</id>
         <published>2024-01-30T08:57:33Z</published>
@@ -50,7 +50,7 @@
           <content type="html"><![CDATA[]]></content>
       </entry>
       <entry>
-        <title>rust</title>
+        <title>Rust</title>
         <link rel="alternate" href="https://storopoli.io/tags/rust/" />
         <id>https://storopoli.io/tags/rust/</id>
         <published>2024-01-30T08:57:33Z</published>
@@ -59,7 +59,7 @@
           <content type="html"><![CDATA[]]></content>
       </entry>
       <entry>
-        <title>web development</title>
+        <title>Web Development</title>
         <link rel="alternate" href="https://storopoli.io/tags/web-development/" />
         <id>https://storopoli.io/tags/web-development/</id>
         <published>2024-01-30T08:57:33Z</published>
@@ -68,7 +68,7 @@
           <content type="html"><![CDATA[]]></content>
       </entry>
       <entry>
-        <title>htmx</title>
+        <title>Htmx</title>
         <link rel="alternate" href="https://storopoli.io/tags/htmx/" />
         <id>https://storopoli.io/tags/htmx/</id>
         <published>2024-01-14T06:13:19-03:00</published>
@@ -77,7 +77,7 @@
           <content type="html"><![CDATA[]]></content>
       </entry>
       <entry>
-        <title>javascript</title>
+        <title>Javascript</title>
         <link rel="alternate" href="https://storopoli.io/tags/javascript/" />
         <id>https://storopoli.io/tags/javascript/</id>
         <published>2024-01-14T06:13:19-03:00</published>
@@ -86,7 +86,7 @@
           <content type="html"><![CDATA[]]></content>
       </entry>
       <entry>
-        <title>bayesian</title>
+        <title>Bayesian</title>
         <link rel="alternate" href="https://storopoli.io/tags/bayesian/" />
         <id>https://storopoli.io/tags/bayesian/</id>
         <published>2023-12-04T17:43:03-03:00</published>
@@ -95,7 +95,16 @@
           <content type="html"><![CDATA[]]></content>
       </entry>
       <entry>
-        <title>nix</title>
+        <title>CI/CD</title>
+        <link rel="alternate" href="https://storopoli.io/tags/ci/cd/" />
+        <id>https://storopoli.io/tags/ci/cd/</id>
+        <published>2023-12-04T17:43:03-03:00</published>
+        <updated>2024-02-11T15:55:02-03:00</updated>
+        <summary type="html"></summary>
+          <content type="html"><![CDATA[]]></content>
+      </entry>
+      <entry>
+        <title>Nix</title>
         <link rel="alternate" href="https://storopoli.io/tags/nix/" />
         <id>https://storopoli.io/tags/nix/</id>
         <published>2023-12-04T17:43:03-03:00</published>
@@ -104,7 +113,7 @@
           <content type="html"><![CDATA[]]></content>
       </entry>
       <entry>
-        <title>julia</title>
+        <title>Julia</title>
         <link rel="alternate" href="https://storopoli.io/tags/julia/" />
         <id>https://storopoli.io/tags/julia/</id>
         <published>2023-11-28T18:19:36-03:00</published>
@@ -113,7 +122,7 @@
           <content type="html"><![CDATA[]]></content>
       </entry>
       <entry>
-        <title>python</title>
+        <title>Python</title>
         <link rel="alternate" href="https://storopoli.io/tags/python/" />
         <id>https://storopoli.io/tags/python/</id>
         <published>2023-11-28T18:19:36-03:00</published>
@@ -122,20 +131,11 @@
           <content type="html"><![CDATA[]]></content>
       </entry>
       <entry>
-        <title>machine learning</title>
+        <title>Machine Learning</title>
         <link rel="alternate" href="https://storopoli.io/tags/machine-learning/" />
         <id>https://storopoli.io/tags/machine-learning/</id>
         <published>2023-11-19T22:49:51-03:00</published>
         <updated>2024-02-11T15:55:02-03:00</updated>
-        <summary type="html"></summary>
-          <content type="html"><![CDATA[]]></content>
-      </entry>
-      <entry>
-        <title>CI/CD</title>
-        <link rel="alternate" href="https://storopoli.io/tags/ci/cd/" />
-        <id>https://storopoli.io/tags/ci/cd/</id>
-        <published>0001-01-01T00:00:00Z</published>
-        <updated>0001-01-01T00:00:00Z</updated>
         <summary type="html"></summary>
           <content type="html"><![CDATA[]]></content>
       </entry>
