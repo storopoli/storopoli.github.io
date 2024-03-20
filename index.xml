@@ -5,7 +5,7 @@
   <link rel="self" href="https://storopoli.io/index.xml" />
   <subtitle>Recent content on Jose Storopoli, PhD</subtitle>
   <id>https://storopoli.io/</id>
-  <generator uri="http://gohugo.io" version="0.123.6">Hugo</generator>
+  <generator uri="http://gohugo.io" version="0.124.0">Hugo</generator>
   <language>en-us</language>
   <updated>2024-02-11T15:59:02Z</updated>
   <author>
@@ -3058,21 +3058,26 @@ However, I am always tempted by them.</li>
         <link rel="alternate" href="https://storopoli.io/about/" />
         <id>https://storopoli.io/about/</id>
         <published>0001-01-01T00:00:00Z</published>
-        <updated>2024-02-15T07:26:44Z</updated>
-        <summary type="html">I am a software developer with a background in computational statistics, scientific computing, and computer science. In other words, I make computers go faster while crunching big numbers (which is almost everything that they do). I am also an ardent Bayesian. I like Rust, Julia, Nix, Vim, and htmx. I practice Stoic Philosophy daily. I hate bloatware and the soydev phenomenon. Everything that I do is either open source or has a permissive Creative Commons license.</summary>
-          <content type="html"><![CDATA[<p>I am a software developer with a background in computational statistics,
-scientific computing, and computer science.
-In other words, I make computers go faster while crunching big numbers
-(which is almost everything that they do).
-I am also an ardent <a href="https://youtu.be/RMNwsdb5VU4">Bayesian</a>.
-I like <a href="https://rust-lang.org/">Rust</a>,
+        <updated>2024-03-20T09:39:07-03:00</updated>
+        <summary type="html">I am a software developer with a PhD in computational statistics. I am interested in performant and reliable software. In other words, I make computers go brrr faster.
+In hope of a better future, I dedicate my free time to Bitcoin-related projects.
+I am also an ardent Bayesian.
+I like Rust, Julia, Nix, and Vim.
+I practice Stoic Philosophy daily.
+I hate bloatware and the soydev phenomenon.
+Everything that I do is either open source or has a permissive Creative Commons license.</summary>
+          <content type="html"><![CDATA[<p>I am a software developer with a PhD in computational statistics.
+I am interested in performant and reliable software.
+In other words, I make computers go brrr faster.</p>
+<p>In hope of a better future, I dedicate my free time to Bitcoin-related projects.</p>
+<p>I am also an ardent <a href="https://youtu.be/RMNwsdb5VU4">Bayesian</a>.</p>
+<p>I like <a href="https://rust-lang.org/">Rust</a>,
 <a href="https://julialang.org">Julia</a>,
 <a href="https://nixos.org">Nix</a>,
-<a href="https://www.vim.org">Vim</a>,
-and <a href="https://htmx.org">htmx</a>.
-I practice <a href="https://stoicquotes.io">Stoic Philosophy</a> daily.
-I hate <a href="https://storopoli.io/2023-11-10-2023-11-13-soydev/">bloatware and the soydev phenomenon</a>.
-Everything that I do is either open source or has a permissive Creative Commons license.</p>
+and <a href="https://www.vim.org">Vim</a>.</p>
+<p>I practice <a href="https://stoicquotes.io">Stoic Philosophy</a> daily.</p>
+<p>I hate <a href="https://storopoli.io/2023-11-10-2023-11-13-soydev/">bloatware and the soydev phenomenon</a>.</p>
+<p>Everything that I do is either open source or has a permissive Creative Commons license.</p>
 <p>I don&rsquo;t have social media, since I think they are overrated
 and &ldquo;they sell your data&rdquo;.
 If you want to contact me, please send an email.</p>
