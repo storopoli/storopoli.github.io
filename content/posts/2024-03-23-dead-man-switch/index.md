@@ -112,7 +112,7 @@ for more details.
 1. **Using Nix**. This is the easiest just do
    `nix run github:storopoli/dead-man-switch`.
 
-Once, you sucessfully run the app, you will see the following output:
+Once, you successfully run the app, you will see the following output:
 
 {{< figure src="app_first_run.png#center" alt="Initial Screen of Dead Man's Switch" title="Initial Screen of Dead Man's Switch" width="800" >}}
 
@@ -239,7 +239,7 @@ If both timers run out, the messages will be sent and DMS will exit.
 > For the stupid smelly nerds that want to go beyond the
 > ["JUST MAKE A FUCKING .EXE AND GIVE IT TO ME"](https://github.com/sherlock-project/sherlock/issues/2019).
 
-Before we dive into the code, here are the **depedencies** that I am using.
+Before we dive into the code, here are the **dependencies** that I am using.
 I've tried to keep them to a minimum, since I want this to be a dead-simple
 program.
 This also helps with reducing the incidence of bugs and narrowing the
