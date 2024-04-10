@@ -51,10 +51,9 @@ This will load MermaidJS under the hood,
 and you can specify diagrams and charts with the shortcode:
 
 ```md
-{{<mermaid>}}
----
-title: My Flowchart
----
+## {{<mermaid>}}
+
+## title: My Flowchart
 
 flowchart LR
 a --> b & c --> d
@@ -74,7 +73,8 @@ and the content is [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 In
 [cc-by-nc-sa-image]: https://licensebuttons.net/l/by-nc-sa/4.0/88x31.png
 [cc-by-nc-sa-shield]: https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg
 
-[^javascript]: JavaScript is a security issue.
-JavaScript enables **remote code execution**.
-The browser is millions of lines of code, nobody truly knows what is going on,
-and often has escalated privileges in your computer.
+[^javascript]:
+    JavaScript is a security issue.
+    JavaScript enables **remote code execution**.
+    The browser is millions of lines of code, nobody truly knows what is going on,
+    and often has escalated privileges in your computer.

@@ -86,7 +86,7 @@ He wanted three things:
 1. The measure should be **additive**.
    The information in a message should be the sum of the information in its parts.
 1. The measure should be **continuous**.
-    Small changes in the message should result in small changes in the measure.
+   Small changes in the message should result in small changes in the measure.
 
 He pretty much found that the formula for Entropy in statistical mechanics
 was a good measure of information.
@@ -110,9 +110,10 @@ In information theory,
 the **Entropy of a random variable is the average level of "information", "surprise",
 or "uncertainty" inherent to the variable's possible outcomes**[^bayesian].
 
-[^bayesian]: there is a Bayesian argument about
-the use of priors that should adhere to the
-[Principle of Maximal Entropy](https://en.wikipedia.org/wiki/Principle_of_maximum_entropy)
+[^bayesian]:
+    there is a Bayesian argument about
+    the use of priors that should adhere to the
+    [Principle of Maximal Entropy](https://en.wikipedia.org/wiki/Principle_of_maximum_entropy)
 
 Let's take the simple example of a fair coin.
 The Entropy of the random variable $X$ that represents the outcome of a fair coin flip is:
@@ -165,12 +166,13 @@ $$H = 8 \cdot \log_2(26) \approx 37.6 \text{ bits}$$
 
 This means that an attacker would need to try $2^{37.6} \approx 2.01 \cdot 10^{11}$ combinations[^combinations] to guess the password.
 
-[^combinations]: technically, we need to divide the number of combinations by 2,
-since we are assuming that the attacker is using a brute-force attack,
-which means that the attacker is trying all possible combinations,
-and the password could be at the beginning or at the end of the search space.
-This is called the [birthday paradox](https://en.wikipedia.org/wiki/Birthday_problem),
-and it assumes that the password is uniformly distributed in the search space.
+[^combinations]:
+    technically, we need to divide the number of combinations by 2,
+    since we are assuming that the attacker is using a brute-force attack,
+    which means that the attacker is trying all possible combinations,
+    and the password could be at the beginning or at the end of the search space.
+    This is called the [birthday paradox](https://en.wikipedia.org/wiki/Birthday_problem),
+    and it assumes that the password is uniformly distributed in the search space.
 
 If the password were to include uppercase letters, numbers, and symbols
 (let's assume 95 possible characters in total),
@@ -194,11 +196,11 @@ it would take:
 
 1. 8-length lowercase-only password:
 
-  $$\frac{2.01 \cdot 10^{11}}{3 \cdot 10^{11}} \approx 0.67 \text{ seconds}$$
+$$\frac{2.01 \cdot 10^{11}}{3 \cdot 10^{11}} \approx 0.67 \text{ seconds}$$
 
 1. 8-length password with uppercase letters, numbers, and symbols:
 
-  $$\frac{6.8 \cdot 10^{15}}{3 \cdot 10^{11}} \approx 22114 \text{ seconds} \approx 6.14 \text{ hours}$$
+$$\frac{6.8 \cdot 10^{15}}{3 \cdot 10^{11}} \approx 22114 \text{ seconds} \approx 6.14 \text{ hours}$$
 
 So, the first password would be cracked in less than a second,
 while the second would take a few hours.
@@ -298,9 +300,10 @@ If you want to generate a seed phrase,
 you can use [KeePassXC](https://keepassxc.org/),
 which is a great open-source **_offline_** password manager that supports seed phrases[^keepassxc].
 
-[^keepassxc]: technically, KeePassXC uses the [EFF wordlist](https://www.eff.org/files/2016/07/18/eff_large_wordlist.txt),
-which has 7,776 words, so each word gives you $\log_2(7776) \approx 12.9$ bits of Entropy.
-They were created to be easy to use with 6-sided dice.
+[^keepassxc]:
+    technically, KeePassXC uses the [EFF wordlist](https://www.eff.org/files/2016/07/18/eff_large_wordlist.txt),
+    which has 7,776 words, so each word gives you $\log_2(7776) \approx 12.9$ bits of Entropy.
+    They were created to be easy to use with 6-sided dice.
 
 ## License
 

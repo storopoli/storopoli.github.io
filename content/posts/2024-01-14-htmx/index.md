@@ -19,8 +19,9 @@ So, when I acquired the domain
 [`stoicquotes.io`](https://stoicquotes.io)[^stoicquotes],
 I've decided to give [`htmx`](https://htmx.org) a try.
 
-[^stoicquotes]: you can find the source code at
-[`storopoli/stoic-quotes`](https://github.com/storopoli/stoic-quotes).
+[^stoicquotes]:
+    you can find the source code at
+    [`storopoli/stoic-quotes`](https://github.com/storopoli/stoic-quotes).
 
 ## What is `htmx`?
 
@@ -33,8 +34,9 @@ minimal JavaScript knowledge, so that you can add interactivity[^htmx] to web pa
 with just HTML.
 
 [^yavascript]: YES, yes, no YavaScript. Hooray!
-[^htmx]: `htmx` can do much more, such as lazy loading, infinite scroll,
-or submitting forms without a full page reload, etc.
+[^htmx]:
+    `htmx` can do much more, such as lazy loading, infinite scroll,
+    or submitting forms without a full page reload, etc.
 
 Let's contrast this with the [Soy stuff](../2023-11-10-2023-11-13-soydev/)
 like the notorious React framework. **React**, on the other hand, is a JavaScript
@@ -74,8 +76,7 @@ what is going on under the hood:
 
 ---
 
-title: htmx
----
+## title: htmx
 
 flowchart LR
 HTML --> DOM
@@ -85,8 +86,7 @@ HTML --> DOM
 
 ---
 
-title: React
----
+## title: React
 
 flowchart LR
 JSON --> JavaScript --> HTML --> VDOM[Virtual DOM] --> DOM
@@ -149,12 +149,15 @@ we have the following HTML[^code]:
 
 ```html
 <div>
-    <blockquote id="quote">
-        Some nice Stoic quote...
-    </blockquote>
+  <blockquote id="quote">Some nice Stoic quote...</blockquote>
 </div>
-<button hx-get="/quote" hx-trigger="click" hx-target="#quote" hx-swap="outerHTML">
-    New
+<button
+  hx-get="/quote"
+  hx-trigger="click"
+  hx-target="#quote"
+  hx-swap="outerHTML"
+>
+  New
 </button>
 ```
 
@@ -178,9 +181,10 @@ This is truly amazing. We just used one line of `htmx`.
 
 `htmx` adheres to my trifecta of amazing tools[^trifecta]:
 
-[^trifecta]: there are some other tools that I use that adhere to the trifecta.
-Most notoriously is [Julia](https://julialang.org) and
-[Rust](https://rust-lang.org).
+[^trifecta]:
+    there are some other tools that I use that adhere to the trifecta.
+    Most notoriously is [Julia](https://julialang.org) and
+    [Rust](https://rust-lang.org).
 
 - powerful
 - expressive
@@ -216,43 +220,39 @@ This is not simple, but here's a breakdown:
 1. create an `index.js` file with some variant of:
 
    ```javascript
-   import { createRoot } from 'react-dom/client';
+   import { createRoot } from "react-dom/client";
 
    document.body.innerHTML = '<div id="app"></div>';
 
-   const root = createRoot(document.getElementById('app'));
+   const root = createRoot(document.getElementById("app"));
    root.render(<h1>Hello, world</h1>);
    ```
 
 And now here's the code for the `Quote` component:
 
 ```jsx
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 const Quote = () => {
-  const [quote, setQuote] = useState('Some nice Stoic quote...');
+  const [quote, setQuote] = useState("Some nice Stoic quote...");
 
   const fetchNewQuote = async () => {
     try {
-      const response = await fetch('/quote');
+      const response = await fetch("/quote");
       const newQuote = await response.text();
       setQuote(newQuote);
     } catch (error) {
-      console.error('Error fetching new quote:', error);
+      console.error("Error fetching new quote:", error);
     }
   };
 
   return (
     <div>
-      <blockquote id="quote">
-        {quote}
-      </blockquote>
-      <button onClick={fetchNewQuote}>
-        New
-      </button>
+      <blockquote id="quote">{quote}</blockquote>
+      <button onClick={fetchNewQuote}>New</button>
     </div>
   );
-}
+};
 
 export default Quote;
 ```

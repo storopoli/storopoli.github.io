@@ -21,10 +21,11 @@ So I decided to make a **Sudoku game for her, without ads or using any permissio
 It wouldn't even need to ask for the blessing of Google or [Tim Apple](https://youtu.be/XHVxm12NbrY)
 since it was a Progressive Web App (PWA) and it would work offline.
 
-[^sudoku]: According to [Wikipedia](https://en.wikipedia.org/wiki/Sudoku),
-Sudoku is a logic-based, combinatorial number-placement puzzle.
-The objective is to fill a 9×9 grid with digits so that each column, each row,
-and each of the nine 3×3 subgrids that compose the grid contain all of the digits from 1 to 9.
+[^sudoku]:
+    According to [Wikipedia](https://en.wikipedia.org/wiki/Sudoku),
+    Sudoku is a logic-based, combinatorial number-placement puzzle.
+    The objective is to fill a 9×9 grid with digits so that each column, each row,
+    and each of the nine 3×3 subgrids that compose the grid contain all of the digits from 1 to 9.
 
 You can play the game at [storopoli.io/sudoku](https://storopoli.io/sudoku)
 or check the source code at [`storopoli/sudoku`](https://github.com/storopoli/sudoku).
@@ -76,8 +77,9 @@ You can sleep soundly at night knowing that your application won't crash
 and as long as the **host machine has electricity and internet access,
 your app is working as expected**[^microsoft].
 
-[^microsoft]: in my case I am sending the bill to Bill Gates,
-since it is using the GitHub Pages to host the app.
+[^microsoft]:
+    in my case I am sending the bill to Bill Gates,
+    since it is using the GitHub Pages to host the app.
 
 ## Performance
 
@@ -272,7 +274,7 @@ differ by exactly one item.
 
 Again I'll add the docstrings since they incorporate some good practices that are worth mentioning:
 
-```rust
+````rust
 /// Finds the index at which two given [`SudokuState`]
 /// differ by exactly one item.
 ///
@@ -314,15 +316,16 @@ pub fn find_changed_cell(previous: &SudokuState, current: &SudokuState) -> Optio
     }
     None // Return None if no change is found (which should not happen in your case)
 }
-```
+````
 
 The function `find_changed_cell` can panic if it cannot convert any of the Sudoku's board cells indexes from `usize` into a `u8`.
 Hence, we add a `## Panics` section to the docstring to inform the user of this possibility.
 Additionally, we add an `## Examples` section to show how to use the function.
 These are good practices that are worth mentioning[^clippy] and I highly encourage you to use them in your Rust code.
 
-[^clippy]: The `clippy` linter can warn you if you don't add these sections to your docstrings.
-Just add `pedantic = "deny"` inside your `Cargo.toml` file in the `[lints.clippy]` section and you're good to go.
+[^clippy]:
+    The `clippy` linter can warn you if you don't add these sections to your docstrings.
+    Just add `pedantic = "deny"` inside your `Cargo.toml` file in the `[lints.clippy]` section and you're good to go.
 
 ## Tests
 

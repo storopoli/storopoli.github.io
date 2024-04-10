@@ -61,11 +61,12 @@ you'll pretty much screwed.
 There's no known efficient algorithm[^np] to factorize a big number into its prime factors.
 You'll be forced to test all numbers from 2 to $\sqrt{n}$ to see if they divide $n$.
 
-[^np]: the problem of factoring a number into its prime factors is not known to be in
-the class of problems that can be solved in polynomial time, P.
-It is not known to be NP-complete, NP, either.
-Actually to find it P is NP or not is the hardest way to earn a million dollars,
-[the P vs NP problem](https://en.m.wikipedia.org/wiki/Millennium_Prize_Problems#P_versus_NP).
+[^np]:
+    the problem of factoring a number into its prime factors is not known to be in
+    the class of problems that can be solved in polynomial time, P.
+    It is not known to be NP-complete, NP, either.
+    Actually to find it P is NP or not is the hardest way to earn a million dollars,
+    [the P vs NP problem](https://en.m.wikipedia.org/wiki/Millennium_Prize_Problems#P_versus_NP).
 
 Here's a number:
 
@@ -163,7 +164,7 @@ the output will be completely different.
 Check this example:
 
 ```shell
-$ echo "The quick brown fox jumps over the lazy dog" | shasum -a 256   
+$ echo "The quick brown fox jumps over the lazy dog" | shasum -a 256
 c03905fcdab297513a620ec81ed46ca44ddb62d41cbbd83eb4a5a3592be26a69  -
 
 $ echo "The quick brown fox jumps over the lazy dog." | shasum -a 256
@@ -179,7 +180,7 @@ This is due to the property of collision resistance that we mentioned earlier.
 Before we dive into public-key cryptography,
 we need a brief interlude on fields.
 
-**[Fields](https://en.wikipedia.org/wiki/Field_(mathematics)) are sets with two binary operations,
+**[Fields](<https://en.wikipedia.org/wiki/Field_(mathematics)>) are sets with two binary operations,
 called addition $+$ and multiplication $\times$**.
 We write
 
@@ -477,13 +478,14 @@ However, it was probably not included due to the fact that there wasn't
 good battle-tested software implementations of it at the time.
 However, it was added to Bitcoin in the Taproot upgrade[^taproot].
 
-[^taproot]: Taproot is a proposed Bitcoin protocol upgrade that was deployed
-as a forward-compatible soft fork.
-The validation of Taproot is based on Schnorr signatures.
-You can find more in BIPS
-[340](https://github.com/bitcoin/bips/blob/master/bip-0340.mediawiki),
-[341](https://github.com/bitcoin/bips/blob/master/bip-0341.mediawiki), and
-[342](https://github.com/bitcoin/bips/blob/master/bip-0342.mediawiki).
+[^taproot]:
+    Taproot is a proposed Bitcoin protocol upgrade that was deployed
+    as a forward-compatible soft fork.
+    The validation of Taproot is based on Schnorr signatures.
+    You can find more in BIPS
+    [340](https://github.com/bitcoin/bips/blob/master/bip-0340.mediawiki),
+    [341](https://github.com/bitcoin/bips/blob/master/bip-0341.mediawiki), and
+    [342](https://github.com/bitcoin/bips/blob/master/bip-0342.mediawiki).
 
 Schnorr is a marvelous algorithm.
 It is so much simpler than DSA.
@@ -538,11 +540,13 @@ both using the same nonce $k = k^\prime$.
 
 First, let's do the ~~ugly~~ DSA math:
 
-$$\begin{aligned}
+$$
+\begin{aligned}
 s^\prime - s &= (k^{\prime {-1}} (H(m_1) + S_k K')) - (k^{-1} (H(m_2) + S_k K)) \\\
 s^\prime - s &= k^{-1} (H(m_1) - H(m_2)) \\\
 k &= (H(m_1) - H(m_2)) (s^\prime - s)^{-1}
-\end{aligned}$$
+\end{aligned}
+$$
 
 Now remember you know $s$, $s^\prime$, $H(m_1)$, $H(m_2)$ $K$, and $K^\prime$.
 Let's do the final step and solve for $S_k$:

@@ -32,10 +32,8 @@
               typos.enable = true;
               treefmt = {
                 enable = true;
+                package = treefmtEval.config.build.wrapper;
               };
-            };
-            settings = {
-              treefmt.package = treefmtEval.config.build.wrapper;
             };
           };
         };

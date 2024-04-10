@@ -91,9 +91,10 @@ Now multiply this by every operation that your code is going to run in productio
 over time.
 Again: **unacceptable**.
 
-[^byte]: technically, we can represent a boolean with just one bit.
-However, the short answer is still one byte,
-because that's [smallest addressable unit of memory](https://en.wikipedia.org/wiki/Byte).
+[^byte]:
+    technically, we can represent a boolean with just one bit.
+    However, the short answer is still one byte,
+    because that's [smallest addressable unit of memory](https://en.wikipedia.org/wiki/Byte).
 
 That's because all objects in Python,
 in the sense that everything that you can instantiate,
@@ -129,8 +130,9 @@ followed by a Python wrapper function that calls it using 10 lines of code,
 _but_ with a docstring that is 50 lines of code;
 you have a "Python"-majority codebase.
 
-[^gitattributes]: and modifying `.gitattributes` is cheating.
-Yes, I am talking to you [NumPy](https://github.com/numpy/numpy/blob/06d7bdfbb585264dcf23d4322be7aee449733ca2/.gitattributes#L6-L7)!
+[^gitattributes]:
+    and modifying `.gitattributes` is cheating.
+    Yes, I am talking to you [NumPy](https://github.com/numpy/numpy/blob/06d7bdfbb585264dcf23d4322be7aee449733ca2/.gitattributes#L6-L7)!
 
 In a sense the most efficient Python programmer is a C/C++ programmer...
 

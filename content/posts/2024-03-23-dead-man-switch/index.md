@@ -85,9 +85,10 @@ which is the current Debian stable Rust version[^debian].
 There are several alternatives on how to deploy it.
 Here are the two easiest ways:
 
-[^debian]: Please check
-[Debian's `rustc` package](https://packages.debian.org/search?keywords=rustc)
-for more details.
+[^debian]:
+    Please check
+    [Debian's `rustc` package](https://packages.debian.org/search?keywords=rustc)
+    for more details.
 
 1. **Building from Source**:
 
@@ -137,8 +138,9 @@ Hence, the configuration file is at `/root/.config/deadman/config.toml`.
 If you open the configuration file, you will see the following content.
 I've added some default values for inspiration[^central-park]:
 
-[^central-park]: Please don't go to bench 137 in Central Park, NY.
-That was just an example.
+[^central-park]:
+    Please don't go to bench 137 in Central Park, NY.
+    That was just an example.
 
 ```toml
 username = "me@example.com"
