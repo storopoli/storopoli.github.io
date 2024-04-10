@@ -18,7 +18,7 @@
         <link rel="alternate" href="https://storopoli.io/2024-02-11-mnemonic/" />
         <id>https://storopoli.io/2024-02-11-mnemonic/</id>
         <published>2024-02-11T15:59:02Z</published>
-        <updated>2024-02-11T17:11:57Z</updated>
+        <updated>2024-04-10T08:57:32-03:00</updated>
         <summary type="html">Warning: This post has KaTeX enabled, so if you want to view the rendered math formulas, you&amp;rsquo;ll have to unfortunately enable JavaScript.
 In this post, let&amp;rsquo;s dive into a topic that is very important for anyone who uses the internet: passwords. We&amp;rsquo;ll cover what the hell is Entropy, good password practices, and how it relates to Bitcoin &amp;ldquo;seed phrases&amp;rdquo;1.
 Entropy Before we go into passwords, I&amp;rsquo;ll introduce the concept of Entropy.</summary>
@@ -289,7 +289,7 @@ They were created to be easy to use with 6-sided dice.&#160;<a href="#fnref:5" c
         <link rel="alternate" href="https://storopoli.io/2024-02-05-crypto-basics/" />
         <id>https://storopoli.io/2024-02-05-crypto-basics/</id>
         <published>2024-02-05T18:53:28-03:00</published>
-        <updated>2024-02-11T15:55:02-03:00</updated>
+        <updated>2024-04-10T08:57:32-03:00</updated>
         <summary type="html">Euclid&amp;rsquo;s one-way function
 Warning: This post has KaTeX enabled, so if you want to view the rendered math formulas, you&amp;rsquo;ll have to unfortunately enable JavaScript.
 This is the companion post to the cryptography workshop that I gave at a local BitDevs. Let&amp;rsquo;s explore the basics of cryptography. We&amp;rsquo;ll go through the following topics:
@@ -427,7 +427,7 @@ There&rsquo;s no <a href="https://en.wikipedia.org/wiki/Automatic_differentiatio
 if we change just one bit of the input,
 the output will be completely different.
 Check this example:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ <span class="nb">echo</span> <span class="s2">&#34;The quick brown fox jumps over the lazy dog&#34;</span> <span class="p">|</span> shasum -a <span class="m">256</span>   
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ <span class="nb">echo</span> <span class="s2">&#34;The quick brown fox jumps over the lazy dog&#34;</span> <span class="p">|</span> shasum -a <span class="m">256</span>
 </span></span><span class="line"><span class="cl">c03905fcdab297513a620ec81ed46ca44ddb62d41cbbd83eb4a5a3592be26a69  -
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">$ <span class="nb">echo</span> <span class="s2">&#34;The quick brown fox jumps over the lazy dog.&#34;</span> <span class="p">|</span> shasum -a <span class="m">256</span>
@@ -765,11 +765,13 @@ This is called the &ldquo;nonce reuse attack&rdquo;.</p>
 Here we are in a context that we have two signatures $s$ and $s^\prime$,
 both using the same nonce $k = k^\prime$.</p>
 <p>First, let&rsquo;s do the <del>ugly</del> DSA math:</p>
-<p>$$\begin{aligned}
+<p>$$
+\begin{aligned}
 s^\prime - s &amp;= (k^{\prime {-1}} (H(m_1) + S_k K&rsquo;)) - (k^{-1} (H(m_2) + S_k K)) \\
 s^\prime - s &amp;= k^{-1} (H(m_1) - H(m_2)) \\
 k &amp;= (H(m_1) - H(m_2)) (s^\prime - s)^{-1}
-\end{aligned}$$</p>
+\end{aligned}
+$$</p>
 <p>Now remember you know $s$, $s^\prime$, $H(m_1)$, $H(m_2)$ $K$, and $K^\prime$.
 Let&rsquo;s do the final step and solve for $S_k$:</p>
 <p>$$S_k = K^{-1}  (k s - H(m_1))$$</p>

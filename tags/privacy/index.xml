@@ -18,7 +18,7 @@
         <link rel="alternate" href="https://storopoli.io/2024-03-23-dead-man-switch/" />
         <id>https://storopoli.io/2024-03-23-dead-man-switch/</id>
         <published>2024-03-23T14:00:16-03:00</published>
-        <updated>2024-03-23T16:05:55-03:00</updated>
+        <updated>2024-04-10T08:57:32-03:00</updated>
         <summary type="html">Sherlock Holmes fights Moriarty at the Reichenbach Falls Got state secrets? Or maybe 50 BTC? Don&amp;rsquo;t trust your government or lawyers? And you want to make sure that if you die, your secrets are passed on? Don&amp;rsquo;t worry, I got you covered. In this post, I&amp;rsquo;ll introduce you to a simple no-bullshit dead man&amp;rsquo;s switch written in Rust.
 Dead Man&amp;rsquo;s Switch According to Wikipedia:
 A dead man&amp;rsquo;s switch is a switch that is designed to be activated or deactivated if the human operator becomes incapacitated, such as through death, loss of consciousness, or being bodily removed from control.</summary>

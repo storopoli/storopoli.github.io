@@ -18,7 +18,7 @@
         <link rel="alternate" href="https://storopoli.io/2024-03-23-dead-man-switch/" />
         <id>https://storopoli.io/2024-03-23-dead-man-switch/</id>
         <published>2024-03-23T14:00:16-03:00</published>
-        <updated>2024-03-23T16:05:55-03:00</updated>
+        <updated>2024-04-10T08:57:32-03:00</updated>
         <summary type="html">Sherlock Holmes fights Moriarty at the Reichenbach Falls Got state secrets? Or maybe 50 BTC? Don&amp;rsquo;t trust your government or lawyers? And you want to make sure that if you die, your secrets are passed on? Don&amp;rsquo;t worry, I got you covered. In this post, I&amp;rsquo;ll introduce you to a simple no-bullshit dead man&amp;rsquo;s switch written in Rust.
 Dead Man&amp;rsquo;s Switch According to Wikipedia:
 A dead man&amp;rsquo;s switch is a switch that is designed to be activated or deactivated if the human operator becomes incapacitated, such as through death, loss of consciousness, or being bodily removed from control.</summary>
@@ -306,7 +306,7 @@ That was just an example.&#160;<a href="#fnref:2" class="footnote-backref" role=
         <link rel="alternate" href="https://storopoli.io/2024-02-11-mnemonic/" />
         <id>https://storopoli.io/2024-02-11-mnemonic/</id>
         <published>2024-02-11T15:59:02Z</published>
-        <updated>2024-02-11T17:11:57Z</updated>
+        <updated>2024-04-10T08:57:32-03:00</updated>
         <summary type="html">Warning: This post has KaTeX enabled, so if you want to view the rendered math formulas, you&amp;rsquo;ll have to unfortunately enable JavaScript.
 In this post, let&amp;rsquo;s dive into a topic that is very important for anyone who uses the internet: passwords. We&amp;rsquo;ll cover what the hell is Entropy, good password practices, and how it relates to Bitcoin &amp;ldquo;seed phrases&amp;rdquo;1.
 Entropy Before we go into passwords, I&amp;rsquo;ll introduce the concept of Entropy.</summary>
@@ -577,7 +577,7 @@ They were created to be easy to use with 6-sided dice.&#160;<a href="#fnref:5" c
         <link rel="alternate" href="https://storopoli.io/2024-02-05-crypto-basics/" />
         <id>https://storopoli.io/2024-02-05-crypto-basics/</id>
         <published>2024-02-05T18:53:28-03:00</published>
-        <updated>2024-02-11T15:55:02-03:00</updated>
+        <updated>2024-04-10T08:57:32-03:00</updated>
         <summary type="html">Euclid&amp;rsquo;s one-way function
 Warning: This post has KaTeX enabled, so if you want to view the rendered math formulas, you&amp;rsquo;ll have to unfortunately enable JavaScript.
 This is the companion post to the cryptography workshop that I gave at a local BitDevs. Let&amp;rsquo;s explore the basics of cryptography. We&amp;rsquo;ll go through the following topics:
@@ -715,7 +715,7 @@ There&rsquo;s no <a href="https://en.wikipedia.org/wiki/Automatic_differentiatio
 if we change just one bit of the input,
 the output will be completely different.
 Check this example:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ <span class="nb">echo</span> <span class="s2">&#34;The quick brown fox jumps over the lazy dog&#34;</span> <span class="p">|</span> shasum -a <span class="m">256</span>   
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ <span class="nb">echo</span> <span class="s2">&#34;The quick brown fox jumps over the lazy dog&#34;</span> <span class="p">|</span> shasum -a <span class="m">256</span>
 </span></span><span class="line"><span class="cl">c03905fcdab297513a620ec81ed46ca44ddb62d41cbbd83eb4a5a3592be26a69  -
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">$ <span class="nb">echo</span> <span class="s2">&#34;The quick brown fox jumps over the lazy dog.&#34;</span> <span class="p">|</span> shasum -a <span class="m">256</span>
@@ -1053,11 +1053,13 @@ This is called the &ldquo;nonce reuse attack&rdquo;.</p>
 Here we are in a context that we have two signatures $s$ and $s^\prime$,
 both using the same nonce $k = k^\prime$.</p>
 <p>First, let&rsquo;s do the <del>ugly</del> DSA math:</p>
-<p>$$\begin{aligned}
+<p>$$
+\begin{aligned}
 s^\prime - s &amp;= (k^{\prime {-1}} (H(m_1) + S_k K&rsquo;)) - (k^{-1} (H(m_2) + S_k K)) \\
 s^\prime - s &amp;= k^{-1} (H(m_1) - H(m_2)) \\
 k &amp;= (H(m_1) - H(m_2)) (s^\prime - s)^{-1}
-\end{aligned}$$</p>
+\end{aligned}
+$$</p>
 <p>Now remember you know $s$, $s^\prime$, $H(m_1)$, $H(m_2)$ $K$, and $K^\prime$.
 Let&rsquo;s do the final step and solve for $S_k$:</p>
 <p>$$S_k = K^{-1}  (k s - H(m_1))$$</p>
@@ -1162,7 +1164,7 @@ You can find more in BIPS
         <link rel="alternate" href="https://storopoli.io/2024-01-30-sudoku/" />
         <id>https://storopoli.io/2024-01-30-sudoku/</id>
         <published>2024-01-30T08:57:33Z</published>
-        <updated>2024-02-11T15:55:02-03:00</updated>
+        <updated>2024-04-10T08:57:32-03:00</updated>
         <summary type="html">It all started when I had to accompany my mom to the hospital. It was just a routine checkup, but I had to wait for a few hours. I brought my laptop with me, since they have good WiFi and I could work on my projects. Then I realized that my mom was playing a Sudoku1 game on her phone. I couln&amp;rsquo;t help but notice that the game was full of ads and it was asking for a lot of permissions, like location and sensor data.</summary>
           <content type="html"><![CDATA[<p><img loading="lazy" src="rust_webdev_meme.jpg#center" alt="rust webdev meme"  />
 </p>
@@ -1488,7 +1490,7 @@ Just add <code>pedantic = &quot;deny&quot;</code> inside your <code>Cargo.toml</
         <link rel="alternate" href="https://storopoli.io/2024-01-14-htmx/" />
         <id>https://storopoli.io/2024-01-14-htmx/</id>
         <published>2024-01-14T06:13:19-03:00</published>
-        <updated>2024-02-11T15:55:02-03:00</updated>
+        <updated>2024-04-10T08:57:32-03:00</updated>
         <summary type="html">Warning: This post has mermaid.js enabled, so if you want to view the rendered diagrams, you&amp;rsquo;ll have to unfortunately enable JavaScript.
 I love to learn new things and I&amp;rsquo;m passionate about Stoic philosophy. So, when I acquired the domain stoicquotes.io1, I&amp;rsquo;ve decided to give htmx a try.
 What is htmx? htmx is a small JavaScript library that allows you to enhance your HTML with attributes to perform AJAX (Asynchronous JavaScript and XML) without writing JavaScript2.</summary>
@@ -1545,8 +1547,7 @@ what is going on under the hood:</p>
 
 ---
 
-title: htmx
----
+## title: htmx
 
 flowchart LR
 HTML --> DOM
@@ -1556,8 +1557,7 @@ HTML --> DOM
 
 ---
 
-title: React
----
+## title: React
 
 flowchart LR
 JSON --> JavaScript --> HTML --> VDOM[Virtual DOM] --> DOM
@@ -1602,12 +1602,15 @@ I has around 40kb of size.</p>
 <p>Inside the code behind <a href="https://stoicquotes.io"><code>stoicquotes.io</code></a><sup id="fnref1:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>,
 we have the following HTML<sup id="fnref:5"><a href="#fn:5" class="footnote-ref" role="doc-noteref">5</a></sup>:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">blockquote</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;quote&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">        Some nice Stoic quote...
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">blockquote</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">blockquote</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;quote&#34;</span><span class="p">&gt;</span>Some nice Stoic quote...<span class="p">&lt;/</span><span class="nt">blockquote</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">button</span> <span class="na">hx-get</span><span class="o">=</span><span class="s">&#34;/quote&#34;</span> <span class="na">hx-trigger</span><span class="o">=</span><span class="s">&#34;click&#34;</span> <span class="na">hx-target</span><span class="o">=</span><span class="s">&#34;#quote&#34;</span> <span class="na">hx-swap</span><span class="o">=</span><span class="s">&#34;outerHTML&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    New
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">button</span>
+</span></span><span class="line"><span class="cl">  <span class="na">hx-get</span><span class="o">=</span><span class="s">&#34;/quote&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="na">hx-trigger</span><span class="o">=</span><span class="s">&#34;click&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="na">hx-target</span><span class="o">=</span><span class="s">&#34;#quote&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="na">hx-swap</span><span class="o">=</span><span class="s">&#34;outerHTML&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  New
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
 </span></span></code></pre></div><p>When the user clicks (<code>hx-trigger</code>) in the &ldquo;New&rdquo; button, <code>htmx</code> sends a <code>GET</code>
 request to the <code>/quote</code> endpoint (<code>hx-get</code>). Then it swaps the whole HTML
@@ -1666,41 +1669,37 @@ This is not simple, but here&rsquo;s a breakdown:</p>
 </li>
 <li>
 <p>create an <code>index.js</code> file with some variant of:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kr">import</span> <span class="p">{</span> <span class="nx">createRoot</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;react-dom/client&#39;</span><span class="p">;</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kr">import</span> <span class="p">{</span> <span class="nx">createRoot</span> <span class="p">}</span> <span class="nx">from</span> <span class="s2">&#34;react-dom/client&#34;</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="s1">&#39;&lt;div id=&#34;app&#34;&gt;&lt;/div&gt;&#39;</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">root</span> <span class="o">=</span> <span class="nx">createRoot</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;app&#39;</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">root</span> <span class="o">=</span> <span class="nx">createRoot</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&#34;app&#34;</span><span class="p">));</span>
 </span></span><span class="line"><span class="cl"><span class="nx">root</span><span class="p">.</span><span class="nx">render</span><span class="p">(</span><span class="o">&lt;</span><span class="nx">h1</span><span class="o">&gt;</span><span class="nx">Hello</span><span class="p">,</span> <span class="nx">world</span><span class="o">&lt;</span><span class="err">/h1&gt;);</span>
 </span></span></code></pre></div></li>
 </ol>
 <p>And now here&rsquo;s the code for the <code>Quote</code> component:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-jsx" data-lang="jsx"><span class="line"><span class="cl"><span class="kr">import</span> <span class="nx">React</span><span class="p">,</span> <span class="p">{</span> <span class="nx">useState</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;react&#39;</span><span class="p">;</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-jsx" data-lang="jsx"><span class="line"><span class="cl"><span class="kr">import</span> <span class="nx">React</span><span class="p">,</span> <span class="p">{</span> <span class="nx">useState</span> <span class="p">}</span> <span class="nx">from</span> <span class="s2">&#34;react&#34;</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">Quote</span> <span class="o">=</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="p">[</span><span class="nx">quote</span><span class="p">,</span> <span class="nx">setQuote</span><span class="p">]</span> <span class="o">=</span> <span class="nx">useState</span><span class="p">(</span><span class="s1">&#39;Some nice Stoic quote...&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="p">[</span><span class="nx">quote</span><span class="p">,</span> <span class="nx">setQuote</span><span class="p">]</span> <span class="o">=</span> <span class="nx">useState</span><span class="p">(</span><span class="s2">&#34;Some nice Stoic quote...&#34;</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">fetchNewQuote</span> <span class="o">=</span> <span class="kr">async</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="k">try</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">      <span class="kr">const</span> <span class="nx">response</span> <span class="o">=</span> <span class="kr">await</span> <span class="nx">fetch</span><span class="p">(</span><span class="s1">&#39;/quote&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">      <span class="kr">const</span> <span class="nx">response</span> <span class="o">=</span> <span class="kr">await</span> <span class="nx">fetch</span><span class="p">(</span><span class="s2">&#34;/quote&#34;</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">      <span class="kr">const</span> <span class="nx">newQuote</span> <span class="o">=</span> <span class="kr">await</span> <span class="nx">response</span><span class="p">.</span><span class="nx">text</span><span class="p">();</span>
 </span></span><span class="line"><span class="cl">      <span class="nx">setQuote</span><span class="p">(</span><span class="nx">newQuote</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">    <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">      <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="s1">&#39;Error fetching new quote:&#39;</span><span class="p">,</span> <span class="nx">error</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="s2">&#34;Error fetching new quote:&#34;</span><span class="p">,</span> <span class="nx">error</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">    <span class="p">}</span>
 </span></span><span class="line"><span class="cl">  <span class="p">};</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="p">(</span>
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">blockquote</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;quote&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">        <span class="p">{</span><span class="nx">quote</span><span class="p">}</span>
-</span></span><span class="line"><span class="cl">      <span class="p">&lt;/</span><span class="nt">blockquote</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">button</span> <span class="na">onClick</span><span class="o">=</span><span class="p">{</span><span class="nx">fetchNewQuote</span><span class="p">}&gt;</span>
-</span></span><span class="line"><span class="cl">        <span class="nx">New</span>
-</span></span><span class="line"><span class="cl">      <span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">blockquote</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;quote&#34;</span><span class="p">&gt;{</span><span class="nx">quote</span><span class="p">}&lt;/</span><span class="nt">blockquote</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">button</span> <span class="na">onClick</span><span class="o">=</span><span class="p">{</span><span class="nx">fetchNewQuote</span><span class="p">}&gt;</span><span class="nx">New</span><span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="kr">export</span> <span class="k">default</span> <span class="nx">Quote</span><span class="p">;</span>
 </span></span></code></pre></div><p>That&rsquo;s a LOT of JavaScript code.
@@ -1755,7 +1754,7 @@ Most notoriously is <a href="https://julialang.org">Julia</a> and
         <link rel="alternate" href="https://storopoli.io/2023-12-04-bayesian_models_ci/" />
         <id>https://storopoli.io/2023-12-04-bayesian_models_ci/</id>
         <published>2023-12-04T17:43:03-03:00</published>
-        <updated>2024-02-11T15:55:02-03:00</updated>
+        <updated>2024-04-10T08:57:32-03:00</updated>
         <summary type="html">I have an open access and open source1 graduate-level course on Bayesian statistics. It is available in GitHub through the repo storopoli/Bayesian-Statistics. I&amp;rsquo;ve taught it many times and every time was such a joy. It is composed of:
 a set of 300+ slides2 covering the theoretical part Stan3 models Turing.jl4 models Now and then I receive emails from someone saying that the materials helped them to understand Bayesian statistics. These kind messages really make my day, and that&amp;rsquo;s why I strive to keep the content up-to-date and relevant.</summary>
           <content type="html"><![CDATA[<p><img loading="lazy" src="bayesian-models-go-brrrrr.png#center" alt="bayesian-models-go-brrrrr"  />
@@ -2259,7 +2258,7 @@ and these tests commonly take place in a cloud machine.&#160;<a href="#fnref:5" 
         <link rel="alternate" href="https://storopoli.io/2023-11-28-zero_cost_abstractions/" />
         <id>https://storopoli.io/2023-11-28-zero_cost_abstractions/</id>
         <published>2023-11-28T18:19:36-03:00</published>
-        <updated>2024-02-11T15:55:02-03:00</updated>
+        <updated>2024-04-10T08:57:32-03:00</updated>
         <summary type="html">In programming language circles there&amp;rsquo;s a recently trend of discussing a concept called zero-cost abstractions: the ability to use higher-levels abstractions without suffering any loss of performance.
 Zero-cost abstractions allows you to write performant code without having to give up a single drop of convenience and expressiveness:
 You want for-loops? You can have it. Generics? Yeah, why not? Data structures? Sure, keep&amp;rsquo;em coming. Async operations? You bet ya! Multi-threading? Hell yes!</summary>
@@ -2608,7 +2607,7 @@ Yes, I am talking to you <a href="https://github.com/numpy/numpy/blob/06d7bdfbb5
         <link rel="alternate" href="https://storopoli.io/2023-11-23-lindley_paradox/" />
         <id>https://storopoli.io/2023-11-23-lindley_paradox/</id>
         <published>2023-11-22T07:06:59-03:00</published>
-        <updated>2024-02-11T15:55:02-03:00</updated>
+        <updated>2024-04-10T08:57:32-03:00</updated>
         <summary type="html">Warning: This post has KaTeX enabled, so if you want to view the rendered math formulas, you&amp;rsquo;ll have to unfortunately enable JavaScript.
 Dennis Lindley, one of my many heroes, was an English statistician, decision theorist and leading advocate of Bayesian statistics. He published a pivotal book, Understanding Uncertainty, that changed my view on what is and how to handle uncertainty in a coherent1 way. He is responsible for one of my favorites quotes: &amp;ldquo;Inside every non-Bayesian there is a Bayesian struggling to get out&amp;rdquo;; and one of my favorite heuristics around prior probabilities: Cromwell&amp;rsquo;s Rule2.</summary>
           <content type="html"><![CDATA[<p><img loading="lazy" src="lindley.jpg#center" alt="Dennis Lindley"  />

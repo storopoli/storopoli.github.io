@@ -18,7 +18,7 @@
         <link rel="alternate" href="https://storopoli.io/2024-02-11-mnemonic/" />
         <id>https://storopoli.io/2024-02-11-mnemonic/</id>
         <published>2024-02-11T15:59:02Z</published>
-        <updated>2024-02-11T17:11:57Z</updated>
+        <updated>2024-04-10T08:57:32-03:00</updated>
         <summary type="html">Warning: This post has KaTeX enabled, so if you want to view the rendered math formulas, you&amp;rsquo;ll have to unfortunately enable JavaScript.
 In this post, let&amp;rsquo;s dive into a topic that is very important for anyone who uses the internet: passwords. We&amp;rsquo;ll cover what the hell is Entropy, good password practices, and how it relates to Bitcoin &amp;ldquo;seed phrases&amp;rdquo;1.
 Entropy Before we go into passwords, I&amp;rsquo;ll introduce the concept of Entropy.</summary>
@@ -289,7 +289,7 @@ They were created to be easy to use with 6-sided dice.&#160;<a href="#fnref:5" c
         <link rel="alternate" href="https://storopoli.io/2023-11-23-lindley_paradox/" />
         <id>https://storopoli.io/2023-11-23-lindley_paradox/</id>
         <published>2023-11-22T07:06:59-03:00</published>
-        <updated>2024-02-11T15:55:02-03:00</updated>
+        <updated>2024-04-10T08:57:32-03:00</updated>
         <summary type="html">Warning: This post has KaTeX enabled, so if you want to view the rendered math formulas, you&amp;rsquo;ll have to unfortunately enable JavaScript.
 Dennis Lindley, one of my many heroes, was an English statistician, decision theorist and leading advocate of Bayesian statistics. He published a pivotal book, Understanding Uncertainty, that changed my view on what is and how to handle uncertainty in a coherent1 way. He is responsible for one of my favorites quotes: &amp;ldquo;Inside every non-Bayesian there is a Bayesian struggling to get out&amp;rdquo;; and one of my favorite heuristics around prior probabilities: Cromwell&amp;rsquo;s Rule2.</summary>
           <content type="html"><![CDATA[<p><img loading="lazy" src="lindley.jpg#center" alt="Dennis Lindley"  />

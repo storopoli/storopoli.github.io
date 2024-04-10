@@ -18,7 +18,7 @@
         <link rel="alternate" href="https://storopoli.io/2023-12-04-bayesian_models_ci/" />
         <id>https://storopoli.io/2023-12-04-bayesian_models_ci/</id>
         <published>2023-12-04T17:43:03-03:00</published>
-        <updated>2024-02-11T15:55:02-03:00</updated>
+        <updated>2024-04-10T08:57:32-03:00</updated>
         <summary type="html">I have an open access and open source1 graduate-level course on Bayesian statistics. It is available in GitHub through the repo storopoli/Bayesian-Statistics. I&amp;rsquo;ve taught it many times and every time was such a joy. It is composed of:
 a set of 300+ slides2 covering the theoretical part Stan3 models Turing.jl4 models Now and then I receive emails from someone saying that the materials helped them to understand Bayesian statistics. These kind messages really make my day, and that&amp;rsquo;s why I strive to keep the content up-to-date and relevant.</summary>
           <content type="html"><![CDATA[<p><img loading="lazy" src="bayesian-models-go-brrrrr.png#center" alt="bayesian-models-go-brrrrr"  />
