@@ -3513,19 +3513,23 @@ However, I am always tempted by them.</li>
         <link rel="alternate" href="https://storopoli.io/about/" />
         <id>https://storopoli.io/about/</id>
         <published>0001-01-01T00:00:00Z</published>
-        <updated>2024-03-20T09:39:07-03:00</updated>
-        <summary type="html">I am a software developer with a PhD in computational statistics. I am interested in performant and reliable software. In other words, I make computers go brrr faster.
-In hope of a better future, I dedicate my free time to Bitcoin-related projects.
-I am also an ardent Bayesian.
-I like Rust, Julia, Nix, and Vim.
-I practice Stoic Philosophy daily.
-I hate bloatware and the soydev phenomenon.
-Everything that I do is either open source or has a permissive Creative Commons license.</summary>
-          <content type="html"><![CDATA[<p>I am a software developer with a PhD in computational statistics.
+        <updated>2024-04-14T10:36:11-03:00</updated>
+        <summary type="html">I am a software developer with a PhD and background in Computational Statistics. I am interested in performant and reliable software. In other words, I make computers go brrr faster.
+In hope of a better future, I dedicate my free time to Bitcoin-related projects. I contribute to the Rust Bitcoin ecosystem, particularly Bitcoin Dev Kit (BDK) and rust-bitcoin. I also work full-time at Portal on Bitcoin-backed smart contracts.
+I am a faculty member at the Department of Computer Science at Universidade Nove de Julho (UNINOVE).</summary>
+          <content type="html"><![CDATA[<p>I am a software developer with a PhD and background in
+Computational Statistics.
 I am interested in performant and reliable software.
 In other words, I make computers go brrr faster.</p>
-<p>In hope of a better future, I dedicate my free time to Bitcoin-related projects.</p>
-<p>I am also an ardent <a href="https://youtu.be/RMNwsdb5VU4">Bayesian</a>.</p>
+<p>In hope of a better future,
+I dedicate my free time to Bitcoin-related projects.
+I contribute to the Rust Bitcoin ecosystem,
+particularly <a href="https://bitcoindevkit.org">Bitcoin Dev Kit (BDK)</a>
+and <a href="https://rust-bitcoin.org"><code>rust-bitcoin</code></a>.
+I also work full-time at <a href="https://portaldefi.com">Portal</a> on Bitcoin-backed smart contracts.</p>
+<p>I am a faculty member at the Department of Computer Science at
+<a href="https://www.uninove.br">Universidade Nove de Julho (UNINOVE)</a>.
+I am also an ardent <a href="https://youtu.be/RMNwsdb5VU4">Bayesian</a>.</p>
 <p>I like <a href="https://rust-lang.org/">Rust</a>,
 <a href="https://julialang.org">Julia</a>,
 <a href="https://nixos.org">Nix</a>,
@@ -3536,6 +3540,8 @@ and <a href="https://www.vim.org">Vim</a>.</p>
 <p>I don&rsquo;t have social media, since I think they are overrated
 and &ldquo;they sell your data&rdquo;.
 If you want to contact me, please send an email.</p>
+<p>If you want to find out what&rsquo;s recently on my mind,
+check out my <a href="https://storopoli.io/">blog</a>.</p>
 ]]></content>
       </entry>
 
