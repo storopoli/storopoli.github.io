@@ -7,12 +7,180 @@
   <id>https://storopoli.io/tags/bitcoin/</id>
   <generator uri="http://gohugo.io" version="0.124.1">Hugo</generator>
   <language>en-us</language>
-  <updated>2024-02-11T15:59:02Z</updated>
+  <updated>2024-04-14T10:37:02-03:00</updated>
   <author>
     <name>Jose Storopoli</name>
     
   </author>
   <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)</rights>
+      <entry>
+        <title>Shamir&#39;s Secret Sharing</title>
+        <link rel="alternate" href="https://storopoli.io/2024-04-14-shamir-secret-sharing/" />
+        <id>https://storopoli.io/2024-04-14-shamir-secret-sharing/</id>
+        <published>2024-04-14T10:37:02-03:00</published>
+        <updated>2024-04-14T12:34:09-03:00</updated>
+        <summary type="html">Warning: This post has KaTeX enabled, so if you want to view the rendered math formulas, you&amp;rsquo;ll have to unfortunately enable JavaScript.
+The Polynomial king and he can do anything! In this post, we&amp;rsquo;ll talk about Shamir&amp;rsquo;s Secret Sharing (SSS), a cryptographic algorithm that allows us to split a secret into multiple parts, called shares, in such a way that the secret can only be reconstructed if a certain number of shares are combined.</summary>
+          <content type="html"><![CDATA[<blockquote>
+<p>Warning: This post has <a href="https://katex.org/">KaTeX</a> enabled,
+so if you want to view the rendered math formulas,
+you&rsquo;ll have to unfortunately enable JavaScript.</p>
+</blockquote>
+<figure>
+    <img loading="lazy" src="polynomial_king.webp#center"
+         alt="The Polynomial king and he can do anything!" width="500"/> <figcaption>
+            The Polynomial king and he can do anything!
+        </figcaption>
+</figure>
+
+<p>In this post, we&rsquo;ll talk about
+<strong><a href="https://en.wikipedia.org/wiki/Shamir%27s_Secret_Sharing">Shamir&rsquo;s Secret Sharing</a>
+(SSS)</strong>, a cryptographic algorithm that allows us to <strong>split a secret into multiple parts,
+called shares, in such a way that the secret can only be reconstructed
+if a certain number of shares are combined</strong>.</p>
+<p>The idea is to give a visual intuition of how the algorithm works,
+and describe the mathematical details behind it.</p>
+<p>The code for all the plots in this post can be found in
+<a href="https://github.com/storopoli/shamir-secret-sharing"><code>storopoli/shamir-secret-sharing</code></a>.</p>
+<h2 id="polynomial-interpolation">Polynomial Interpolation</h2>
+<p><strong>If you have two points you can draw a <em>unique</em> line that passes through them</strong>.
+Suppose that you have the points $(3,3)$ and $(4,4)$.
+Hence, there is only one line that passes through these two points.
+See the plot below.</p>
+<figure>
+    <img loading="lazy" src="line.svg#center"
+         alt="A line passing through two points" width="600"/> <figcaption>
+            A line passing through two points
+        </figcaption>
+</figure>
+
+<p><strong>If you have three points you can draw a <em>unique</em> parabola that passes through them</strong>.
+Suppose that you have the points $(-4,16)$, $(1,1)$, and $(4,16)$.
+Hence, there is only one parabola that passes through these three points.</p>
+<figure>
+    <img loading="lazy" src="quadratic.svg#center"
+         alt="A parabola passing through three points" width="600"/> <figcaption>
+            A parabola passing through three points
+        </figcaption>
+</figure>
+
+<p><strong>If you have four points you can draw a <em>unique</em> cubic polynomial that passes through them</strong>.
+Suppose that you have the points $(-2,8)$, $(-1,1)$, $(1,1)$, and $(2,8)$.
+Hence, there is only one cubic polynomial that passes through these four points.</p>
+<figure>
+    <img loading="lazy" src="cubic.svg#center"
+         alt="A cubic polynomial passing through four points" width="600"/> <figcaption>
+            A cubic polynomial passing through four points
+        </figcaption>
+</figure>
+
+<p>As you might have guessed, <strong>if you have $n$ points you can draw a <em>unique</em> polynomial of degree $n-1$ that passes through them</strong>.
+This is called <strong>polynomial interpolation</strong><sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>.</p>
+<p>More formally, say that we have a polynomial $f(x)$ of degree $n$:</p>
+<p>$$ f(x) = a_n x^n + a_{n-1} x^{n-1} + \ldots + a_1x + a_0 $$</p>
+<p>and we have $n$ points $(x_1, y_1)$, $(x_2, y_2)$, $\ldots$, $(x_n, y_n)$.
+Then, there is a unique polynomial $f(x)$ of degree $n-1$ such that $f(x_i) = y_i$ for $i = 1, 2, \ldots, n$.</p>
+<h2 id="shamirs-secret-sharing">Shamir&rsquo;s Secret Sharing</h2>
+<p>Ok now let&rsquo;s connect this idea to Shamir&rsquo;s Secret Sharing.
+Suppose you encode a <strong>secret $k$ as a number</strong>.
+Let&rsquo;s say a private key for a Bitcoin wallet.
+As you&rsquo;ve already know, a private key is just a <a href="../2024-02-05-crypto-basics/">very big number</a>.</p>
+<p>You want to split this secret into <strong>$N$ parts</strong>, called <strong>shares</strong>.
+You also want to specify a <strong>threshold $T$</strong> such that the <strong>secret $k$ can only be reconstructed if at <em>least</em> $T$ shares are combined</strong>.
+Here&rsquo;s how you can use polynomial interpolation to achieve this.</p>
+<p>The idea is to use polynomial interpolation to generate a polynomial $f(x)$ of degree $T-1$ such that $f(0) = k$.
+In other words, the polynomial $f(x)$ when evaluated at $x = 0$ should give you the secret $k$.
+Then, you can <strong>generate $N$ shares by evaluating $f(x)$ at $N$ different points</strong>.</p>
+<p>Here&rsquo;s an example with $T = 4$ and $N = 5$.
+Our secret is $k = 5$ and since $T = 4$, we generate a polynomial of degree $T-1 = 3$.
+We&rsquo;ve chosen the polynomial $f(x) = 2x^3 - 3x^2 + 2x + 5 $.
+Then, we evaluate $f(x)$ at $N = 5$ different points to generate the shares.</p>
+<figure>
+    <img loading="lazy" src="shamir.svg#center"
+         alt="Shamir&#39;s Secret Sharing with N=5 and T=4" width="600"/> <figcaption>
+            Shamir&#39;s Secret Sharing N=5 and T=4
+        </figcaption>
+</figure>
+
+<p>Now this polynomial is <strong>guaranteed to pass through the point $(0, k)$</strong>.
+Hence if you evaluate <strong>$f(0)$ you get the secret $k$</strong>.
+To know the secret, you <strong>need to know the polynomial $f(x)$</strong>.
+And to know the polynomial $f(x)$, you <strong>need to know at least $T$ shares</strong>.
+Otherwise, you <strong>can&rsquo;t reconstruct the polynomial and hence the secret</strong>.</p>
+<p>In this setup we generate addresses from the extended public key (xpub) of a Bitcoin wallet that has the private key $k$.
+Then, we split the private key into shares and distribute them to different people.
+Only if at least $T$ people come together, they can reconstruct the private key and spend the funds.</p>
+<h2 id="rotating-shares">Rotating Shares</h2>
+<p>Note that there&rsquo;s nothing special about the points</p>
+<ul>
+<li>$(-2, f(-2))$</li>
+<li>$(-1, f(-1))$</li>
+<li>$(\frac{1}{2}, f(\frac{1}{2}))$</li>
+<li>$(1, f(1))$</li>
+<li>$(2, f(2))$</li>
+</ul>
+<p>that we&rsquo;ve used in the previous example.
+You could have chosen <strong>any other $N$ points and the polynomial would still be the same</strong>.</p>
+<p>Suppose now that your share buddy has lost his share.
+Then, the participants can get together and <strong>generate a new polynomial evaluation at any point $n \notin \{ -2, -1, \frac{1}{2}, 1, 2 \}$</strong>.</p>
+<p>This is exactly what the image below shows:</p>
+<figure>
+    <img loading="lazy" src="shamir_alternate_single.svg#center"
+         alt="Shamir&#39;s Secret Sharing with N=5 and T=4" width="600"/> <figcaption>
+            Shamir&#39;s Secret Sharing N=5 and T=4
+        </figcaption>
+</figure>
+
+<p>Here we&rsquo;ve replaced the point $(-2, f(-2))$ with the point $(3, f(3))$.
+We also assume that the point $(-2, f(-2))$ is lost.
+The <strong>polynomial is still the same</strong>, and the secret can still be reconstructed if at least $T$ shares are combined.</p>
+<p>We can also <strong>rotate all the shares</strong>.
+This is shown in the image below:</p>
+<figure>
+    <img loading="lazy" src="shamir_alternate_multiple.svg#center"
+         alt="Shamir&#39;s Secret Sharing with N=5 and T=4" width="600"/> <figcaption>
+            Shamir&#39;s Secret Sharing N=5 and T=4
+        </figcaption>
+</figure>
+
+<p>Here <strong>all previous points have been replaced by new points</strong>.</p>
+<h2 id="the-polynomial-king">The Polynomial King</h2>
+<blockquote>
+<p>I am the <a href="https://youtu.be/ashTaoGrR2o?t=642"><del>Lizard</del> Polynomial King, I can do anything!</a></p>
+<p>Jim Morrison</p>
+</blockquote>
+<p>In the end <strong>if you somehow know the polynomial $f(x)$, you can do anything</strong>.
+You can rug-pull all you share buddies and take all the funds.</p>
+<p>There are several ways that a malicious actor could learn the polynomial.
+For example, if the shares are generated in a predictable way, an attacker could guess the polynomial.
+Or, during the reconstruction phase, an attacker could learn the polynomial by observing the shares.
+Additionally, during a distributed share generation, an attacker could disrupt the process and force the participants to reveal their shares<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>In this post, <strong>we&rsquo;ve seen how polynomial interpolation can be used to split a secret into multiple shares</strong>.
+We&rsquo;ve also seen how the <strong>secret can be reconstructed if a certain number of shares are combined</strong>.
+This is the basic idea behind <strong>Shamir&rsquo;s Secret Sharing (SSS)</strong>.</p>
+<p>Note that the devil is in the details.
+A lot of the complexities of SSS come from the <strong>details of how the shares are generated and how the secret is reconstructed</strong>.
+There are <strong>several types of attacks that can be done by a malicious actor</strong>.
+Especially during the share generation and reconstruction phases.</p>
+<p>The intent of this blog post is to show how <strong>elegant, simple and powerful the idea behind SSS is</strong>.</p>
+<h2 id="license">License</h2>
+<p>This post is licensed under <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International</a>.</p>
+<p><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img loading="lazy" src="https://licensebuttons.net/l/by-nc-sa/4.0/88x31.png" alt="CC BY-NC-SA 4.0"  />
+</a></p>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p>and steams from the <a href="https://en.wikipedia.org/wiki/Lagrange_polynomial">Lagrange interpolation</a>.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2">
+<p>or force them to reuse nonces. Then, &ldquo;poof&rdquo;, private keys are gone.&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
+]]></content>
+      </entry>
       <entry>
         <title>Seed Phrases and Entropy</title>
         <link rel="alternate" href="https://storopoli.io/2024-02-11-mnemonic/" />

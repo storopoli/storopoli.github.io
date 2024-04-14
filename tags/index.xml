@@ -7,12 +7,30 @@
   <id>https://storopoli.io/tags/</id>
   <generator uri="http://gohugo.io" version="0.124.1">Hugo</generator>
   <language>en-us</language>
-  <updated>2024-03-23T14:00:16-03:00</updated>
+  <updated>2024-04-14T10:37:02-03:00</updated>
   <author>
     <name>Jose Storopoli</name>
     
   </author>
   <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)</rights>
+      <entry>
+        <title>Bitcoin</title>
+        <link rel="alternate" href="https://storopoli.io/tags/bitcoin/" />
+        <id>https://storopoli.io/tags/bitcoin/</id>
+        <published>2024-04-14T10:37:02-03:00</published>
+        <updated>2024-04-14T12:34:09-03:00</updated>
+        <summary type="html"></summary>
+          <content type="html"><![CDATA[]]></content>
+      </entry>
+      <entry>
+        <title>Cryptography</title>
+        <link rel="alternate" href="https://storopoli.io/tags/cryptography/" />
+        <id>https://storopoli.io/tags/cryptography/</id>
+        <published>2024-04-14T10:37:02-03:00</published>
+        <updated>2024-04-14T12:34:09-03:00</updated>
+        <summary type="html"></summary>
+          <content type="html"><![CDATA[]]></content>
+      </entry>
       <entry>
         <title>Nix</title>
         <link rel="alternate" href="https://storopoli.io/tags/nix/" />
@@ -36,24 +54,6 @@
         <link rel="alternate" href="https://storopoli.io/tags/rust/" />
         <id>https://storopoli.io/tags/rust/</id>
         <published>2024-03-23T14:00:16-03:00</published>
-        <updated>2024-04-10T08:57:32-03:00</updated>
-        <summary type="html"></summary>
-          <content type="html"><![CDATA[]]></content>
-      </entry>
-      <entry>
-        <title>Bitcoin</title>
-        <link rel="alternate" href="https://storopoli.io/tags/bitcoin/" />
-        <id>https://storopoli.io/tags/bitcoin/</id>
-        <published>2024-02-11T15:59:02Z</published>
-        <updated>2024-04-10T08:57:32-03:00</updated>
-        <summary type="html"></summary>
-          <content type="html"><![CDATA[]]></content>
-      </entry>
-      <entry>
-        <title>Cryptography</title>
-        <link rel="alternate" href="https://storopoli.io/tags/cryptography/" />
-        <id>https://storopoli.io/tags/cryptography/</id>
-        <published>2024-02-11T15:59:02Z</published>
         <updated>2024-04-10T08:57:32-03:00</updated>
         <summary type="html"></summary>
           <content type="html"><![CDATA[]]></content>
