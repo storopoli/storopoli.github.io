@@ -745,7 +745,7 @@ They were created to be easy to use with 6-sided dice.&#160;<a href="#fnref:5" c
         <link rel="alternate" href="https://storopoli.io/2024-02-05-crypto-basics/" />
         <id>https://storopoli.io/2024-02-05-crypto-basics/</id>
         <published>2024-02-05T18:53:28-03:00</published>
-        <updated>2024-04-10T08:57:32-03:00</updated>
+        <updated>2024-04-15T09:24:31-03:00</updated>
         <summary type="html">Euclid&amp;rsquo;s one-way function
 Warning: This post has KaTeX enabled, so if you want to view the rendered math formulas, you&amp;rsquo;ll have to unfortunately enable JavaScript.
 This is the companion post to the cryptography workshop that I gave at a local BitDevs. Let&amp;rsquo;s explore the basics of cryptography. We&amp;rsquo;ll go through the following topics:
@@ -823,7 +823,7 @@ that is, given the size of the set $Y$,
 it is hard to find two $x_1, x_2 \in X$ that have the same $y \in Y$ value<sup id="fnref:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">4</a></sup>.
 This property is really important because if an attacker wants to brute-force the
 hash function, there&rsquo;s no option than searching uniformly across the whole possible
-space of possible values that the hash function outputs.</li>
+space of possible values that the hash function outputs<sup id="fnref:5"><a href="#fn:5" class="footnote-ref" role="doc-noteref">5</a></sup>.</li>
 </ul>
 <p>These properties make enable cryptographic hash functions to be used in a wide range of applications,
 including but not limited to:</p>
@@ -1085,7 +1085,7 @@ Let&rsquo;s pick $x = 15$.</li>
 So let&rsquo;s plug in the numbers; find $x$ in</p>
 <p>$$3^x = 15 \mod 17 $$</p>
 <p>Try to find it.
-Good luck<sup id="fnref:5"><a href="#fn:5" class="footnote-ref" role="doc-noteref">5</a></sup>.</p>
+Good luck<sup id="fnref:6"><a href="#fn:6" class="footnote-ref" role="doc-noteref">6</a></sup>.</p>
 <h2 id="public-key-cryptography">Public-key cryptography</h2>
 <p>Public-key cryptography, or asymmetric cryptography, is a cryptographic system that uses pairs of keys:
 private and public.
@@ -1173,7 +1173,7 @@ The patent for Schnorr signatures expired in 2008,
 just in time for Satoshi to include it in Bitcoin.
 However, it was probably not included due to the fact that there wasn&rsquo;t
 good battle-tested software implementations of it at the time.
-However, it was added to Bitcoin in the Taproot upgrade<sup id="fnref:6"><a href="#fn:6" class="footnote-ref" role="doc-noteref">6</a></sup>.</p>
+However, it was added to Bitcoin in the Taproot upgrade<sup id="fnref:7"><a href="#fn:7" class="footnote-ref" role="doc-noteref">7</a></sup>.</p>
 <p>Schnorr is a marvelous algorithm.
 It is so much simpler than DSA.
 Here&rsquo;s how you sign a message using Schnorr:</p>
@@ -1249,7 +1249,7 @@ i.e anything with $+, \cdot, -$, are linear operations
 However, division (modular inverse),
 .i.e anything that is $^{-1}$, is not linear.
 That is:</p>
-<p>$$x^{-1} + y^{-1} != (x + y)^{-1}.$$</p>
+<p>$$x^{-1} + y^{-1} \ne (x + y)^{-1}.$$</p>
 <p>Here&rsquo;s a trivial python code that shows that modular inverse is not linear:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-Python" data-lang="Python"><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">p</span> <span class="o">=</span> <span class="mi">71</span><span class="p">;</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">13</span><span class="p">;</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">17</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="nb">pow</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">p</span><span class="p">)</span> <span class="o">+</span> <span class="nb">pow</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">p</span><span class="p">)</span> <span class="o">==</span> <span class="nb">pow</span><span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="n">y</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">p</span><span class="p">)</span>
@@ -1312,16 +1312,21 @@ Actually to find it P is NP or not is the hardest way to earn a million dollars,
 <p>at least $\frac{1}{N}$ where $N$ is the size of $Y$.&#160;<a href="#fnref:4" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 <li id="fn:5">
-<p>The answer is $x = 6$. This means that $3^6 = 15 \mod 17$.&#160;<a href="#fnref:5" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+<p>actually this is not true. Due to the <a href="https://en.wikipedia.org/wiki/Birthday_problem#Probability_of_a_shared_birthday_(collision)">birthday paradox</a>,
+the probability of finding a collision is not $\frac{1}{N}$ but $\frac{\frac{1}{N}}{2}$.
+Hence the search space is actually $2^{\frac{N}{2}}$ instead of the original $2^N$.&#160;<a href="#fnref:5" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 <li id="fn:6">
+<p>The answer is $x = 6$. This means that $3^6 = 15 \mod 17$.&#160;<a href="#fnref:6" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:7">
 <p>Taproot is a proposed Bitcoin protocol upgrade that was deployed
 as a forward-compatible soft fork.
 The validation of Taproot is based on Schnorr signatures.
 You can find more in BIPS
 <a href="https://github.com/bitcoin/bips/blob/master/bip-0340.mediawiki">340</a>,
 <a href="https://github.com/bitcoin/bips/blob/master/bip-0341.mediawiki">341</a>, and
-<a href="https://github.com/bitcoin/bips/blob/master/bip-0342.mediawiki">342</a>.&#160;<a href="#fnref:6" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+<a href="https://github.com/bitcoin/bips/blob/master/bip-0342.mediawiki">342</a>.&#160;<a href="#fnref:7" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 </ol>
 </div>
