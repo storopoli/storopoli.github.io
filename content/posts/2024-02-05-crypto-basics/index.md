@@ -98,10 +98,13 @@ which are hash functions that have statistical properties desirable for cryptogr
   it is hard to find two $x_1, x_2 \in X$ that have the same $y \in Y$ value[^1/n].
   This property is really important because if an attacker wants to brute-force the
   hash function, there's no option than searching uniformly across the whole possible
-  space of possible values that the hash function outputs.
+  space of possible values that the hash function outputs[^birthday].
 
 [^surjection]: this is called [surjection](https://en.wikipedia.org/wiki/Bijection%2C_injection_and_surjection).
 [^1/n]: at least $\frac{1}{N}$ where $N$ is the size of $Y$.
+[^birthday]: actually this is not true. Due to the [birthday paradox](https://en.wikipedia.org/wiki/Birthday_problem#Probability_of_a_shared_birthday_(collision)),
+    the probability of finding a collision is not $\frac{1}{N}$ but $\frac{1}{\sqrt{N}}$.
+    Hence the search space is actually $2^{\frac{N}{2}}$ instead of the original $2^N$.
 
 These properties make enable cryptographic hash functions to be used in a wide range of applications,
 including but not limited to:
@@ -578,7 +581,7 @@ However, division (modular inverse),
 .i.e anything that is $^{-1}$, is not linear.
 That is:
 
-$$x^{-1} + y^{-1} != (x + y)^{-1}.$$
+$$x^{-1} + y^{-1} \ne (x + y)^{-1}.$$
 
 Here's a trivial python code that shows that modular inverse is not linear:
 
