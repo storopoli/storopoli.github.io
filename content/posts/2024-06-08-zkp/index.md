@@ -120,9 +120,7 @@ from Berkeley University.
 It provides a good introduction to Zero-Knowledge Proofs,
 while being quite accessible to beginners.
 
-{{<youtube>}}
-gcKCW7CNu_M
-{{</youtube>}}
+{{<youtube>}}gcKCW7CNu_M{{</youtube>}}
 
 Also we have tons of papers on the subject.
 Here are some of the most important ones:
