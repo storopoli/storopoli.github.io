@@ -5,13 +5,15 @@ tags = ["bitcoin", "cryptography"]
 categories = []
 javascript = true
 math = true
-mermaid = false
+mermaid = true
 +++
 
 {{< figure src="zkp_meme.jpg#center" alt="Zero-Knowledge Proofs and the Meaning of Life" title="Zero-Knowledge Proofs and the Meaning of Life" width="500" >}}
 
-> Warning: This post has [KaTeX](https://katex.org/) enabled,
+> Warning: This post has [KaTeX](https://katex.org/)
+> and [`mermaid.js`](https://mermaid.js.org) enabled,
 > so if you want to view the rendered math formulas,
+> and diagrams,
 > you'll have to unfortunately enable JavaScript.
 
 Lately, I've been diving a little into the world of **Zero-Knowledge Proofs**.
@@ -40,9 +42,22 @@ but some mathematical background is necessary.
 
 Video
 
-{{< youtube >}}
+{{<youtube>}}
 gcKCW7CNu_M
-{{< /youtube >}}
+{{</youtube>}}
+
+## DAG
+
+{{<mermaid>}}
+---
+
+title: DAG
+---
+
+graph TD
+  A(A) -- Link Text --> B(B)
+  A -- Link Text --> C(C)
+{{</mermaid>}}
 
 ## References
 
