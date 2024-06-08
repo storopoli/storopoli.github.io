@@ -36,6 +36,15 @@ However, as you might guess, the subject is quite complex,
 and I'll try to simplify it as much as possible;
 but some mathematical background is necessary.
 
+## Placeholder
+
+Video
+
+{{< youtube >}}
+gcKCW7CNu_M
+{{< /youtube >}}
+
+
 ## License
 
 This post is licensed under [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International][cc-by-nc-sa].
