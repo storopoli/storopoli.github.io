@@ -8,11 +8,11 @@ math = true
 mermaid = false
 +++
 
+{{< figure src="polynomial_king.webp#center" alt="The Polynomial king and he can do anything!" title="The Polynomial king and he can do anything!" width="500" >}}
+
 > Warning: This post has [KaTeX](https://katex.org/) enabled,
 > so if you want to view the rendered math formulas,
 > you'll have to unfortunately enable JavaScript.
-
-{{< figure src="polynomial_king.webp#center" alt="The Polynomial king and he can do anything!" title="The Polynomial king and he can do anything!" width="500" >}}
 
 In this post, we'll talk about
 **[Shamir's Secret Sharing](https://en.wikipedia.org/wiki/Shamir%27s_Secret_Sharing)
