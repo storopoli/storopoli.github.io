@@ -115,8 +115,8 @@ graph TD
 
 ## Resources
 
-The following video from YouTube is from the Blockchain Web3 MOOC
-from Berkeley University.
+The following video from YouTube is from the
+[Blockchain Web3 MOOC from Berkeley University](https://rdi.berkeley.edu/).
 It provides a good introduction to Zero-Knowledge Proofs,
 while being quite accessible to beginners.
 
