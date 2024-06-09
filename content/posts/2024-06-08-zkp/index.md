@@ -99,6 +99,43 @@ If you come up from a scheme that satisfies these properties,
 congratulations, you have a **Zero-Knowledge Proof** scheme
 and you can name it whatever you want,
 just like a Pokemon!
+## ZKPs Taxonomy
+
+We can classify **Zero-Knowledge Proofs** into two broad categories:
+
+1. **Interactive Zero-Knowledge Proofs**: In this case, the prover and the verifier interact multiple times.
+   The prover sends a proof to the verifier,
+   and the verifier sends a challenge to the prover,
+   and this interaction continues until the verifier is convinced.
+   The Fiat-Shamir Heuristic can transform an interactive ZKP into a non-interactive ZKP.
+
+1. **Non-Interactive Zero-Knowledge Proofs**: In this case, the prover sends a proof to the verifier,
+    and the verifier accepts or rejects the proof.
+    No further interaction is needed.
+
+Additionally,
+the setup of the **simulator $S$ with respect to the data it uses**
+can be further classified into three categories.
+Generally speaking, the data used by $S$ is some random bits.
+
+1. **Trusted Setup**: $S$ uses data that must be kept secret.
+   If compromised trusted setup, any proof by an adversary $A$ can be accepted by any verifier $V$.
+   This is bad, and we want to avoid it.
+1. **Trusted but Universal Setup**: $S$ uses data that must be public,
+    but it only uses for the initial setup.
+    Future proofs can be verified without the need for this data.
+1. **Transparent Setup**: $S$ uses no data at all.
+    This is the best setup, as it doesn't require any data to be used by $S$.
+
+Some of the most popular Zero-Knowledge Proof systems are:
+
+- **zk-SNARKs**: Zero-Knowledge Succinct Non-Interactive Argument of Knowledge.
+  This is a non-interactive ZKP system with a trusted setup.
+- **Bulletproofs**: A non-interactive ZKP system with a transparent setup.
+- **zk-STARKs**: Zero-Knowledge Scalable Transparent Argument of Knowledge.
+  This is a non-interactive ZKP system with a transparent setup,
+  with an additional property of being (plausibly) post-quantum secure.
+
 
 ## DAG
 
