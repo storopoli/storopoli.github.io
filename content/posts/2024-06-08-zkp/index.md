@@ -99,6 +99,7 @@ If you come up from a scheme that satisfies these properties,
 congratulations, you have a **Zero-Knowledge Proof** scheme
 and you can name it whatever you want,
 just like a Pokemon!
+
 ## ZKPs Taxonomy
 
 We can classify **Zero-Knowledge Proofs** into two broad categories:
@@ -110,8 +111,8 @@ We can classify **Zero-Knowledge Proofs** into two broad categories:
    The Fiat-Shamir Heuristic can transform an interactive ZKP into a non-interactive ZKP.
 
 1. **Non-Interactive Zero-Knowledge Proofs**: In this case, the prover sends a proof to the verifier,
-    and the verifier accepts or rejects the proof.
-    No further interaction is needed.
+   and the verifier accepts or rejects the proof.
+   No further interaction is needed.
 
 Additionally,
 the setup of the **simulator $S$ with respect to the data it uses**
@@ -122,10 +123,10 @@ Generally speaking, the data used by $S$ is some random bits.
    If compromised trusted setup, any proof by an adversary $A$ can be accepted by any verifier $V$.
    This is bad, and we want to avoid it.
 1. **Trusted but Universal Setup**: $S$ uses data that must be public,
-    but it only uses for the initial setup.
-    Future proofs can be verified without the need for this data.
+   but it only uses for the initial setup.
+   Future proofs can be verified without the need for this data.
 1. **Transparent Setup**: $S$ uses no data at all.
-    This is the best setup, as it doesn't require any data to be used by $S$.
+   This is the best setup, as it doesn't require any data to be used by $S$.
 
 Some of the most popular Zero-Knowledge Proof systems are:
 
@@ -136,6 +137,132 @@ Some of the most popular Zero-Knowledge Proof systems are:
   This is a non-interactive ZKP system with a transparent setup,
   with an additional property of being (plausibly) post-quantum secure.
 
+## zk-SNARKs
+
+**zk-SNARKs** are the most popular Zero-Knowledge Proof system.
+They are used in the Zcash protocol,
+and the defunct Tornado Cash smart contract.
+Ethereum also uses zk-SNARKs in its Layer 2 scaling solution,
+the zk-Rollups.
+[BitVM](https://bitvm.org/) also uses a SNARK-based VM to run smart contracts
+on top of Bitcoin.
+
+Let's go over the concepts behind zk-SNARKs[^petkus].
+
+[^petkus]: most of this section is base on [Petkus19].
+
+### The first idea: Proving Knowledge of a Polynomial
+
+First some polynomial primer.
+**A polynomial $f(x)$ is a function that can be written as**:
+
+$$ f(x) = c_n x^n + \ldots + c_1 x^1 + c_0 x^0 $$
+
+where $c_n, \ldots, c_1, c_0$ are the coefficients of the polynomial,
+and $n$ is the degree of the polynomial.
+
+Now, the [Fundamental Theorem of Algebra](https://en.wikipedia.org/wiki/Fundamental_theorem_of_algebra) states that
+**a polynomial of degree $d$ can have at most $d$ (real-valued-only) roots[^at-most]**.
+
+[^at-most]:
+    the "at most" is because we are talking about real-valued-only roots.
+    If we consider complex roots, then a polynomial of degree $d$ has exactly $d$ roots.
+
+This can be extended to the concept that **two non-equal polynomials of degree $d$ can have at most $d$ points of intersection**.
+
+The idea of proving knowledge of a polynomial is to show that you know the polynomial,
+without revealing the polynomial itself.
+
+This simple protocol can be done in four steps,
+note that both the prover and the verifier have knowledge of the polynomial:
+
+1. Verifier chooses a random value for $x$ and evaluates his polynomial locally
+1. Verifier gives $x$ to the prover and asks to evaluate the polynomial in question
+1. Prover evaluates his polynomial at $x$ and gives the result to the verifier
+1. Verifier checks if the local result is equal to the prover's result,
+   and if so then the statement is proven with a high confidence
+
+How much is "high confidence"?
+Suppose that the verifier chooses an $x$ at random from a set of $2^{256}$ values,
+that is a 256-bit number.
+According to [Wolfram Alpha](https://www.wolframalpha.com/input?i2d=true&i=Power%5B2%2C256%5D),
+the decimal approximation is $\approx 1.16 \times 10^{77}$.
+This is almost the [number of atoms in the observable universe](https://en.wikipedia.org/wiki/Observable_universe#Matter_content%E2%80%94number_of_atoms)!
+The number of points where evaluations are different is $10^{77} - d$,
+where $d$ is the degree of the polynomial.
+Therefore, we can assume with overwhelming probability that the prover knows the polynomial.
+This is due to the fact that an adversary has $\frac{d}{10^{77}}$ chance of guessing the polynomial[^birthday],
+which we can safely consider negligible[^negligible].
+
+[^birthday]:
+    the [Birthday paradox](https://en.wikipedia.org/wiki/Birthday_problem)
+    states that any collision resistance scheme has a probability of $\frac{1}{2}$ of collision,
+    hence we take the square root of the number of possible values.
+    So, the security of the polynomial proof is $\sqrt{10^{77}} = 10^{38.5}$,
+    which is still a huge number.
+
+### The second idea: Proving Knowledge of a Polynomial without Revealing the Polynomial
+
+The protocol above has some implications,
+mainly that the protocol works only for a certain polynomial,
+and the verifier has to know the polynomial in advance.
+Which is not practical at all since we want to prove knowledge
+of a secret without revealing the secret itself.
+
+We can do better, we can use the fact,
+also stated in the [Fundamental Theorem of Algebra](https://en.wikipedia.org/wiki/Fundamental_theorem_of_algebra),
+that any polynomial can be factored into linear polynomials,
+i.e. a set of degree-1 polynomials representing a line.
+We can represent any valid polynomial as a product of its linear-polynomial factors:
+
+$$ (x - a_0) (x - a_1) \ldots (x - a_d) = 0 $$
+
+where $a_0, \ldots, a_{d}$ are the roots of the polynomial.
+If you wanna prove knowledge of a polynomial, it is just a matter of proving knowledge of its roots.
+But how do we do that without disclosing the polynomial itself?
+This can be accomplished by proving that a polynomial $p(x)$ is the multiplication
+of the factors $t(x) = (x - a_0) \ldots (x - a_d)$, called the **target polynomial**,
+and some arbitrary polynomial $h(x)$, called the **residual polynomial**:
+
+$$ p(x) = t(x) \cdot h(x). $$
+
+The prover can show that exists some polynomial $h(x)$ such that
+$p(x)$ can be made equal to $t(x)$.
+You can find $h(x)$ by simply dividing $p(x)$ by $t(x)$:
+
+$$ h(x) = \frac{p(x)}{t(x)}. $$
+
+Now we can create a protocol that can work for any polynomial $p(x)$
+with only three steps:
+
+1. Verifier samples a random value $r$, calculates $t = t(r)$ and gives $r$ to the
+prover
+1. Prover calculates $h(x) = \frac{p(x)}{t(x)}$ and evaluates $p = p(r)$ and $h = h(r)$;
+   the resulting values $p$, $h$ are provided to the verifier
+1. Verifier then checks that $p = t \cdot h$, if so those polynomials are equal,
+   meaning that $p(x)$ has $t(x)$ as a cofactor.
+
+Note that the verifier has no clue about the polynomial $p(x)$,
+and can be convinced that the prover knows the polynomial $p(x)$.
+
+For example, let's consider two polynomials $p(x)$ and $t(x)$ of degree $3$:
+
+- $p(x) = x^3 - 3x^2 + 2x$
+- $t(x) = (x - 1) (x - 2)$
+
+An example protocol interaction in this case could be:
+
+1. Verifier samples a random value $23$, calculates $t = t(23) = (23 − 1)(23 − 2) = 462$ and
+gives $23$ to the prover
+1. Prover calculates $h(x) = \frac{p(x)}{t(x)} = x$, evaluates $p = p(23) = 10626$ and $h = h(23) = 23$
+   and provides $p$, $h$ to the verifier
+1. Verifier then checks that $p = t \cdot h$, i.e. $10626 = 462 \cdot 23$,
+   which is true, and therefore the statement is proven
+
+Great! We can prove stuff without revealing the stuff itself!
+Noice!
+We know only need to find a trick to represent
+any sort of computation as a polynomial.
 
 ## DAG
 
