@@ -264,18 +264,56 @@ Noice!
 We know only need to find a trick to represent
 any sort of computation as a polynomial.
 
-## DAG
+### The third idea: Representing Computations as Polynomials
+
+We can **represent any computation as a polynomial by using [Arithmetic Circuits](https://en.wikipedia.org/wiki/Arithmetic_circuit)**.
+An arithmetic circuit is a directed acyclic graph (DAG) where:
+
+- Every indegree[^indegree]-zero node is an input gate that represents a variable $x_i$
+- Every node with indegree $>1$ is either:
+  - an addition gate, $+$, that represents the sum of its children
+  - a multiplication gate, $\times$, that represents the product of its children
+
+[^indegree]: the number of edges entering a node
+
+Here's an example of an arithmetic circuit that represents the polynomial $p(x_1, x_2) = x_2^3 + x_1 x_2^2 + x_2^2 + x_1 x_2$:
 
 {{<mermaid>}}
 ---
 
-title: DAG
+title: Arithmetic Circuit for p(x)
 ---
 
-graph TD
-  A(A) -- Link Text --> B(B)
-  A -- Link Text --> C(C)
+graph BT
+  X1(x₁) --> Plus1(+)
+  X2(X₂) --> Plus1
+  X2 --> Plus2(+)
+  One(1) --> Plus2
+  Plus1 --> Times(⨉)
+  Plus2 --> Times
+  X2 --> Times
+  
 {{</mermaid>}}
+
+In the circuit above, the input gates compute (from left to right)
+$x_{1},x_{2}$ and $1$,
+the sum gates compute $x_{1}+x_{2}$
+and $x_{2}+1$,
+and the product gate computes $(x_{1}+x_{2})x_{2}(x_{2}+1)$
+which evaluates to $x_{2}^{3}+x_{1}x_{2}^{2}+x_{2}^{2}+x_{1}x_{2}$.
+
+The idea is to prove that the output of the circuit is equal to some target polynomial $t(x)$.
+This can be done by proving that the output of the circuit is equal to the target polynomial $t(x)$
+multiplied by some arbitrary polynomial $h(x)$,
+as we did in the previous section.
+
+## Remarks
+
+This is a very high-level overview of Zero-Knowledge Proofs.
+The subject is quite complex and requires a lot of mathematical background.
+I tried to simplify it as much as possible,
+to give a general intuition of how Zero-Knowledge Proofs work.
+Please check the resources below for more in-depth information.
 
 ## Resources
 
@@ -329,6 +367,13 @@ It provides a good introduction to Zero-Knowledge Proofs,
 while being quite accessible to beginners.
 
 {{<youtube>}}gcKCW7CNu_M{{</youtube>}}
+
+{{<line_break>}}
+
+This [video from YouTube](https://youtu.be/iRQw2RpQAVc)
+explains the math behind the Arithmetic Circuits
+and how to encode them as polynomials.
+I can't embed the video here, since the video owner has disabled embedding.
 
 ## License
 
