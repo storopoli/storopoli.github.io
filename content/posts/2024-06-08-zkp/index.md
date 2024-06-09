@@ -282,7 +282,9 @@ graph TD
 We have tons of papers on the subject.
 Here are some selected few.
 
-The whole idea of ZKPs as discussed above in three properties was first conceived by [[SMR85]].
+The whole idea of ZKPs as discussed above in three properties
+(Completeness, Soundness, and Zero-Knowledge)
+was first conceived by [[SMR85]].
 Later [[Kil92]] showed that some of the properties' assumptions can be relaxed,
 more specifically using computational soundness instead of statistical soundness.
 [[Mic94]] applied the [Fiat-Shamir Heuristic](https://en.wikipedia.org/wiki/Fiat%E2%80%93Shamir_heuristic)
