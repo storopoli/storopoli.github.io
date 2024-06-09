@@ -115,37 +115,54 @@ graph TD
 
 ## Resources
 
+We have tons of papers on the subject.
+Here are some selected few.
+
+The whole idea of ZKPs as discussed above in three properties was first conceived by [[SMR85]].
+Later [[Kil92]] showed that some of the properties' assumptions can be relaxed,
+more specifically using computational soundness instead of statistical soundness.
+[[Mic94]] applied the [Fiat-Shamir Heuristic](https://en.wikipedia.org/wiki/Fiat%E2%80%93Shamir_heuristic)
+to [[Kil92]]'s contributions to show that you can create any non-interactive ZKP system into
+a non-interactive ZKP system using the [Random Oracle Model](https://en.wikipedia.org/wiki/Random_oracle_model).
+
+Going to the zk-SNARKs side,
+the term was introduced by [[Bit11]]
+and the first protocol, the Pinocchio protocol,
+was introduced by [[Gen12]] and [[Par13]].
+The Bulletproofs protocol was introduced by [[Bunz18]],
+followed by the Bulletproofs++ protocol by [[Eagen24]].
+
+zk-STARKs were introduced by [[Ben-Sasson19]].
+
+Finally, if you want an intuitive but very comprehensive explanation of zk-SNARKs,
+then you should read [[Petkus19]].
+
+[SMR85]: https://epubs.siam.org/doi/10.1137/0218012 "Goldwasser, S., Micali, S., & Rackoff, C. (1985). The knowledge complexity of interactive proof systems. SIAM Journal on computing, 18(1), 186-208."
+
+[Kil92]: https://dl.acm.org/doi/abs/10.1145/129712.129782 "Kilian, J. (1992). A note on efficient zero-knowledge proofs and arguments (extended abstract). In Proceedings of the twenty-fourth annual ACM symposium on Theory of computing (pp. 723-732)."
+
+[Mic94]: https://ieeexplore.ieee.org/abstract/document/365746/ "Micali, S. (1994). CS proofs (extended abstract). In Proceedings 35th Annual Symposium on Foundations of Computer Science (pp. 436-445)."
+
+[Bit11]: https://eprint.iacr.org/2011/443 "Bitansky, N., Canetti, R., & Goldwasser, S. (2011). From Extractable Collision Resistance to Succinct Non-Interactive Arguments of Knowledge, and Back Again. In Proceedings of the 3rd innovations in theoretical computer science conference (pp. 326-349)."
+
+[Gen12]: https://eprint.iacr.org/2012/215 "Gennaro, R., Gentry, C., Parno, B., & Raykova, M. (2013). Quadratic span programs and succinct NIZKs without PCPs. In Advances in Cryptology–EUROCRYPT 2013: 32nd Annual International Conference on the Theory and Applications of Cryptographic Techniques, Athens, Greece, May 26-30, 2013. Proceedings 32 (pp. 626-645)."
+
+[Par13]: https://eprint.iacr.org/2013/279 "Parno, B., Gentry, C., Howell, J., & Raykova, M. (2013). Pinocchio: Nearly practical verifiable computation. In Proceedings of the 2013 IEEE Symposium on Security and Privacy (SP) (pp. 238-252)."
+
+[Bunz18]: https://ieeexplore.ieee.org/document/8418611 "Bünz, B., Bootle, J., Boneh, D., Poelstra, A., Wuille, P., & Maxwell, G. (2018). Bulletproofs: Short Proofs for Confidential Transactions and More. In Proceedings of the 2018 IEEE Symposium on Security and Privacy (SP) (pp. 315-334)."
+
+[Eagen24]: https://link.springer.com/chapter/10.1007/978-3-031-58740-5_9 "Bulletproofs++: next generation confidential transactions via reciprocal set membership arguments. In Annual International Conference on the Theory and Applications of Cryptographic Techniques (pp. 249-279)."
+
+[Ben-Sasson19]: https://link.springer.com/chapter/10.1007/978-3-030-26954-8_23 "Ben-Sasson, E., Bentov, I., Horesh, Y., & Riabzev, M. (2019). Scalable zero knowledge with no trusted setup. In Advances in Cryptology–CRYPTO 2019: 39th Annual International Cryptology Conference, Santa Barbara, CA, USA, August 18–22, 2019, Proceedings, Part III 39 (pp. 701-732)."
+
+[Petkus19]: https://arxiv.org/abs/1906.07221 "Petkus, M. (2019). Why and How zk-SNARK works. arXiv preprint 1906.07221."
+
 The following video from YouTube is from the
 [Blockchain Web3 MOOC from Berkeley University](https://rdi.berkeley.edu/).
 It provides a good introduction to Zero-Knowledge Proofs,
 while being quite accessible to beginners.
 
 {{<youtube>}}gcKCW7CNu_M{{</youtube>}}
-
-Also we have tons of papers on the subject.
-Here are some of the most important ones:
-
-[Petkus19] M. Petkus. Why and How zk-SNARK works. arXiv preprint arXiv:1906.07221. 2019 Jun 17.
-
-[Kil92] J. Kilian. A note on efficient zero-knowledge proofs and arguments (extended abstract). In STOC, pages 723–732, 1992.
-
-[Mic94] S. Micali. Cs proofs (extended abstracts). In FOCS, pages 436–453, 1994.
-
-[GGPR13] R. Gennaro, C. Gentry, B. Parno, and M. Raykova. Quadratic span programs and succinct NIZKs without PCPs. In EUROCRYPT, 2013.
-
-[Growth16] J. Growth. On the size of pairing-based non-interactive arguments. In EUROCRYPT, 2016.
-
-[Sonic19] B. Bunz, B. Fisch, and A. Szepieniec. Transparent SNARKs from DARK compilers. ePrint Report 2019/1229, 2019.
-
-[Marlin19] A. Chiesa, Y. Hu, M. Maller, P. Mishra, N. Vesely, and N. Ward. "Marlin: Preprocessing zkSNARKs with universal and updatable SRS." In Advances in Cryptology–EUROCRYPT 2020: 39th Annual International Conference on the Theory and Applications of Cryptographic Techniques, Zagreb, Croatia, May 10–14, 2020, Proceedings, Part I 39, pp. 738-768. Springer International Publishing, 2020.
-
-[Plonk19] A. Gabizon Z. Williamson, and O. Ciobotaru. "Plonk: Permutations over lagrange-bases for oecumenical noninteractive arguments of knowledge." Cryptology ePrint Archive (2019).
-
-[Dark20] B. Bünz, B. Fisch, and A. Szepieniec. Transparent SNARKs from DARK compilers. In Advances in Cryptology–EUROCRYPT 2020: 39th Annual International Conference on the Theory and Applications of Cryptographic Techniques, Zagreb, Croatia, May 10–14, 2020, Proceedings, Part I 39 2020 (pp. 677-706). Springer International Publishing.
-
-[Halo20] L. Wang. Halo 0.9: A Halo Protocol with Fully-Succinctness. Cryptology ePrint Archive. 2020.
-
-[STARK19] E. Ben-Sasson, A. Chiesa, E. Tromer, and M. Virza. "Scalable, transparent, and post-quantum secure computational integrity." In Advances in Cryptology–CRYPTO 2019: 39th Annual International Cryptology Conference, Santa Barbara, CA, USA, August 18–22, 2019, Proceedings, Part III 39, pp. 19-48. Springer International Publishing, 2019.
 
 ## License
 
