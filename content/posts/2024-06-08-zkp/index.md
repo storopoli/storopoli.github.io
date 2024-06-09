@@ -29,6 +29,32 @@ since a lot of new Bitcoin innovations are being built on top of them.
 It allows for a higher level of privacy and potential scalability improvements
 in the Bitcoin network.
 
+Zero-knowledge proofs are advantageous in a myriad of application,
+including (refer to [Petkus19]):
+
+- **Proving statement on private data**:
+
+  - Person $A$ has more than $X$ in his bank account
+  - In the last year, a bank did not transact with an entity $Y$
+  - Matching DNA without revealing full DNA
+  - One has a credit score higher than $Z$
+
+- **Anonymous authorization**:
+
+  - Proving that requester $R$ has right to access web-site's restricted area without revealing its identity (e.g., login, password)
+  - Prove that one is from the list of allowed countries/states without revealing from which one exactly
+  - Prove that one owns a monthly pass to a subway/metro without revealing card's id
+
+- **Anonymous payments**:
+
+  - Payment with full detachment from any kind of identity
+  - Paying taxes without revealing one's earnings
+
+- **Outsourcing computation**:
+  - Outsource an expensive computation and validate that the result is correct without redoing the execution;
+    it opens up a category of trustless computing
+  - Changing a blockchain model from everyone computes the same to one party computes and everyone verifies
+
 The idea behind this post is to give a general overview of Zero-Knowledge Proofs,
 while providing further resources,
 especially which papers to read,
