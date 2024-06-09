@@ -43,7 +43,7 @@ but some mathematical background is necessary.
 Let's formalize the concept of **Zero-Knowledge Proofs**.
 A formal definition of zero-knowledge has to use some computational model,
 and without loss of generality,
-we can use the [Turing Machine](https://en.wikipedia.org/wiki/Turing_machine).
+we can use the [Turing Machine](https://en.wikipedia.org/wiki/Turing_machine)
 model.
 So let's create three Turing machines:
 
@@ -93,7 +93,7 @@ The tuple $(P, V, S)$ is a **Zero-Knowledge Proof** if the following properties 
    there exists an $N$ such that for all $n > N$,
    $$ f(n) < \frac{1}{p(n)}. $$
    If you want to learn more about negligible functions,
-   read Chapter 3 Section 3.1 of the book [Introduction to Modern Cryptography](https://doi.org/10.1201/9781420010756) by Katz & Lindell.
+   read Chapter 3, Section 3.1 of the book [Introduction to Modern Cryptography](https://doi.org/10.1201/9781420010756) by Katz & Lindell.
 
 If you come up from a scheme that satisfies these properties,
 congratulations, you have a **Zero-Knowledge Proof** scheme
@@ -118,13 +118,16 @@ Additionally,
 the setup of the **simulator $S$ with respect to the data it uses**
 can be further classified into three categories.
 Generally speaking, the data used by $S$ is some random bits.
+In trusted setups, if the data is compromised,
+the security of the proof is also compromised.
+In other words, anyone with the hold of the data can prove anything to anyone.
+This is bad, and we want to avoid it.
 
 1. **Trusted Setup**: $S$ uses data that must be kept secret.
-   If compromised trusted setup, any proof by an adversary $A$ can be accepted by any verifier $V$.
-   This is bad, and we want to avoid it.
-1. **Trusted but Universal Setup**: $S$ uses data that must be public,
+1. **Trusted but Universal Setup**: $S$ uses data that must be kept private,
    but it only uses for the initial setup.
-   Future proofs can be verified without the need for this data.
+   Future proofs can be verified without the need for the initial data,
+   and can be considered transparent.
 1. **Transparent Setup**: $S$ uses no data at all.
    This is the best setup, as it doesn't require any data to be used by $S$.
 
@@ -149,17 +152,17 @@ on top of Bitcoin.
 
 Let's go over the concepts behind zk-SNARKs[^petkus].
 
-[^petkus]: most of this section is base on [Petkus19].
+[^petkus]: most of this section is based on [Petkus19].
 
 ### The first idea: Proving Knowledge of a Polynomial
 
 First some polynomial primer.
 **A polynomial $f(x)$ is a function that can be written as**:
 
-$$ f(x) = c_n x^n + \ldots + c_1 x^1 + c_0 x^0 $$
+$$ f(x) = c_d x^d + \ldots + c_1 x^1 + c_0 x^0 $$
 
-where $c_n, \ldots, c_1, c_0$ are the coefficients of the polynomial,
-and $n$ is the degree of the polynomial.
+where $c_d, \ldots, c_1, c_0$ are the coefficients of the polynomial,
+and $d$ is the degree of the polynomial.
 
 Now, the [Fundamental Theorem of Algebra](https://en.wikipedia.org/wiki/Fundamental_theorem_of_algebra) states that
 **a polynomial of degree $d$ can have at most $d$ (real-valued-only) roots[^at-most]**.
