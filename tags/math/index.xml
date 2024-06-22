@@ -89,7 +89,7 @@ He devoured a forty-five-volume history of the world and was able to recite whol
 </li>
 <li>
 <p><strong><a href="https://en.wikipedia.org/wiki/Hans_Bethe">Hans Bethe</a> (Nobel Prize winner)</strong>:
-&ldquo;I have sometimes wondered whether a brain like von Neumann&rsquo;s does not indicate a species superior to that of man&rdquo;</p>
+&ldquo;I have sometimes wondered whether a brain like von Neumann&rsquo;s does not indicate a species superior to that of man.&rdquo;</p>
 </li>
 <li>
 <p><strong><a href="https://en.wikipedia.org/wiki/Stanislaw_Ulam">Stanislaw Ulam</a> (co-inventor of the Monte Carlo method)</strong>:
@@ -184,7 +184,7 @@ It then turns around and reaches the first bicycle when</p>
 In general, a geometric series is written as $a + ar + ar^{2} + ar^{3} + \ldots$,
 where a $a$ is the coefficient of each term and $r$ is the common ratio between adjacent terms.</p>
 <p>Here we have $a = 12$ and $r = \frac{4}{5}$,
-and we know it converges to $\frac{a}{1-r} = 15$.</p>
+and we know it converges to $\frac{a}{1-r} = 15$ when $r &lt; 1$.</p>
 <p>That&rsquo;s how von Neumann solved the problem in his head in a matter of seconds.</p>
 <h2 id="license">License</h2>
 <p>This post is licensed under <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International</a>.</p>
