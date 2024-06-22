@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Math on Jose Storopoli, PhD</title>
+  <link rel="alternate" href="https://storopoli.io/tags/math/" />
+  <link rel="self" href="https://storopoli.io/tags/math/index.xml" />
+  <subtitle>Recent content in Math on Jose Storopoli, PhD</subtitle>
+  <id>https://storopoli.io/tags/math/</id>
+  <generator uri="http://gohugo.io" version="0.127.0">Hugo</generator>
+  <language>en-us</language>
+  <updated>2024-06-22T05:54:46-03:00</updated>
+  <author>
+    <name>Jose Storopoli</name>
+    
+  </author>
+  <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)</rights>
+      <entry>
+        <title>Von Neumann</title>
+        <link rel="alternate" href="https://storopoli.io/2024-06-22-von-neumann/" />
+        <id>https://storopoli.io/2024-06-22-von-neumann/</id>
+        <published>2024-06-22T05:54:46-03:00</published>
+        <updated>2024-06-22T08:29:18-03:00</updated>
+        <summary type="html">Von Neumann&amp;#39;s wartime Los Alamos ID badge photo Warning: This post has KaTeX enabled, so if you want to view the rendered math formulas, you&amp;rsquo;ll have to unfortunately enable JavaScript.
+John von Neumann was a Hungarian-American mathematician. But to define him as a simple mathematician would be an understatement. He is a fucking legend and one of my heroes! He single-handedly:
+proposed an axiomatization of set theory along with a definition of cardinality that remains the standard one in mathematics today.</summary>
+          <content type="html"><![CDATA[<figure>
+    <img loading="lazy" src="von_neumann.jpg#center"
+         alt="Von Neumann&#39;s wartime Los Alamos ID badge photo" width="300"/> <figcaption>
+            Von Neumann&#39;s wartime Los Alamos ID badge photo
+        </figcaption>
+</figure>
+
+<blockquote>
+<p>Warning: This post has <a href="https://katex.org/">KaTeX</a> enabled,
+so if you want to view the rendered math formulas,
+you&rsquo;ll have to unfortunately enable JavaScript.</p>
+</blockquote>
+<p>John von Neumann was a Hungarian-American mathematician.
+But to define him as a simple mathematician would be an understatement.
+He is a <strong>fucking legend</strong> and one of my heroes!
+He single-handedly:</p>
+<ul>
+<li><strong>proposed an axiomatization of <a href="https://en.wikipedia.org/wiki/Von_Neumann%E2%80%93Bernays%E2%80%93G%C3%B6del_set_theory">set theory</a></strong>
+along with a definition of <a href="https://en.wikipedia.org/wiki/Von_Neumann_cardinal_assignment">cardinality</a>
+that remains the standard one in mathematics today.
+Funny enough he started working on solving the paradoxes
+of set theory while he was only 11 years old!</li>
+<li><strong>laid the mathematical foundations of quantum mechanics</strong>.</li>
+<li><strong>made the atomic bomb possible</strong> by conceptualizing and designing
+the explosive lenses that were needed to compress the plutonium core
+of the Fat Man weapon that was later dropped on Nagasaki.
+He also invented the term &ldquo;kiloton&rdquo; of TNT as a unit of energy
+released in a nuclear explosion.</li>
+<li><strong>invented the modern computer</strong>. Yes, I know, Alan Turing came up with
+the idea while trying to solve the <a href="https://en.wikipedia.org/wiki/Halting_problem">halting problem</a>,
+but it was von Neumann that recognized the true potential of
+computing machines and designed the first computers.
+We even have the <a href="https://en.wikipedia.org/wiki/Von_Neumann_architecture">von Neumann architecture</a> that pretty much underlies in every working
+universal Turing machine in the world.</li>
+<li><strong>created the field of <a href="https://en.wikipedia.org/wiki/Game_theory">game theory</a></strong>,
+along with the most important game theory&rsquo;s theorem: the <a href="https://en.wikipedia.org/wiki/Minimax_theorem">minimax theorem</a>.</li>
+<li><strong>co-invented the <a href="https://en.wikipedia.org/wiki/Monte_Carlo_method">Monte Carlo method</a></strong>
+while trying to solve the problem of neutron diffusion.</li>
+<li><strong>created the field of <a href="https://en.wikipedia.org/wiki/Cellular_automaton">cellular automata</a></strong>
+and paved the way for the discovery of DNA.</li>
+</ul>
+<p>The list above is just a quick summary of his achievements.
+Everywhere you look in mathematics, physics, computer science, and even biology and economics,
+you&rsquo;ll find von Neumann&rsquo;s fingerprints.</p>
+<h2 id="the-sharpest-mind-of-the-20th-century">The Sharpest Mind of the 20th Century</h2>
+<p>Von Neumann was recognized by his peers as one of the most intelligent people
+to have ever lived.
+Johnny, as he was known to his friends, was a prodigy since early childhood.
+Some sources suggest that he could multiply two 8-digit numbers together in his head when he was six.
+As a child, von Neumann absorbed Ancient Greek and Latin, and spoke French, German and English as well as his native Hungarian.
+He devoured a forty-five-volume history of the world and was able to recite whole chapters verbatim decades later.</p>
+<p>Here are some quotes from his contemporaries:</p>
+<ul>
+<li>
+<p><strong><a href="https://en.wikipedia.org/wiki/Enrico_Fermi">Enrico Fermi</a> (Nobel Prize winner)</strong> while talking to <a href="https://en.wikipedia.org/wiki/Herbert_L._Anderson">Herbert Anderson</a>:
+&ldquo;You know, Herb, Johnny can do calculations in his head ten times as fast as I can! And I can do them ten times as fast as you can, Herb, so you can see how impressive Johnny is!&rdquo;</p>
+</li>
+<li>
+<p><strong><a href="https://en.wikipedia.org/wiki/George_P%C3%B3lya">George Pólya</a> (mathematician, and whose lectures von Neumann attended as a student)</strong>:
+&ldquo;Johnny was the only student I was ever afraid of. If in the course of a lecture I stated an unsolved problem, the chances were he&rsquo;d come to me at the end of the lecture with the complete solution scribbled on a slip of paper.&rdquo;</p>
+</li>
+<li>
+<p><strong><a href="https://en.wikipedia.org/wiki/Edward_Teller">Edward Teller</a> (father of the hydrogen bomb)</strong>:
+&ldquo;Von Neumann would carry on a conversation with my 3-year-old son, and the two of them would talk as equals, and I sometimes wondered if he used the same principle when he talked to the rest of us.&rdquo;</p>
+</li>
+<li>
+<p><strong><a href="https://en.wikipedia.org/wiki/Hans_Bethe">Hans Bethe</a> (Nobel Prize winner)</strong>:
+&ldquo;I have sometimes wondered whether a brain like von Neumann&rsquo;s does not indicate a species superior to that of man&rdquo;</p>
+</li>
+<li>
+<p><strong><a href="https://en.wikipedia.org/wiki/Stanislaw_Ulam">Stanislaw Ulam</a> (co-inventor of the Monte Carlo method)</strong>:
+&ldquo;I have had a brain, and von Neumann had a computer.&rdquo;</p>
+</li>
+<li>
+<p><strong><a href="https://en.wikipedia.org/wiki/Claude_Shannon">Claude Shannon</a> (father of information theory)</strong>:
+&ldquo;the smartest person I&rsquo;ve ever met.&rdquo;</p>
+</li>
+<li>
+<p><strong><a href="https://en.wikipedia.org/wiki/Marina_von_Neumann_Whitman">Marina von Neumann Whitman</a> (his daughter)</strong>:
+&ldquo;Although he genuinely adored my mother, my father&rsquo;s first love in life was thinking, a pursuit that occupied most of his waking hours.&rdquo;</p>
+</li>
+</ul>
+<figure>
+    <img loading="lazy" src="von_neumann_oppenheimer.jpeg#center"
+         alt="Von Neumann and Oppenheimer together in-front of one of the computing machines used on the hydrogen bomb project. Von Neumann could do calculations in his head faster than these early computers and would sometimes face off against them in competitions meant to entertain the other people in the labs" width="500"/> <figcaption>
+            Von Neumann and Oppenheimer together in-front of one of the computing machines used on the hydrogen bomb project. Von Neumann could do calculations in his head faster than these early computers and would sometimes face off against them in competitions meant to entertain the other people in the labs
+        </figcaption>
+</figure>
+
+<p>If you want to know more about von Neumann, I recommend his biography:
+<a href="https://www.goodreads.com/book/show/61089520-the-man-from-the-future">The Man from the Future: The Visionary Life of John von Neumann</a>
+by Ananyo Bhattacharya.</p>
+<h2 id="the-fly-puzzle">The Fly Puzzle</h2>
+<p>One of the most famous stories about von Neumann is the fly puzzle.
+This was reported by <a href="https://en.wikipedia.org/wiki/Eugene_Wigner">Eugene Wigner</a>
+in the 1966 documentary on Von Neumann.
+Below is the exact part where Wigner tells the story:</p>
+<style>
+  .embed-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+  }
+  .embed-container iframe,
+  .embed-container object,
+  .embed-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+</style>
+<div class="embed-container">
+  <iframe
+    src="https://www.youtube.com/embed/HpJgBcE-cFQ?start=184&amp;end=319"
+    frameborder="0"
+    allowfullscreen
+  ></iframe>
+</div>
+
+<br />
+
+<p>The tale takes place in Los Alamos during the Manhattan Project.
+<a href="https://en.wikipedia.org/wiki/Max_Born">Max Born (Nobel Prize winner)</a>
+told von Neumann&rsquo;s the following puzzle:</p>
+<blockquote>
+<p>Two bicycles begin 20 miles apart,
+and each travels toward the other at 10 miles per hour until they collide;
+meanwhile, a fly travels continuously back and forth between the bicycles
+at 15 miles per hour until it is squashed in the collision.
+How far does the fly travel in total?</p>
+</blockquote>
+<p>One can solve this rather easily by not paying attention to the inherent infinite geometric series that the fly travels.
+Instead, focus on the fact that the fly is squashed when the bicycles collide,
+and that the two bicycles will collide in one hour.
+Thus, the fly travels 15 miles in total.</p>
+<p>By the time Born had finished the question, von Neumann had already solved it.
+He said &ldquo;Why? 15 miles, of course.&rdquo;
+Born was surprise and said that Johnny was &ldquo;one of my first scientist friends that saw the solution immediately.&rdquo;
+Johnny then replied &ldquo;I can&rsquo;t understand that. It is a simple infinite geometrical series.&rdquo;</p>
+<p>Now, to understand how fast von Neumann&rsquo;s mind was, let&rsquo;s solve the problem the way he did.
+Note that the fly reaches the second bicycle when</p>
+<p>$$ 15t = 20 - 10t,$$</p>
+<p>where $t$ is the time in hours.
+Note that $t_1$ is</p>
+<p>$$ t_1 = \frac{20}{25} = \frac{4}{5}.$$</p>
+<p>This means that the total time it takes for the fly to reach the second bicycle for the first time
+is $\frac{4}{5}$ hours and the total distance traveled by the fly is
+$d_1 = 15 \times \frac{4}{5} = 12$ miles.
+It then turns around and reaches the first bicycle when</p>
+<p>$$ 12 - 15t = 8 + 10t.$$</p>
+<p>Solving for $t_2$ we get</p>
+<p>$$ t_2 = \frac{4}{25}.$$</p>
+<p>Continuing, the total distance traveled by the fly is given by summing the series</p>
+<p>$$ 15 \sum_{n=1}^{\infty} \frac{4}{5^n} = 15.$$</p>
+<p>This is a classical <a href="https://en.wikipedia.org/wiki/Geometric_series">geometric series</a>.
+In general, a geometric series is written as $a + ar + ar^{2} + ar^{3} + \ldots$,
+where a $a$ is the coefficient of each term and $r$ is the common ratio between adjacent terms.</p>
+<p>Here we have $a = 12$ and $r = \frac{4}{5}$,
+and we know it converges to $\frac{a}{1-r} = 15$.</p>
+<p>That&rsquo;s how von Neumann solved the problem in his head in a matter of seconds.</p>
+<h2 id="license">License</h2>
+<p>This post is licensed under <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International</a>.</p>
+<p><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img loading="lazy" src="https://licensebuttons.net/l/by-nc-sa/4.0/88x31.png" alt="CC BY-NC-SA 4.0"  />
+</a></p>
+]]></content>
+      </entry>
+
+</feed>
+
+

@@ -2,16 +2,22 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://storopoli.io/</loc>
+    <lastmod>2024-06-22T08:29:18-03:00</lastmod>
+  </url><url>
+    <loc>https://storopoli.io/tags/math/</loc>
+    <lastmod>2024-06-22T08:29:18-03:00</lastmod>
+  </url><url>
+    <loc>https://storopoli.io/tags/</loc>
+    <lastmod>2024-06-22T08:29:18-03:00</lastmod>
+  </url><url>
+    <loc>https://storopoli.io/2024-06-22-von-neumann/</loc>
+    <lastmod>2024-06-22T08:29:18-03:00</lastmod>
+  </url><url>
     <loc>https://storopoli.io/tags/bitcoin/</loc>
     <lastmod>2024-06-09T08:34:22-03:00</lastmod>
   </url><url>
     <loc>https://storopoli.io/tags/cryptography/</loc>
-    <lastmod>2024-06-09T08:34:22-03:00</lastmod>
-  </url><url>
-    <loc>https://storopoli.io/</loc>
-    <lastmod>2024-06-09T08:34:22-03:00</lastmod>
-  </url><url>
-    <loc>https://storopoli.io/tags/</loc>
     <lastmod>2024-06-09T08:34:22-03:00</lastmod>
   </url><url>
     <loc>https://storopoli.io/2024-06-08-zkp/</loc>

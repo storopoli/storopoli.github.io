@@ -7,12 +7,21 @@
   <id>https://storopoli.io/tags/</id>
   <generator uri="http://gohugo.io" version="0.127.0">Hugo</generator>
   <language>en-us</language>
-  <updated>2024-06-08T15:48:33-03:00</updated>
+  <updated>2024-06-22T05:54:46-03:00</updated>
   <author>
     <name>Jose Storopoli</name>
     
   </author>
   <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)</rights>
+      <entry>
+        <title>Math</title>
+        <link rel="alternate" href="https://storopoli.io/tags/math/" />
+        <id>https://storopoli.io/tags/math/</id>
+        <published>2024-06-22T05:54:46-03:00</published>
+        <updated>2024-06-22T08:29:18-03:00</updated>
+        <summary type="html"></summary>
+          <content type="html"><![CDATA[]]></content>
+      </entry>
       <entry>
         <title>Bitcoin</title>
         <link rel="alternate" href="https://storopoli.io/tags/bitcoin/" />
