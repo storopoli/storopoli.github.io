@@ -22,13 +22,11 @@ env = "production"
 title = "Jose Storopoli, PhD"
 description = "I make computers go brrr faster"
 keywords = [
+  "cryptography",
+  "Bitcoin",
   "statistics",
-  "Bayesian statistics",
-  "Julia",
   "Rust",
   "math",
-  "blog",
-  "research",
   "security",
   "privacy",
 ]
