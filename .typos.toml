@@ -8,6 +8,8 @@ extend-ignore-re = [
 [default.extend-words]
 # Claus Schnorr
 "Claus" = "Claus"
+# Gilbert Strang
+"Strang" = "Strang"
 "ratatui" = "ratatui"
 "Noice" = "Noice"
 
