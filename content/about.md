@@ -11,9 +11,10 @@ In other words, I make computers go brrr faster.
 In hope of a better future,
 I dedicate my free time to Bitcoin-related projects.
 I contribute to the Rust Bitcoin ecosystem,
-particularly [Bitcoin Dev Kit (BDK)](https://bitcoindevkit.org)
-and [`rust-bitcoin`](https://rust-bitcoin.org).
-I also work full-time at [Portal](https://portaldefi.com) on Bitcoin-backed smart contracts.
+particularly [`rust-bitcoin`](https://rust-bitcoin.org)
+and [Bitcoin Dev Kit (BDK)](https://bitcoindevkit.org).
+I also work full-time at [Alpen Labs](https://alpenlabs.io)
+building Bitcoin-native zero-knowledge rollups.
 
 I am a faculty member at the Department of Computer Science at
 [Universidade Nove de Julho (UNINOVE)](https://www.uninove.br).
