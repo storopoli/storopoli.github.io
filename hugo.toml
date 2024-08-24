@@ -79,6 +79,10 @@ name = "key"
 url = "/assets/publickey.txt"
 
 [[params.socialIcons]]
+name = "other"
+url = "/assets/ssh.txt"
+
+[[params.socialIcons]]
 name = "rss"
 url = "index.xml"
 
