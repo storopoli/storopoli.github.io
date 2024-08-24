@@ -63,11 +63,19 @@ name = "github"
 url = "https://github.com/storopoli"
 
 [[params.socialIcons]]
+name = "gitlab"
+url = "https://gitlab.com/storopoli"
+
+[[params.socialIcons]]
+name = "sourcehut"
+url = "https://sr.ht/~storopoli/"
+
+[[params.socialIcons]]
 name = "email"
 url = "mailto:jose@storopoli.io"
 
 [[params.socialIcons]]
-name = "pgpkey"
+name = "key"
 url = "/assets/publickey.txt"
 
 [[params.socialIcons]]
