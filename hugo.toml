@@ -67,6 +67,10 @@ name = "gitlab"
 url = "https://gitlab.com/storopoli"
 
 [[params.socialIcons]]
+name = "codeberg"
+url = "https://codeberg.org/storopoli"
+
+[[params.socialIcons]]
 name = "sourcehut"
 url = "https://sr.ht/~storopoli/"
 
