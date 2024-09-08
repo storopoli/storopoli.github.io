@@ -5,7 +5,7 @@
   <link rel="self" href="https://storopoli.io/posts/index.xml" />
   <subtitle>Recent content in Blog on Jose Storopoli, PhD</subtitle>
   <id>https://storopoli.io/posts/</id>
-  <generator uri="http://gohugo.io" version="0.133.1">Hugo</generator>
+  <generator uri="http://gohugo.io" version="0.134.1">Hugo</generator>
   <language>en-us</language>
   <updated>0001-01-01T00:00:00Z</updated>
   <author>
@@ -19,9 +19,17 @@
         <id>https://storopoli.io/2024-06-22-von-neumann/</id>
         <published>2024-06-22T05:54:46-03:00</published>
         <updated>2024-06-22T08:29:18-03:00</updated>
-        <summary type="html">Von Neumann&amp;#39;s wartime Los Alamos ID badge photo Warning: This post has KaTeX enabled, so if you want to view the rendered math formulas, you&amp;rsquo;ll have to unfortunately enable JavaScript.
-John von Neumann was a Hungarian-American mathematician. But to define him as a simple mathematician would be an understatement. He is a fucking legend and one of my heroes! He single-handedly:
-proposed an axiomatization of set theory along with a definition of cardinality that remains the standard one in mathematics today.</summary>
+        <summary type="html">&lt;figure&gt;
+    &lt;img loading=&#34;lazy&#34; src=&#34;von_neumann.jpg#center&#34;
+         alt=&#34;Von Neumann&amp;#39;s wartime Los Alamos ID badge photo&#34; width=&#34;300&#34;/&gt; &lt;figcaption&gt;
+            Von Neumann&amp;#39;s wartime Los Alamos ID badge photo
+        &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Warning: This post has &lt;a href=&#34;https://katex.org/&#34;&gt;KaTeX&lt;/a&gt; enabled,
+so if you want to view the rendered math formulas,
+you&amp;rsquo;ll have to unfortunately enable JavaScript.&lt;/p&gt;</summary>
           <content type="html"><![CDATA[<figure>
     <img loading="lazy" src="von_neumann.jpg#center"
          alt="Von Neumann&#39;s wartime Los Alamos ID badge photo" width="300"/> <figcaption>
@@ -198,8 +206,19 @@ and we know it converges to $\frac{a}{1-r} = 15$ when $r &lt; 1$.</p>
         <id>https://storopoli.io/2024-06-08-zkp/</id>
         <published>2024-06-08T15:48:33-03:00</published>
         <updated>2024-06-09T08:34:22-03:00</updated>
-        <summary type="html">Zero-Knowledge Proofs and the Meaning of Life Warning: This post has KaTeX and mermaid.js enabled, so if you want to view the rendered math formulas, and diagrams, you&amp;rsquo;ll have to unfortunately enable JavaScript.
-Lately, I&amp;rsquo;ve been diving a little into the world of Zero-Knowledge Proofs. The idea is to prove that you know something without revealing what you know. More specifically, a Zero-Knowledge Proof is a cryptographic protocol that allows a prover to convince a verifier that a statement is true without revealing any information beyond the validity of the statement.</summary>
+        <summary type="html">&lt;figure&gt;
+    &lt;img loading=&#34;lazy&#34; src=&#34;zkp_meme.jpg#center&#34;
+         alt=&#34;Zero-Knowledge Proofs and the Meaning of Life&#34; width=&#34;500&#34;/&gt; &lt;figcaption&gt;
+            Zero-Knowledge Proofs and the Meaning of Life
+        &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Warning: This post has &lt;a href=&#34;https://katex.org/&#34;&gt;KaTeX&lt;/a&gt;
+and &lt;a href=&#34;https://mermaid.js.org&#34;&gt;&lt;code&gt;mermaid.js&lt;/code&gt;&lt;/a&gt; enabled,
+so if you want to view the rendered math formulas,
+and diagrams,
+you&amp;rsquo;ll have to unfortunately enable JavaScript.&lt;/p&gt;</summary>
           <content type="html"><![CDATA[<figure>
     <img loading="lazy" src="zkp_meme.jpg#center"
          alt="Zero-Knowledge Proofs and the Meaning of Life" width="500"/> <figcaption>
@@ -596,8 +615,17 @@ which is still a huge number.&#160;<a href="#fnref:4" class="footnote-backref" r
         <id>https://storopoli.io/2024-04-14-shamir-secret-sharing/</id>
         <published>2024-04-14T10:37:02-03:00</published>
         <updated>2024-06-08T16:08:00-03:00</updated>
-        <summary type="html">The Polynomial king and he can do anything! Warning: This post has KaTeX enabled, so if you want to view the rendered math formulas, you&amp;rsquo;ll have to unfortunately enable JavaScript.
-In this post, we&amp;rsquo;ll talk about Shamir&amp;rsquo;s Secret Sharing (SSS), a cryptographic algorithm that allows us to split a secret into multiple parts, called shares, in such a way that the secret can only be reconstructed if a certain number of shares are combined.</summary>
+        <summary type="html">&lt;figure&gt;
+    &lt;img loading=&#34;lazy&#34; src=&#34;polynomial_king.webp#center&#34;
+         alt=&#34;The Polynomial king and he can do anything!&#34; width=&#34;500&#34;/&gt; &lt;figcaption&gt;
+            The Polynomial king and he can do anything!
+        &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Warning: This post has &lt;a href=&#34;https://katex.org/&#34;&gt;KaTeX&lt;/a&gt; enabled,
+so if you want to view the rendered math formulas,
+you&amp;rsquo;ll have to unfortunately enable JavaScript.&lt;/p&gt;</summary>
           <content type="html"><![CDATA[<figure>
     <img loading="lazy" src="polynomial_king.webp#center"
          alt="The Polynomial king and he can do anything!" width="500"/> <figcaption>
@@ -763,10 +791,20 @@ Especially during the share generation and reconstruction phases.</p>
         <link rel="alternate" href="https://storopoli.io/2024-03-23-dead-man-switch/" />
         <id>https://storopoli.io/2024-03-23-dead-man-switch/</id>
         <published>2024-03-23T14:00:16-03:00</published>
-        <updated>2024-04-10T08:57:32-03:00</updated>
-        <summary type="html">Sherlock Holmes fights Moriarty at the Reichenbach Falls Got state secrets? Or maybe 50 BTC? Don&amp;rsquo;t trust your government or lawyers? And you want to make sure that if you die, your secrets are passed on? Don&amp;rsquo;t worry, I got you covered. In this post, I&amp;rsquo;ll introduce you to a simple no-bullshit dead man&amp;rsquo;s switch written in Rust.
-Dead Man&amp;rsquo;s Switch According to Wikipedia:
-A dead man&amp;rsquo;s switch is a switch that is designed to be activated or deactivated if the human operator becomes incapacitated, such as through death, loss of consciousness, or being bodily removed from control.</summary>
+        <updated>2024-09-08T19:00:51-03:00</updated>
+        <summary type="html">&lt;figure&gt;
+    &lt;img loading=&#34;lazy&#34; src=&#34;the_final_problem.png#center&#34;
+         alt=&#34;Sherlock Holmes fights Moriarty at the Reichenbach Falls&#34; width=&#34;300&#34;/&gt; &lt;figcaption&gt;
+            Sherlock Holmes fights Moriarty at the Reichenbach Falls
+        &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Got state secrets? Or maybe 50 BTC?
+Don&amp;rsquo;t trust your government or lawyers?
+And you want to make sure that if you die, your secrets are passed on?
+Don&amp;rsquo;t worry, I got you covered.
+In this post,
+I&amp;rsquo;ll introduce you to a &lt;strong&gt;simple no-bullshit dead man&amp;rsquo;s switch&lt;/strong&gt; written in Rust.&lt;/p&gt;</summary>
           <content type="html"><![CDATA[<figure>
     <img loading="lazy" src="the_final_problem.png#center"
          alt="Sherlock Holmes fights Moriarty at the Reichenbach Falls" width="300"/> <figcaption>
@@ -838,8 +876,6 @@ which means you can use it for free as long as you share your code.
 The package is also available on <a href="https://crates.io/crates/dead-man-switch">crates.io</a>,
 Rust&rsquo;s package manager.</p>
 <p>DMS is very easy to use and deploy.
-I&rsquo;ve made an extra effort to make sure that it builds with Rust version 1.63.0,
-which is the current Debian stable Rust version<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>.
 There are several alternatives on how to deploy it.
 Here are the two easiest ways:</p>
 <ol>
@@ -852,11 +888,11 @@ Here are the two easiest ways:</p>
 </span></span></code></pre></div></li>
 <li>
 <p>Install the DMS:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">cargo install dead-man-switch
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">cargo install dead-man-switch-tui
 </span></span></code></pre></div></li>
 <li>
 <p>Run the app with:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">dead-man-switch
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">dead-man-switch-tui
 </span></span></code></pre></div></li>
 </ol>
 </li>
@@ -865,6 +901,15 @@ Here are the two easiest ways:</p>
 <code>nix run github:storopoli/dead-man-switch</code>.</p>
 </li>
 </ol>
+<blockquote>
+<p><strong>Note</strong>: I&rsquo;ve also released a Web Interface for the dead-man-switch.
+You can easily deploy it using Docker or Docker Compose.
+Check out the <a href="https://github.com/storopoli/dead-man-switch">GitHub repository</a>.</p>
+<p>I&rsquo;ve also launched a <a href="https://start9.com">StartOS</a> app with a simple interface
+for configuring and checking in with the Dead Man&rsquo;s Switch.
+Check out the instructions on the
+<a href="https://github.com/storopoli/dead-man-switch-startos"><code>dead-man-switch-startos</code> repository</a>.</p>
+</blockquote>
 <p>Once, you successfully run the app, you will see the following output:</p>
 <figure>
     <img loading="lazy" src="app_first_run.png#center"
@@ -891,7 +936,7 @@ config file location:</p>
 <p>In this example, I am running it from a Debian server as the <code>root</code> user.
 Hence, the configuration file is at <code>/root/.config/deadman/config.toml</code>.</p>
 <p>If you open the configuration file, you will see the following content.
-I&rsquo;ve added some default values for inspiration<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>:</p>
+I&rsquo;ve added some default values for inspiration<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="nx">username</span> <span class="p">=</span> <span class="s2">&#34;me@example.com&#34;</span>
 </span></span><span class="line"><span class="cl"><span class="nx">password</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
 </span></span><span class="line"><span class="cl"><span class="nx">smtp_server</span> <span class="p">=</span> <span class="s2">&#34;smtp.example.com&#34;</span>
@@ -988,6 +1033,10 @@ handle optional attachments.</li>
 <li><a href="https://crates.io/crates/chrono"><code>chrono</code></a> to handle timers and date/time
 formatting.</li>
 </ul>
+<blockquote>
+<p><strong>Note</strong>: the Dead Man&rsquo;s Switch Web Interface uses <a href="https://github.com/tokio-rs/axum"><code>axum</code></a>,
+<a href="https://djc.github.io/askama/"><code>askama</code></a> and <a href="https://github.com/tower-rs/tower"><code>tower</code></a>.</p>
+</blockquote>
 <p>The app is divided into a library and a binary.
 The library is contained in the <code>lib.rs</code> file and the binary in the <code>main.rs</code>,
 both under the <code>src/</code> directory.
@@ -1026,6 +1075,11 @@ Probably the way he would have used it is by:</p>
 <li>Disallow password authentication and only allow key-based authentication.</li>
 <li>Encrypt everything in the case the server is seized.</li>
 </ol>
+<blockquote>
+<p><strong>Note</strong>: Sherlock could also use a coreboot non-KYC piece of hardware that
+runs StartOS and the newly launched Dead Man&rsquo;s Switch StartOS app that already
+uses an onion service for handling the check-ins via Tor.</p>
+</blockquote>
 <h2 id="license">License</h2>
 <p>This post is licensed under <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International</a>.</p>
 <p><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img loading="lazy" src="https://licensebuttons.net/l/by-nc-sa/4.0/88x31.png" alt="CC BY-NC-SA 4.0"  />
@@ -1034,13 +1088,8 @@ Probably the way he would have used it is by:</p>
 <hr>
 <ol>
 <li id="fn:1">
-<p>Please check
-<a href="https://packages.debian.org/search?keywords=rustc">Debian&rsquo;s <code>rustc</code> package</a>
-for more details.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
-</li>
-<li id="fn:2">
 <p>Please don&rsquo;t go to bench 137 in Central Park, NY.
-That was just an example.&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+That was just an example.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 </ol>
 </div>
@@ -1052,9 +1101,17 @@ That was just an example.&#160;<a href="#fnref:2" class="footnote-backref" role=
         <id>https://storopoli.io/2024-02-11-mnemonic/</id>
         <published>2024-02-11T15:59:02Z</published>
         <updated>2024-04-10T08:57:32-03:00</updated>
-        <summary type="html">Warning: This post has KaTeX enabled, so if you want to view the rendered math formulas, you&amp;rsquo;ll have to unfortunately enable JavaScript.
-In this post, let&amp;rsquo;s dive into a topic that is very important for anyone who uses the internet: passwords. We&amp;rsquo;ll cover what the hell is Entropy, good password practices, and how it relates to Bitcoin &amp;ldquo;seed phrases&amp;rdquo;1.
-Entropy Before we go into passwords, I&amp;rsquo;ll introduce the concept of Entropy.</summary>
+        <summary type="html">&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;password_strength.png#center&#34; alt=&#34;Password Meme&#34;  /&gt;
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Warning: This post has &lt;a href=&#34;https://katex.org/&#34;&gt;KaTeX&lt;/a&gt; enabled,
+so if you want to view the rendered math formulas,
+you&amp;rsquo;ll have to unfortunately enable JavaScript.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;In this post, let&amp;rsquo;s dive into a topic that is very important for anyone who uses the internet: &lt;strong&gt;passwords&lt;/strong&gt;.
+We&amp;rsquo;ll cover what the hell is &lt;strong&gt;Entropy&lt;/strong&gt;,
+good &lt;strong&gt;password practices&lt;/strong&gt;,
+and how it relates to &lt;strong&gt;Bitcoin &amp;ldquo;seed phrases&amp;rdquo;&lt;/strong&gt;&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;</summary>
           <content type="html"><![CDATA[<p><img loading="lazy" src="password_strength.png#center" alt="Password Meme"  />
 </p>
 <blockquote>
@@ -1323,10 +1380,17 @@ They were created to be easy to use with 6-sided dice.&#160;<a href="#fnref:5" c
         <id>https://storopoli.io/2024-02-05-crypto-basics/</id>
         <published>2024-02-05T18:53:28-03:00</published>
         <updated>2024-04-15T09:24:31-03:00</updated>
-        <summary type="html">Euclid&amp;rsquo;s one-way function
-Warning: This post has KaTeX enabled, so if you want to view the rendered math formulas, you&amp;rsquo;ll have to unfortunately enable JavaScript.
-This is the companion post to the cryptography workshop that I gave at a local BitDevs. Let&amp;rsquo;s explore the basics of cryptography. We&amp;rsquo;ll go through the following topics:
-One-way functions Hash functions Public-key cryptography DSA Schnorr Why we don&amp;rsquo;t reuse nonces? Why we can combine Schnorr Signatures and not DSA?</summary>
+        <summary type="html">&lt;figure&gt;
+    &lt;img loading=&#34;lazy&#34; src=&#34;euclid.webp&#34;
+         alt=&#34;Euclid&amp;#39;s one-way function&#34;/&gt; &lt;figcaption&gt;
+            &lt;p&gt;Euclid&amp;rsquo;s one-way function&lt;/p&gt;
+        &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Warning: This post has &lt;a href=&#34;https://katex.org/&#34;&gt;KaTeX&lt;/a&gt; enabled,
+so if you want to view the rendered math formulas,
+you&amp;rsquo;ll have to unfortunately enable JavaScript.&lt;/p&gt;</summary>
           <content type="html"><![CDATA[<figure>
     <img loading="lazy" src="euclid.webp"
          alt="Euclid&#39;s one-way function"/> <figcaption>
@@ -1569,73 +1633,73 @@ Below we have a table of all the results of the following operation</p>
 <p>for every possible value of $x$.
 As you&rsquo;ve guessed right this is the $\mathbb{Z}_7$ finite field.</p>
 <table>
-<thead>
-<tr>
-<th style="text-align:center">$b$</th>
-<th style="text-align:center">$b^1 \mod 7$</th>
-<th style="text-align:center">$b^2 \mod 7$</th>
-<th style="text-align:center">$b^3 \mod 7$</th>
-<th style="text-align:center">$b^4 \mod 7$</th>
-<th style="text-align:center">$b^5 \mod 7$</th>
-<th style="text-align:center">$b^6 \mod 7$</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">$1$</td>
-<td style="text-align:center">$1$</td>
-<td style="text-align:center">$1$</td>
-<td style="text-align:center">$1$</td>
-<td style="text-align:center">$1$</td>
-<td style="text-align:center">$1$</td>
-<td style="text-align:center">$1$</td>
-</tr>
-<tr>
-<td style="text-align:center">$2$</td>
-<td style="text-align:center">$2$</td>
-<td style="text-align:center">$4$</td>
-<td style="text-align:center">$1$</td>
-<td style="text-align:center">$2$</td>
-<td style="text-align:center">$4$</td>
-<td style="text-align:center">$1$</td>
-</tr>
-<tr>
-<td style="text-align:center">$3$</td>
-<td style="text-align:center">$3$</td>
-<td style="text-align:center">$2$</td>
-<td style="text-align:center">$6$</td>
-<td style="text-align:center">$4$</td>
-<td style="text-align:center">$5$</td>
-<td style="text-align:center">$1$</td>
-</tr>
-<tr>
-<td style="text-align:center">$4$</td>
-<td style="text-align:center">$4$</td>
-<td style="text-align:center">$2$</td>
-<td style="text-align:center">$1$</td>
-<td style="text-align:center">$4$</td>
-<td style="text-align:center">$2$</td>
-<td style="text-align:center">$1$</td>
-</tr>
-<tr>
-<td style="text-align:center">$5$</td>
-<td style="text-align:center">$5$</td>
-<td style="text-align:center">$4$</td>
-<td style="text-align:center">$6$</td>
-<td style="text-align:center">$2$</td>
-<td style="text-align:center">$3$</td>
-<td style="text-align:center">$1$</td>
-</tr>
-<tr>
-<td style="text-align:center">$6$</td>
-<td style="text-align:center">$6$</td>
-<td style="text-align:center">$1$</td>
-<td style="text-align:center">$6$</td>
-<td style="text-align:center">$1$</td>
-<td style="text-align:center">$1$</td>
-<td style="text-align:center">$1$</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: center">$b$</th>
+          <th style="text-align: center">$b^1 \mod 7$</th>
+          <th style="text-align: center">$b^2 \mod 7$</th>
+          <th style="text-align: center">$b^3 \mod 7$</th>
+          <th style="text-align: center">$b^4 \mod 7$</th>
+          <th style="text-align: center">$b^5 \mod 7$</th>
+          <th style="text-align: center">$b^6 \mod 7$</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: center">$1$</td>
+          <td style="text-align: center">$1$</td>
+          <td style="text-align: center">$1$</td>
+          <td style="text-align: center">$1$</td>
+          <td style="text-align: center">$1$</td>
+          <td style="text-align: center">$1$</td>
+          <td style="text-align: center">$1$</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">$2$</td>
+          <td style="text-align: center">$2$</td>
+          <td style="text-align: center">$4$</td>
+          <td style="text-align: center">$1$</td>
+          <td style="text-align: center">$2$</td>
+          <td style="text-align: center">$4$</td>
+          <td style="text-align: center">$1$</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">$3$</td>
+          <td style="text-align: center">$3$</td>
+          <td style="text-align: center">$2$</td>
+          <td style="text-align: center">$6$</td>
+          <td style="text-align: center">$4$</td>
+          <td style="text-align: center">$5$</td>
+          <td style="text-align: center">$1$</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">$4$</td>
+          <td style="text-align: center">$4$</td>
+          <td style="text-align: center">$2$</td>
+          <td style="text-align: center">$1$</td>
+          <td style="text-align: center">$4$</td>
+          <td style="text-align: center">$2$</td>
+          <td style="text-align: center">$1$</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">$5$</td>
+          <td style="text-align: center">$5$</td>
+          <td style="text-align: center">$4$</td>
+          <td style="text-align: center">$6$</td>
+          <td style="text-align: center">$2$</td>
+          <td style="text-align: center">$3$</td>
+          <td style="text-align: center">$1$</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">$6$</td>
+          <td style="text-align: center">$6$</td>
+          <td style="text-align: center">$1$</td>
+          <td style="text-align: center">$6$</td>
+          <td style="text-align: center">$1$</td>
+          <td style="text-align: center">$1$</td>
+          <td style="text-align: center">$1$</td>
+      </tr>
+  </tbody>
 </table>
 <p>You see that something interesting is happening here.
 For specific values of $b$, such as $b = 3$, and $b = 5$, we are able to <strong>generate the whole finite field</strong>.
@@ -1915,7 +1979,18 @@ You can find more in BIPS
         <id>https://storopoli.io/2024-01-30-sudoku/</id>
         <published>2024-01-30T08:57:33Z</published>
         <updated>2024-04-10T08:57:32-03:00</updated>
-        <summary type="html">It all started when I had to accompany my mom to the hospital. It was just a routine checkup, but I had to wait for a few hours. I brought my laptop with me, since they have good WiFi and I could work on my projects. Then I realized that my mom was playing a Sudoku1 game on her phone. I couln&amp;rsquo;t help but notice that the game was full of ads and it was asking for a lot of permissions, like location and sensor data.</summary>
+        <summary type="html">&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;rust_webdev_meme.jpg#center&#34; alt=&#34;rust webdev meme&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;It all started when I had to accompany my mom to the hospital.
+It was just a routine checkup, but I had to wait for a few hours.
+I brought my laptop with me, since they have good WiFi and I could work on my projects.
+Then I realized that my mom was playing a &lt;a href=&#34;https://en.wikipedia.org/wiki/Sudoku&#34;&gt;Sudoku&lt;/a&gt;&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;
+game on her phone.
+I couln&amp;rsquo;t help but notice that the game was full of ads and it was asking for a lot of permissions,
+like location and sensor data.
+So I decided to make a &lt;strong&gt;Sudoku game for her, without ads or using any permission&lt;/strong&gt;.
+It wouldn&amp;rsquo;t even need to ask for the blessing of Google or &lt;a href=&#34;https://youtu.be/XHVxm12NbrY&#34;&gt;Tim Apple&lt;/a&gt;
+since it was a Progressive Web App (PWA) and it would work offline.&lt;/p&gt;</summary>
           <content type="html"><![CDATA[<p><img loading="lazy" src="rust_webdev_meme.jpg#center" alt="rust webdev meme"  />
 </p>
 <p>It all started when I had to accompany my mom to the hospital.
@@ -2241,9 +2316,25 @@ Just add <code>pedantic = &quot;deny&quot;</code> inside your <code>Cargo.toml</
         <id>https://storopoli.io/2024-01-14-htmx/</id>
         <published>2024-01-14T06:13:19-03:00</published>
         <updated>2024-04-10T08:57:32-03:00</updated>
-        <summary type="html">Warning: This post has mermaid.js enabled, so if you want to view the rendered diagrams, you&amp;rsquo;ll have to unfortunately enable JavaScript.
-I love to learn new things and I&amp;rsquo;m passionate about Stoic philosophy. So, when I acquired the domain stoicquotes.io1, I&amp;rsquo;ve decided to give htmx a try.
-What is htmx? htmx is a small JavaScript library that allows you to enhance your HTML with attributes to perform AJAX (Asynchronous JavaScript and XML) without writing JavaScript2.</summary>
+        <summary type="html">&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;bellcurve.png#center&#34; alt=&#34;htmx bell curve&#34;  /&gt;
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Warning: This post has &lt;a href=&#34;https://mermaid.js.org&#34;&gt;&lt;code&gt;mermaid.js&lt;/code&gt;&lt;/a&gt; enabled,
+so if you want to view the rendered diagrams,
+you&amp;rsquo;ll have to unfortunately enable JavaScript.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;I love to learn new things and I&amp;rsquo;m passionate about Stoic philosophy.
+So, when I acquired the domain
+&lt;a href=&#34;https://stoicquotes.io&#34;&gt;&lt;code&gt;stoicquotes.io&lt;/code&gt;&lt;/a&gt;&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;,
+I&amp;rsquo;ve decided to give &lt;a href=&#34;https://htmx.org&#34;&gt;&lt;code&gt;htmx&lt;/code&gt;&lt;/a&gt; a try.&lt;/p&gt;
+&lt;h2 id=&#34;what-is-htmx&#34;&gt;What is &lt;code&gt;htmx&lt;/code&gt;?&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;htmx&lt;/code&gt;&lt;/strong&gt; is a small JavaScript library that allows you to enhance your HTML with
+attributes to perform AJAX (Asynchronous JavaScript and XML) without writing
+JavaScript&lt;sup id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;. It focuses on extending HTML by adding custom attributes
+that describe how to perform common dynamic web page behaviors like partial page
+updates, form submission, etc. &lt;code&gt;htmx&lt;/code&gt; is designed to be easy to use, requiring
+minimal JavaScript knowledge, so that you can add interactivity&lt;sup id=&#34;fnref:3&#34;&gt;&lt;a href=&#34;#fn:3&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;3&lt;/a&gt;&lt;/sup&gt; to web pages
+with just HTML.&lt;/p&gt;</summary>
           <content type="html"><![CDATA[<p><img loading="lazy" src="bellcurve.png#center" alt="htmx bell curve"  />
 </p>
 <blockquote>
@@ -2505,8 +2596,21 @@ Most notoriously is <a href="https://julialang.org">Julia</a> and
         <id>https://storopoli.io/2023-12-04-bayesian_models_ci/</id>
         <published>2023-12-04T17:43:03-03:00</published>
         <updated>2024-04-10T08:57:32-03:00</updated>
-        <summary type="html">I have an open access and open source1 graduate-level course on Bayesian statistics. It is available in GitHub through the repo storopoli/Bayesian-Statistics. I&amp;rsquo;ve taught it many times and every time was such a joy. It is composed of:
-a set of 300+ slides2 covering the theoretical part Stan3 models Turing.jl4 models Now and then I receive emails from someone saying that the materials helped them to understand Bayesian statistics. These kind messages really make my day, and that&amp;rsquo;s why I strive to keep the content up-to-date and relevant.</summary>
+        <summary type="html">&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;bayesian-models-go-brrrrr.png#center&#34; alt=&#34;bayesian-models-go-brrrrr&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;I have an open access and open source&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt; graduate-level course on Bayesian statistics.
+It is available in GitHub through the repo &lt;a href=&#34;https://github.com/storopoli/Bayesian-Statistics&#34;&gt;&lt;code&gt;storopoli/Bayesian-Statistics&lt;/code&gt;&lt;/a&gt;.
+I&amp;rsquo;ve taught it many times and every time was such a joy.
+It is composed of:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;a set of 300+ slides&lt;sup id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt; covering the theoretical part&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://mc-stan.org&#34;&gt;Stan&lt;/a&gt;&lt;sup id=&#34;fnref:3&#34;&gt;&lt;a href=&#34;#fn:3&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;3&lt;/a&gt;&lt;/sup&gt; models&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://turinglang.org&#34;&gt;Turing.jl&lt;/a&gt;&lt;sup id=&#34;fnref:4&#34;&gt;&lt;a href=&#34;#fn:4&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;4&lt;/a&gt;&lt;/sup&gt; models&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Now and then I receive emails from someone saying that the materials helped
+them to understand Bayesian statistics.
+These kind messages really make my day, and that&amp;rsquo;s why I strive to keep
+the content up-to-date and relevant.&lt;/p&gt;</summary>
           <content type="html"><![CDATA[<p><img loading="lazy" src="bayesian-models-go-brrrrr.png#center" alt="bayesian-models-go-brrrrr"  />
 </p>
 <p>I have an open access and open source<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> graduate-level course on Bayesian statistics.
@@ -3009,9 +3113,21 @@ and these tests commonly take place in a cloud machine.&#160;<a href="#fnref:5" 
         <id>https://storopoli.io/2023-11-28-zero_cost_abstractions/</id>
         <published>2023-11-28T18:19:36-03:00</published>
         <updated>2024-04-10T08:57:32-03:00</updated>
-        <summary type="html">In programming language circles there&amp;rsquo;s a recently trend of discussing a concept called zero-cost abstractions: the ability to use higher-levels abstractions without suffering any loss of performance.
-Zero-cost abstractions allows you to write performant code without having to give up a single drop of convenience and expressiveness:
-You want for-loops? You can have it. Generics? Yeah, why not? Data structures? Sure, keep&amp;rsquo;em coming. Async operations? You bet ya! Multi-threading? Hell yes!</summary>
+        <summary type="html">&lt;p&gt;In programming language circles there&amp;rsquo;s a recently trend of discussing a concept
+called &lt;strong&gt;zero-cost abstractions&lt;/strong&gt;:
+the ability to use higher-levels abstractions without suffering any loss of performance.&lt;/p&gt;
+&lt;p&gt;Zero-cost abstractions allows you to write performant code without having to
+give up a single drop of convenience and expressiveness:&lt;/p&gt;
+&lt;p&gt;You want for-loops?
+&lt;em&gt;You can have it&lt;/em&gt;.
+Generics?
+&lt;em&gt;Yeah, why not&lt;/em&gt;?
+Data structures?
+&lt;em&gt;Sure, keep&amp;rsquo;em coming&lt;/em&gt;.
+Async operations?
+&lt;em&gt;You bet ya&lt;/em&gt;!
+Multi-threading?
+&lt;em&gt;Hell yes&lt;/em&gt;!&lt;/p&gt;</summary>
           <content type="html"><![CDATA[<p>In programming language circles there&rsquo;s a recently trend of discussing a concept
 called <strong>zero-cost abstractions</strong>:
 the ability to use higher-levels abstractions without suffering any loss of performance.</p>
@@ -3358,8 +3474,28 @@ Yes, I am talking to you <a href="https://github.com/numpy/numpy/blob/06d7bdfbb5
         <id>https://storopoli.io/2023-11-23-lindley_paradox/</id>
         <published>2023-11-22T07:06:59-03:00</published>
         <updated>2024-04-10T08:57:32-03:00</updated>
-        <summary type="html">Warning: This post has KaTeX enabled, so if you want to view the rendered math formulas, you&amp;rsquo;ll have to unfortunately enable JavaScript.
-Dennis Lindley, one of my many heroes, was an English statistician, decision theorist and leading advocate of Bayesian statistics. He published a pivotal book, Understanding Uncertainty, that changed my view on what is and how to handle uncertainty in a coherent1 way. He is responsible for one of my favorites quotes: &amp;ldquo;Inside every non-Bayesian there is a Bayesian struggling to get out&amp;rdquo;; and one of my favorite heuristics around prior probabilities: Cromwell&amp;rsquo;s Rule2.</summary>
+        <summary type="html">&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;lindley.jpg#center&#34; alt=&#34;Dennis Lindley&#34;  /&gt;
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Warning: This post has &lt;a href=&#34;https://katex.org/&#34;&gt;KaTeX&lt;/a&gt; enabled,
+so if you want to view the rendered math formulas,
+you&amp;rsquo;ll have to unfortunately enable JavaScript.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Dennis_Lindley&#34;&gt;Dennis Lindley&lt;/a&gt;,
+one of my many heroes,
+was an English statistician,
+decision theorist and leading advocate of Bayesian statistics.
+He published a pivotal book,
+&lt;a href=&#34;https://onlinelibrary.wiley.com/doi/book/10.1002/9781118650158&#34;&gt;Understanding Uncertainty&lt;/a&gt;,
+that changed my view on what is and how to handle uncertainty in a
+coherent&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt; way.
+He is responsible for one of my favorites quotes:
+&amp;ldquo;Inside every non-Bayesian there is a Bayesian struggling to get out&amp;rdquo;;
+and one of my favorite heuristics around prior probabilities:
+&lt;a href=&#34;https://en.wikipedia.org/wiki/Cromwell%27s_rule&#34;&gt;Cromwell&amp;rsquo;s Rule&lt;/a&gt;&lt;sup id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;.
+Lindley predicted in 1975 that &amp;ldquo;Bayesian methods will indeed become pervasive,
+enabled by the development of powerful computing facilities&amp;rdquo; (Lindley, 1975).
+You can find more about all of Lindley&amp;rsquo;s achievements in his &lt;a href=&#34;https://www.theguardian.com/science/2014/mar/16/dennis-lindley&#34;&gt;obituary&lt;/a&gt;.&lt;/p&gt;</summary>
           <content type="html"><![CDATA[<p><img loading="lazy" src="lindley.jpg#center" alt="Dennis Lindley"  />
 </p>
 <blockquote>
@@ -3711,8 +3847,20 @@ published scientific studies suffer from this flaw.&#160;<a href="#fnref:8" clas
         <id>https://storopoli.io/2023-11-20-word_embeddings/</id>
         <published>2023-11-19T22:49:51-03:00</published>
         <updated>2024-02-11T15:55:02-03:00</updated>
-        <summary type="html">Warning: This post has KaTeX enabled, so if you want to view the rendered math formulas, you&amp;rsquo;ll have to unfortunately enable JavaScript.
-I wish I could go back in time and tell my younger self that you can make a machine understand human language with trigonometry. That would definitely have made me more aware and interested in the subject during my school years. I would have looked at triangles, circles, sines, cosines, and tangents in a whole different way.</summary>
+        <summary type="html">&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;euclid.jpg#center&#34; alt=&#34;Euclid of Alexandria&#34;  /&gt;
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Warning: This post has &lt;a href=&#34;https://katex.org/&#34;&gt;KaTeX&lt;/a&gt; enabled,
+so if you want to view the rendered math formulas,
+you&amp;rsquo;ll have to unfortunately enable JavaScript.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;I wish I could go back in time and tell my younger self
+that you can make a machine understand human language with trigonometry.
+That would definitely have made me more aware and interested in the
+subject during my school years.
+I would have looked at triangles, circles, sines, cosines, and tangents
+in a whole different way.
+Alas, better late than never.&lt;/p&gt;</summary>
           <content type="html"><![CDATA[<p><img loading="lazy" src="euclid.jpg#center" alt="Euclid of Alexandria"  />
 </p>
 <blockquote>
@@ -3887,7 +4035,17 @@ and <a href="https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8
         <id>https://storopoli.io/2023-11-10-2023-11-13-soydev/</id>
         <published>2023-11-13T00:00:00Z</published>
         <updated>2024-02-11T15:55:02-03:00</updated>
-        <summary type="html">Let&amp;rsquo;s dive into the concept of &amp;ldquo;soydev&amp;rdquo;, a term often used pejoratively to describe developers with a superficial understanding of technology. I provide my definition of what soydev is, why is bad, and how it came to be. To counteract soydev inclinations, I propose an abstract approach centered on timeless concepts, protocols, and first principles, fostering a mindset of exploration, resilience in the face of failure, and an insatiable hunger for knowledge.</summary>
+        <summary type="html">&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;soydev.jpg&#34; alt=&#34;soydev meme&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;Let&amp;rsquo;s dive into the &lt;strong&gt;concept of &amp;ldquo;soydev&amp;rdquo;&lt;/strong&gt;,
+a term often used pejoratively to describe developers with
+a superficial understanding of technology.
+I provide my definition of what soydev is,
+why is bad, and how it came to be.
+To counteract soydev inclinations,
+I propose an abstract approach centered on timeless concepts, protocols,
+and first principles, fostering a mindset of exploration,
+resilience in the face of failure, and an insatiable hunger for knowledge.&lt;/p&gt;</summary>
           <content type="html"><![CDATA[<p><img loading="lazy" src="soydev.jpg" alt="soydev meme"  />
 </p>
 <p>Let&rsquo;s dive into the <strong>concept of &ldquo;soydev&rdquo;</strong>,

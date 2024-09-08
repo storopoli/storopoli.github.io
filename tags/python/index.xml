@@ -5,7 +5,7 @@
   <link rel="self" href="https://storopoli.io/tags/python/index.xml" />
   <subtitle>Recent content in Python on Jose Storopoli, PhD</subtitle>
   <id>https://storopoli.io/tags/python/</id>
-  <generator uri="http://gohugo.io" version="0.133.1">Hugo</generator>
+  <generator uri="http://gohugo.io" version="0.134.1">Hugo</generator>
   <language>en-us</language>
   <updated>2023-11-28T18:19:36-03:00</updated>
   <author>
@@ -19,9 +19,21 @@
         <id>https://storopoli.io/2023-11-28-zero_cost_abstractions/</id>
         <published>2023-11-28T18:19:36-03:00</published>
         <updated>2024-04-10T08:57:32-03:00</updated>
-        <summary type="html">In programming language circles there&amp;rsquo;s a recently trend of discussing a concept called zero-cost abstractions: the ability to use higher-levels abstractions without suffering any loss of performance.
-Zero-cost abstractions allows you to write performant code without having to give up a single drop of convenience and expressiveness:
-You want for-loops? You can have it. Generics? Yeah, why not? Data structures? Sure, keep&amp;rsquo;em coming. Async operations? You bet ya! Multi-threading? Hell yes!</summary>
+        <summary type="html">&lt;p&gt;In programming language circles there&amp;rsquo;s a recently trend of discussing a concept
+called &lt;strong&gt;zero-cost abstractions&lt;/strong&gt;:
+the ability to use higher-levels abstractions without suffering any loss of performance.&lt;/p&gt;
+&lt;p&gt;Zero-cost abstractions allows you to write performant code without having to
+give up a single drop of convenience and expressiveness:&lt;/p&gt;
+&lt;p&gt;You want for-loops?
+&lt;em&gt;You can have it&lt;/em&gt;.
+Generics?
+&lt;em&gt;Yeah, why not&lt;/em&gt;?
+Data structures?
+&lt;em&gt;Sure, keep&amp;rsquo;em coming&lt;/em&gt;.
+Async operations?
+&lt;em&gt;You bet ya&lt;/em&gt;!
+Multi-threading?
+&lt;em&gt;Hell yes&lt;/em&gt;!&lt;/p&gt;</summary>
           <content type="html"><![CDATA[<p>In programming language circles there&rsquo;s a recently trend of discussing a concept
 called <strong>zero-cost abstractions</strong>:
 the ability to use higher-levels abstractions without suffering any loss of performance.</p>

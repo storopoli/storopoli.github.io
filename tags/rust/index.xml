@@ -5,7 +5,7 @@
   <link rel="self" href="https://storopoli.io/tags/rust/index.xml" />
   <subtitle>Recent content in Rust on Jose Storopoli, PhD</subtitle>
   <id>https://storopoli.io/tags/rust/</id>
-  <generator uri="http://gohugo.io" version="0.133.1">Hugo</generator>
+  <generator uri="http://gohugo.io" version="0.134.1">Hugo</generator>
   <language>en-us</language>
   <updated>2024-03-23T14:00:16-03:00</updated>
   <author>
@@ -18,10 +18,20 @@
         <link rel="alternate" href="https://storopoli.io/2024-03-23-dead-man-switch/" />
         <id>https://storopoli.io/2024-03-23-dead-man-switch/</id>
         <published>2024-03-23T14:00:16-03:00</published>
-        <updated>2024-04-10T08:57:32-03:00</updated>
-        <summary type="html">Sherlock Holmes fights Moriarty at the Reichenbach Falls Got state secrets? Or maybe 50 BTC? Don&amp;rsquo;t trust your government or lawyers? And you want to make sure that if you die, your secrets are passed on? Don&amp;rsquo;t worry, I got you covered. In this post, I&amp;rsquo;ll introduce you to a simple no-bullshit dead man&amp;rsquo;s switch written in Rust.
-Dead Man&amp;rsquo;s Switch According to Wikipedia:
-A dead man&amp;rsquo;s switch is a switch that is designed to be activated or deactivated if the human operator becomes incapacitated, such as through death, loss of consciousness, or being bodily removed from control.</summary>
+        <updated>2024-09-08T19:00:51-03:00</updated>
+        <summary type="html">&lt;figure&gt;
+    &lt;img loading=&#34;lazy&#34; src=&#34;the_final_problem.png#center&#34;
+         alt=&#34;Sherlock Holmes fights Moriarty at the Reichenbach Falls&#34; width=&#34;300&#34;/&gt; &lt;figcaption&gt;
+            Sherlock Holmes fights Moriarty at the Reichenbach Falls
+        &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Got state secrets? Or maybe 50 BTC?
+Don&amp;rsquo;t trust your government or lawyers?
+And you want to make sure that if you die, your secrets are passed on?
+Don&amp;rsquo;t worry, I got you covered.
+In this post,
+I&amp;rsquo;ll introduce you to a &lt;strong&gt;simple no-bullshit dead man&amp;rsquo;s switch&lt;/strong&gt; written in Rust.&lt;/p&gt;</summary>
           <content type="html"><![CDATA[<figure>
     <img loading="lazy" src="the_final_problem.png#center"
          alt="Sherlock Holmes fights Moriarty at the Reichenbach Falls" width="300"/> <figcaption>
@@ -93,8 +103,6 @@ which means you can use it for free as long as you share your code.
 The package is also available on <a href="https://crates.io/crates/dead-man-switch">crates.io</a>,
 Rust&rsquo;s package manager.</p>
 <p>DMS is very easy to use and deploy.
-I&rsquo;ve made an extra effort to make sure that it builds with Rust version 1.63.0,
-which is the current Debian stable Rust version<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>.
 There are several alternatives on how to deploy it.
 Here are the two easiest ways:</p>
 <ol>
@@ -107,11 +115,11 @@ Here are the two easiest ways:</p>
 </span></span></code></pre></div></li>
 <li>
 <p>Install the DMS:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">cargo install dead-man-switch
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">cargo install dead-man-switch-tui
 </span></span></code></pre></div></li>
 <li>
 <p>Run the app with:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">dead-man-switch
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">dead-man-switch-tui
 </span></span></code></pre></div></li>
 </ol>
 </li>
@@ -120,6 +128,15 @@ Here are the two easiest ways:</p>
 <code>nix run github:storopoli/dead-man-switch</code>.</p>
 </li>
 </ol>
+<blockquote>
+<p><strong>Note</strong>: I&rsquo;ve also released a Web Interface for the dead-man-switch.
+You can easily deploy it using Docker or Docker Compose.
+Check out the <a href="https://github.com/storopoli/dead-man-switch">GitHub repository</a>.</p>
+<p>I&rsquo;ve also launched a <a href="https://start9.com">StartOS</a> app with a simple interface
+for configuring and checking in with the Dead Man&rsquo;s Switch.
+Check out the instructions on the
+<a href="https://github.com/storopoli/dead-man-switch-startos"><code>dead-man-switch-startos</code> repository</a>.</p>
+</blockquote>
 <p>Once, you successfully run the app, you will see the following output:</p>
 <figure>
     <img loading="lazy" src="app_first_run.png#center"
@@ -146,7 +163,7 @@ config file location:</p>
 <p>In this example, I am running it from a Debian server as the <code>root</code> user.
 Hence, the configuration file is at <code>/root/.config/deadman/config.toml</code>.</p>
 <p>If you open the configuration file, you will see the following content.
-I&rsquo;ve added some default values for inspiration<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>:</p>
+I&rsquo;ve added some default values for inspiration<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="nx">username</span> <span class="p">=</span> <span class="s2">&#34;me@example.com&#34;</span>
 </span></span><span class="line"><span class="cl"><span class="nx">password</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
 </span></span><span class="line"><span class="cl"><span class="nx">smtp_server</span> <span class="p">=</span> <span class="s2">&#34;smtp.example.com&#34;</span>
@@ -243,6 +260,10 @@ handle optional attachments.</li>
 <li><a href="https://crates.io/crates/chrono"><code>chrono</code></a> to handle timers and date/time
 formatting.</li>
 </ul>
+<blockquote>
+<p><strong>Note</strong>: the Dead Man&rsquo;s Switch Web Interface uses <a href="https://github.com/tokio-rs/axum"><code>axum</code></a>,
+<a href="https://djc.github.io/askama/"><code>askama</code></a> and <a href="https://github.com/tower-rs/tower"><code>tower</code></a>.</p>
+</blockquote>
 <p>The app is divided into a library and a binary.
 The library is contained in the <code>lib.rs</code> file and the binary in the <code>main.rs</code>,
 both under the <code>src/</code> directory.
@@ -281,6 +302,11 @@ Probably the way he would have used it is by:</p>
 <li>Disallow password authentication and only allow key-based authentication.</li>
 <li>Encrypt everything in the case the server is seized.</li>
 </ol>
+<blockquote>
+<p><strong>Note</strong>: Sherlock could also use a coreboot non-KYC piece of hardware that
+runs StartOS and the newly launched Dead Man&rsquo;s Switch StartOS app that already
+uses an onion service for handling the check-ins via Tor.</p>
+</blockquote>
 <h2 id="license">License</h2>
 <p>This post is licensed under <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International</a>.</p>
 <p><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img loading="lazy" src="https://licensebuttons.net/l/by-nc-sa/4.0/88x31.png" alt="CC BY-NC-SA 4.0"  />
@@ -289,13 +315,8 @@ Probably the way he would have used it is by:</p>
 <hr>
 <ol>
 <li id="fn:1">
-<p>Please check
-<a href="https://packages.debian.org/search?keywords=rustc">Debian&rsquo;s <code>rustc</code> package</a>
-for more details.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
-</li>
-<li id="fn:2">
 <p>Please don&rsquo;t go to bench 137 in Central Park, NY.
-That was just an example.&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+That was just an example.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 </ol>
 </div>
@@ -307,7 +328,18 @@ That was just an example.&#160;<a href="#fnref:2" class="footnote-backref" role=
         <id>https://storopoli.io/2024-01-30-sudoku/</id>
         <published>2024-01-30T08:57:33Z</published>
         <updated>2024-04-10T08:57:32-03:00</updated>
-        <summary type="html">It all started when I had to accompany my mom to the hospital. It was just a routine checkup, but I had to wait for a few hours. I brought my laptop with me, since they have good WiFi and I could work on my projects. Then I realized that my mom was playing a Sudoku1 game on her phone. I couln&amp;rsquo;t help but notice that the game was full of ads and it was asking for a lot of permissions, like location and sensor data.</summary>
+        <summary type="html">&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;rust_webdev_meme.jpg#center&#34; alt=&#34;rust webdev meme&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;It all started when I had to accompany my mom to the hospital.
+It was just a routine checkup, but I had to wait for a few hours.
+I brought my laptop with me, since they have good WiFi and I could work on my projects.
+Then I realized that my mom was playing a &lt;a href=&#34;https://en.wikipedia.org/wiki/Sudoku&#34;&gt;Sudoku&lt;/a&gt;&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;
+game on her phone.
+I couln&amp;rsquo;t help but notice that the game was full of ads and it was asking for a lot of permissions,
+like location and sensor data.
+So I decided to make a &lt;strong&gt;Sudoku game for her, without ads or using any permission&lt;/strong&gt;.
+It wouldn&amp;rsquo;t even need to ask for the blessing of Google or &lt;a href=&#34;https://youtu.be/XHVxm12NbrY&#34;&gt;Tim Apple&lt;/a&gt;
+since it was a Progressive Web App (PWA) and it would work offline.&lt;/p&gt;</summary>
           <content type="html"><![CDATA[<p><img loading="lazy" src="rust_webdev_meme.jpg#center" alt="rust webdev meme"  />
 </p>
 <p>It all started when I had to accompany my mom to the hospital.
@@ -633,9 +665,25 @@ Just add <code>pedantic = &quot;deny&quot;</code> inside your <code>Cargo.toml</
         <id>https://storopoli.io/2024-01-14-htmx/</id>
         <published>2024-01-14T06:13:19-03:00</published>
         <updated>2024-04-10T08:57:32-03:00</updated>
-        <summary type="html">Warning: This post has mermaid.js enabled, so if you want to view the rendered diagrams, you&amp;rsquo;ll have to unfortunately enable JavaScript.
-I love to learn new things and I&amp;rsquo;m passionate about Stoic philosophy. So, when I acquired the domain stoicquotes.io1, I&amp;rsquo;ve decided to give htmx a try.
-What is htmx? htmx is a small JavaScript library that allows you to enhance your HTML with attributes to perform AJAX (Asynchronous JavaScript and XML) without writing JavaScript2.</summary>
+        <summary type="html">&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;bellcurve.png#center&#34; alt=&#34;htmx bell curve&#34;  /&gt;
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Warning: This post has &lt;a href=&#34;https://mermaid.js.org&#34;&gt;&lt;code&gt;mermaid.js&lt;/code&gt;&lt;/a&gt; enabled,
+so if you want to view the rendered diagrams,
+you&amp;rsquo;ll have to unfortunately enable JavaScript.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;I love to learn new things and I&amp;rsquo;m passionate about Stoic philosophy.
+So, when I acquired the domain
+&lt;a href=&#34;https://stoicquotes.io&#34;&gt;&lt;code&gt;stoicquotes.io&lt;/code&gt;&lt;/a&gt;&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;,
+I&amp;rsquo;ve decided to give &lt;a href=&#34;https://htmx.org&#34;&gt;&lt;code&gt;htmx&lt;/code&gt;&lt;/a&gt; a try.&lt;/p&gt;
+&lt;h2 id=&#34;what-is-htmx&#34;&gt;What is &lt;code&gt;htmx&lt;/code&gt;?&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;htmx&lt;/code&gt;&lt;/strong&gt; is a small JavaScript library that allows you to enhance your HTML with
+attributes to perform AJAX (Asynchronous JavaScript and XML) without writing
+JavaScript&lt;sup id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;. It focuses on extending HTML by adding custom attributes
+that describe how to perform common dynamic web page behaviors like partial page
+updates, form submission, etc. &lt;code&gt;htmx&lt;/code&gt; is designed to be easy to use, requiring
+minimal JavaScript knowledge, so that you can add interactivity&lt;sup id=&#34;fnref:3&#34;&gt;&lt;a href=&#34;#fn:3&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;3&lt;/a&gt;&lt;/sup&gt; to web pages
+with just HTML.&lt;/p&gt;</summary>
           <content type="html"><![CDATA[<p><img loading="lazy" src="bellcurve.png#center" alt="htmx bell curve"  />
 </p>
 <blockquote>
@@ -897,9 +945,21 @@ Most notoriously is <a href="https://julialang.org">Julia</a> and
         <id>https://storopoli.io/2023-11-28-zero_cost_abstractions/</id>
         <published>2023-11-28T18:19:36-03:00</published>
         <updated>2024-04-10T08:57:32-03:00</updated>
-        <summary type="html">In programming language circles there&amp;rsquo;s a recently trend of discussing a concept called zero-cost abstractions: the ability to use higher-levels abstractions without suffering any loss of performance.
-Zero-cost abstractions allows you to write performant code without having to give up a single drop of convenience and expressiveness:
-You want for-loops? You can have it. Generics? Yeah, why not? Data structures? Sure, keep&amp;rsquo;em coming. Async operations? You bet ya! Multi-threading? Hell yes!</summary>
+        <summary type="html">&lt;p&gt;In programming language circles there&amp;rsquo;s a recently trend of discussing a concept
+called &lt;strong&gt;zero-cost abstractions&lt;/strong&gt;:
+the ability to use higher-levels abstractions without suffering any loss of performance.&lt;/p&gt;
+&lt;p&gt;Zero-cost abstractions allows you to write performant code without having to
+give up a single drop of convenience and expressiveness:&lt;/p&gt;
+&lt;p&gt;You want for-loops?
+&lt;em&gt;You can have it&lt;/em&gt;.
+Generics?
+&lt;em&gt;Yeah, why not&lt;/em&gt;?
+Data structures?
+&lt;em&gt;Sure, keep&amp;rsquo;em coming&lt;/em&gt;.
+Async operations?
+&lt;em&gt;You bet ya&lt;/em&gt;!
+Multi-threading?
+&lt;em&gt;Hell yes&lt;/em&gt;!&lt;/p&gt;</summary>
           <content type="html"><![CDATA[<p>In programming language circles there&rsquo;s a recently trend of discussing a concept
 called <strong>zero-cost abstractions</strong>:
 the ability to use higher-levels abstractions without suffering any loss of performance.</p>

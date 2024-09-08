@@ -5,7 +5,7 @@
   <link rel="self" href="https://storopoli.io/tags/javascript/index.xml" />
   <subtitle>Recent content in Javascript on Jose Storopoli, PhD</subtitle>
   <id>https://storopoli.io/tags/javascript/</id>
-  <generator uri="http://gohugo.io" version="0.133.1">Hugo</generator>
+  <generator uri="http://gohugo.io" version="0.134.1">Hugo</generator>
   <language>en-us</language>
   <updated>2024-01-14T06:13:19-03:00</updated>
   <author>
@@ -19,9 +19,25 @@
         <id>https://storopoli.io/2024-01-14-htmx/</id>
         <published>2024-01-14T06:13:19-03:00</published>
         <updated>2024-04-10T08:57:32-03:00</updated>
-        <summary type="html">Warning: This post has mermaid.js enabled, so if you want to view the rendered diagrams, you&amp;rsquo;ll have to unfortunately enable JavaScript.
-I love to learn new things and I&amp;rsquo;m passionate about Stoic philosophy. So, when I acquired the domain stoicquotes.io1, I&amp;rsquo;ve decided to give htmx a try.
-What is htmx? htmx is a small JavaScript library that allows you to enhance your HTML with attributes to perform AJAX (Asynchronous JavaScript and XML) without writing JavaScript2.</summary>
+        <summary type="html">&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;bellcurve.png#center&#34; alt=&#34;htmx bell curve&#34;  /&gt;
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Warning: This post has &lt;a href=&#34;https://mermaid.js.org&#34;&gt;&lt;code&gt;mermaid.js&lt;/code&gt;&lt;/a&gt; enabled,
+so if you want to view the rendered diagrams,
+you&amp;rsquo;ll have to unfortunately enable JavaScript.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;I love to learn new things and I&amp;rsquo;m passionate about Stoic philosophy.
+So, when I acquired the domain
+&lt;a href=&#34;https://stoicquotes.io&#34;&gt;&lt;code&gt;stoicquotes.io&lt;/code&gt;&lt;/a&gt;&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;,
+I&amp;rsquo;ve decided to give &lt;a href=&#34;https://htmx.org&#34;&gt;&lt;code&gt;htmx&lt;/code&gt;&lt;/a&gt; a try.&lt;/p&gt;
+&lt;h2 id=&#34;what-is-htmx&#34;&gt;What is &lt;code&gt;htmx&lt;/code&gt;?&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;htmx&lt;/code&gt;&lt;/strong&gt; is a small JavaScript library that allows you to enhance your HTML with
+attributes to perform AJAX (Asynchronous JavaScript and XML) without writing
+JavaScript&lt;sup id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;. It focuses on extending HTML by adding custom attributes
+that describe how to perform common dynamic web page behaviors like partial page
+updates, form submission, etc. &lt;code&gt;htmx&lt;/code&gt; is designed to be easy to use, requiring
+minimal JavaScript knowledge, so that you can add interactivity&lt;sup id=&#34;fnref:3&#34;&gt;&lt;a href=&#34;#fn:3&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;3&lt;/a&gt;&lt;/sup&gt; to web pages
+with just HTML.&lt;/p&gt;</summary>
           <content type="html"><![CDATA[<p><img loading="lazy" src="bellcurve.png#center" alt="htmx bell curve"  />
 </p>
 <blockquote>

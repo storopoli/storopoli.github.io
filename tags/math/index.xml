@@ -5,7 +5,7 @@
   <link rel="self" href="https://storopoli.io/tags/math/index.xml" />
   <subtitle>Recent content in Math on Jose Storopoli, PhD</subtitle>
   <id>https://storopoli.io/tags/math/</id>
-  <generator uri="http://gohugo.io" version="0.133.1">Hugo</generator>
+  <generator uri="http://gohugo.io" version="0.134.1">Hugo</generator>
   <language>en-us</language>
   <updated>2024-06-22T05:54:46-03:00</updated>
   <author>
@@ -19,9 +19,17 @@
         <id>https://storopoli.io/2024-06-22-von-neumann/</id>
         <published>2024-06-22T05:54:46-03:00</published>
         <updated>2024-06-22T08:29:18-03:00</updated>
-        <summary type="html">Von Neumann&amp;#39;s wartime Los Alamos ID badge photo Warning: This post has KaTeX enabled, so if you want to view the rendered math formulas, you&amp;rsquo;ll have to unfortunately enable JavaScript.
-John von Neumann was a Hungarian-American mathematician. But to define him as a simple mathematician would be an understatement. He is a fucking legend and one of my heroes! He single-handedly:
-proposed an axiomatization of set theory along with a definition of cardinality that remains the standard one in mathematics today.</summary>
+        <summary type="html">&lt;figure&gt;
+    &lt;img loading=&#34;lazy&#34; src=&#34;von_neumann.jpg#center&#34;
+         alt=&#34;Von Neumann&amp;#39;s wartime Los Alamos ID badge photo&#34; width=&#34;300&#34;/&gt; &lt;figcaption&gt;
+            Von Neumann&amp;#39;s wartime Los Alamos ID badge photo
+        &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Warning: This post has &lt;a href=&#34;https://katex.org/&#34;&gt;KaTeX&lt;/a&gt; enabled,
+so if you want to view the rendered math formulas,
+you&amp;rsquo;ll have to unfortunately enable JavaScript.&lt;/p&gt;</summary>
           <content type="html"><![CDATA[<figure>
     <img loading="lazy" src="von_neumann.jpg#center"
          alt="Von Neumann&#39;s wartime Los Alamos ID badge photo" width="300"/> <figcaption>
