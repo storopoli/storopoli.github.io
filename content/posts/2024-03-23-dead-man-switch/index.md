@@ -80,15 +80,8 @@ The package is also available on [crates.io](https://crates.io/crates/dead-man-s
 Rust's package manager.
 
 DMS is very easy to use and deploy.
-I've made an extra effort to make sure that it builds with Rust version 1.63.0,
-which is the current Debian stable Rust version[^debian].
 There are several alternatives on how to deploy it.
 Here are the two easiest ways:
-
-[^debian]:
-    Please check
-    [Debian's `rustc` package](https://packages.debian.org/search?keywords=rustc)
-    for more details.
 
 1. **Building from Source**:
 
@@ -101,17 +94,26 @@ Here are the two easiest ways:
    1. Install the DMS:
 
       ```bash
-      cargo install dead-man-switch
+      cargo install dead-man-switch-tui
       ```
 
    1. Run the app with:
 
       ```bash
-      dead-man-switch
+      dead-man-switch-tui
       ```
 
 1. **Using Nix**. This is the easiest just do
    `nix run github:storopoli/dead-man-switch`.
+
+> **Note**: I've also released a Web Interface for the dead-man-switch.
+> You can easily deploy it using Docker or Docker Compose.
+> Check out the [GitHub repository](https://github.com/storopoli/dead-man-switch).
+>
+> I've also launched a [StartOS](https://start9.com) app with a simple interface
+> for configuring and checking in with the Dead Man's Switch.
+> Check out the instructions on the
+> [`dead-man-switch-startos` repository](https://github.com/storopoli/dead-man-switch-startos).
 
 Once, you successfully run the app, you will see the following output:
 
@@ -257,6 +259,9 @@ attack surface:
 - [`chrono`](https://crates.io/crates/chrono) to handle timers and date/time
   formatting.
 
+> **Note**: the Dead Man's Switch Web Interface uses [`axum`](https://github.com/tokio-rs/axum),
+> [`askama`](https://djc.github.io/askama/) and [`tower`](https://github.com/tower-rs/tower).
+
 The app is divided into a library and a binary.
 The library is contained in the `lib.rs` file and the binary in the `main.rs`,
 both under the `src/` directory.
@@ -302,6 +307,10 @@ Probably the way he would have used it is by:
 1. Change the server's default SSH port to a random one.
 1. Disallow password authentication and only allow key-based authentication.
 1. Encrypt everything in the case the server is seized.
+
+> **Note**: Sherlock could also use a coreboot non-KYC piece of hardware that
+> runs StartOS and the newly launched Dead Man's Switch StartOS app that already
+> uses an onion service for handling the check-ins via Tor.
 
 ## License
 
