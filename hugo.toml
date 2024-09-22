@@ -20,7 +20,7 @@ minifyOutput = true
 [params]
 env = "production"
 title = "Jose Storopoli, PhD"
-description = "I make computers go brrr faster"
+description = "Cypherpunks write code"
 keywords = [
   "cryptography",
   "Bitcoin",
@@ -56,7 +56,7 @@ favicon = "/assets/favicon.svg"
 [params.homeInfoParams]
 enabled = true
 title = "Jose Storopoli, PhD"
-content = "I make computers go brrr faster"
+content = "Cypherpunks write code"
 
 [[params.socialIcons]]
 name = "github"

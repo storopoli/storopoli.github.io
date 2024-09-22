@@ -5,35 +5,31 @@ hidemeta = true
 
 I am a software developer with a PhD and background in
 Computational Statistics.
-I am interested in performant and reliable software.
-In other words, I make computers go brrr faster.
+I primarily work with cryptography,
+zero-knowledge protocols,
+censorship-resistant tools,
+and distributed systems.
 
 In hope of a better future,
-I dedicate my free time to Bitcoin-related projects.
-I contribute to the Rust Bitcoin ecosystem,
-particularly [`rust-bitcoin`](https://rust-bitcoin.org)
-and [Bitcoin Dev Kit (BDK)](https://bitcoindevkit.org).
-I also work full-time at [Alpen Labs](https://alpenlabs.io)
-building Bitcoin-native zero-knowledge rollups.
+I dedicate most of my waking hours
+to [Bitcoin](https://bitcoin.org)-related projects,
+because ["cypherpunks write code"](https://www.activism.net/cypherpunk/manifesto.html)
+and "fix the money, fix the world".
 
-I am a faculty member at the Department of Computer Science at
-[Universidade Nove de Julho (UNINOVE)](https://www.uninove.br).
-I am also an ardent [Bayesian](https://youtu.be/RMNwsdb5VU4).
+If you are in a bad day, grab a curated Stoicism piece of advice at
+[`stoicquotes.io`](https://stoicquotes.io).
 
-I like [Rust](https://rust-lang.org/),
-[Julia](https://julialang.org),
-[Nix](https://nixos.org),
-and [Vim](https://www.vim.org).
+Also, remember that you might be wrong,
+or, [don't use P=0 for your priors](https://en.wikipedia.org/wiki/Cromwell%27s_rule).
+Finally,
+[never attribute to malice that which is adequately explained by stupidity](https://en.wikipedia.org/wiki/Hanlon%27s_razor).
 
-I practice [Stoic Philosophy](https://stoicquotes.io) daily.
-
-I hate [bloatware and the soydev phenomenon](https://storopoli.io/2023-11-10-2023-11-13-soydev/).
-
-Everything that I do is either open source or has a permissive Creative Commons license.
+Everything that I do is either open source
+or has a permissive Creative Commons license.
+"Open source everything".
 
 I don't have social media, since I think they are overrated
 and "they sell your data".
 If you want to contact me, please send an email.
-
 If you want to find out what's recently on my mind,
 check out my [blog](https://storopoli.io/).
