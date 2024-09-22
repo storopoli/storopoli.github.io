@@ -5,7 +5,7 @@
   <link rel="self" href="https://storopoli.io/tags/math/index.xml" />
   <subtitle>Recent content in Math on Jose Storopoli, PhD</subtitle>
   <id>https://storopoli.io/tags/math/</id>
-  <generator uri="http://gohugo.io" version="0.134.1">Hugo</generator>
+  <generator uri="http://gohugo.io" version="0.134.3">Hugo</generator>
   <language>en-us</language>
   <updated>2024-06-22T05:54:46-03:00</updated>
   <author>
@@ -29,7 +29,40 @@
 &lt;blockquote&gt;
 &lt;p&gt;Warning: This post has &lt;a href=&#34;https://katex.org/&#34;&gt;KaTeX&lt;/a&gt; enabled,
 so if you want to view the rendered math formulas,
-you&amp;rsquo;ll have to unfortunately enable JavaScript.&lt;/p&gt;</summary>
+you&amp;rsquo;ll have to unfortunately enable JavaScript.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;John von Neumann was a Hungarian-American mathematician.
+But to define him as a simple mathematician would be an understatement.
+He is a &lt;strong&gt;fucking legend&lt;/strong&gt; and one of my heroes!
+He single-handedly:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;proposed an axiomatization of &lt;a href=&#34;https://en.wikipedia.org/wiki/Von_Neumann%E2%80%93Bernays%E2%80%93G%C3%B6del_set_theory&#34;&gt;set theory&lt;/a&gt;&lt;/strong&gt;
+along with a definition of &lt;a href=&#34;https://en.wikipedia.org/wiki/Von_Neumann_cardinal_assignment&#34;&gt;cardinality&lt;/a&gt;
+that remains the standard one in mathematics today.
+Funny enough he started working on solving the paradoxes
+of set theory while he was only 11 years old!&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;laid the mathematical foundations of quantum mechanics&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;made the atomic bomb possible&lt;/strong&gt; by conceptualizing and designing
+the explosive lenses that were needed to compress the plutonium core
+of the Fat Man weapon that was later dropped on Nagasaki.
+He also invented the term &amp;ldquo;kiloton&amp;rdquo; of TNT as a unit of energy
+released in a nuclear explosion.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;invented the modern computer&lt;/strong&gt;. Yes, I know, Alan Turing came up with
+the idea while trying to solve the &lt;a href=&#34;https://en.wikipedia.org/wiki/Halting_problem&#34;&gt;halting problem&lt;/a&gt;,
+but it was von Neumann that recognized the true potential of
+computing machines and designed the first computers.
+We even have the &lt;a href=&#34;https://en.wikipedia.org/wiki/Von_Neumann_architecture&#34;&gt;von Neumann architecture&lt;/a&gt; that pretty much underlies in every working
+universal Turing machine in the world.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;created the field of &lt;a href=&#34;https://en.wikipedia.org/wiki/Game_theory&#34;&gt;game theory&lt;/a&gt;&lt;/strong&gt;,
+along with the most important game theory&amp;rsquo;s theorem: the &lt;a href=&#34;https://en.wikipedia.org/wiki/Minimax_theorem&#34;&gt;minimax theorem&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;co-invented the &lt;a href=&#34;https://en.wikipedia.org/wiki/Monte_Carlo_method&#34;&gt;Monte Carlo method&lt;/a&gt;&lt;/strong&gt;
+while trying to solve the problem of neutron diffusion.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;created the field of &lt;a href=&#34;https://en.wikipedia.org/wiki/Cellular_automaton&#34;&gt;cellular automata&lt;/a&gt;&lt;/strong&gt;
+and paved the way for the discovery of DNA.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The list above is just a quick summary of his achievements.
+Everywhere you look in mathematics, physics, computer science, and even biology and economics,
+you&amp;rsquo;ll find von Neumann&amp;rsquo;s fingerprints.&lt;/p&gt;</summary>
           <content type="html"><![CDATA[<figure>
     <img loading="lazy" src="von_neumann.jpg#center"
          alt="Von Neumann&#39;s wartime Los Alamos ID badge photo" width="300"/> <figcaption>

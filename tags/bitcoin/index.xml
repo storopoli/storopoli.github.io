@@ -5,7 +5,7 @@
   <link rel="self" href="https://storopoli.io/tags/bitcoin/index.xml" />
   <subtitle>Recent content in Bitcoin on Jose Storopoli, PhD</subtitle>
   <id>https://storopoli.io/tags/bitcoin/</id>
-  <generator uri="http://gohugo.io" version="0.134.1">Hugo</generator>
+  <generator uri="http://gohugo.io" version="0.134.3">Hugo</generator>
   <language>en-us</language>
   <updated>2024-06-08T15:48:33-03:00</updated>
   <author>
@@ -31,7 +31,15 @@
 and &lt;a href=&#34;https://mermaid.js.org&#34;&gt;&lt;code&gt;mermaid.js&lt;/code&gt;&lt;/a&gt; enabled,
 so if you want to view the rendered math formulas,
 and diagrams,
-you&amp;rsquo;ll have to unfortunately enable JavaScript.&lt;/p&gt;</summary>
+you&amp;rsquo;ll have to unfortunately enable JavaScript.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Lately, I&amp;rsquo;ve been diving a little into the world of &lt;strong&gt;Zero-Knowledge Proofs&lt;/strong&gt;.
+The idea is to prove that you know something without revealing what you know.
+More specifically, a &lt;strong&gt;Zero-Knowledge Proof&lt;/strong&gt; is a cryptographic protocol that allows
+a &lt;strong&gt;prover&lt;/strong&gt; to convince a &lt;strong&gt;verifier&lt;/strong&gt; that a statement is true without revealing
+any information beyond the validity of the statement.
+In essence, by the end of the protocol, the verifier is convinced that the prover knows the secret,
+and the &lt;strong&gt;verifier hasn&amp;rsquo;t learned anything (zero-knowledge) about the secret&lt;/strong&gt;.&lt;/p&gt;</summary>
           <content type="html"><![CDATA[<figure>
     <img loading="lazy" src="zkp_meme.jpg#center"
          alt="Zero-Knowledge Proofs and the Meaning of Life" width="500"/> <figcaption>
@@ -438,7 +446,13 @@ which is still a huge number.&#160;<a href="#fnref:4" class="footnote-backref" r
 &lt;blockquote&gt;
 &lt;p&gt;Warning: This post has &lt;a href=&#34;https://katex.org/&#34;&gt;KaTeX&lt;/a&gt; enabled,
 so if you want to view the rendered math formulas,
-you&amp;rsquo;ll have to unfortunately enable JavaScript.&lt;/p&gt;</summary>
+you&amp;rsquo;ll have to unfortunately enable JavaScript.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;In this post, we&amp;rsquo;ll talk about
+&lt;strong&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Shamir%27s_Secret_Sharing&#34;&gt;Shamir&amp;rsquo;s Secret Sharing&lt;/a&gt;
+(SSS)&lt;/strong&gt;, a cryptographic algorithm that allows us to &lt;strong&gt;split a secret into multiple parts,
+called shares, in such a way that the secret can only be reconstructed
+if a certain number of shares are combined&lt;/strong&gt;.&lt;/p&gt;</summary>
           <content type="html"><![CDATA[<figure>
     <img loading="lazy" src="polynomial_king.webp#center"
          alt="The Polynomial king and he can do anything!" width="500"/> <figcaption>
@@ -615,7 +629,10 @@ you&amp;rsquo;ll have to unfortunately enable JavaScript.&lt;/p&gt;
 &lt;p&gt;In this post, let&amp;rsquo;s dive into a topic that is very important for anyone who uses the internet: &lt;strong&gt;passwords&lt;/strong&gt;.
 We&amp;rsquo;ll cover what the hell is &lt;strong&gt;Entropy&lt;/strong&gt;,
 good &lt;strong&gt;password practices&lt;/strong&gt;,
-and how it relates to &lt;strong&gt;Bitcoin &amp;ldquo;seed phrases&amp;rdquo;&lt;/strong&gt;&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;</summary>
+and how it relates to &lt;strong&gt;Bitcoin &amp;ldquo;seed phrases&amp;rdquo;&lt;/strong&gt;&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;entropy&#34;&gt;Entropy&lt;/h2&gt;
+&lt;p&gt;Before we go into passwords,
+I&amp;rsquo;ll introduce the concept of &lt;strong&gt;&lt;em&gt;Entropy&lt;/em&gt;&lt;/strong&gt;.&lt;/p&gt;</summary>
           <content type="html"><![CDATA[<p><img loading="lazy" src="password_strength.png#center" alt="Password Meme"  />
 </p>
 <blockquote>
@@ -894,7 +911,28 @@ They were created to be easy to use with 6-sided dice.&#160;<a href="#fnref:5" c
 &lt;blockquote&gt;
 &lt;p&gt;Warning: This post has &lt;a href=&#34;https://katex.org/&#34;&gt;KaTeX&lt;/a&gt; enabled,
 so if you want to view the rendered math formulas,
-you&amp;rsquo;ll have to unfortunately enable JavaScript.&lt;/p&gt;</summary>
+you&amp;rsquo;ll have to unfortunately enable JavaScript.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;This is the companion post to the &lt;a href=&#34;https://github.com/storopoli/cryptography-workshop&#34;&gt;cryptography workshop&lt;/a&gt;
+that I gave at a local BitDevs.
+Let&amp;rsquo;s explore the basics of cryptography.
+We&amp;rsquo;ll go through the following topics:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;One-way functions&lt;/li&gt;
+&lt;li&gt;Hash functions&lt;/li&gt;
+&lt;li&gt;Public-key cryptography&lt;/li&gt;
+&lt;li&gt;DSA&lt;/li&gt;
+&lt;li&gt;Schnorr&lt;/li&gt;
+&lt;li&gt;Why we don&amp;rsquo;t reuse nonces?&lt;/li&gt;
+&lt;li&gt;Why we can combine Schnorr Signatures and not DSA?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;one-way-functions&#34;&gt;One-way functions&lt;/h2&gt;
+&lt;p&gt;A one-way function is a &lt;strong&gt;function that is easy to compute on every input,
+but hard to invert given the image&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt; of a random input&lt;/strong&gt;.
+For example, imagine an omelet.
+It&amp;rsquo;s easy to make an omelet from eggs,
+but it&amp;rsquo;s hard to make eggs from an omelet.
+In a sense we can say that the function $\text{omelet}$ is a one-way function&lt;/p&gt;</summary>
           <content type="html"><![CDATA[<figure>
     <img loading="lazy" src="euclid.webp"
          alt="Euclid&#39;s one-way function"/> <figcaption>
