@@ -4329,44 +4329,41 @@ However, I am always tempted by them.</li>
         <updated>2024-10-02T05:11:50-03:00</updated>
         <summary type="html">&lt;p&gt;I am a software developer with a PhD and background in
 Computational Statistics.
-I primarily work with cryptography, zero-knowledge protocols,
-distributed systems, and compiler-based languages.&lt;/p&gt;
+I primarily work with cryptography,
+zero-knowledge protocols,
+censorship-resistant tools,
+and distributed systems.&lt;/p&gt;
 &lt;p&gt;In hope of a better future,
-I dedicate most of my waking hours to &lt;a href=&#34;https://bitcoin.org&#34;&gt;Bitcoin&lt;/a&gt;-related projects,
-because &lt;a href=&#34;https://www.activism.net/cypherpunk/manifesto.html&#34;&gt;&amp;ldquo;cypherpunks write code&amp;rdquo;&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;I contribute to the Rust Bitcoin ecosystem,
-particularly &lt;a href=&#34;https://rust-bitcoin.org&#34;&gt;&lt;code&gt;rust-bitcoin&lt;/code&gt;&lt;/a&gt;
-and &lt;a href=&#34;https://bitcoindevkit.org&#34;&gt;Bitcoin Dev Kit (BDK)&lt;/a&gt;.
-I also work full-time at &lt;a href=&#34;https://alpenlabs.io&#34;&gt;Alpen Labs&lt;/a&gt;
-building Bitcoin-native zero-knowledge rollups.&lt;/p&gt;
-&lt;p&gt;I was in academia for a long time,
-but ultimately decided to leave it behind.
-I am also an ardent &lt;a href=&#34;https://youtu.be/RMNwsdb5VU4&#34;&gt;Bayesian&lt;/a&gt;.&lt;/p&gt;</summary>
+I dedicate most of my waking hours
+to &lt;a href=&#34;https://bitcoin.org&#34;&gt;Bitcoin&lt;/a&gt;-related projects,
+because &lt;a href=&#34;https://www.activism.net/cypherpunk/manifesto.html&#34;&gt;&amp;ldquo;cypherpunks write code&amp;rdquo;&lt;/a&gt;
+and &amp;ldquo;fix the money, fix the world&amp;rdquo;.&lt;/p&gt;
+&lt;p&gt;If you are in a bad day, grab a curated Stoicism piece of advice at
+&lt;a href=&#34;https://stoicquotes.io&#34;&gt;&lt;code&gt;stoicquotes.io&lt;/code&gt;&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Also, remember that you might be wrong,
+or, don&amp;rsquo;t use $P=0$ for your &lt;a href=&#34;https://en.wikipedia.org/wiki/Cromwell%27s_rule&#34;&gt;priors&lt;/a&gt;.
+Finally,
+&lt;a href=&#34;https://en.wikipedia.org/wiki/Hanlon%27s_razor&#34;&gt;never attribute to malice that which is adequately explained by stupidity&lt;/a&gt;.&lt;/p&gt;</summary>
           <content type="html"><![CDATA[<p>I am a software developer with a PhD and background in
 Computational Statistics.
-I primarily work with cryptography, zero-knowledge protocols,
-distributed systems, and compiler-based languages.</p>
+I primarily work with cryptography,
+zero-knowledge protocols,
+censorship-resistant tools,
+and distributed systems.</p>
 <p>In hope of a better future,
-I dedicate most of my waking hours to <a href="https://bitcoin.org">Bitcoin</a>-related projects,
-because <a href="https://www.activism.net/cypherpunk/manifesto.html">&ldquo;cypherpunks write code&rdquo;</a>.</p>
-<p>I contribute to the Rust Bitcoin ecosystem,
-particularly <a href="https://rust-bitcoin.org"><code>rust-bitcoin</code></a>
-and <a href="https://bitcoindevkit.org">Bitcoin Dev Kit (BDK)</a>.
-I also work full-time at <a href="https://alpenlabs.io">Alpen Labs</a>
-building Bitcoin-native zero-knowledge rollups.</p>
-<p>I was in academia for a long time,
-but ultimately decided to leave it behind.
-I am also an ardent <a href="https://youtu.be/RMNwsdb5VU4">Bayesian</a>.</p>
-<p>I like <a href="https://rust-lang.org/">Rust</a>,
-<a href="https://www.haskell.org">Haskell</a>,
-<a href="https://nixos.org">Nix</a>,
-and <a href="https://www.vim.org">Vim</a>.</p>
-<p>I practice <a href="https://stoicquotes.io">Stoic Philosophy</a> daily.</p>
-<p>I hate <a href="https://storopoli.io/2023-11-10-2023-11-13-soydev/">bloatware and the soydev phenomenon</a>.</p>
-<p>Everything that I do is either open source or has a permissive Creative Commons license.
-&ldquo;Open source everything&rdquo; is my motto.
-While I respect the rights of others to protect their creations,
-I am strongly against intellectual property.</p>
+I dedicate most of my waking hours
+to <a href="https://bitcoin.org">Bitcoin</a>-related projects,
+because <a href="https://www.activism.net/cypherpunk/manifesto.html">&ldquo;cypherpunks write code&rdquo;</a>
+and &ldquo;fix the money, fix the world&rdquo;.</p>
+<p>If you are in a bad day, grab a curated Stoicism piece of advice at
+<a href="https://stoicquotes.io"><code>stoicquotes.io</code></a>.</p>
+<p>Also, remember that you might be wrong,
+or, don&rsquo;t use $P=0$ for your <a href="https://en.wikipedia.org/wiki/Cromwell%27s_rule">priors</a>.
+Finally,
+<a href="https://en.wikipedia.org/wiki/Hanlon%27s_razor">never attribute to malice that which is adequately explained by stupidity</a>.</p>
+<p>Everything that I do is either open source
+or has a permissive Creative Commons license.
+&ldquo;Open source everything&rdquo;.</p>
 <p>I don&rsquo;t have social media, since I think they are overrated
 and &ldquo;they sell your data&rdquo;.
 If you want to contact me, please
