@@ -1,25 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
-  <title>CI/CD on Jose Storopoli, PhD</title>
-  <link rel="alternate" href="https://storopoli.io/tags/ci/cd/" />
-  <link rel="self" href="https://storopoli.io/tags/ci/cd/index.xml" />
-  <subtitle>Recent content in CI/CD on Jose Storopoli, PhD</subtitle>
-  <id>https://storopoli.io/tags/ci/cd/</id>
-  <generator uri="http://gohugo.io" version="0.135.0">Hugo</generator>
-  <language>en-us</language>
-  <updated>2023-12-04T17:43:03-03:00</updated>
-  <author>
-    <name>Jose Storopoli</name>
-    
-  </author>
-  <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)</rights>
-      <entry>
-        <title>Testing Bayesian Models with Nix and GitHub Actions</title>
-        <link rel="alternate" href="https://storopoli.io/2023-12-04-bayesian_models_ci/" />
-        <id>https://storopoli.io/2023-12-04-bayesian_models_ci/</id>
-        <published>2023-12-04T17:43:03-03:00</published>
-        <updated>2024-04-10T08:57:32-03:00</updated>
-        <summary type="html">&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;bayesian-models-go-brrrrr.png#center&#34; alt=&#34;bayesian-models-go-brrrrr&#34;  /&gt;
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>CI/CD on Jose Storopoli, PhD</title>
+    <link>https://storopoli.io/tags/ci/cd/</link>
+    <description>Recent content in CI/CD on Jose Storopoli, PhD</description>
+    <generator>Hugo -- 0.136.5</generator>
+    <language>en-us</language>
+    <copyright>CC BY-NC-SA 4.0</copyright>
+    <lastBuildDate>Wed, 10 Apr 2024 08:57:32 -0300</lastBuildDate>
+    <atom:link href="https://storopoli.io/tags/ci/cd/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Testing Bayesian Models with Nix and GitHub Actions</title>
+      <link>https://storopoli.io/2023-12-04-bayesian_models_ci/</link>
+      <pubDate>Mon, 04 Dec 2023 17:43:03 -0300</pubDate>
+      <guid>https://storopoli.io/2023-12-04-bayesian_models_ci/</guid>
+      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;bayesian-models-go-brrrrr.png#center&#34; alt=&#34;bayesian-models-go-brrrrr&#34;  /&gt;
 &lt;/p&gt;
 &lt;p&gt;I have an open access and open source&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt; graduate-level course on Bayesian statistics.
 It is available in GitHub through the repo &lt;a href=&#34;https://github.com/storopoli/Bayesian-Statistics&#34;&gt;&lt;code&gt;storopoli/Bayesian-Statistics&lt;/code&gt;&lt;/a&gt;.
@@ -33,8 +28,8 @@ It is composed of:&lt;/p&gt;
 &lt;p&gt;Now and then I receive emails from someone saying that the materials helped
 them to understand Bayesian statistics.
 These kind messages really make my day, and that&amp;rsquo;s why I strive to keep
-the content up-to-date and relevant.&lt;/p&gt;</summary>
-          <content type="html"><![CDATA[<p><img loading="lazy" src="bayesian-models-go-brrrrr.png#center" alt="bayesian-models-go-brrrrr"  />
+the content up-to-date and relevant.&lt;/p&gt;</description>
+      <content:encoded><![CDATA[<p><img loading="lazy" src="bayesian-models-go-brrrrr.png#center" alt="bayesian-models-go-brrrrr"  />
 </p>
 <p>I have an open access and open source<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> graduate-level course on Bayesian statistics.
 It is available in GitHub through the repo <a href="https://github.com/storopoli/Bayesian-Statistics"><code>storopoli/Bayesian-Statistics</code></a>.
@@ -528,8 +523,8 @@ and these tests commonly take place in a cloud machine.&#160;<a href="#fnref:5" 
 </li>
 </ol>
 </div>
-]]></content>
-      </entry>
+]]></content:encoded>
+    </item>
 
 </feed>
 

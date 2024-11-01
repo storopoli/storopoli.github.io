@@ -1,25 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Math on Jose Storopoli, PhD</title>
-  <link rel="alternate" href="https://storopoli.io/tags/math/" />
-  <link rel="self" href="https://storopoli.io/tags/math/index.xml" />
-  <subtitle>Recent content in Math on Jose Storopoli, PhD</subtitle>
-  <id>https://storopoli.io/tags/math/</id>
-  <generator uri="http://gohugo.io" version="0.135.0">Hugo</generator>
-  <language>en-us</language>
-  <updated>2024-06-22T05:54:46-03:00</updated>
-  <author>
-    <name>Jose Storopoli</name>
-    
-  </author>
-  <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)</rights>
-      <entry>
-        <title>Von Neumann</title>
-        <link rel="alternate" href="https://storopoli.io/2024-06-22-von-neumann/" />
-        <id>https://storopoli.io/2024-06-22-von-neumann/</id>
-        <published>2024-06-22T05:54:46-03:00</published>
-        <updated>2024-06-22T08:29:18-03:00</updated>
-        <summary type="html">&lt;figure&gt;
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Math on Jose Storopoli, PhD</title>
+    <link>https://storopoli.io/tags/math/</link>
+    <description>Recent content in Math on Jose Storopoli, PhD</description>
+    <generator>Hugo -- 0.136.5</generator>
+    <language>en-us</language>
+    <copyright>CC BY-NC-SA 4.0</copyright>
+    <lastBuildDate>Sat, 22 Jun 2024 08:29:18 -0300</lastBuildDate>
+    <atom:link href="https://storopoli.io/tags/math/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Von Neumann</title>
+      <link>https://storopoli.io/2024-06-22-von-neumann/</link>
+      <pubDate>Sat, 22 Jun 2024 05:54:46 -0300</pubDate>
+      <guid>https://storopoli.io/2024-06-22-von-neumann/</guid>
+      <description>&lt;figure&gt;
     &lt;img loading=&#34;lazy&#34; src=&#34;von_neumann.jpg#center&#34;
          alt=&#34;Von Neumann&amp;#39;s wartime Los Alamos ID badge photo&#34; width=&#34;300&#34;/&gt; &lt;figcaption&gt;
             Von Neumann&amp;#39;s wartime Los Alamos ID badge photo
@@ -62,8 +57,8 @@ and paved the way for the discovery of DNA.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;The list above is just a quick summary of his achievements.
 Everywhere you look in mathematics, physics, computer science, and even biology and economics,
-you&amp;rsquo;ll find von Neumann&amp;rsquo;s fingerprints.&lt;/p&gt;</summary>
-          <content type="html"><![CDATA[<figure>
+you&amp;rsquo;ll find von Neumann&amp;rsquo;s fingerprints.&lt;/p&gt;</description>
+      <content:encoded><![CDATA[<figure>
     <img loading="lazy" src="von_neumann.jpg#center"
          alt="Von Neumann&#39;s wartime Los Alamos ID badge photo" width="300"/> <figcaption>
             Von Neumann&#39;s wartime Los Alamos ID badge photo
@@ -231,8 +226,8 @@ and we know it converges to $\frac{a}{1-r} = 15$ when $r &lt; 1$.</p>
 <p>This post is licensed under <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International</a>.</p>
 <p><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img loading="lazy" src="https://licensebuttons.net/l/by-nc-sa/4.0/88x31.png" alt="CC BY-NC-SA 4.0"  />
 </a></p>
-]]></content>
-      </entry>
+]]></content:encoded>
+    </item>
 
 </feed>
 

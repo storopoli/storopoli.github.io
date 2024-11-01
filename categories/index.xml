@@ -1,18 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Categories on Jose Storopoli, PhD</title>
-  <link rel="alternate" href="https://storopoli.io/categories/" />
-  <link rel="self" href="https://storopoli.io/categories/index.xml" />
-  <subtitle>Recent content in Categories on Jose Storopoli, PhD</subtitle>
-  <id>https://storopoli.io/categories/</id>
-  <generator uri="http://gohugo.io" version="0.135.0">Hugo</generator>
-  <language>en-us</language>
-  <updated>0001-01-01T00:00:00Z</updated>
-  <author>
-    <name>Jose Storopoli</name>
-    
-  </author>
-  <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)</rights>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Categories on Jose Storopoli, PhD</title>
+    <link>https://storopoli.io/categories/</link>
+    <description>Recent content in Categories on Jose Storopoli, PhD</description>
+    <generator>Hugo -- 0.136.5</generator>
+    <language>en-us</language>
+    <copyright>CC BY-NC-SA 4.0</copyright>
+    <atom:link href="https://storopoli.io/categories/index.xml" rel="self" type="application/rss+xml" />
 
 </feed>
 

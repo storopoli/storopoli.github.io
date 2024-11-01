@@ -1,25 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Julia on Jose Storopoli, PhD</title>
-  <link rel="alternate" href="https://storopoli.io/tags/julia/" />
-  <link rel="self" href="https://storopoli.io/tags/julia/index.xml" />
-  <subtitle>Recent content in Julia on Jose Storopoli, PhD</subtitle>
-  <id>https://storopoli.io/tags/julia/</id>
-  <generator uri="http://gohugo.io" version="0.135.0">Hugo</generator>
-  <language>en-us</language>
-  <updated>2023-11-28T18:19:36-03:00</updated>
-  <author>
-    <name>Jose Storopoli</name>
-    
-  </author>
-  <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)</rights>
-      <entry>
-        <title>Zero-cost Abstractions</title>
-        <link rel="alternate" href="https://storopoli.io/2023-11-28-zero_cost_abstractions/" />
-        <id>https://storopoli.io/2023-11-28-zero_cost_abstractions/</id>
-        <published>2023-11-28T18:19:36-03:00</published>
-        <updated>2024-04-10T08:57:32-03:00</updated>
-        <summary type="html">&lt;p&gt;In programming language circles there&amp;rsquo;s a recently trend of discussing a concept
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Julia on Jose Storopoli, PhD</title>
+    <link>https://storopoli.io/tags/julia/</link>
+    <description>Recent content in Julia on Jose Storopoli, PhD</description>
+    <generator>Hugo -- 0.136.5</generator>
+    <language>en-us</language>
+    <copyright>CC BY-NC-SA 4.0</copyright>
+    <lastBuildDate>Wed, 10 Apr 2024 08:57:32 -0300</lastBuildDate>
+    <atom:link href="https://storopoli.io/tags/julia/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Zero-cost Abstractions</title>
+      <link>https://storopoli.io/2023-11-28-zero_cost_abstractions/</link>
+      <pubDate>Tue, 28 Nov 2023 18:19:36 -0300</pubDate>
+      <guid>https://storopoli.io/2023-11-28-zero_cost_abstractions/</guid>
+      <description>&lt;p&gt;In programming language circles there&amp;rsquo;s a recently trend of discussing a concept
 called &lt;strong&gt;zero-cost abstractions&lt;/strong&gt;:
 the ability to use higher-levels abstractions without suffering any loss of performance.&lt;/p&gt;
 &lt;p&gt;Zero-cost abstractions allows you to write performant code without having to
@@ -33,8 +28,8 @@ Data structures?
 Async operations?
 &lt;em&gt;You bet ya&lt;/em&gt;!
 Multi-threading?
-&lt;em&gt;Hell yes&lt;/em&gt;!&lt;/p&gt;</summary>
-          <content type="html"><![CDATA[<p>In programming language circles there&rsquo;s a recently trend of discussing a concept
+&lt;em&gt;Hell yes&lt;/em&gt;!&lt;/p&gt;</description>
+      <content:encoded><![CDATA[<p>In programming language circles there&rsquo;s a recently trend of discussing a concept
 called <strong>zero-cost abstractions</strong>:
 the ability to use higher-levels abstractions without suffering any loss of performance.</p>
 <p>Zero-cost abstractions allows you to write performant code without having to
@@ -372,15 +367,14 @@ Yes, I am talking to you <a href="https://github.com/numpy/numpy/blob/06d7bdfbb5
 </li>
 </ol>
 </div>
-]]></content>
-      </entry>
-      <entry>
-        <title>Lindley&#39;s Paradox, or The consistency of Bayesian Thinking</title>
-        <link rel="alternate" href="https://storopoli.io/2023-11-23-lindley_paradox/" />
-        <id>https://storopoli.io/2023-11-23-lindley_paradox/</id>
-        <published>2023-11-22T07:06:59-03:00</published>
-        <updated>2024-04-10T08:57:32-03:00</updated>
-        <summary type="html">&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;lindley.jpg#center&#34; alt=&#34;Dennis Lindley&#34;  /&gt;
+]]></content:encoded>
+    </item>
+    <item>
+      <title>Lindley&#39;s Paradox, or The consistency of Bayesian Thinking</title>
+      <link>https://storopoli.io/2023-11-23-lindley_paradox/</link>
+      <pubDate>Wed, 22 Nov 2023 07:06:59 -0300</pubDate>
+      <guid>https://storopoli.io/2023-11-23-lindley_paradox/</guid>
+      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;lindley.jpg#center&#34; alt=&#34;Dennis Lindley&#34;  /&gt;
 &lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Warning: This post has &lt;a href=&#34;https://katex.org/&#34;&gt;KaTeX&lt;/a&gt; enabled,
@@ -401,8 +395,8 @@ and one of my favorite heuristics around prior probabilities:
 &lt;a href=&#34;https://en.wikipedia.org/wiki/Cromwell%27s_rule&#34;&gt;Cromwell&amp;rsquo;s Rule&lt;/a&gt;&lt;sup id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;.
 Lindley predicted in 1975 that &amp;ldquo;Bayesian methods will indeed become pervasive,
 enabled by the development of powerful computing facilities&amp;rdquo; (Lindley, 1975).
-You can find more about all of Lindley&amp;rsquo;s achievements in his &lt;a href=&#34;https://www.theguardian.com/science/2014/mar/16/dennis-lindley&#34;&gt;obituary&lt;/a&gt;.&lt;/p&gt;</summary>
-          <content type="html"><![CDATA[<p><img loading="lazy" src="lindley.jpg#center" alt="Dennis Lindley"  />
+You can find more about all of Lindley&amp;rsquo;s achievements in his &lt;a href=&#34;https://www.theguardian.com/science/2014/mar/16/dennis-lindley&#34;&gt;obituary&lt;/a&gt;.&lt;/p&gt;</description>
+      <content:encoded><![CDATA[<p><img loading="lazy" src="lindley.jpg#center" alt="Dennis Lindley"  />
 </p>
 <blockquote>
 <p>Warning: This post has <a href="https://katex.org/">KaTeX</a> enabled,
@@ -745,15 +739,14 @@ published scientific studies suffer from this flaw.&#160;<a href="#fnref:8" clas
 </li>
 </ol>
 </div>
-]]></content>
-      </entry>
-      <entry>
-        <title>Word Embeddings</title>
-        <link rel="alternate" href="https://storopoli.io/2023-11-20-word_embeddings/" />
-        <id>https://storopoli.io/2023-11-20-word_embeddings/</id>
-        <published>2023-11-19T22:49:51-03:00</published>
-        <updated>2024-02-11T15:55:02-03:00</updated>
-        <summary type="html">&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;euclid.jpg#center&#34; alt=&#34;Euclid of Alexandria&#34;  /&gt;
+]]></content:encoded>
+    </item>
+    <item>
+      <title>Word Embeddings</title>
+      <link>https://storopoli.io/2023-11-20-word_embeddings/</link>
+      <pubDate>Sun, 19 Nov 2023 22:49:51 -0300</pubDate>
+      <guid>https://storopoli.io/2023-11-20-word_embeddings/</guid>
+      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;euclid.jpg#center&#34; alt=&#34;Euclid of Alexandria&#34;  /&gt;
 &lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Warning: This post has &lt;a href=&#34;https://katex.org/&#34;&gt;KaTeX&lt;/a&gt; enabled,
@@ -766,8 +759,8 @@ That would definitely have made me more aware and interested in the
 subject during my school years.
 I would have looked at triangles, circles, sines, cosines, and tangents
 in a whole different way.
-Alas, better late than never.&lt;/p&gt;</summary>
-          <content type="html"><![CDATA[<p><img loading="lazy" src="euclid.jpg#center" alt="Euclid of Alexandria"  />
+Alas, better late than never.&lt;/p&gt;</description>
+      <content:encoded><![CDATA[<p><img loading="lazy" src="euclid.jpg#center" alt="Euclid of Alexandria"  />
 </p>
 <blockquote>
 <p>Warning: This post has <a href="https://katex.org/">KaTeX</a> enabled,
@@ -933,8 +926,8 @@ and <a href="https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8
 <p>This post is licensed under <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International</a>.</p>
 <p><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img loading="lazy" src="https://licensebuttons.net/l/by-nc-sa/4.0/88x31.png" alt="CC BY-NC-SA 4.0"  />
 </a></p>
-]]></content>
-      </entry>
+]]></content:encoded>
+    </item>
 
 </feed>
 

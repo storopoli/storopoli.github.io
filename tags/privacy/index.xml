@@ -1,25 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Privacy on Jose Storopoli, PhD</title>
-  <link rel="alternate" href="https://storopoli.io/tags/privacy/" />
-  <link rel="self" href="https://storopoli.io/tags/privacy/index.xml" />
-  <subtitle>Recent content in Privacy on Jose Storopoli, PhD</subtitle>
-  <id>https://storopoli.io/tags/privacy/</id>
-  <generator uri="http://gohugo.io" version="0.135.0">Hugo</generator>
-  <language>en-us</language>
-  <updated>2024-03-23T14:00:16-03:00</updated>
-  <author>
-    <name>Jose Storopoli</name>
-    
-  </author>
-  <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)</rights>
-      <entry>
-        <title>Sherlock Holmes Final Letter: A Simple Dead Man&#39;s Switch in Rust</title>
-        <link rel="alternate" href="https://storopoli.io/2024-03-23-dead-man-switch/" />
-        <id>https://storopoli.io/2024-03-23-dead-man-switch/</id>
-        <published>2024-03-23T14:00:16-03:00</published>
-        <updated>2024-09-08T19:00:51-03:00</updated>
-        <summary type="html">&lt;figure&gt;
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Privacy on Jose Storopoli, PhD</title>
+    <link>https://storopoli.io/tags/privacy/</link>
+    <description>Recent content in Privacy on Jose Storopoli, PhD</description>
+    <generator>Hugo -- 0.136.5</generator>
+    <language>en-us</language>
+    <copyright>CC BY-NC-SA 4.0</copyright>
+    <lastBuildDate>Sun, 08 Sep 2024 19:00:51 -0300</lastBuildDate>
+    <atom:link href="https://storopoli.io/tags/privacy/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Sherlock Holmes Final Letter: A Simple Dead Man&#39;s Switch in Rust</title>
+      <link>https://storopoli.io/2024-03-23-dead-man-switch/</link>
+      <pubDate>Sat, 23 Mar 2024 14:00:16 -0300</pubDate>
+      <guid>https://storopoli.io/2024-03-23-dead-man-switch/</guid>
+      <description>&lt;figure&gt;
     &lt;img loading=&#34;lazy&#34; src=&#34;the_final_problem.png#center&#34;
          alt=&#34;Sherlock Holmes fights Moriarty at the Reichenbach Falls&#34; width=&#34;300&#34;/&gt; &lt;figcaption&gt;
             Sherlock Holmes fights Moriarty at the Reichenbach Falls
@@ -33,8 +28,8 @@ Don&amp;rsquo;t worry, I got you covered.
 In this post,
 I&amp;rsquo;ll introduce you to a &lt;strong&gt;simple no-bullshit dead man&amp;rsquo;s switch&lt;/strong&gt; written in Rust.&lt;/p&gt;
 &lt;h2 id=&#34;dead-mans-switch&#34;&gt;Dead Man&amp;rsquo;s Switch&lt;/h2&gt;
-&lt;p&gt;According to &lt;a href=&#34;https://en.wikipedia.org/wiki/Dead_man%27s_switch&#34;&gt;Wikipedia&lt;/a&gt;:&lt;/p&gt;</summary>
-          <content type="html"><![CDATA[<figure>
+&lt;p&gt;According to &lt;a href=&#34;https://en.wikipedia.org/wiki/Dead_man%27s_switch&#34;&gt;Wikipedia&lt;/a&gt;:&lt;/p&gt;</description>
+      <content:encoded><![CDATA[<figure>
     <img loading="lazy" src="the_final_problem.png#center"
          alt="Sherlock Holmes fights Moriarty at the Reichenbach Falls" width="300"/> <figcaption>
             Sherlock Holmes fights Moriarty at the Reichenbach Falls
@@ -322,8 +317,8 @@ That was just an example.&#160;<a href="#fnref:1" class="footnote-backref" role=
 </li>
 </ol>
 </div>
-]]></content>
-      </entry>
+]]></content:encoded>
+    </item>
 
 </feed>
 

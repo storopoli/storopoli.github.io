@@ -1,25 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Dioxus on Jose Storopoli, PhD</title>
-  <link rel="alternate" href="https://storopoli.io/tags/dioxus/" />
-  <link rel="self" href="https://storopoli.io/tags/dioxus/index.xml" />
-  <subtitle>Recent content in Dioxus on Jose Storopoli, PhD</subtitle>
-  <id>https://storopoli.io/tags/dioxus/</id>
-  <generator uri="http://gohugo.io" version="0.135.0">Hugo</generator>
-  <language>en-us</language>
-  <updated>2024-01-30T08:57:33Z</updated>
-  <author>
-    <name>Jose Storopoli</name>
-    
-  </author>
-  <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)</rights>
-      <entry>
-        <title>Fullstack and Progressive Web Apps in Rust: A Tale of a Sudoku Spyware</title>
-        <link rel="alternate" href="https://storopoli.io/2024-01-30-sudoku/" />
-        <id>https://storopoli.io/2024-01-30-sudoku/</id>
-        <published>2024-01-30T08:57:33Z</published>
-        <updated>2024-04-10T08:57:32-03:00</updated>
-        <summary type="html">&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;rust_webdev_meme.jpg#center&#34; alt=&#34;rust webdev meme&#34;  /&gt;
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Dioxus on Jose Storopoli, PhD</title>
+    <link>https://storopoli.io/tags/dioxus/</link>
+    <description>Recent content in Dioxus on Jose Storopoli, PhD</description>
+    <generator>Hugo -- 0.136.5</generator>
+    <language>en-us</language>
+    <copyright>CC BY-NC-SA 4.0</copyright>
+    <lastBuildDate>Wed, 10 Apr 2024 08:57:32 -0300</lastBuildDate>
+    <atom:link href="https://storopoli.io/tags/dioxus/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Fullstack and Progressive Web Apps in Rust: A Tale of a Sudoku Spyware</title>
+      <link>https://storopoli.io/2024-01-30-sudoku/</link>
+      <pubDate>Tue, 30 Jan 2024 08:57:33 +0000</pubDate>
+      <guid>https://storopoli.io/2024-01-30-sudoku/</guid>
+      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;rust_webdev_meme.jpg#center&#34; alt=&#34;rust webdev meme&#34;  /&gt;
 &lt;/p&gt;
 &lt;p&gt;It all started when I had to accompany my mom to the hospital.
 It was just a routine checkup, but I had to wait for a few hours.
@@ -30,8 +25,8 @@ I couln&amp;rsquo;t help but notice that the game was full of ads and it was ask
 like location and sensor data.
 So I decided to make a &lt;strong&gt;Sudoku game for her, without ads or using any permission&lt;/strong&gt;.
 It wouldn&amp;rsquo;t even need to ask for the blessing of Google or &lt;a href=&#34;https://youtu.be/XHVxm12NbrY&#34;&gt;Tim Apple&lt;/a&gt;
-since it was a Progressive Web App (PWA) and it would work offline.&lt;/p&gt;</summary>
-          <content type="html"><![CDATA[<p><img loading="lazy" src="rust_webdev_meme.jpg#center" alt="rust webdev meme"  />
+since it was a Progressive Web App (PWA) and it would work offline.&lt;/p&gt;</description>
+      <content:encoded><![CDATA[<p><img loading="lazy" src="rust_webdev_meme.jpg#center" alt="rust webdev meme"  />
 </p>
 <p>It all started when I had to accompany my mom to the hospital.
 It was just a routine checkup, but I had to wait for a few hours.
@@ -348,8 +343,8 @@ Just add <code>pedantic = &quot;deny&quot;</code> inside your <code>Cargo.toml</
 </li>
 </ol>
 </div>
-]]></content>
-      </entry>
+]]></content:encoded>
+    </item>
 
 </feed>
 

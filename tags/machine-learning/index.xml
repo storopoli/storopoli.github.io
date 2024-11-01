@@ -1,25 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Machine Learning on Jose Storopoli, PhD</title>
-  <link rel="alternate" href="https://storopoli.io/tags/machine-learning/" />
-  <link rel="self" href="https://storopoli.io/tags/machine-learning/index.xml" />
-  <subtitle>Recent content in Machine Learning on Jose Storopoli, PhD</subtitle>
-  <id>https://storopoli.io/tags/machine-learning/</id>
-  <generator uri="http://gohugo.io" version="0.135.0">Hugo</generator>
-  <language>en-us</language>
-  <updated>2023-11-19T22:49:51-03:00</updated>
-  <author>
-    <name>Jose Storopoli</name>
-    
-  </author>
-  <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)</rights>
-      <entry>
-        <title>Word Embeddings</title>
-        <link rel="alternate" href="https://storopoli.io/2023-11-20-word_embeddings/" />
-        <id>https://storopoli.io/2023-11-20-word_embeddings/</id>
-        <published>2023-11-19T22:49:51-03:00</published>
-        <updated>2024-02-11T15:55:02-03:00</updated>
-        <summary type="html">&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;euclid.jpg#center&#34; alt=&#34;Euclid of Alexandria&#34;  /&gt;
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Machine Learning on Jose Storopoli, PhD</title>
+    <link>https://storopoli.io/tags/machine-learning/</link>
+    <description>Recent content in Machine Learning on Jose Storopoli, PhD</description>
+    <generator>Hugo -- 0.136.5</generator>
+    <language>en-us</language>
+    <copyright>CC BY-NC-SA 4.0</copyright>
+    <lastBuildDate>Sun, 11 Feb 2024 15:55:02 -0300</lastBuildDate>
+    <atom:link href="https://storopoli.io/tags/machine-learning/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Word Embeddings</title>
+      <link>https://storopoli.io/2023-11-20-word_embeddings/</link>
+      <pubDate>Sun, 19 Nov 2023 22:49:51 -0300</pubDate>
+      <guid>https://storopoli.io/2023-11-20-word_embeddings/</guid>
+      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;euclid.jpg#center&#34; alt=&#34;Euclid of Alexandria&#34;  /&gt;
 &lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Warning: This post has &lt;a href=&#34;https://katex.org/&#34;&gt;KaTeX&lt;/a&gt; enabled,
@@ -32,8 +27,8 @@ That would definitely have made me more aware and interested in the
 subject during my school years.
 I would have looked at triangles, circles, sines, cosines, and tangents
 in a whole different way.
-Alas, better late than never.&lt;/p&gt;</summary>
-          <content type="html"><![CDATA[<p><img loading="lazy" src="euclid.jpg#center" alt="Euclid of Alexandria"  />
+Alas, better late than never.&lt;/p&gt;</description>
+      <content:encoded><![CDATA[<p><img loading="lazy" src="euclid.jpg#center" alt="Euclid of Alexandria"  />
 </p>
 <blockquote>
 <p>Warning: This post has <a href="https://katex.org/">KaTeX</a> enabled,
@@ -199,8 +194,8 @@ and <a href="https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8
 <p>This post is licensed under <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International</a>.</p>
 <p><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img loading="lazy" src="https://licensebuttons.net/l/by-nc-sa/4.0/88x31.png" alt="CC BY-NC-SA 4.0"  />
 </a></p>
-]]></content>
-      </entry>
+]]></content:encoded>
+    </item>
 
 </feed>
 

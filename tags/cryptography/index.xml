@@ -1,25 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Cryptography on Jose Storopoli, PhD</title>
-  <link rel="alternate" href="https://storopoli.io/tags/cryptography/" />
-  <link rel="self" href="https://storopoli.io/tags/cryptography/index.xml" />
-  <subtitle>Recent content in Cryptography on Jose Storopoli, PhD</subtitle>
-  <id>https://storopoli.io/tags/cryptography/</id>
-  <generator uri="http://gohugo.io" version="0.135.0">Hugo</generator>
-  <language>en-us</language>
-  <updated>2024-06-08T15:48:33-03:00</updated>
-  <author>
-    <name>Jose Storopoli</name>
-    
-  </author>
-  <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)</rights>
-      <entry>
-        <title>Zero-Knowledge Proofs</title>
-        <link rel="alternate" href="https://storopoli.io/2024-06-08-zkp/" />
-        <id>https://storopoli.io/2024-06-08-zkp/</id>
-        <published>2024-06-08T15:48:33-03:00</published>
-        <updated>2024-06-09T08:34:22-03:00</updated>
-        <summary type="html">&lt;figure&gt;
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Cryptography on Jose Storopoli, PhD</title>
+    <link>https://storopoli.io/tags/cryptography/</link>
+    <description>Recent content in Cryptography on Jose Storopoli, PhD</description>
+    <generator>Hugo -- 0.136.5</generator>
+    <language>en-us</language>
+    <copyright>CC BY-NC-SA 4.0</copyright>
+    <lastBuildDate>Sun, 09 Jun 2024 08:34:22 -0300</lastBuildDate>
+    <atom:link href="https://storopoli.io/tags/cryptography/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Zero-Knowledge Proofs</title>
+      <link>https://storopoli.io/2024-06-08-zkp/</link>
+      <pubDate>Sat, 08 Jun 2024 15:48:33 -0300</pubDate>
+      <guid>https://storopoli.io/2024-06-08-zkp/</guid>
+      <description>&lt;figure&gt;
     &lt;img loading=&#34;lazy&#34; src=&#34;zkp_meme.jpg#center&#34;
          alt=&#34;Zero-Knowledge Proofs and the Meaning of Life&#34; width=&#34;500&#34;/&gt; &lt;figcaption&gt;
             Zero-Knowledge Proofs and the Meaning of Life
@@ -39,8 +34,8 @@ More specifically, a &lt;strong&gt;Zero-Knowledge Proof&lt;/strong&gt; is a cryp
 a &lt;strong&gt;prover&lt;/strong&gt; to convince a &lt;strong&gt;verifier&lt;/strong&gt; that a statement is true without revealing
 any information beyond the validity of the statement.
 In essence, by the end of the protocol, the verifier is convinced that the prover knows the secret,
-and the &lt;strong&gt;verifier hasn&amp;rsquo;t learned anything (zero-knowledge) about the secret&lt;/strong&gt;.&lt;/p&gt;</summary>
-          <content type="html"><![CDATA[<figure>
+and the &lt;strong&gt;verifier hasn&amp;rsquo;t learned anything (zero-knowledge) about the secret&lt;/strong&gt;.&lt;/p&gt;</description>
+      <content:encoded><![CDATA[<figure>
     <img loading="lazy" src="zkp_meme.jpg#center"
          alt="Zero-Knowledge Proofs and the Meaning of Life" width="500"/> <figcaption>
             Zero-Knowledge Proofs and the Meaning of Life
@@ -428,15 +423,14 @@ which is still a huge number.&#160;<a href="#fnref:4" class="footnote-backref" r
 </li>
 </ol>
 </div>
-]]></content>
-      </entry>
-      <entry>
-        <title>Shamir&#39;s Secret Sharing</title>
-        <link rel="alternate" href="https://storopoli.io/2024-04-14-shamir-secret-sharing/" />
-        <id>https://storopoli.io/2024-04-14-shamir-secret-sharing/</id>
-        <published>2024-04-14T10:37:02-03:00</published>
-        <updated>2024-06-08T16:08:00-03:00</updated>
-        <summary type="html">&lt;figure&gt;
+]]></content:encoded>
+    </item>
+    <item>
+      <title>Shamir&#39;s Secret Sharing</title>
+      <link>https://storopoli.io/2024-04-14-shamir-secret-sharing/</link>
+      <pubDate>Sun, 14 Apr 2024 10:37:02 -0300</pubDate>
+      <guid>https://storopoli.io/2024-04-14-shamir-secret-sharing/</guid>
+      <description>&lt;figure&gt;
     &lt;img loading=&#34;lazy&#34; src=&#34;polynomial_king.webp#center&#34;
          alt=&#34;The Polynomial king and he can do anything!&#34; width=&#34;500&#34;/&gt; &lt;figcaption&gt;
             The Polynomial king and he can do anything!
@@ -452,8 +446,8 @@ you&amp;rsquo;ll have to unfortunately enable JavaScript.&lt;/p&gt;
 &lt;strong&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Shamir%27s_Secret_Sharing&#34;&gt;Shamir&amp;rsquo;s Secret Sharing&lt;/a&gt;
 (SSS)&lt;/strong&gt;, a cryptographic algorithm that allows us to &lt;strong&gt;split a secret into multiple parts,
 called shares, in such a way that the secret can only be reconstructed
-if a certain number of shares are combined&lt;/strong&gt;.&lt;/p&gt;</summary>
-          <content type="html"><![CDATA[<figure>
+if a certain number of shares are combined&lt;/strong&gt;.&lt;/p&gt;</description>
+      <content:encoded><![CDATA[<figure>
     <img loading="lazy" src="polynomial_king.webp#center"
          alt="The Polynomial king and he can do anything!" width="500"/> <figcaption>
             The Polynomial king and he can do anything!
@@ -611,15 +605,14 @@ Especially during the share generation and reconstruction phases.</p>
 </li>
 </ol>
 </div>
-]]></content>
-      </entry>
-      <entry>
-        <title>Seed Phrases and Entropy</title>
-        <link rel="alternate" href="https://storopoli.io/2024-02-11-mnemonic/" />
-        <id>https://storopoli.io/2024-02-11-mnemonic/</id>
-        <published>2024-02-11T15:59:02Z</published>
-        <updated>2024-04-10T08:57:32-03:00</updated>
-        <summary type="html">&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;password_strength.png#center&#34; alt=&#34;Password Meme&#34;  /&gt;
+]]></content:encoded>
+    </item>
+    <item>
+      <title>Seed Phrases and Entropy</title>
+      <link>https://storopoli.io/2024-02-11-mnemonic/</link>
+      <pubDate>Sun, 11 Feb 2024 15:59:02 +0000</pubDate>
+      <guid>https://storopoli.io/2024-02-11-mnemonic/</guid>
+      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;password_strength.png#center&#34; alt=&#34;Password Meme&#34;  /&gt;
 &lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Warning: This post has &lt;a href=&#34;https://katex.org/&#34;&gt;KaTeX&lt;/a&gt; enabled,
@@ -632,8 +625,8 @@ good &lt;strong&gt;password practices&lt;/strong&gt;,
 and how it relates to &lt;strong&gt;Bitcoin &amp;ldquo;seed phrases&amp;rdquo;&lt;/strong&gt;&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
 &lt;h2 id=&#34;entropy&#34;&gt;Entropy&lt;/h2&gt;
 &lt;p&gt;Before we go into passwords,
-I&amp;rsquo;ll introduce the concept of &lt;strong&gt;&lt;em&gt;Entropy&lt;/em&gt;&lt;/strong&gt;.&lt;/p&gt;</summary>
-          <content type="html"><![CDATA[<p><img loading="lazy" src="password_strength.png#center" alt="Password Meme"  />
+I&amp;rsquo;ll introduce the concept of &lt;strong&gt;&lt;em&gt;Entropy&lt;/em&gt;&lt;/strong&gt;.&lt;/p&gt;</description>
+      <content:encoded><![CDATA[<p><img loading="lazy" src="password_strength.png#center" alt="Password Meme"  />
 </p>
 <blockquote>
 <p>Warning: This post has <a href="https://katex.org/">KaTeX</a> enabled,
@@ -893,15 +886,14 @@ They were created to be easy to use with 6-sided dice.&#160;<a href="#fnref:5" c
 </li>
 </ol>
 </div>
-]]></content>
-      </entry>
-      <entry>
-        <title>Cryptography Basics</title>
-        <link rel="alternate" href="https://storopoli.io/2024-02-05-crypto-basics/" />
-        <id>https://storopoli.io/2024-02-05-crypto-basics/</id>
-        <published>2024-02-05T18:53:28-03:00</published>
-        <updated>2024-04-15T09:24:31-03:00</updated>
-        <summary type="html">&lt;figure&gt;
+]]></content:encoded>
+    </item>
+    <item>
+      <title>Cryptography Basics</title>
+      <link>https://storopoli.io/2024-02-05-crypto-basics/</link>
+      <pubDate>Mon, 05 Feb 2024 18:53:28 -0300</pubDate>
+      <guid>https://storopoli.io/2024-02-05-crypto-basics/</guid>
+      <description>&lt;figure&gt;
     &lt;img loading=&#34;lazy&#34; src=&#34;euclid.webp&#34;
          alt=&#34;Euclid&amp;#39;s one-way function&#34;/&gt; &lt;figcaption&gt;
             &lt;p&gt;Euclid&amp;rsquo;s one-way function&lt;/p&gt;
@@ -932,8 +924,8 @@ but hard to invert given the image&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#3
 For example, imagine an omelet.
 It&amp;rsquo;s easy to make an omelet from eggs,
 but it&amp;rsquo;s hard to make eggs from an omelet.
-In a sense we can say that the function $\text{omelet}$ is a one-way function&lt;/p&gt;</summary>
-          <content type="html"><![CDATA[<figure>
+In a sense we can say that the function $\text{omelet}$ is a one-way function&lt;/p&gt;</description>
+      <content:encoded><![CDATA[<figure>
     <img loading="lazy" src="euclid.webp"
          alt="Euclid&#39;s one-way function"/> <figcaption>
             <p>Euclid&rsquo;s one-way function</p>
@@ -1513,8 +1505,8 @@ You can find more in BIPS
 </li>
 </ol>
 </div>
-]]></content>
-      </entry>
+]]></content:encoded>
+    </item>
 
 </feed>
 

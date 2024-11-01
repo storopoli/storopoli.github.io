@@ -1,25 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Htmx on Jose Storopoli, PhD</title>
-  <link rel="alternate" href="https://storopoli.io/tags/htmx/" />
-  <link rel="self" href="https://storopoli.io/tags/htmx/index.xml" />
-  <subtitle>Recent content in Htmx on Jose Storopoli, PhD</subtitle>
-  <id>https://storopoli.io/tags/htmx/</id>
-  <generator uri="http://gohugo.io" version="0.135.0">Hugo</generator>
-  <language>en-us</language>
-  <updated>2024-01-14T06:13:19-03:00</updated>
-  <author>
-    <name>Jose Storopoli</name>
-    
-  </author>
-  <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)</rights>
-      <entry>
-        <title>htmx: an Oasis in a Desert of Soy</title>
-        <link rel="alternate" href="https://storopoli.io/2024-01-14-htmx/" />
-        <id>https://storopoli.io/2024-01-14-htmx/</id>
-        <published>2024-01-14T06:13:19-03:00</published>
-        <updated>2024-04-10T08:57:32-03:00</updated>
-        <summary type="html">&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;bellcurve.png#center&#34; alt=&#34;htmx bell curve&#34;  /&gt;
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Htmx on Jose Storopoli, PhD</title>
+    <link>https://storopoli.io/tags/htmx/</link>
+    <description>Recent content in Htmx on Jose Storopoli, PhD</description>
+    <generator>Hugo -- 0.136.5</generator>
+    <language>en-us</language>
+    <copyright>CC BY-NC-SA 4.0</copyright>
+    <lastBuildDate>Wed, 10 Apr 2024 08:57:32 -0300</lastBuildDate>
+    <atom:link href="https://storopoli.io/tags/htmx/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>htmx: an Oasis in a Desert of Soy</title>
+      <link>https://storopoli.io/2024-01-14-htmx/</link>
+      <pubDate>Sun, 14 Jan 2024 06:13:19 -0300</pubDate>
+      <guid>https://storopoli.io/2024-01-14-htmx/</guid>
+      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;bellcurve.png#center&#34; alt=&#34;htmx bell curve&#34;  /&gt;
 &lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Warning: This post has &lt;a href=&#34;https://mermaid.js.org&#34;&gt;&lt;code&gt;mermaid.js&lt;/code&gt;&lt;/a&gt; enabled,
@@ -37,8 +32,8 @@ JavaScript&lt;sup id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;#fn:2&#34; class=&#34;
 that describe how to perform common dynamic web page behaviors like partial page
 updates, form submission, etc. &lt;code&gt;htmx&lt;/code&gt; is designed to be easy to use, requiring
 minimal JavaScript knowledge, so that you can add interactivity&lt;sup id=&#34;fnref:3&#34;&gt;&lt;a href=&#34;#fn:3&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;3&lt;/a&gt;&lt;/sup&gt; to web pages
-with just HTML.&lt;/p&gt;</summary>
-          <content type="html"><![CDATA[<p><img loading="lazy" src="bellcurve.png#center" alt="htmx bell curve"  />
+with just HTML.&lt;/p&gt;</description>
+      <content:encoded><![CDATA[<p><img loading="lazy" src="bellcurve.png#center" alt="htmx bell curve"  />
 </p>
 <blockquote>
 <p>Warning: This post has <a href="https://mermaid.js.org"><code>mermaid.js</code></a> enabled,
@@ -291,8 +286,8 @@ Most notoriously is <a href="https://julialang.org">Julia</a> and
 </li>
 </ol>
 </div>
-]]></content>
-      </entry>
+]]></content:encoded>
+    </item>
 
 </feed>
 
