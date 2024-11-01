@@ -5,7 +5,8 @@
 This is my personal site at [storopoli.io](https://storopoli.io).
 
 It is built with [Hugo](https://gohugo.io/)
-and the theme is [WonderMod](https://github.com/Wonderfall/hugo-WonderMod) by [Wonderfall](https://github.com/Wonderfall).
+and the theme is my personal fork of [WonderMod](https://github.com/storopoli/hugo-WonderMod)
+by [Wonderfall](https://github.com/Wonderfall).
 WonderMod is a fork of an original theme called [PaperMod](https://github.com/adityatelange/hugo-PaperMod).
 Since PaperMod isn't interested in a few changes such as **removing inline JavaScript**,
 which I personally require to harden my websites,
