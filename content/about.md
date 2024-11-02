@@ -1,8 +1,7 @@
 +++
 title = "About"
 hidemeta = true
-javascript = true
-math = true
+javascript = false
 +++
 
 I am a software developer with a PhD and background in
@@ -22,7 +21,7 @@ If you are in a bad day, grab a curated Stoicism piece of advice at
 [`stoicquotes.io`](https://stoicquotes.io).
 
 Also, remember that you might be wrong,
-or, don't use $P=0$ for your [priors](https://en.wikipedia.org/wiki/Cromwell%27s_rule).
+or, don't use P=0 for your [priors](https://en.wikipedia.org/wiki/Cromwell%27s_rule).
 Finally,
 [never attribute to malice that which is adequately explained by stupidity](https://en.wikipedia.org/wiki/Hanlon%27s_razor).
 
