@@ -87,7 +87,7 @@ name = "key"
 url = "/assets/publickey.txt"
 
 [[params.socialIcons]]
-name = "other"
+name = "ssh"
 url = "/assets/ssh.txt"
 
 [[params.socialIcons]]
