@@ -1,0 +1,45 @@
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/wypst@0.0.8/dist/wypst.min.css"
+  integrity="sha384-wcIxkf4k558AjM3Yz3BBFQUbk/zgIYC2R0QpeeYb+TwlBVMrlgLqwRjRtGZiK7ww"
+  crossorigin="anonymous"
+/>
+<script
+  defer
+  src="https://cdn.jsdelivr.net/npm/wypst@0.0.8/dist/wypst.min.js"
+  integrity="sha384-0bsHz/wZhjA1AaUVRQ/VVDZGqhqntAxbg7Uo/AoXGIeD4x+qUNGJp9Jb+esdyWWI"
+  crossorigin="anonymous"
+></script>
+
+<style>
+  :root {
+    --math-color-light: #000000;
+    --math-background-light: #ffffff;
+    --math-color-dark: #ffffff;
+    --math-background-dark: #000000;
+    --math-font-size: 1rem !important;
+    --math-block-font-size: 1.25rem !important;
+  }
+
+  body.light-mode {
+    --math-color: var(--math-color-light);
+    --math-background: var(--math-background-light);
+  }
+
+  body.dark-mode {
+    --math-color: var(--math-color-dark);
+    --math-background: var(--math-background-dark);
+  }
+
+  .math-element {
+    color: var(--math-color);
+    background-color: var(--math-background);
+    font-size: var(--math-font-size);
+  }
+
+  .math-block {
+    font-size: var(--math-block-font-size);
+  }
+</style>
+
+<script defer src="/js/typst.js"></script>

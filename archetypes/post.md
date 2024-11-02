@@ -6,6 +6,7 @@ tags = []
 categories = []
 javascript = false
 math = false
+typst = false
 mermaid = false
 +++
 

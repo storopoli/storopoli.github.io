@@ -28,23 +28,34 @@ javascript: true
 
 ## Math Support
 
-Math support can be enabled by setting the YAML front matter with:
+Math support can be enabled by setting the YAML front matter with
+either one of `math` (for $\LaTeX$) or `typst` (for [Typst](https://typst.app/));
+along with `javascript` set to `true`.
 
 ```yaml
+javascript: true
 math: true
+# or
+typst: true
 ```
 
-This will load [KaTeX](https://katex.org/) under the hood,
-and anything between `$` and `$$` will be rendered as inline or equation math
+> [!WARNING]
+> Never toggle both `math` and `typst` at the same time.
+
+This will load either [KaTeX](https://katex.org/) or [wypst](https://github.com/0xpapercut/wypst)
+under the hood, and anything between `$` and `$$`
+will be rendered as inline or equation math
 using JavaScript.
 
-Check all the supported functions in [KaTeX documentation](https://katex.org/docs/supported).
+Check all the supported functions in [KaTeX documentation](https://katex.org/docs/supported)
+or [wypst sourcecode](https://github.com/0xpapercut/wypst/blob/0687e570c6c641c0875f4e9448d7936c1eadc9ac/src/core/src/converter.rs#L488-L511)
 
 ## Mermaid Support
 
 [MermaidJS](https://mermaid.js.org/) support can be enabled by setting the YAML front matter with:
 
 ```yaml
+javascript: true
 mermaid: true
 ```
 

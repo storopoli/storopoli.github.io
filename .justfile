@@ -18,3 +18,7 @@ folder NAME:
 # new content in 'content/posts/date-<title>/index.md' with the math template and folder template to add external resources
 math NAME:
   hugo new -k post_math content/posts/$(date -u +%Y-%m-%d)-{{NAME}}/index.md
+
+# new content in 'content/posts/date-<title>/index.md' with the typst template and folder template to add external resources
+typst NAME:
+  hugo new -k post_typst content/posts/$(date -u +%Y-%m-%d)-{{NAME}}/index.md
