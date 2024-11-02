@@ -7,7 +7,7 @@
     <generator>Hugo -- 0.136.5</generator>
     <language>en-us</language>
     <copyright>CC BY-NC-SA 4.0</copyright>
-    <lastBuildDate>Wed, 02 Oct 2024 05:11:50 -0300</lastBuildDate>
+    <lastBuildDate>Sat, 02 Nov 2024 05:36:23 -0300</lastBuildDate>
     <atom:link href="https://storopoli.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Von Neumann</title>
@@ -4323,7 +4323,7 @@ and &amp;ldquo;fix the money, fix the world&amp;rdquo;.&lt;/p&gt;
 &lt;p&gt;If you are in a bad day, grab a curated Stoicism piece of advice at
 &lt;a href=&#34;https://stoicquotes.io&#34;&gt;&lt;code&gt;stoicquotes.io&lt;/code&gt;&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Also, remember that you might be wrong,
-or, don&amp;rsquo;t use $P=0$ for your &lt;a href=&#34;https://en.wikipedia.org/wiki/Cromwell%27s_rule&#34;&gt;priors&lt;/a&gt;.
+or, don&amp;rsquo;t use P=0 for your &lt;a href=&#34;https://en.wikipedia.org/wiki/Cromwell%27s_rule&#34;&gt;priors&lt;/a&gt;.
 Finally,
 &lt;a href=&#34;https://en.wikipedia.org/wiki/Hanlon%27s_razor&#34;&gt;never attribute to malice that which is adequately explained by stupidity&lt;/a&gt;.&lt;/p&gt;</description>
       <content:encoded><![CDATA[<p>I am a software developer with a PhD and background in
@@ -4340,7 +4340,7 @@ and &ldquo;fix the money, fix the world&rdquo;.</p>
 <p>If you are in a bad day, grab a curated Stoicism piece of advice at
 <a href="https://stoicquotes.io"><code>stoicquotes.io</code></a>.</p>
 <p>Also, remember that you might be wrong,
-or, don&rsquo;t use $P=0$ for your <a href="https://en.wikipedia.org/wiki/Cromwell%27s_rule">priors</a>.
+or, don&rsquo;t use P=0 for your <a href="https://en.wikipedia.org/wiki/Cromwell%27s_rule">priors</a>.
 Finally,
 <a href="https://en.wikipedia.org/wiki/Hanlon%27s_razor">never attribute to malice that which is adequately explained by stupidity</a>.</p>
 <p>Everything that I do is either open source
