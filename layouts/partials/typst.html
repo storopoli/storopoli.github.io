@@ -17,6 +17,8 @@
     --math-background-light: #ffffff;
     --math-color-dark: #ffffff;
     --math-background-dark: #000000;
+    --math-font-size: 1rem !important;
+    --math-block-font-size: 1.25rem !important;
   }
 
   body.light-mode {
@@ -32,6 +34,11 @@
   .math-element {
     color: var(--math-color);
     background-color: var(--math-background);
+    font-size: var(--math-font-size);
+  }
+
+  .math-block {
+    font-size: var(--math-block-font-size);
   }
 </style>
 

@@ -13,9 +13,13 @@ document.addEventListener("DOMContentLoaded", function () {
       textNodes.push(walker.currentNode);
     }
 
+    // Collect promises to ensure all rendering is completed
+    const renderPromises = [];
+
     for (const node of textNodes) {
       const text = node.nodeValue;
-      const regex = /\$(.*?)\$/g;
+      // Updated regex to handle multi-line expressions
+      const regex = /\$([\s\S]*?)\$/g;
       let match;
       let lastIndex = 0;
       const fragments = [];
@@ -23,17 +27,28 @@ document.addEventListener("DOMContentLoaded", function () {
       while ((match = regex.exec(text)) !== null) {
         const [fullMatch, mathText] = match;
         const beforeMatch = text.slice(lastIndex, match.index);
-        const isMathMode =
-          fullMatch.startsWith("$ ") && fullMatch.endsWith(" $");
-        const renderedMath = await wypst.renderToString(mathText.trim());
+
+        // Check if mathText contains newline characters
+        const containsNewline = mathText.includes("\n");
+        // Check for whitespace immediately after opening $ and before closing $
+        const hasWhitespaceAroundDelimiters =
+          /^\$\s/.test(fullMatch) && /\s\$$/.test(fullMatch);
+
+        // Determine if it's math mode based on whitespace or newlines
+        const isMathMode = hasWhitespaceAroundDelimiters || containsNewline;
 
         fragments.push(document.createTextNode(beforeMatch));
+
         const span = document.createElement("span");
-        span.className = "math-element";
+        span.className = "math-element katex";
         if (isMathMode) {
-          span.classList.add("katex-display");
+          span.classList.add("katex-display", "math-block");
         }
-        span.innerHTML = renderedMath;
+
+        // Use wypst.render to render the math into the span element
+        const renderPromise = wypst.render(mathText.trim(), span, {});
+        renderPromises.push(renderPromise);
+
         fragments.push(span);
 
         lastIndex = regex.lastIndex;
@@ -49,13 +64,9 @@ document.addEventListener("DOMContentLoaded", function () {
         parent.removeChild(node);
       }
     }
-  };
 
-  const renderMathMode = async function (expression) {
-    const div = document.createElement("div");
-    div.style.textAlign = "center";
-    await wypst.render(expression, div, {});
-    return div.innerHTML;
+    // Wait for all rendering promises to complete
+    await Promise.all(renderPromises);
   };
 
   wypst.initialize().then(() => {
