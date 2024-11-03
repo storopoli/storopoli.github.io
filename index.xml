@@ -7,8 +7,269 @@
     <generator>Hugo -- 0.136.5</generator>
     <language>en-us</language>
     <copyright>CC BY-NC-SA 4.0</copyright>
-    <lastBuildDate>Sun, 03 Nov 2024 07:51:39 -0300</lastBuildDate>
+    <lastBuildDate>Sun, 03 Nov 2024 13:37:37 -0300</lastBuildDate>
     <atom:link href="https://storopoli.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Zig comptime is such a powerful built-in feature</title>
+      <link>https://storopoli.io/2024-11-03-zig-comptime/</link>
+      <pubDate>Sun, 03 Nov 2024 11:03:11 -0300</pubDate>
+      <guid>https://storopoli.io/2024-11-03-zig-comptime/</guid>
+      <description>&lt;p&gt;I have been following the development of &lt;a href=&#34;https://ziglang.org/&#34;&gt;Zig&lt;/a&gt;
+for a while now.
+I like the idea of a systems programming language
+that is &lt;strong&gt;simple to learn and use,
+&lt;em&gt;yet&lt;/em&gt; powerful and expressive&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;With Rust, I can get the powerful and expressive part,
+&lt;em&gt;but&lt;/em&gt; the &lt;strong&gt;learning curve is a bit steep&lt;/strong&gt;,
+and some parts of the language are &lt;strong&gt;complex
+and hard to understand&lt;/strong&gt;.
+For example &lt;code&gt;async&lt;/code&gt;/&lt;code&gt;await&lt;/code&gt; (specially if you have to deal with &lt;code&gt;Stream&lt;/code&gt;s and &lt;code&gt;Pin&lt;/code&gt;s);
+and the macro domain-specific language (DSL).&lt;/p&gt;</description>
+      <content:encoded><![CDATA[<p>I have been following the development of <a href="https://ziglang.org/">Zig</a>
+for a while now.
+I like the idea of a systems programming language
+that is <strong>simple to learn and use,
+<em>yet</em> powerful and expressive</strong>.</p>
+<p>With Rust, I can get the powerful and expressive part,
+<em>but</em> the <strong>learning curve is a bit steep</strong>,
+and some parts of the language are <strong>complex
+and hard to understand</strong>.
+For example <code>async</code>/<code>await</code> (specially if you have to deal with <code>Stream</code>s and <code>Pin</code>s);
+and the macro domain-specific language (DSL).</p>
+<p>Now back to Zig.
+The language can be learned in one lazy morning.
+That&rsquo;s exactly what I did and then played around
+<a href="https://github.com/storopoli/graphs-complexity/pull/21">migrating some C code to Zig from an old course</a>
+that I used to teach about algorithmic complexity.
+The code is now simpler and more readable than the original C code.
+I have hugely benefited from Zig&rsquo;s built-in features such as:</p>
+<ul>
+<li><a href="https://ziglang.org/documentation/master/#Optionals"><strong>Optionals</strong></a></li>
+<li><a href="https://ziglang.org/documentation/master/#Errors"><strong>Error handling</strong></a></li>
+<li><a href="https://ziglang.org/documentation/master/#comptime"><strong><code>comptime</code></strong> (more on that, since it is the main topic of this post)</a></li>
+<li><a href="https://ziglang.org/documentation/master/#Operators"><strong>safe integer/floating-point arithmetic</strong></a></li>
+<li><a href="https://ziglang.org/documentation/master/#defer"><strong>deferring memory deallocation</strong> to the end of the scope</a></li>
+<li><a href="https://ziglang.org/documentation/master/#struct"><strong><code>struct</code>s with functions</strong> (methods)</a></li>
+<li><a href="https://ziglang.org/documentation/master/#Choosing-an-Allocator"><strong>BYOA</strong> (Bring Your Own Allocator)</a><sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></li>
+</ul>
+<p>Writing in Zig, comparing to C, is such a joy and you are always sure that
+you won&rsquo;t spend hours debugging because Zig has:</p>
+<ul>
+<li><strong>No hidden control flow</strong></li>
+<li><strong>No hidden memory allocations</strong></li>
+<li><strong>No preprocessor, no macros</strong></li>
+</ul>
+<p>I highly recommend you to give Zig a try.
+It is the <strong>ultimate C killer</strong>.
+In fact, you can <strong>compile and interop C and Zig</strong> code with Zig.
+So you can start migrating your C codebase to Zig incrementally.
+As an additional caveat, <strong>Zig can be faster than C</strong><sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>.</p>
+<h2 id="zigs-comptime">Zig&rsquo;s <code>comptime</code></h2>
+<p>I&rsquo;ve been wanting to write about Zig for a while now.
+But I had no topic in mind.
+Then, I was inspired by this talk by <a href="https://matklad.github.io">@matklad</a>
+on modern systems programming comparing
+Rust and Zig interwoven with his
+professional journey from Rust to Zig,
+and the amazing work he&rsquo;s doing at
+<a href="https://tigerbeetle.com">TigerBeetle</a>:</p>
+<p><a href="https://youtu.be/4aLy6qjhHeo?t=1904"><img loading="lazy" src="youtube_preview.jpg#center" alt="Matklad - Modern Systems Programming: Rust and Zig"  />
+</a></p>
+<p>The talk goes on to compare Rust and Zig in terms of systems programming.
+Then, at the middle of the talk, he starts to talk about Zig.
+One of the Zig&rsquo;s features that he covers is Zig&rsquo;s <code>comptime</code> feature
+which allows to <strong>run code and evaluate expressions at compile-time</strong>
+<em>without</em> the need for meta-programming/macros or code generation.</p>
+<p>Let me explain now what is <code>comptime</code> in Zig.
+You can do <code>comptime</code> in Zig in different places, such as:</p>
+<ol>
+<li><strong>Parameters of functions</strong></li>
+<li><strong>Variables</strong></li>
+<li><strong>Expressions</strong></li>
+</ol>
+<p>Here are some examples thanks to <a href="https://kristoff.it/blog/what-is-zig-comptime/">Loris Cro</a>
+and <a href="https://ziglang.org/documentation/master/#comptime">Zig&rsquo;s documentation</a>.</p>
+<h3 id="parameters-of-functions">Parameters of functions</h3>
+<p>The first Zig code example is about using <code>comptime</code>
+to decide the length of a statically-allocated array:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-zig" data-lang="zig"><span class="line"><span class="cl"><span class="k">fn</span><span class="w"> </span><span class="n">multiply</span><span class="p">(</span><span class="n">a</span><span class="o">:</span><span class="w"> </span><span class="kt">i64</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="o">:</span><span class="w"> </span><span class="kt">i64</span><span class="p">)</span><span class="w"> </span><span class="kt">i64</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kr">pub</span><span class="w"> </span><span class="k">fn</span><span class="w"> </span><span class="n">main</span><span class="p">()</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kr">const</span><span class="w"> </span><span class="n">len</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kr">comptime</span><span class="w"> </span><span class="n">multiply</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kr">const</span><span class="w"> </span><span class="n">my_static_array</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="n">len</span><span class="p">]</span><span class="kt">u8</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">undefined</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div><h3 id="variables">Variables</h3>
+<p>The second example is about using <code>comptime</code> to define a variable.
+This Zig code evaluates a Fibonacci number at compile-time:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-zig" data-lang="zig"><span class="line"><span class="cl"><span class="kr">const</span><span class="w"> </span><span class="n">expect</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">@import</span><span class="p">(</span><span class="s">&#34;std&#34;</span><span class="p">).</span><span class="n">testing</span><span class="p">.</span><span class="n">expect</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">fn</span><span class="w"> </span><span class="n">fibonacci</span><span class="p">(</span><span class="n">index</span><span class="o">:</span><span class="w"> </span><span class="kt">u32</span><span class="p">)</span><span class="w"> </span><span class="kt">u32</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">index</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">index</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">fibonacci</span><span class="p">(</span><span class="n">index</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">fibonacci</span><span class="p">(</span><span class="n">index</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">2</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">test</span><span class="w"> </span><span class="s">&#34;fibonacci&#34;</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">// test fibonacci at run-time
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="w">    </span><span class="k">try</span><span class="w"> </span><span class="n">expect</span><span class="p">(</span><span class="n">fibonacci</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">13</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">// test fibonacci at compile-time
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="w">    </span><span class="k">try</span><span class="w"> </span><span class="kr">comptime</span><span class="w"> </span><span class="n">expect</span><span class="p">(</span><span class="n">fibonacci</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">13</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div><h3 id="expressions">Expressions</h3>
+<p>The final example is about using <code>comptime</code> to evaluate an expression.
+The following Zig code evaluates a <code>for</code>-loop at compile-time.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-zig" data-lang="zig"><span class="line"><span class="cl"><span class="kr">const</span><span class="w"> </span><span class="n">max</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kr">comptime</span><span class="w"> </span><span class="kr">var</span><span class="w"> </span><span class="n">total</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kr">comptime</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="mi">1</span><span class="p">..</span><span class="n">max</span><span class="p">)</span><span class="w"> </span><span class="o">|</span><span class="n">i</span><span class="o">|</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">total</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">i</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div><h3 id="bonus-example-zigs-generics">Bonus example: Zig&rsquo;s Generics</h3>
+<p>Now you can see how impressive <code>comptime</code> is.
+In fact, Zig&rsquo;s generics are implemented using <code>comptime</code>.
+Check the Zig code below that creates a generic <code>List</code> data structure:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-zig" data-lang="zig"><span class="line"><span class="cl"><span class="k">fn</span><span class="w"> </span><span class="n">List</span><span class="p">(</span><span class="kr">comptime</span><span class="w"> </span><span class="n">T</span><span class="o">:</span><span class="w"> </span><span class="kt">type</span><span class="p">)</span><span class="w"> </span><span class="kt">type</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">items</span><span class="o">:</span><span class="w"> </span><span class="p">[]</span><span class="n">T</span><span class="p">,</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">len</span><span class="o">:</span><span class="w"> </span><span class="kt">usize</span><span class="p">,</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">};</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1">// The generic List data structure can be instantiated by passing in a type:
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kr">var</span><span class="w"> </span><span class="n">buffer</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="mi">10</span><span class="p">]</span><span class="kt">i32</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">undefined</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kr">var</span><span class="w"> </span><span class="n">list</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">List</span><span class="p">(</span><span class="kt">i32</span><span class="p">){</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">.</span><span class="n">items</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">&amp;</span><span class="n">buffer</span><span class="p">,</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">.</span><span class="n">len</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">};</span><span class="w">
+</span></span></span></code></pre></div><h3 id="the-caveats-of-comptime">The caveats of <code>comptime</code></h3>
+<p><code>comptime</code> has some caveats.
+<code>comptime</code> expressions must be known at compile-time.
+That means:</p>
+<ol>
+<li>At the callsite, the value must be known at compile-time, or it is a compile error.</li>
+<li>In the function definition, the value is known at compile-time.</li>
+</ol>
+<p>If you guarantee that the value is known at compile-time,
+you can use <code>comptime</code> to evaluate anything at compile-time.</p>
+<h2 id="the-motivating-example">The motivating example</h2>
+<p>The motivating example for this blog post is an explanation
+that matklad gives in his talk about how they use <code>comptime</code> at TigerBeetle
+to make sure that a <code>struct</code> that represents a header has no padding in its fields.</p>
+<p><img loading="lazy" src="header_padding.png" alt="TigerBeetle&rsquo;s header struct"  />
+</p>
+<p>Then, he said that to have the same checks at compile-time in Rust,
+you would need to bring a lot of complexity with <code>proc-macro</code>s.
+That made me curious about how hard it would be to do the same in Rust.</p>
+<p>So here&rsquo;s a toy problem that I came up with to compare Zig and Rust.
+Instead of checking for padding in fields of a <code>struct</code>,
+I decided to simplify and check for zero-padding in a string.</p>
+<h3 id="zero-padding-check-in-zig">Zero padding check in Zig</h3>
+<p>In Zig, strings are arrays of bytes,
+and you can iterate over them at compile-time:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-zig" data-lang="zig"><span class="line"><span class="cl"><span class="kr">const</span><span class="w"> </span><span class="n">std</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">@import</span><span class="p">(</span><span class="s">&#34;std&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">fn</span><span class="w"> </span><span class="n">checkZeroPadding</span><span class="p">(</span><span class="kr">comptime</span><span class="w"> </span><span class="n">s</span><span class="o">:</span><span class="w"> </span><span class="p">[]</span><span class="kr">const</span><span class="w"> </span><span class="kt">u8</span><span class="p">)</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">s</span><span class="p">)</span><span class="w"> </span><span class="o">|</span><span class="n">c</span><span class="o">|</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">c</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">&#39;0&#39;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="nb">@compileError</span><span class="p">(</span><span class="s">&#34;String contains zero-padding&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kr">pub</span><span class="w"> </span><span class="k">fn</span><span class="w"> </span><span class="n">main</span><span class="p">()</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kr">comptime</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="kr">const</span><span class="w"> </span><span class="n">str1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#34;12345&#34;</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="kr">const</span><span class="w"> </span><span class="n">str2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#34;01234&#34;</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">checkZeroPadding</span><span class="p">(</span><span class="n">str1</span><span class="p">);</span><span class="w"> </span><span class="c1">// This will compile
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="w">        </span><span class="n">checkZeroPadding</span><span class="p">(</span><span class="n">str2</span><span class="p">);</span><span class="w"> </span><span class="c1">// This will cause a compile-time error
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div><p>The code above uses <code>comptime</code> to check if a string has zero-padding.</p>
+<h3 id="zero-padding-check-in-rust">Zero padding check in Rust</h3>
+<p>Compare this to how to do the same thing in Rust.
+We need to use a procedural macro to achieve the same result.
+Note that <a href="https://doc.rust-lang.org/reference/macros.html">macros in Rust</a>
+have their own domain-specific language (DSL) that is not Rust itself.
+Hence, you need to learn a new language to write a macro in Rust.</p>
+<p>First create a library crate named <code>zero-padding-checker</code>
+that exports a <a href="https://doc.rust-lang.org/reference/procedural-macros.html"><code>proc-macro</code></a>
+and add a procedural macro to check for zero-padding in a string:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-rust" data-lang="rust"><span class="line"><span class="cl"><span class="k">use</span><span class="w"> </span><span class="n">proc_macro</span>::<span class="n">TokenStream</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">use</span><span class="w"> </span><span class="n">quote</span>::<span class="n">quote</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">use</span><span class="w"> </span><span class="n">syn</span>::<span class="p">{</span><span class="n">parse_macro_input</span><span class="p">,</span><span class="w"> </span><span class="n">LitStr</span><span class="p">};</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="cp">#[proc_macro]</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">pub</span><span class="w"> </span><span class="k">fn</span> <span class="nf">check_zero_padding</span><span class="p">(</span><span class="n">input</span>: <span class="nc">TokenStream</span><span class="p">)</span><span class="w"> </span>-&gt; <span class="nc">TokenStream</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">input</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="fm">parse_macro_input!</span><span class="p">(</span><span class="n">input</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">LitStr</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">input</span><span class="p">.</span><span class="n">value</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="n">value</span><span class="p">.</span><span class="n">starts_with</span><span class="p">(</span><span class="sc">&#39;0&#39;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="fm">quote!</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="fm">compile_error!</span><span class="p">(</span><span class="s">&#34;String contains zero-padding&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">.</span><span class="n">into</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="fm">quote!</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span>#<span class="n">input</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">.</span><span class="n">into</span><span class="p">()</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div><p>Then you call the macro in your code:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-rust" data-lang="rust"><span class="line"><span class="cl"><span class="k">use</span><span class="w"> </span><span class="n">zero_padding_checker</span>::<span class="n">check_zero_padding</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">fn</span> <span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="fm">check_zero_padding!</span><span class="p">(</span><span class="s">&#34;12345&#34;</span><span class="p">);</span><span class="w"> </span><span class="c1">// This will compile
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="w">    </span><span class="fm">check_zero_padding!</span><span class="p">(</span><span class="s">&#34;01234&#34;</span><span class="p">);</span><span class="w"> </span><span class="c1">// This will cause a compile-time error
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div><p>The Rust code above is far more complex than the Zig code.
+First, it requires dependency on <code>syn</code> and <code>quote</code> crates
+(note that the <code>proc-macro</code> crate is provided by Rust&rsquo;s compiler).
+Second, despite the fact that this is a simple example,
+procedural macros in Rust have their own domain-specific language (DSL)
+and the complexity can grow quickly as the problem becomes more complex<sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup>.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>Yeah, <strong>Zig is a great language and has a bright future ahead</strong>.
+<strong><code>comptime</code></strong> is a powerful feature that allows you to <strong>run almost <em>any</em> code at compile-time</strong>.
+It is built into the language and you don&rsquo;t need to learn a new language to use it
+or bring external dependencies to make it work.</p>
+<p>If you like to <strong>learn more about Zig</strong>, I recommend reading the
+<a href="https://ziglang.org/learn/">learn section of Zig&rsquo;s documentation</a>.
+Also, to learn more about <strong>Zig&rsquo;s <code>comptime</code></strong> feature,
+check <a href="https://ziglang.org/documentation/master/#comptime">Zig&rsquo;s documentation on <code>comptime</code></a>.</p>
+<h2 id="license">License</h2>
+<p>This post is licensed under <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International</a>.</p>
+<p><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img loading="lazy" src="https://licensebuttons.net/l/by-nc-sa/4.0/88x31.png" alt="CC BY-NC-SA 4.0"  />
+</a></p>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p>Zig doesn&rsquo;t have a built-in allocator.
+And I don&rsquo;t know it the acronym BYOA is a thing.
+I just made it up. But it makes sense, right?&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2">
+<p>It is faster for the following reasons:</p>
+<ol>
+<li>The reference implementation uses LLVM as a backend for state of the art optimizations.</li>
+<li>What other projects call &ldquo;Link Time Optimization&rdquo; Zig does automatically.
+For native targets, advanced CPU features are enabled (<code>-march=native</code>)</li>
+<li>Carefully chosen undefined behavior.</li>
+<li>Zig directly exposes a SIMD vector type, making it easy to write portable vectorized code.</li>
+</ol>
+&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></li>
+<li id="fn:3">
+<p>Take a look at some examples in <a href="https://veykril.github.io/tlborm">The Little Book of Rust Macros</a>&#160;<a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
+]]></content:encoded>
+    </item>
     <item>
       <title>Von Neumann</title>
       <link>https://storopoli.io/2024-06-22-von-neumann/</link>

@@ -7,8 +7,29 @@
     <generator>Hugo -- 0.136.5</generator>
     <language>en-us</language>
     <copyright>CC BY-NC-SA 4.0</copyright>
-    <lastBuildDate>Sun, 08 Sep 2024 19:00:51 -0300</lastBuildDate>
+    <lastBuildDate>Sun, 03 Nov 2024 13:37:37 -0300</lastBuildDate>
     <atom:link href="https://storopoli.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Compiler</title>
+      <link>https://storopoli.io/tags/compiler/</link>
+      <pubDate>Sun, 03 Nov 2024 11:03:11 -0300</pubDate>
+      <guid>https://storopoli.io/tags/compiler/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Rust</title>
+      <link>https://storopoli.io/tags/rust/</link>
+      <pubDate>Sun, 03 Nov 2024 11:03:11 -0300</pubDate>
+      <guid>https://storopoli.io/tags/rust/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Zig</title>
+      <link>https://storopoli.io/tags/zig/</link>
+      <pubDate>Sun, 03 Nov 2024 11:03:11 -0300</pubDate>
+      <guid>https://storopoli.io/tags/zig/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Math</title>
       <link>https://storopoli.io/tags/math/</link>
@@ -42,13 +63,6 @@
       <link>https://storopoli.io/tags/privacy/</link>
       <pubDate>Sat, 23 Mar 2024 14:00:16 -0300</pubDate>
       <guid>https://storopoli.io/tags/privacy/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Rust</title>
-      <link>https://storopoli.io/tags/rust/</link>
-      <pubDate>Sat, 23 Mar 2024 14:00:16 -0300</pubDate>
-      <guid>https://storopoli.io/tags/rust/</guid>
       <description></description>
     </item>
     <item>
