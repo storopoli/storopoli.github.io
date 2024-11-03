@@ -2,7 +2,7 @@
 <!-- this disables any javascript, including KaTeX -->
 <meta
   http-equiv="Content-Security-Policy"
-  content="default-src 'none'; img-src 'self'; script-src 'self'; font-src 'self'; style-src 'self'; connect-src 'self'; form-action 'none'; block-all-mixed-content; base-uri 'none'"
+  content="default-src 'none'; img-src 'self'; script-src 'none'; font-src 'none'; style-src 'self'; connect-src 'none'; form-action 'none'; block-all-mixed-content; base-uri 'none'"
 />
 {{ end }} {{ if or .Params.typst .Site.Params.typst }} {{ partial "typst.html" . }}
 {{ end }} {{ if or .Params.math .Site.Params.math }} {{ partial "math.html" . }}

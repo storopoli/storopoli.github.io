@@ -5,4 +5,5 @@ layout = "search" # is necessary
 # description = "Description for Search"
 summary = "Search"
 placeholder = "Enter your search query"
+javascript = true
 +++
