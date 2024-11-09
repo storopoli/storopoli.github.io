@@ -1,0 +1,55 @@
+<extend template="base.shtml">
+<title id="title">Home</title>
+<head id="head">
+  <link
+  type="text/css"
+  rel="stylesheet"
+  href="$site.asset('term-highlight.css').link()"
+>
+</head>
+<div
+  id="content"
+>
+  <style>
+    h1,
+    h2,
+    h3 {
+      text-align: center;
+    }
+
+    .profile-pic {
+      border-radius: 50%;
+      border: 5px solid lightblue;
+      margin-top: 1rem;
+    }
+  </style>
+  <div style="display:flex; flex-direction:column; align-items:center;">
+    <h1 id="header" class="noupper" style="margin-bottom:0;">
+      Jose Storopoli, PhD
+    </h1>
+    <div class="menu" style="display:flex; justify-content:center; ">
+      <a href="/">Home</a>
+      •
+      <a href="$site.page('blog').link()">Blog</a>
+      •
+      <a href="https://github.com/storopoli" target="_blank">
+        GitHub
+      </a>
+    </div>
+    <h3 style="margin-top:0;"><br>
+      <img src="$site.asset('pp.jpg').link()" height=200  class="profile-pic"></h3>
+    <div id="page" :html="$page.content()"></div>
+  </div>
+</div>
+<footer id="footer">
+  <small class="noupper" style="color:#606060;font-weight:normal;">
+     CC-BY-SA 4.0
+     &copy; in 2024 by &nbsp;
+    <a href="https://github.com/storopoli" target="_blank">Jose Storopoli, PhD</a>
+    —
+    <i>made with &nbsp;
+      <a href="https://zine-ssg.io" target="_blank">
+        <img src="$site.asset('zig-logo-light.svg').link()" height=13>
+      </a></i>
+  </small>
+</footer>

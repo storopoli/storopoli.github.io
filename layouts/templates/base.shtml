@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head id="head">
+    <meta charset="UTF-8">
+    <meta name="description" content="Jose Storopoli, PhD - personal website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@storopoli">
+    <meta name="twitter:author" content="@storopoli">
+    <meta name="twitter:description" content="Jose Storopoli, PhD - personal website">
+    <meta name="twitter:title" content="$page.title.suffix(' | @stropoli')">
+    <meta name="twitter:image" content="$site.host_url.addPath($site.asset('pp.jpg').link())">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="$page.title.suffix(' | @storopoli')">
+    <meta property="og:image" content="$site.host_url.addPath($site.asset('pp.jpg').link())">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title id="title">
+      <super>
+      - @storopoli
+    </title>
+    <link rel="stylesheet" type="text/css" href="$site.asset('main.css').link()">
+    <link rel="stylesheet" type="text/css" href="$site.asset('highlight.css').link()">
+    <super>
+  </head>
+  <body>
+    <div id="content">
+      <super>
+    </div>
+    <footer id="footer">
+      <super>
+    </footer>
+  </body>
+</html>
