@@ -5,7 +5,7 @@
   type="text/css"
   rel="stylesheet"
   href="$site.asset('term-highlight.css').link()"
->
+  >
 </head>
 <div
   id="content"
