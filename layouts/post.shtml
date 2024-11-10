@@ -70,6 +70,10 @@
       <a href="https://github.com/storopoli" target="_blank">
         GitHub
       </a>
+      •
+      <a href="$site.asset('publickey.txt').link()" target="_blank">
+        PGP
+      </a>
     </div>
   </div>
   <h1 :text="$page.title"></h1>

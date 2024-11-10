@@ -19,6 +19,8 @@
       - @storopoli
     </title>
     <link rel="stylesheet" type="text/css" href="$site.asset('main.css').link()">
+    <link rel="stylesheet" type="text/css" href="$site.asset('fonts.css').link()">
+    <link rel="stylesheet" type="text/css" href="$site.asset('fira_code.css').link()">
     <link rel="stylesheet" type="text/css" href="$site.asset('highlight.css').link()">
     <super>
   </head>

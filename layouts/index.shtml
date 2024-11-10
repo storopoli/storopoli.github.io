@@ -35,6 +35,10 @@
       <a href="https://github.com/storopoli" target="_blank">
         GitHub
       </a>
+      •
+      <a href="$site.asset('publickey.txt').link()" target="_blank">
+        PGP
+      </a>
     </div>
     <h3 style="margin-top:0;"><br>
       <img src="$site.asset('pp.jpg').link()" height=200  class="profile-pic"></h3>

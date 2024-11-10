@@ -12,6 +12,7 @@ pub fn build(b: *std.Build) !void {
             "CNAME",
             "favicon.svg",
             "pp.jpg",
+            "publickey.txt",
             "zig-logo-light.svg",
 
             // well-known
