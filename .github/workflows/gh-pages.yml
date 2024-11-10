@@ -4,14 +4,15 @@ on:
   workflow_dispatch:
   push:
     branches:
-      - main  # Set a branch to deploy
+      - main
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
         with:
-          fetch-depth: 0  # Change if you need git info
+          fetch-depth: 0
 
       - name: Setup Zig
         uses: mlugg/setup-zig@v1
@@ -27,4 +28,3 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./zig-out
-
