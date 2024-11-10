@@ -70,10 +70,18 @@
     </div>
     <footer id="footer">
       <small class="noupper" style="color:#606060;font-weight:normal;">
-        CC-BY-SA 4.0
-        &copy; in 2024 by &nbsp;
-        <a href="https://github.com/storopoli" target="_blank">Jose Storopoli, PhD</a>
+        <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">
+          CC-BY-SA 4.0
+        </a>
+        &nbsp;
         —
+        &nbsp;
+        <a href="https://github.com/storopoli" target="_blank">
+          Jose Storopoli, PhD
+        </a>
+        &nbsp;
+        —
+        &nbsp;
         <i>made with &nbsp;
           <a href="https://zine-ssg.io" target="_blank">
             <img src="$site.asset('zig-logo-light.svg').link()" height=13>
