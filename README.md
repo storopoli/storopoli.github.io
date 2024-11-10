@@ -7,6 +7,13 @@ This is my personal site at [storopoli.io](https://storopoli.io).
 It is built with [Zig](https://ziglang.org/)
 and [Zine](https://zine-ssg.io).
 
+To run the site locally, you need to have Zig installed,
+and run the following command;
+
+```sh
+zig build serve
+```
+
 ## JavaScript
 
 By default, all JavaScript[^javascript] is disabled.
@@ -16,7 +23,7 @@ By default, all JavaScript[^javascript] is disabled.
 Math support can be enabled by setting the frontmatter with;
 
 ```zig
-.layout = "post-math.shtml",
+.custom = {"math": true},
 ```
 
 This will load either [KaTeX](https://katex.org/)

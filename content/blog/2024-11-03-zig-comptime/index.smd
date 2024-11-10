@@ -1,8 +1,8 @@
 ---
 .title = "Zig comptime is such a powerful built-in feature",
-.date = @date("2024-11-03T11:03:11-03:00"),
+.date = @date("2024-11-03T11:03:11"),
 .author = "Jose Storopoli, PhD",
-.layout = "templates/post.shtml",
+.layout = "post.shtml",
 .tags = ["zig", "compiler", "rust"],
 .draft = false,
 .custom = {"toc": true},
