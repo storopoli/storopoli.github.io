@@ -1,39 +1,8 @@
 <extend template="base.shtml">
 <title :text="$page.title" id="title"></title>
-<head id="head">
-  <link
-  type="text/css"
-  rel="stylesheet"
-  href="$site.asset('term-highlight.css').link()"
-  >
-</head>
-<div
-  id="content"
->
-  <style>
-    h1,
-    h2,
-    h3 {
-      text-align: center;
-    }
-  </style>
+<head id="head"></head>
+<div id="content">
   <div style="display:flex; flex-direction:column; align-items:center;">
-    <h1 id="header" class="noupper" style="margin-bottom:0;">
-      Jose Storopoli, PhD
-    </h1>
-    <div class="menu" style="display:flex; justify-content:center; ">
-      <a href="/">Home</a>
-      •
-      <a href="$site.page('blog').link()">Blog</a>
-      •
-      <a href="https://github.com/storopoli" target="_blank">
-        GitHub
-      </a>
-      •
-      <a href="$site.asset('publickey.txt').link()" target="_blank">
-        PGP
-      </a>
-    </div>
     <div>
       <h1
         :text="$page.title"

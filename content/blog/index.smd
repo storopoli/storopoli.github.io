@@ -4,6 +4,12 @@
 .author = "Jose Storopoli, PhD",
 .layout = "collection.shtml",
 .draft = false,
+.alternatives = [{
+  .name = "rss",
+  .type = "application/rss+xml",
+  .layout = "rss.xml",
+  .output = "index.xml",
+}],
 ---
 
 
