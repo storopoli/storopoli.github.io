@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+  <head id="head">
+    <meta charset="UTF-8">
+    <meta name="description" content="Jose Storopoli, PhD - personal website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@storopoli">
+    <meta name="twitter:author" content="@storopoli">
+    <meta name="twitter:description" content="Jose Storopoli, PhD - personal website">
+    <meta name="twitter:title" content="Zero-cost Abstractions | @stropoli">
+    <meta name="twitter:image" content="https://storopoli.io/pp.jpg">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Zero-cost Abstractions | @storopoli">
+    <meta property="og:image" content="https://storopoli.io/pp.jpg">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title id="title">
+      Zero-cost Abstractions
+      - @storopoli
+    </title>
+    <link rel="stylesheet" type="text/css" href="/main.css">
+    <link rel="stylesheet" type="text/css" href="/fonts.css">
+    <link rel="stylesheet" type="text/css" href="/fira_code.css">
+    <link rel="stylesheet" type="text/css" href="/highlight.css">
+    <link type="text/css" rel="stylesheet" href="/term-highlight.css">
+    
+  </head>
+  <body>
+    <div id="content">
+      <style>
+        h1,
+        h2,
+        h3 {
+          text-align: center;
+        }
+
+        .profile-pic {
+          border-radius: 50%;
+          border: 5px solid lightblue;
+          margin-top: 1rem;
+        }
+      </style>
+      <div style="display:flex; flex-direction:column; align-items:center;">
+        <h1 id="header" class="noupper" style="margin-bottom:0;">
+          Jose Storopoli, PhD
+        </h1>
+        <div class="menu" style="display:flex; justify-content:center; ">
+          <a href="/">Home</a>
+          •
+          <a href="/blog/">Blog</a>
+          •
+          <a href="https://github.com/storopoli" target="_blank">
+            GitHub
+          </a>
+          •
+          <a href="/publickey.txt" target="_blank">
+            PGP
+          </a>
+          •
+          <a href="/index.xml" rel="alternate" type="application/rss+xml">
+            RSS
+          </a>
+        </div>
+      </div>
+      
+  <h1>Zero-cost Abstractions</h1>
+  <p class="post-byline">
+    <span>November 28, 2023</span>
+    •
+    <span>11</span>
+    min read • by
+    <b>Jose Storopoli, PhD</b>
+    <span></span>
+  </p>
+  <div id="post-description"></div>
+  <div>
+    <div class="toc block info">
+      <h1>&nbsp;Table of Contents</h1>
+      <div><ul>
+<li>
+<ul><li>
+The curious case of the Python boolean</li><li>More zero-costs abstractions<ul><li>
+For-loops</li><li>Enums</li></ul></li><li>Conclusion</li></ul></ul></div>
+    </div>
+  </div>
+  <div></div>
+  <div id="content">
+    <div id="post-body"><p>In programming language circles there’s a recently trend of discussing a concept called <strong>zero-cost abstractions</strong>: the ability to use higher-levels abstractions without suffering any loss of performance.</p><p>Zero-cost abstractions allows you to write performant code without having to give up a single drop of convenience and expressiveness:</p><p>You want for-loops? <em>You can have it</em>. Generics? <em>Yeah, why not</em>? Data structures? <em>Sure, keep’em coming</em>. Async operations? <em>You bet ya</em>! Multi-threading? <em>Hell yes</em>!</p><p>To put more formally, I like <a href="https://stackoverflow.com/a/69178445" target="_blank">this definition from StackOverflow</a>:</p><blockquote><p>Zero Cost Abstractions means adding higher-level programming concepts, like generics, collections and so on do not come with a run-time cost, only compile time cost (the code will be slower to compile). Any operation on zero-cost abstractions is as fast as you would write out matching functionality by hand using lower-level programming concepts like for loops, counters, ifs and using raw pointers.</p></blockquote><p>Here’s an analogy:</p><blockquote><p>Imagine that you are going to buy a car. The sales person offers you a fancy car praising how easy it is to drive it, that you don’t need to think about RPM, clutch and stick shift, parking maneuver, fuel type, and other shenanigans. You just turn it on and drive. However, once you take a look at the car’s data sheet, you are horrified. The car is bad in every aspect except easy of use. It has dreadful fuel consumption, atrocious safety ratings, disastrous handling, and so on…</p></blockquote><p>Believe me, you wouldn’t want to own that car.</p><p>Metaphors aside, that’s <strong>exactly what professional developers and whole teams choose to use every day: unacceptable inferior tools</strong>. Tools that, not only don’t have <strong>zero-cost abstractions</strong>, rather don’t allow you to even have non-zero-cost anything!</p><p>Let’s do some Python bashing in the meantime. I know that’s easy to bash Python, but that’s not the point. If Python wasn’t used so widely in production, I would definitely leave it alone. Don’t get me wrong, Python is the second-best language for everything.</p><h2>The curious case of the Python boolean</h2><p><figure><img src="/blog/2023-11-28-zero_cost_abstractions/non-zero-cost-abstraction.png" alt="">
+<figcaption>Python WTF?</figcaption></figure></p><p>I wish this meme was a joke, but it isn’t. A boolean is one of the simplest data type taking only two possible values: true or false. Just grab your nearest Python REPL:</p><pre><code class="python"><span class="operator">&gt;</span><span class="operator">&gt;&gt;</span> <span class="keyword">from</span> <span class="variable">sys</span> <span class="keyword">import</span> <span class="variable">getsizeof</span>
+<span class="operator">&gt;</span><span class="operator">&gt;&gt;</span> <span class="function">getsizeof</span>(<span class="constant builtin">True</span>)
+<span class="number">28</span>
+</code></pre>
+<p>The function <a href="https://docs.python.org/3/library/sys.html#sys.getsizeof" target="_blank"><code>sys.getsizeof</code></a> returns the size of an object in bytes. <strong>How the hell Python needs 28 bytes to represent something that needs at most 1 byte</strong>? Imagine incurring a 28x penalty in memory size requirements for every boolean that you use. Now multiply this by every operation that your code is going to run in production over time. Again: <strong>unacceptable</strong>.</p><p>That’s because all objects in Python, in the sense that everything that you can instantiate, i.e. everything that you can put on the left hand-side of the <code>=</code> assignment, is a <a href="https://docs.python.org/3/c-api/structures.html#c.PyObject" target="_blank"><code>PyObject</code></a>:</p><blockquote><p>All Python objects ultimately share a small number of fields at the beginning of the object’s representation in memory. These are represented by the <code>PyObject</code> and <code>PyVarObject</code> types.</p></blockquote><p>Python is dynamically-typed, which means that you don’t have primitives like 8-, 16-, 32-bit (un)signed integers and so on. Everything is a huge mess allocated in the heap that must carry not only its value, but also information about its type.</p><p>Most important, everything that is fast in Python is <em>not Python-based</em>. Take a look at the image below, I grabbed some popular Python libraries from GitHub, namely <a href="https://github.com/numpy/numpy" target="_blank">NumPy</a> (linear algebra package) and <a href="https://github.com/pytorch/pytorch" target="_blank">PyToch</a> (deep learning package), and checked the language codebase percentage.</p><p><figure><img src="/blog/2023-11-28-zero_cost_abstractions/python-my-ass.jpg" alt="">
+<figcaption>Python my ass</figcaption></figure></p><p>Surprise, they are <strong><em>not</em> Python libraries</strong>. They are <strong>C/C++ codebases</strong>. Even if Python is the main language used in these codebases, I still think that this is not the case due to the nature of the Python code: <strong>all docstrings are written in Python</strong>. If you have a very fast C function in your codebase that takes 50 lines of code, followed by a Python wrapper function that calls it using 10 lines of code, <em>but</em> with a docstring that is 50 lines of code; you have a “Python”-majority codebase.</p><p>In a sense the most efficient Python programmer is a C/C++ programmer…</p><p>Here’s <a href="https://julialang.org" target="_blank">Julia</a>, which is also dynamically-typed:</p><pre><code class="python"><span class="variable">julia</span><span class="operator">&gt;</span> <span class="variable">Base</span>.<span class="function method">summarysize</span>(<span class="variable">true</span>)
+<span class="number">1</span>
+</code></pre>
+<p>And to your surprise, Julia is coded in …. Julia! Check the image below for the language codebase percentage of <a href="https://github.com/JuliaLang/julia" target="_blank">Julia</a> and <a href="https://github.com/LuxDL/Lux.jl" target="_blank"><code>Lux.jl</code></a> (deep learning package).</p><p><figure><img src="/blog/2023-11-28-zero_cost_abstractions/julia.jpg" alt="">
+<figcaption>Julia: turtles all the way</figcaption></figure></p><p>Finally, here’s <a href="https://rust-lang.org" target="_blank">Rust</a>, which is not dynamically-, but static-typed:</p><pre><code class="rust"><span class="comment">// main.rs</span>
+<span class="keyword">use</span> <span class="type">std</span><span class="punctuation delimiter">::</span><span class="constant">mem</span><span class="punctuation delimiter">;</span>
+
+<span class="keyword">fn</span> <span class="function">main</span><span class="punctuation bracket">(</span><span class="punctuation bracket">)</span> <span class="punctuation bracket">{</span>
+    <span class="constant">println</span><span class="function macro">!</span><span class="punctuation bracket">(</span><span class="string">&quot;Size of bool: {} byte&quot;</span><span class="punctuation delimiter">,</span> <span class="constant">mem</span><span class="punctuation delimiter">::</span><span class="constant">size_of</span><span class="punctuation delimiter">::</span>&lt;<span class="type builtin">bool</span>&gt;<span class="punctuation bracket">(</span><span class="punctuation bracket">)</span><span class="punctuation bracket">)</span><span class="punctuation delimiter">;</span>
+<span class="punctuation bracket">}</span>
+</code></pre>
+<pre><code class="bash"><span class="constant">$ cargo</span> <span class="constant">run</span> <span class="constant">--release</span>
+   <span class="constant">Compiling</span> <span class="constant">size_of_bool</span> <span class="constant">v0.1.0</span>
+    <span class="constant">Finished</span> <span class="constant">release</span> <span class="constant">[optimized]</span> <span class="constant">target</span>(<span class="constant">s</span>) <span class="keyword">in</span> <span class="constant">0.00s</span>
+     <span class="constant">Running</span> <span class="constant">`target/release/size_of_bool`</span>
+<span class="constant">Size</span> <span class="constant">of</span> <span class="constant">bool:</span> <span class="constant">1</span> <span class="constant">byte</span>
+</code></pre>
+<h2>More zero-costs abstractions</h2><p>Let’s cover two more zero-costs abstractions, both in Julia and in Rust: <strong>for-loops</strong> and <strong>enums</strong>.</p><h3>For-loops</h3><p>A friend and a Julia-advocate once told me that Julia’s master plan is to secretly “make everyone aware about <em>compilers</em>”. The <a href="https://en.wikipedia.org/wiki/Compiler" target="_blank">compiler</a> is a program that translate source code from a high-level programming language to a low-level programming language (e.g. assembly language, object code, or machine code) to create an executable program.</p><p>Python uses <a href="https://github.com/python/cpython" target="_blank">CPython</a> as the compiler. If you search around on why CPython/Python is so slow and inefficient, you’ll find that the culprits are:</p><ol><li>Python is <strong>dynamic-typed language</strong>.</li><li>Python’s <strong>Global Interpreter Lock (GIL) restricts multi-threading capabilities</strong>.</li><li>Python is <strong>interpreted</strong>, which means that Python code is executed sequentially: line-by-line.</li><li>Python is <strong>garbage-collected</strong>: all memory its tracked, and allocated or deallocated which introduces overhead.</li></ol><p>I completely disagree with almost all the above reasons, except the GIL. <strong>Python is slow because of its design decisions</strong>, more specifically the way CPython works under the hood. It is not built for performance in mind. Actually, the main objective of Python was to be a “language that would be easy to read, write, and maintain”. I salute that: Python has remained true to its main objective.</p><p>Now let’s switch to Julia:</p><ol><li>Julia is <strong>dynamic-typed language</strong>.</li><li>Julia is <strong>interpreted</strong>, which means that Julia code is executed sequentially: line-by-line.</li><li>Julia is <strong>garbage-collected</strong>: all memory its tracked, and allocated or deallocated which introduces overhead.</li></ol><p>I’ve copy-pasted all Python’s arguments for inefficiency, except the GIL. And, contrary to Python, <a href="https://julialang.org/benchmarks/" target="_blank">Julia is fast</a>! Sometimes even faster than C. Actually, that was the goal all along since Julia’s inception. If you check the <a href="https://julialang.org/blog/2012/02/why-we-created-julia/" target="_blank">notorious Julia announcement blog post from 2012</a>:</p><blockquote><p>We want a language that’s open source, with a liberal license. We want the speed of C with the dynamism of Ruby. We want a language that’s homoiconic, with true macros like Lisp, but with obvious, familiar mathematical notation like Matlab. We want something as usable for general programming as Python, as easy for statistics as R, as natural for string processing as Perl, as powerful for linear algebra as Matlab, as good at gluing programs together as the shell. Something that is dirt simple to learn, yet keeps the most serious hackers happy. We want it interactive and we want it compiled.</p><p>(Did we mention it should be as fast as C?)</p></blockquote><p>It mentions “speed” twice. Not only that, but also specifically says that it should match C’s speed.</p><p>Julia is fast because of its design decisions. One of the major reasons why Julia is fast is because of the choice of compiler that it uses: <a href="https://llvm.org/" target="_blank">LLVM</a>.</p><p>LLVM originally stood for <strong>l</strong>ow <strong>l</strong>evel <strong>v</strong>irtual <strong>m</strong>achine. Despite its name, LLVM has little to do with traditional virtual machines. LLVM can take <a href="https://en.wikipedia.org/wiki/Intermediate_representation" target="_blank">intermediate representation (IR)</a> code and compile it into machine-dependent instructions. It has <a href="https://foundation.llvm.org/docs/sponsors/" target="_blank">support and sponsorship</a> from a lot of big-tech corporations, such as Apple, Google, IBM, Meta, Arm, Intel, AMD, Nvidia, and so on. It is a pretty fast compiler that can do wonders in optimizing IR code to a plethora of computer architectures.</p><p>In a sense, Julia is a front-end for LLVM. It turns your easy-to-read and easy-to-write Julia code into LLVM IR code. Take this for-loop example inside a function:</p><pre><code class="python"><span class="function">function</span> <span class="variable">sum_10</span>()
+    <span class="variable">acc</span> <span class="operator">=</span> <span class="number">0</span>
+    <span class="keyword">for</span> <span class="variable">i</span> <span class="operator">in</span> <span class="number">1</span>:<span class="number">10</span>
+        <span class="variable">acc</span> <span class="operator">+=</span> <span class="variable">i</span>
+    <span class="variable">end</span>
+    <span class="keyword">return</span> <span class="variable">acc</span>
+<span class="variable">end</span>
+</code></pre>
+<p>Let’s check what Julia generates as LLVM IR code for this function. We can do that with the <code>@code_llvm</code> macro.</p><pre><code class="python"><span class="variable">julia</span><span class="operator">&gt;</span> @<span class="variable">code_llvm</span> <span class="variable">debuginfo</span><span class="operator">=</span>:<span class="variable">none</span> <span class="function">sum_10</span>()
+<span class="variable">define</span> <span class="variable">i64</span> @<span class="function">julia_sum_10_172</span>() <span class="comment">#0 {</span>
+<span class="variable">top</span>:
+  <span class="type">ret</span> <span class="variable">i64</span> <span class="number">55</span>
+}
+</code></pre>
+<p>You can’t easily fool the compiler. Julia understands that the answer is 55, and the LLVM IR generated code is pretty much just “return 55 as a 64-bit integer”.</p><p>Let’s also check the machine-dependent instructions with the <code>@code_native</code> macro. I am using an Apple Silicon machine, so these instructions might differ from yours:</p><pre><code class="python"><span class="variable">julia</span><span class="operator">&gt;</span> @<span class="variable">code_native</span> <span class="variable">debuginfo</span><span class="operator">=</span>:<span class="function">none</span> <span class="variable">sum_10</span>()
+        .<span class="variable">section</span>        <span class="variable">__TEXT</span>,<span class="variable">__text</span>,<span class="variable">regular</span>,<span class="variable">pure_instructions</span>
+        .<span class="property">build_version</span> <span class="variable">macos</span>, <span class="number">14</span>, <span class="number">0</span>
+        .<span class="property">globl</span>  <span class="variable">_julia_sum_10_214</span>               ; <span class="operator">-</span><span class="operator">-</span> <span class="variable">Begin</span> <span class="variable">function</span> <span class="variable">julia_sum_10_214</span>
+        .<span class="property">p2align</span>        <span class="number">2</span>
+<span class="variable">_julia_sum_10_214</span>:                      ; @<span class="variable">julia_sum_10_214</span>
+        .<span class="property">cfi_startproc</span>
+; <span class="operator">%</span><span class="variable">bb</span>.<span class="number">0</span>:                                ; <span class="operator">%</span><span class="variable">top</span>
+        <span class="variable">mov</span>     <span class="variable">w0</span>, <span class="comment">#55</span>
+        <span class="variable">ret</span>
+        .<span class="property">cfi_endproc</span>
+                                        ; <span class="operator">-</span><span class="operator">-</span> <span class="variable">End</span> <span class="variable">function</span>
+.<span class="property">subsections_via_symbols</span>
+</code></pre>
+<p>The only important instruction for our argument here is the <code>mov w0, #55</code>. This means “move the value 55 into the <code>w0</code> register”, where <code>w0</code> is one of registers available in ARM-based architectures (which Apple Silicon chips are).</p><p>This is a <strong>zero-cost abstraction</strong>! I don’t need to give up for-loops, because they might be slow and inefficient; like some Python users suggest newcomers. I can have the full convenience and expressiveness of for-loops without paying performance costs. Pretty much the definition of a zero-cost abstraction from above.</p><p>Using LLVM as a compiler backend is not something unique to Julia. Rust also uses LLVM under the hood. Take for example this simple Rust code:</p><pre><code class="rust"><span class="comment">// main.rs</span>
+<span class="keyword">pub</span> <span class="keyword">fn</span> <span class="function">sum_10</span><span class="punctuation bracket">(</span><span class="punctuation bracket">)</span> -&gt; <span class="type builtin">i32</span> <span class="punctuation bracket">{</span>
+    <span class="keyword">let</span> <span class="keyword">mut</span> <span class="constant">acc</span> = <span class="constant builtin">0</span><span class="punctuation delimiter">;</span>
+    <span class="keyword">for</span> <span class="constant">i</span> <span class="keyword">in</span> <span class="constant builtin">1</span>..=<span class="constant builtin">10</span> <span class="punctuation bracket">{</span>
+        <span class="constant">acc</span> += <span class="constant">i</span>
+    <span class="punctuation bracket">}</span>
+    <span class="constant">acc</span>
+<span class="punctuation bracket">}</span>
+
+<span class="keyword">fn</span> <span class="function">main</span><span class="punctuation bracket">(</span><span class="punctuation bracket">)</span> <span class="punctuation bracket">{</span>
+    <span class="constant">println</span><span class="function macro">!</span><span class="punctuation bracket">(</span><span class="string">&quot;sum_10: {}&quot;</span><span class="punctuation delimiter">,</span> <span class="constant">sum_10</span><span class="punctuation bracket">(</span><span class="punctuation bracket">)</span><span class="punctuation bracket">)</span><span class="punctuation delimiter">;</span>
+<span class="punctuation bracket">}</span>
+</code></pre>
+<p>We can inspect both LLVM IR code and machine instructions with the <a href="https://github.com/pacak/cargo-show-asm" target="_blank"><code>cargo-show-asm</code></a> crate:</p><pre><code class="bash"><span class="constant">$ cargo</span> <span class="constant">asm</span> <span class="constant">--llvm</span> <span class="constant">&quot;sum_10::main&quot;</span> <span class="operator">|</span> <span class="constant">grep</span> <span class="constant">55</span>
+    <span class="constant">Finished</span> <span class="constant">release</span> <span class="constant">[optimized]</span> <span class="constant">target</span>(<span class="constant">s</span>) <span class="keyword">in</span> <span class="constant">0.00s</span>
+
+  <span class="constant">store</span> <span class="constant">i32</span> <span class="constant">55,</span> <span class="constant">ptr</span> <span class="constant">%_9,</span> <span class="constant">align</span> <span class="constant">4</span>
+</code></pre>
+<pre><code class="bash"><span class="constant">$ cargo</span> <span class="constant">asm</span> <span class="constant">&quot;sum_10::main&quot;</span> <span class="operator">|</span> <span class="constant">grep</span> <span class="constant">55</span>
+    <span class="constant">Finished</span> <span class="constant">release</span> <span class="constant">[optimized]</span> <span class="constant">target</span>(<span class="constant">s</span>) <span class="keyword">in</span> <span class="constant">0.00s</span>
+
+        <span class="constant">mov</span> <span class="constant">w8,</span> <span class="comment">#55</span>
+</code></pre>
+<p>No coincidence that the LLVM IR code is very similar, with the difference that integers, by default, in Julia are 64 bits and in Rust 32 bits. However, the machine code is <strong>identical</strong>: “move the value 55 into a <code>w</code> something register”.</p><h3>Enums</h3><p>Another zero-cost abstraction, in Julia and Rust, is <strong>enums</strong>.</p><p>In Julia all enums, by default have a <code>BaseType</code> of <code>Int32</code>: a signed 32-bit integer. However, we can override this with type annotations:</p><pre><code class="python"><span class="variable">julia</span><span class="operator">&gt;</span> @<span class="variable">enum</span> <span class="variable">Thing</span>::<span class="variable">Bool</span> <span class="variable">One</span> <span class="type">Two</span>
+
+<span class="variable">julia</span><span class="operator">&gt;</span> <span class="variable">Base</span>.<span class="function method">summarysize</span>(<span class="function">Thing</span>(<span class="variable">false</span>))
+<span class="number">1</span>
+</code></pre>
+<p>Here we have an enum <code>Thing</code> with two variants: <code>One</code> and <code>Two</code>. Since we can safely represent all the possible variant space of <code>Thing</code> with a boolean type, we override the <code>BaseType</code> of <code>Thing</code> to be the <code>Bool</code> type. Unsurprised, any object of <code>Thing</code> occupies 1 byte in memory.</p><p>We can achieve the same with Rust:</p><pre><code class="rust"><span class="comment">// main.rs</span>
+<span class="keyword">use</span> <span class="type">std</span><span class="punctuation delimiter">::</span><span class="constant">mem</span><span class="punctuation delimiter">;</span>
+
+<span class="attribute">#[allow(dead_code)]</span>
+<span class="keyword">enum</span> <span class="type">Thing</span> <span class="punctuation bracket">{</span>
+    <span class="constant">One</span><span class="punctuation delimiter">,</span>
+    <span class="constant">Two</span><span class="punctuation delimiter">,</span>
+<span class="punctuation bracket">}</span>
+
+<span class="keyword">fn</span> <span class="function">main</span><span class="punctuation bracket">(</span><span class="punctuation bracket">)</span> <span class="punctuation bracket">{</span>
+    <span class="constant">println</span><span class="function macro">!</span><span class="punctuation bracket">(</span><span class="string">&quot;Size of Thing: {} byte&quot;</span><span class="punctuation delimiter">,</span> <span class="constant">mem</span><span class="punctuation delimiter">::</span><span class="constant">size_of</span><span class="punctuation delimiter">::</span>&lt;<span class="constant">Thing</span>&gt;<span class="punctuation bracket">(</span><span class="punctuation bracket">)</span><span class="punctuation bracket">)</span><span class="punctuation delimiter">;</span>
+<span class="punctuation bracket">}</span>
+</code></pre>
+<pre><code class="bash"><span class="constant">$ cargo</span> <span class="constant">run</span> <span class="constant">--release</span>
+   <span class="constant">Compiling</span> <span class="constant">enum_size</span> <span class="constant">v0.1.0</span>
+    <span class="constant">Finished</span> <span class="constant">release</span> <span class="constant">[optimized]</span> <span class="constant">target</span>(<span class="constant">s</span>) <span class="keyword">in</span> <span class="constant">0.09s</span>
+     <span class="constant">Running</span> <span class="constant">`target/release/enum_size`</span>
+<span class="constant">Size</span> <span class="constant">of</span> <span class="constant">Thing:</span> <span class="constant">1</span> <span class="constant">byte</span>
+</code></pre>
+<p>However, contrary to Julia, Rust compiler automatically detects the enum’s variant space size and adjust accordingly. So, no need of overrides.</p><h2>Conclusion</h2><p>Zero-cost abstractions are a joy to have in a programming language. It enables you, as a programmer, to just focus on what’s important: write expressive code that is easy to read, maintain, debug, and build upon.</p><p>It is no wonder that zero-cost abstractions is a pervasive feature of two of my top-favorite languages: <a href="https://julialang.org" target="_blank">Julia</a> and <a href="https://rust-lang.org" target="_blank">Rust</a>.</p></div>
+  </div>
+  <hr>
+  <div id="prev-next">
+    <span>
+      <a href="/blog/2023-11-23-lindley_paradox/">←
+        <span>Lindley&apos;s Paradox, or The consistency of Bayesian Thinking</span></a>
+    </span>
+    <span>&nbsp; • &nbsp;</span>
+    <span>
+      <a href="/blog/2024-01-14-htmx/"><span>htmx: an Oasis in a Desert of Soy</span>
+        →</a>
+    </span>
+    <small>&nbsp; or &nbsp;</small>
+    <small>
+      <a href="/">Back to the Homepage</a>
+    </small>
+  </div>
+
+    </div>
+    <footer id="footer">
+      <small class="noupper" style="color:#606060;font-weight:normal;">
+        <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">
+          CC-BY-SA 4.0
+        </a>
+        &nbsp;
+        —
+        &nbsp;
+        <a href="https://github.com/storopoli" target="_blank">
+          Jose Storopoli, PhD
+        </a>
+        &nbsp;
+        —
+        &nbsp;
+        <i>made with &nbsp;
+          <a href="https://zine-ssg.io" target="_blank">
+            <img src="/zig-logo-light.svg" height="13">
+          </a></i>
+      </small>
+      
+    </footer>
+  </body>
+</html>

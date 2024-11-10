@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+  <head id="head">
+    <meta charset="UTF-8">
+    <meta name="description" content="Jose Storopoli, PhD - personal website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@storopoli">
+    <meta name="twitter:author" content="@storopoli">
+    <meta name="twitter:description" content="Jose Storopoli, PhD - personal website">
+    <meta name="twitter:title" content="Seed Phrases and Entropy | @stropoli">
+    <meta name="twitter:image" content="https://storopoli.io/pp.jpg">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Seed Phrases and Entropy | @storopoli">
+    <meta property="og:image" content="https://storopoli.io/pp.jpg">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title id="title">
+      Seed Phrases and Entropy
+      - @storopoli
+    </title>
+    <link rel="stylesheet" type="text/css" href="/main.css">
+    <link rel="stylesheet" type="text/css" href="/fonts.css">
+    <link rel="stylesheet" type="text/css" href="/fira_code.css">
+    <link rel="stylesheet" type="text/css" href="/highlight.css">
+    <link type="text/css" rel="stylesheet" href="/term-highlight.css">
+    
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css"
+    integrity="sha384-vKruj+a13U8yHIkAyGgK1J3ArTLzrFGBbBc0tDp4ad/EyewESeXE/Iv67Aj8gKZ0"
+    crossorigin="anonymous"
+  >
+
+  <!-- The loading of KaTeX is deferred to speed up page rendering -->
+  <script
+    defer
+    src="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.js"
+    integrity="sha384-PwRUT/YqbnEjkZO0zZxNqcxACrXe+j766U2amXcgMg5457rve2Y7I6ZJSm2A0mS4"
+    crossorigin="anonymous"
+  ></script>
+
+  <!-- To automatically render math in text elements, include the auto-render extension: -->
+  <script
+    defer
+    src="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/contrib/auto-render.min.js"
+    integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05"
+    crossorigin="anonymous"
+    onload="renderMathInElement(document.body);"
+  ></script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      renderMathInElement(document.body, {
+        delimiters: [
+          { left: "$$", right: "$$", display: true },
+          { left: "$", right: "$", display: false },
+        ],
+      });
+    });
+  </script>
+
+  </head>
+  <body>
+    <div id="content">
+      <style>
+        h1,
+        h2,
+        h3 {
+          text-align: center;
+        }
+
+        .profile-pic {
+          border-radius: 50%;
+          border: 5px solid lightblue;
+          margin-top: 1rem;
+        }
+      </style>
+      <div style="display:flex; flex-direction:column; align-items:center;">
+        <h1 id="header" class="noupper" style="margin-bottom:0;">
+          Jose Storopoli, PhD
+        </h1>
+        <div class="menu" style="display:flex; justify-content:center; ">
+          <a href="/">Home</a>
+          •
+          <a href="/blog/">Blog</a>
+          •
+          <a href="https://github.com/storopoli" target="_blank">
+            GitHub
+          </a>
+          •
+          <a href="/publickey.txt" target="_blank">
+            PGP
+          </a>
+          •
+          <a href="/index.xml" rel="alternate" type="application/rss+xml">
+            RSS
+          </a>
+        </div>
+      </div>
+      
+  <h1>Seed Phrases and Entropy</h1>
+  <p class="post-byline">
+    <span>February 11, 2024</span>
+    •
+    <span>10</span>
+    min read • by
+    <b>Jose Storopoli, PhD</b>
+    <span></span>
+  </p>
+  <div id="post-description"></div>
+  <div>
+    <div class="toc block info">
+      <h1>&nbsp;Table of Contents</h1>
+      <div><ul>
+<li>
+<ul><li>
+Entropy<ul><li>
+How the hell Physics came to Passwords?</li><li>Entropy and Passwords</li></ul></li><li>Bitcoin Seed Phrases</li><li>Seed Phrases and Passwords</li><li>Conclusion</li></ul></ul></div>
+    </div>
+  </div>
+  <div>
+    <div class="block warning">
+      <h1>&nbsp;Math Equations</h1>
+      This post has <a href="https://katex.org/">KaTeX</a> enabled,
+      so if you want to view the rendered math formulas,
+      you'll have to unfortunately enable JavaScript.
+    </div>
+  </div>
+  <div id="content">
+    <div id="post-body"><p><figure><img src="/blog/2024-02-11-mnemonic/password_strength.png" alt="">
+<figcaption>Password meme</figcaption></figure></p><p>In this post, let’s dive into a topic that is very important for anyone who uses the internet: <strong>passwords</strong>. We’ll cover what the hell is <strong>Entropy</strong>, good <strong>password practices</strong>, and how it relates to <strong>Bitcoin “seed phrases”</strong>.</p><div class="block info"><p> seed phrases are technically called “mnemonic phrases”, but I’ll use the term “seed phrases” for the rest of the post.</p></div><h2>Entropy</h2><p>Before we go into passwords, I’ll introduce the concept of <strong><em>Entropy</em></strong>.</p><p><a href="https://en.wikipedia.org/wiki/Entropy" target="_blank">Entropy</a> is a measure of the <strong>amount of disorder in a system</strong>. It has its origins in <strong>Thermodynamics</strong>, where it’s used to measure the amount of energy in a system that is not available to do work.</p><p>The etymology of the word “Entropy” is after the Greek word for “transformation”.</p><p>It was given a proper statistical definition by <a href="https://en.wikipedia.org/wiki/Ludwig_Boltzmann" target="_blank">Ludwig Boltzmann</a> in 1870s. while establishing the field of <a href="https://en.wikipedia.org/wiki/Statistical_dynamics" target="_blank">Statistical Dynamics</a>, a field of physics that studies the behavior of large collections of particles.</p><p><figure><img src="/blog/2024-02-11-mnemonic/boltzmann.jpg" alt="">
+<figcaption>Ludwig Boltzmann</figcaption></figure></p><p>In the context of Statistical Dynamics, <strong>Entropy is a measure of the number of ways a system can be arranged</strong>. The more ways a system can be arranged, the higher its Entropy. Specifically, <strong>Entropy is a logarithmic measure of the number of system states with significant probability of being occupied</strong>:</p><p>$$S = -k \cdot \sum_i p_i \ln p_i$$</p><p>Where:</p><ul><li>$S$: Entropy.</li><li>$k$: Boltzmann’s constant, a physical constant that relates temperature to energy.</li><li>$p_i$: probability of the system being in state $i$.</li></ul><p>In this formula, if all states are equally likely, i.e $p_i = \frac{1}{N}$, where $N$ is the number of states, then the entropy is maximized. You can see this since a probability $p$ is a real number between 0 and 1, and as $N$ approaches infinity, the sum of the logarithms approaches negative infinity. Then, multiplying by $-k$ yields positive infinity.</p><h3>How the hell Physics came to Passwords?</h3><p>There’s once a great men called <a href="https://en.wikipedia.org/wiki/Claude_Shannon" target="_blank">Claude Shannon</a>, who single-handedly founded the field of <a href="https://en.wikipedia.org/wiki/Information_theory" target="_blank"><strong>Information Theory</strong></a>, invented the concept of a <a href="https://en.wikipedia.org/wiki/Bit" target="_blank"><strong>Bit</strong></a>, and was the first to think about Boolean algebra in the context of electrical circuits. He laid the foundation for the <a href="https://en.wikipedia.org/wiki/Digital_Revolution" target="_blank"><strong>Digital Revolution</strong></a>.</p><p>If you are happy using your smartphone, laptop, or any other digital device, in you high speed fiber internet connection, through a wireless router to send cats pictures to your friends, then you should thank Claude Shannon.</p><p><figure><img src="/blog/2024-02-11-mnemonic/shannon.jpg" alt="">
+<figcaption>Claude Shannon</figcaption></figure></p><p>He was trying to find a formula to quantify the amount of information in a message. He wanted three things:</p><ol><li>The measure should be a <strong>function of the probability of the message</strong>. Messages that are more likely should have less information.</li><li>The measure should be <strong>additive</strong>. The information in a message should be the sum of the information in its parts.</li><li>The measure should be <strong>continuous</strong>. Small changes in the message should result in small changes in the measure.</li></ol><p>He pretty much found that the formula for Entropy in statistical mechanics was a good measure of information. He called it <em>Entropy</em> to honor Boltzmann’s work. To differentiate it from the Statistical Dynamics’ Entropy, he changed the letter to $H$, in honor of <a href="https://en.wikipedia.org/wiki/H-theorem" target="_blank">Boltzmann’s $H$-theorem</a>. So the formula for the Entropy of a message is:</p><p>$$H(X) = −\Sigma_{x \in X} P(x_i​) \log ​P(x_i​)$$</p><p>Where:</p><ul><li>$X$: random discrete variable.</li><li>$H(X)$: Entropy of $X$</li><li>$P(x_i)$: probability of the random variable $X$ taking the value $x_i$. Also known as the probability mass function (PMF) of the discrete random variable $X$.</li><li>$\log$: base 2 logarithm, to measure the Entropy in bits.</li></ul><p>In information theory, the <strong>Entropy of a random variable is the average level of “information”, “surprise”, or “uncertainty” inherent to the variable’s possible outcomes</strong>.</p><p>Let’s take the simple example of a fair coin. The Entropy of the random variable $X$ that represents the outcome of a fair coin flip is:</p><p>$$H(X) = −\Sigma_{x \in X} P(x_i​) \log ​P(x_i​) = -\left(\frac{1}{2} \log \frac{1}{2} + \frac{1}{2} \log \frac{1}{2}\right) = 1 \text{ bit}$$</p><p>So the outcome of a fair coin flip has 1 bit of Entropy. This means that the outcome of a fair coin flip has 1 bit of information, or 1 bit of uncertainty. Once the message is received, that the coin flip was heads or tails, the receiver has 1 bit of information about the outcome.</p><p>Alternatively, we only need 1 bit to encode the outcome of a fair coin flip. Hence, there’s a connection between Entropy, search space, and information.</p><p>Another good example is the outcome of a fair 6-sided die. The Entropy of the random variable $X$ that represents the outcome of a fair 6-sided die is:</p><p>$$H(X) = −\Sigma_{x \in X} P(x_i​) \log ​P(x_i​) = - \sum_{i=1}^6\left(\frac{1}{6} * \log \frac{1}{6} \right) \approx 2.58 \text{ bits}$$</p><p>This means that the outcome of a fair 6-sided die has 2.58 bits of Entropy. we need $\operatorname{ceil}(2.58) = 3$ bits to encode the outcome of a fair 6-sided die.</p><h3>Entropy and Passwords</h3><p>Ok now we come full circle. Let’s talk, finally, about passwords.</p><p>In the context of passwords, <strong>Entropy</strong> is a measure of how unpredictable a password is. The higher the Entropy, the harder it is to guess the password. The Entropy of a password is measured in bits, and it’s calculated using the formula:</p><p>$$H = L \cdot \log_2(N)$$</p><p>Where:</p><ul><li>$H$: Entropy in bits</li><li>$N$: number of possible characters in the password</li><li>$L$: length of the password</li><li>$\log_2$:​ (N) calculates how many bits are needed to represent each character from the set.</li></ul><p>For example, if we have a password with 8 characters and each character can be any of the 26 lowercase letters, the standard english alphabet, the Entropy would be:</p><p>$$H = 8 \cdot \log_2(26) \approx 37.6 \text{ bits}$$</p><p>This means that an attacker would need to try $2^{37.6} \approx 2.01 \cdot 10^{11}$ combinations to guess the password.</p><div class="block info"><p> Technically, we need to divide the number of combinations by 2, since we are assuming that the attacker is using a brute-force attack, which means that the attacker is trying all possible combinations, and the password could be at the beginning or at the end of the search space. This is called the <a href="https://en.wikipedia.org/wiki/Birthday_problem" target="_blank">birthday paradox</a>, and it assumes that the password is uniformly distributed in the search space.</p></div><p>If the password were to include uppercase letters, numbers, and symbols (let’s assume 95 possible characters in total), the Entropy for an 8-character password would be:</p><p>$$H = 8 \cdot \log_2(95) \approx 52.6 \text{ bits}$$</p><p>This means that an attacker would need to try $2^{52.6} \approx 6.8 \cdot 10^{15}$ combinations to guess the password.</p><p>This sounds a lot but it’s not that much.</p><p>For the calculations below, we’ll assume that the attacker now your dictionary set, i.e. the set of characters you use to create your password, and the password length.</p><p>If an attacker get a hold of an NVIDIA RTX 4090, MSRP USD 1,599, which can do <a href="https://www.tomshardware.com/news/rtx-4090-password-cracking-comparison" target="_blank">300 GH/s (300,000,000,000 hashes/second)</a>, i.e. $3 \cdot 10^{11}$ hashes/second, it would take:</p><ol><li>8-length lowercase-only password:</li></ol><p>$$\frac{2.01 \cdot 10^{11}}{3 \cdot 10^{11}} \approx 0.67 \text{ seconds}$$</p><ol><li>8-length password with uppercase letters, numbers, and symbols:</li></ol><p>$$\frac{6.8 \cdot 10^{15}}{3 \cdot 10^{11}} \approx 22114 \text{ seconds} \approx 6.14 \text{ hours}$$</p><p>So, the first password would be cracked in less than a second, while the second would take a few hours. This with just one 1.5k USD GPU.</p><h2>Bitcoin Seed Phrases</h2><p>Now that we understand Entropy and how it relates to passwords, let’s talk about bitcoin seed phrases.</p><p>Remember that our private key is a big-fucking number? If not, check my <a href="/blog/2024-02-05-crypto-basics/">post on cryptographics basics</a>.</p><p><a href="https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki" target="_blank">BIP-39</a> specifies how to use easy-to-remember seed phrases to store and recover private keys. The <a href="https://github.com/bitcoin/bips/blob/master/bip-0039/english.txt" target="_blank">wordlist</a> adheres to the following principles:</p><ol><li><strong>smart selection of words</strong>: the wordlist is created in such a way that it’s enough to type the first four letters to unambiguously identify the word.</li><li><strong>similar words avoided</strong>: word pairs like “build” and “built”, “woman” and “women”, or “quick” and “quickly” not only make remembering the sentence difficult but are also more error prone and more difficult to guess.</li></ol><p>Here is a simple 7-word seed phrase: <code>brave sadness grocery churn wet mammal tube</code>. Surprisingly enough, this badboy here gives you $77$ bits of Entropy, while also being easy to remember. This is due to the fact that the wordlist has 2048 words, so each word gives you $\log_2(2048) = 11$ bits of Entropy.</p><p>There’s a minor caveat to cover here. The last word in the seed phrase is a checksum, which is used to verify that the phrase is valid.</p><p>So, if you have a 12-word seed phrase, you have $11 \cdot 11 = 121$ bits of Entropy. And for a 24-word seed phrase, you have $23 \cdot 11 = 253$ bits of Entropy.</p><p>The National Institute of Standards and Technology (NIST) recommends a <a href="https://crypto.stackexchange.com/a/87059" target="_blank">minimum of 112 bits of Entropy for all things cryptographic</a>. And Bitcoin has a <a href="https://bitcoin.stackexchange.com/a/118929" target="_blank">minimum of 128 bits of Entropy</a>.</p><p>Depending on your threat model, <a href="https://www.nytimes.com/2013/08/18/magazine/laura-poitras-snowden.html" target="_blank">“Assume that your adversary is capable of a trillion guesses per second”</a>, it can take a few years to crack a 121-bit Entropy seed phrase:</p><p>$$\frac{2^{121}}{10^{12}} \approx 2.66 \cdot 10^{24} \text{ seconds} \approx 3.08 \cdot 10^{19} \text{ days} \approx 8.43 \cdot 10^{16} \text{ years}$$</p><p>That’s a lot of years. Now for a 253-bit Entropy seed phrase:</p><p>$$\frac{2^{253}}{10^{12}} \approx 1.45 \cdot 10^{64} \text{ seconds} \approx 1.68 \cdot 10^{59} \text{ days} \approx 4.59 \cdot 10^{56} \text{ years}$$</p><p>That’s another huge number of years.</p><h2>Seed Phrases and Passwords</h2><p>You can also use a seed phrase as a password. The bonus point is that you don’t need to use the last word as a checksum, so you get 11 bits of Entropy free, compared to a Bitcoin seed phrase.</p><p>Remember the 7-words badboy seed phrase we generated earlier? <code>brave sadness grocery churn wet mammal tube</code>.</p><p>It has $66$ bits of Entropy. This would take, assuming <a href="https://www.nytimes.com/2013/08/18/magazine/laura-poitras-snowden.html" target="_blank">“that your adversary is capable of a trillion guesses per second”</a>:</p><p>$$\frac{2^{77}}{10^{12}} \approx 1.51 \cdot 10^{11} \text{ seconds} \approx 1.75 \cdot 10^{6} \text{ days} \approx 4.79 \cdot 10^{3} \text{ years}$$</p><p>That’s why tons of people use seed phrases as passwords. Even if you know the dictionary set and the length of the password, i.e. the number of words in the seed phrase, it would take a lot of years to crack it.</p><h2>Conclusion</h2><p>Entropy is a measure of the amount of disorder in a system. In the context of passwords, it’s a measure of how unpredictable a password is. The higher the Entropy, the harder it is to guess the password.</p><p>Bitcoin seed phrases are a great way to store and recover private keys. They are easy to remember and have a high amount of Entropy. You can even use a seed phrase as a password.</p><p>Even it your attacker is capable of a trillion guesses per second, like the <a href="https://www.nytimes.com/2013/08/18/magazine/laura-poitras-snowden.html" target="_blank">NSA</a>, it would take them a lot of years to crack even a 7-word seed phrase.</p><p>If you want to generate a seed phrase, you can use <a href="https://keepassxc.org/" target="_blank">KeePassXC</a>, which is a great open-source <strong><em>offline</em></strong> password manager that supports seed phrases.</p><div class="block info"><p> Technically, KeePassXC uses the <a href="https://www.eff.org/files/2016/07/18/eff_large_wordlist.txt" target="_blank">EFF wordlist</a>, which has 7,776 words, so each word gives you $\log_2(7776) \approx 12.9$ bits of Entropy. They were created to be easy to use with 6-sided dice.</p></div></div>
+  </div>
+  <hr>
+  <div id="prev-next">
+    <span>
+      <a href="/blog/2024-02-05-crypto-basics/">←
+        <span>Basics of Cryptographic Signatures</span></a>
+    </span>
+    <span>&nbsp; • &nbsp;</span>
+    <span>
+      <a href="/blog/2024-03-23-dead-man-switch/"><span>Sherlock Holmes Final Letter: A Simple Dead Man&apos;s Switch in Rust</span>
+        →</a>
+    </span>
+    <small>&nbsp; or &nbsp;</small>
+    <small>
+      <a href="/">Back to the Homepage</a>
+    </small>
+  </div>
+
+    </div>
+    <footer id="footer">
+      <small class="noupper" style="color:#606060;font-weight:normal;">
+        <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">
+          CC-BY-SA 4.0
+        </a>
+        &nbsp;
+        —
+        &nbsp;
+        <a href="https://github.com/storopoli" target="_blank">
+          Jose Storopoli, PhD
+        </a>
+        &nbsp;
+        —
+        &nbsp;
+        <i>made with &nbsp;
+          <a href="https://zine-ssg.io" target="_blank">
+            <img src="/zig-logo-light.svg" height="13">
+          </a></i>
+      </small>
+      
+    </footer>
+  </body>
+</html>

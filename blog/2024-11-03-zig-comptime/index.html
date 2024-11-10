@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+  <head id="head">
+    <meta charset="UTF-8">
+    <meta name="description" content="Jose Storopoli, PhD - personal website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@storopoli">
+    <meta name="twitter:author" content="@storopoli">
+    <meta name="twitter:description" content="Jose Storopoli, PhD - personal website">
+    <meta name="twitter:title" content="Zig comptime is such a powerful built-in feature | @stropoli">
+    <meta name="twitter:image" content="https://storopoli.io/pp.jpg">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Zig comptime is such a powerful built-in feature | @storopoli">
+    <meta property="og:image" content="https://storopoli.io/pp.jpg">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title id="title">
+      Zig comptime is such a powerful built-in feature
+      - @storopoli
+    </title>
+    <link rel="stylesheet" type="text/css" href="/main.css">
+    <link rel="stylesheet" type="text/css" href="/fonts.css">
+    <link rel="stylesheet" type="text/css" href="/fira_code.css">
+    <link rel="stylesheet" type="text/css" href="/highlight.css">
+    <link type="text/css" rel="stylesheet" href="/term-highlight.css">
+    
+  </head>
+  <body>
+    <div id="content">
+      <style>
+        h1,
+        h2,
+        h3 {
+          text-align: center;
+        }
+
+        .profile-pic {
+          border-radius: 50%;
+          border: 5px solid lightblue;
+          margin-top: 1rem;
+        }
+      </style>
+      <div style="display:flex; flex-direction:column; align-items:center;">
+        <h1 id="header" class="noupper" style="margin-bottom:0;">
+          Jose Storopoli, PhD
+        </h1>
+        <div class="menu" style="display:flex; justify-content:center; ">
+          <a href="/">Home</a>
+          •
+          <a href="/blog/">Blog</a>
+          •
+          <a href="https://github.com/storopoli" target="_blank">
+            GitHub
+          </a>
+          •
+          <a href="/publickey.txt" target="_blank">
+            PGP
+          </a>
+          •
+          <a href="/index.xml" rel="alternate" type="application/rss+xml">
+            RSS
+          </a>
+        </div>
+      </div>
+      
+  <h1>Zig comptime is such a powerful built-in feature</h1>
+  <p class="post-byline">
+    <span>November 03, 2024</span>
+    •
+    <span>7</span>
+    min read • by
+    <b>Jose Storopoli, PhD</b>
+    <span></span>
+  </p>
+  <div id="post-description"></div>
+  <div>
+    <div class="toc block info">
+      <h1>&nbsp;Table of Contents</h1>
+      <div><ul>
+<li>
+<ul><li>
+Zig’s <code>comptime</code><ul><li>
+Parameters of functions</li><li>Variables</li><li>Expressions</li><li>Bonus example: Zig’s Generics</li><li>The caveats of <code>comptime</code></li></ul></li><li>The motivating example<ul><li>
+Zero padding check in Zig</li><li>Zero padding check in Rust</li></ul></li><li>Conclusion</li></ul></ul></div>
+    </div>
+  </div>
+  <div></div>
+  <div id="content">
+    <div id="post-body"><p>I have been following the development of <a href="https://ziglang.org/" target="_blank">Zig</a> for a while now. I like the idea of a systems programming language that is <strong>simple to learn and use, <em>yet</em> powerful and expressive</strong>.</p><p>With Rust, I can get the powerful and expressive part, <em>but</em> the <strong>learning curve is a bit steep</strong>, and some parts of the language are <strong>complex and hard to understand</strong>. For example <code>async</code>/<code>await</code> (specially if you have to deal with <code>Stream</code>s and <code>Pin</code>s); and the macro domain-specific language (DSL).</p><p>Now back to Zig. The language can be learned in one lazy morning. That’s exactly what I did and then played around <a href="https://github.com/storopoli/graphs-complexity/pull/21" target="_blank">migrating some C code to Zig from an old course</a> that I used to teach about algorithmic complexity. The code is now simpler and more readable than the original C code. I have hugely benefited from Zig’s built-in features such as:</p><ul><li><a href="https://ziglang.org/documentation/master/#Optionals" target="_blank"><strong>Optionals</strong></a></li><li><a href="https://ziglang.org/documentation/master/#Errors" target="_blank"><strong>Error handling</strong></a></li><li><a href="https://ziglang.org/documentation/master/#comptime" target="_blank"><strong><code>comptime</code></strong> (more on that, since it is the main topic of this post)</a></li><li><a href="https://ziglang.org/documentation/master/#Operators" target="_blank"><strong>safe integer/floating-point arithmetic</strong></a></li><li><a href="https://ziglang.org/documentation/master/#defer" target="_blank"><strong>deferring memory deallocation</strong> to the end of the scope</a></li><li><a href="https://ziglang.org/documentation/master/#struct" target="_blank"><strong><code>struct</code>s with functions</strong> (methods)</a></li><li><a href="https://ziglang.org/documentation/master/#Choosing-an-Allocator" target="_blank"><strong>BYOA</strong> (Bring Your Own Allocator)</a>[^BYOA]</li></ul><p>[^BYOA]: Zig doesn’t have a built-in allocator. And I don’t know it the acronym BYOA is a thing. I just made it up. But it makes sense, right?</p><p>Writing in Zig, comparing to C, is such a joy and you are always sure that you won’t spend hours debugging because Zig has:</p><ul><li><strong>No hidden control flow</strong></li><li><strong>No hidden memory allocations</strong></li><li><strong>No preprocessor, no macros</strong></li></ul><p>I highly recommend you to give Zig a try. It is the <strong>ultimate C killer</strong>. In fact, you can <strong>compile and interop C and Zig</strong> code with Zig. So you can start migrating your C codebase to Zig incrementally. As an additional caveat, <strong>Zig can be faster than C</strong>.</p><h2>Zig’s <code>comptime</code></h2><p>I’ve been wanting to write about Zig for a while now. But I had no topic in mind. Then, I was inspired by this talk by <a href="https://matklad.github.io" target="_blank">@matklad</a> on modern systems programming comparing Rust and Zig interwoven with his professional journey from Rust to Zig, and the amazing work he’s doing at <a href="https://tigerbeetle.com" target="_blank">TigerBeetle</a>:</p><p><a href="https://youtu.be/4aLy6qjhHeo?t=1904" target="_blank"><figure><img src="/blog/2024-11-03-zig-comptime/youtube_preview.jpg" alt="">
+<figcaption>Matklad - Modern Systems Programming: Rust and Zig</figcaption></figure></a></p><p>The talk goes on to compare Rust and Zig in terms of systems programming. Then, at the middle of the talk, he starts to talk about Zig. One of the Zig’s features that he covers is Zig’s <code>comptime</code> feature which allows to <strong>run code and evaluate expressions at compile-time</strong> <em>without</em> the need for meta-programming/macros or code generation.</p><p>Let me explain now what is <code>comptime</code> in Zig. You can do <code>comptime</code> in Zig in different places, such as:</p><ol><li><strong>Parameters of functions</strong></li><li><strong>Variables</strong></li><li><strong>Expressions</strong></li></ol><p>Here are some examples thanks to <a href="https://kristoff.it/blog/what-is-zig-comptime/" target="_blank">Loris Cro</a> and <a href="https://ziglang.org/documentation/master/#comptime" target="_blank">Zig’s documentation</a>.</p><h3>Parameters of functions</h3><p>The first Zig code example is about using <code>comptime</code> to decide the length of a statically-allocated array:</p><pre><code class="zig"><span class="keyword function">fn</span> <span class="function">multiply</span><span class="punctuation bracket">(</span><span class="parameter">a</span><span class="punctuation delimiter">:</span> <span class="type builtin">i64</span><span class="punctuation delimiter">,</span> <span class="parameter">b</span><span class="punctuation delimiter">:</span> <span class="type builtin">i64</span><span class="punctuation bracket">)</span> <span class="type builtin">i64</span> <span class="punctuation bracket">{</span>
+    <span class="keyword return">return</span> <span class="variable">a</span> <span class="operator">*</span> <span class="variable">b</span><span class="punctuation delimiter">;</span>
+<span class="punctuation bracket">}</span>
+
+<span class="attribute">pub</span> <span class="keyword function">fn</span> <span class="function">main</span><span class="punctuation bracket">(</span><span class="punctuation bracket">)</span> <span class="type builtin">void</span> <span class="punctuation bracket">{</span>
+    <span class="type qualifier">const</span> <span class="variable">len</span> = <span class="attribute">comptime</span> <span class="variable">multiply</span><span class="punctuation bracket">(</span><span class="number">4</span><span class="punctuation delimiter">,</span> <span class="number">5</span><span class="punctuation bracket">)</span><span class="punctuation delimiter">;</span>
+    <span class="type qualifier">const</span> <span class="variable">my_static_array</span><span class="punctuation delimiter">:</span> <span class="punctuation bracket">[</span><span class="variable builtin">len</span><span class="punctuation bracket">]</span><span class="type builtin">u8</span> = <span class="constant builtin">undefined</span><span class="punctuation delimiter">;</span>
+<span class="punctuation bracket">}</span>
+</code></pre>
+<h3>Variables</h3><p>The second example is about using <code>comptime</code> to define a variable. This Zig code evaluates a Fibonacci number at compile-time:</p><pre><code class="zig"><span class="type qualifier">const</span> <span class="variable">expect</span> = <span class="function builtin">@import</span><span class="punctuation bracket">(</span><span class="string">&quot;std&quot;</span><span class="punctuation bracket">)</span><span class="punctuation delimiter">.</span><span class="field">testing</span><span class="punctuation delimiter">.</span><span class="field">expect</span><span class="punctuation delimiter">;</span>
+
+<span class="keyword function">fn</span> <span class="function">fibonacci</span><span class="punctuation bracket">(</span><span class="parameter">index</span><span class="punctuation delimiter">:</span> <span class="type builtin">u32</span><span class="punctuation bracket">)</span> <span class="type builtin">u32</span> <span class="punctuation bracket">{</span>
+    <span class="conditional">if</span> <span class="punctuation bracket">(</span><span class="variable">index</span> <span class="operator">&lt;</span> <span class="number">2</span><span class="punctuation bracket">)</span> <span class="keyword return">return</span> <span class="variable">index</span><span class="punctuation delimiter">;</span>
+    <span class="keyword return">return</span> <span class="variable">fibonacci</span><span class="punctuation bracket">(</span><span class="variable">index</span> <span class="operator">-</span> <span class="number">1</span><span class="punctuation bracket">)</span> <span class="operator">+</span> <span class="variable">fibonacci</span><span class="punctuation bracket">(</span><span class="variable">index</span> <span class="operator">-</span> <span class="number">2</span><span class="punctuation bracket">)</span><span class="punctuation delimiter">;</span>
+<span class="punctuation bracket">}</span>
+
+<span class="keyword">test</span> <span class="string">&quot;fibonacci&quot;</span> <span class="punctuation bracket">{</span>
+    <span class="comment">// test fibonacci at run-time</span>
+    <span class="operator">try</span> <span class="variable">expect</span><span class="punctuation bracket">(</span><span class="variable">fibonacci</span><span class="punctuation bracket">(</span><span class="number">7</span><span class="punctuation bracket">)</span> <span class="operator">==</span> <span class="number">13</span><span class="punctuation bracket">)</span><span class="punctuation delimiter">;</span>
+
+    <span class="comment">// test fibonacci at compile-time</span>
+    <span class="operator">try</span> <span class="attribute">comptime</span> <span class="variable">expect</span><span class="punctuation bracket">(</span><span class="variable">fibonacci</span><span class="punctuation bracket">(</span><span class="number">7</span><span class="punctuation bracket">)</span> <span class="operator">==</span> <span class="number">13</span><span class="punctuation bracket">)</span><span class="punctuation delimiter">;</span>
+<span class="punctuation bracket">}</span>
+</code></pre>
+<h3>Expressions</h3><p>The final example is about using <code>comptime</code> to evaluate an expression. The following Zig code evaluates a <code>for</code>-loop at compile-time.</p><pre><code class="zig"><span class="type qualifier">const</span> <span class="variable">max</span> = <span class="number">10</span><span class="punctuation delimiter">;</span>
+<span class="attribute">comptime</span> <span class="variable">var</span> <span class="variable">total</span> = <span class="number">0</span><span class="error">;</span>
+<span class="attribute">comptime</span> <span class="punctuation bracket">{</span>
+    <span class="repeat">for</span> <span class="punctuation bracket">(</span><span class="number">1</span><span class="punctuation special">..</span><span class="variable">max</span><span class="punctuation bracket">)</span> |<span class="variable">i</span>| <span class="punctuation bracket">{</span>
+        <span class="variable">total</span> <span class="operator">+=</span> <span class="variable">i</span><span class="punctuation delimiter">;</span>
+    <span class="punctuation bracket">}</span>
+<span class="punctuation bracket">}</span>
+</code></pre>
+<h3>Bonus example: Zig’s Generics</h3><p>Now you can see how impressive <code>comptime</code> is. In fact, Zig’s generics are implemented using <code>comptime</code>. Check the Zig code below that creates a generic <code>List</code> data structure:</p><pre><code class="zig"><span class="keyword function">fn</span> <span class="function">List</span><span class="punctuation bracket">(</span><span class="attribute">comptime</span> <span class="parameter">T</span><span class="punctuation delimiter">:</span> <span class="type builtin">type</span><span class="punctuation bracket">)</span> <span class="type builtin">type</span> <span class="punctuation bracket">{</span>
+    <span class="keyword return">return</span> <span class="keyword">struct</span> <span class="punctuation bracket">{</span>
+        <span class="field">items</span><span class="punctuation delimiter">:</span> <span class="punctuation bracket">[</span><span class="punctuation bracket">]</span><span class="variable">T</span><span class="punctuation delimiter">,</span>
+        <span class="field">len</span><span class="punctuation delimiter">:</span> <span class="type builtin">usize</span><span class="punctuation delimiter">,</span>
+    <span class="punctuation bracket">}</span><span class="punctuation delimiter">;</span>
+<span class="punctuation bracket">}</span>
+
+<span class="comment">// The generic List data structure can be instantiated by passing in a type:</span>
+<span class="type qualifier">var</span> <span class="variable">buffer</span><span class="punctuation delimiter">:</span> <span class="punctuation bracket">[</span><span class="number">10</span><span class="punctuation bracket">]</span><span class="type builtin">i32</span> = <span class="constant builtin">undefined</span><span class="punctuation delimiter">;</span>
+<span class="type qualifier">var</span> <span class="variable">list</span> = <span class="variable">List</span><span class="punctuation bracket">(</span><span class="type builtin">i32</span><span class="punctuation bracket">)</span><span class="punctuation bracket">{</span>
+    <span class="punctuation delimiter">.</span><span class="field">items</span> = <span class="operator">&amp;</span><span class="variable">buffer</span><span class="punctuation delimiter">,</span>
+    <span class="punctuation delimiter">.</span><span class="field">len</span> = <span class="number">0</span><span class="punctuation delimiter">,</span>
+<span class="punctuation bracket">}</span><span class="punctuation delimiter">;</span>
+</code></pre>
+<h3>The caveats of <code>comptime</code></h3><p><code>comptime</code> has some caveats. <code>comptime</code> expressions must be known at compile-time. That means:</p><ol><li>At the callsite, the value must be known at compile-time, or it is a compile error.</li><li>In the function definition, the value is known at compile-time.</li></ol><p>If you guarantee that the value is known at compile-time, you can use <code>comptime</code> to evaluate anything at compile-time.</p><h2>The motivating example</h2><p>The motivating example for this blog post is an explanation that matklad gives in his talk about how they use <code>comptime</code> at TigerBeetle to make sure that a <code>struct</code> that represents a header has no padding in its fields.</p><p><figure><img src="/blog/2024-11-03-zig-comptime/header_padding.png" alt="">
+<figcaption>TigerBeetle’s header struct</figcaption></figure></p><p>Then, he said that to have the same checks at compile-time in Rust, you would need to bring a lot of complexity with <code>proc-macro</code>s. That made me curious about how hard it would be to do the same in Rust.</p><p>So here’s a toy problem that I came up with to compare Zig and Rust. Instead of checking for padding in fields of a <code>struct</code>, I decided to simplify and check for zero-padding in a string.</p><h3>Zero padding check in Zig</h3><p>In Zig, strings are arrays of bytes, and you can iterate over them at compile-time:</p><pre><code class="zig"><span class="type qualifier">const</span> <span class="variable">std</span> = <span class="function builtin">@import</span><span class="punctuation bracket">(</span><span class="string">&quot;std&quot;</span><span class="punctuation bracket">)</span><span class="punctuation delimiter">;</span>
+
+<span class="keyword function">fn</span> <span class="function">checkZeroPadding</span><span class="punctuation bracket">(</span><span class="attribute">comptime</span> <span class="parameter">s</span><span class="punctuation delimiter">:</span> <span class="punctuation bracket">[</span><span class="punctuation bracket">]</span><span class="type qualifier">const</span> <span class="type builtin">u8</span><span class="punctuation bracket">)</span> <span class="type builtin">void</span> <span class="punctuation bracket">{</span>
+    <span class="repeat">for</span> <span class="punctuation bracket">(</span><span class="variable">s</span><span class="punctuation bracket">)</span> |<span class="variable">c</span>| <span class="punctuation bracket">{</span>
+        <span class="conditional">if</span> <span class="punctuation bracket">(</span><span class="variable">c</span> <span class="operator">==</span> <span class="character">&apos;0&apos;</span><span class="punctuation bracket">)</span> <span class="punctuation bracket">{</span>
+            <span class="function builtin">@compileError</span><span class="punctuation bracket">(</span><span class="string">&quot;String contains zero-padding&quot;</span><span class="punctuation bracket">)</span><span class="punctuation delimiter">;</span>
+        <span class="punctuation bracket">}</span>
+    <span class="punctuation bracket">}</span>
+<span class="punctuation bracket">}</span>
+
+<span class="attribute">pub</span> <span class="keyword function">fn</span> <span class="function">main</span><span class="punctuation bracket">(</span><span class="punctuation bracket">)</span> <span class="type builtin">void</span> <span class="punctuation bracket">{</span>
+    <span class="attribute">comptime</span> <span class="punctuation bracket">{</span>
+        <span class="type qualifier">const</span> <span class="variable">str1</span> = <span class="string">&quot;12345&quot;</span><span class="punctuation delimiter">;</span>
+        <span class="type qualifier">const</span> <span class="variable">str2</span> = <span class="string">&quot;01234&quot;</span><span class="punctuation delimiter">;</span>
+
+        <span class="variable">checkZeroPadding</span><span class="punctuation bracket">(</span><span class="variable">str1</span><span class="punctuation bracket">)</span><span class="punctuation delimiter">;</span> <span class="comment">// This will compile</span>
+        <span class="variable">checkZeroPadding</span><span class="punctuation bracket">(</span><span class="variable">str2</span><span class="punctuation bracket">)</span><span class="punctuation delimiter">;</span> <span class="comment">// This will cause a compile-time error</span>
+    <span class="punctuation bracket">}</span>
+<span class="punctuation bracket">}</span>
+</code></pre>
+<p>The code above uses <code>comptime</code> to check if a string has zero-padding.</p><h3>Zero padding check in Rust</h3><p>Compare this to how to do the same thing in Rust. We need to use a procedural macro to achieve the same result. Note that <a href="https://doc.rust-lang.org/reference/macros.html" target="_blank">macros in Rust</a> have their own domain-specific language (DSL) that is not Rust itself. Hence, you need to learn a new language to write a macro in Rust.</p><p>First create a library crate named <code>zero-padding-checker</code> that exports a <a href="https://doc.rust-lang.org/reference/procedural-macros.html" target="_blank"><code>proc-macro</code></a> and add a procedural macro to check for zero-padding in a string:</p><pre><code class="rust"><span class="keyword">use</span> <span class="type">proc_macro</span><span class="punctuation delimiter">::</span><span class="constant">TokenStream</span><span class="punctuation delimiter">;</span>
+<span class="keyword">use</span> <span class="type">quote</span><span class="punctuation delimiter">::</span><span class="constant">quote</span><span class="punctuation delimiter">;</span>
+<span class="keyword">use</span> <span class="constant">syn</span><span class="punctuation delimiter">::</span><span class="punctuation bracket">{</span><span class="constant">parse_macro_input</span><span class="punctuation delimiter">,</span> <span class="constant">LitStr</span><span class="punctuation bracket">}</span><span class="punctuation delimiter">;</span>
+
+<span class="attribute">#[proc_macro]</span>
+<span class="keyword">pub</span> <span class="keyword">fn</span> <span class="function">check_zero_padding</span><span class="punctuation bracket">(</span><span class="variable parameter">input</span><span class="punctuation delimiter">:</span> <span class="type">TokenStream</span><span class="punctuation bracket">)</span> -&gt; <span class="type">TokenStream</span> <span class="punctuation bracket">{</span>
+    <span class="keyword">let</span> <span class="constant">input</span> = <span class="constant">parse_macro_input</span><span class="function macro">!</span><span class="punctuation bracket">(</span><span class="constant">input</span> <span class="keyword">as</span> <span class="constant">LitStr</span><span class="punctuation bracket">)</span><span class="punctuation delimiter">;</span>
+    <span class="keyword">let</span> <span class="constant">value</span> = <span class="constant">input</span><span class="punctuation delimiter">.</span><span class="function method">value</span><span class="punctuation bracket">(</span><span class="punctuation bracket">)</span><span class="punctuation delimiter">;</span>
+
+    <span class="keyword">if</span> <span class="constant">value</span><span class="punctuation delimiter">.</span><span class="function method">starts_with</span><span class="punctuation bracket">(</span><span class="string">&apos;0&apos;</span><span class="punctuation bracket">)</span> <span class="punctuation bracket">{</span>
+        <span class="keyword">return</span> <span class="constant">quote</span><span class="function macro">!</span> <span class="punctuation bracket">{</span>
+            <span class="constant">compile_error</span>!<span class="punctuation bracket">(</span><span class="string">&quot;String contains zero-padding&quot;</span><span class="punctuation bracket">)</span><span class="punctuation delimiter">;</span>
+        <span class="punctuation bracket">}</span>
+        <span class="punctuation delimiter">.</span><span class="function method">into</span><span class="punctuation bracket">(</span><span class="punctuation bracket">)</span><span class="punctuation delimiter">;</span>
+    <span class="punctuation bracket">}</span>
+
+    <span class="constant">quote</span><span class="function macro">!</span> <span class="punctuation bracket">{</span>
+        #<span class="constant">input</span>
+    <span class="punctuation bracket">}</span>
+    <span class="punctuation delimiter">.</span><span class="function method">into</span><span class="punctuation bracket">(</span><span class="punctuation bracket">)</span>
+<span class="punctuation bracket">}</span>
+</code></pre>
+<p>Then you call the macro in your code:</p><pre><code class="rust"><span class="keyword">use</span> <span class="type">zero_padding_checker</span><span class="punctuation delimiter">::</span><span class="constant">check_zero_padding</span><span class="punctuation delimiter">;</span>
+
+<span class="keyword">fn</span> <span class="function">main</span><span class="punctuation bracket">(</span><span class="punctuation bracket">)</span> <span class="punctuation bracket">{</span>
+    <span class="constant">check_zero_padding</span><span class="function macro">!</span><span class="punctuation bracket">(</span><span class="string">&quot;12345&quot;</span><span class="punctuation bracket">)</span><span class="punctuation delimiter">;</span> <span class="comment">// This will compile</span>
+    <span class="constant">check_zero_padding</span><span class="function macro">!</span><span class="punctuation bracket">(</span><span class="string">&quot;01234&quot;</span><span class="punctuation bracket">)</span><span class="punctuation delimiter">;</span> <span class="comment">// This will cause a compile-time error</span>
+<span class="punctuation bracket">}</span>
+</code></pre>
+<p>The Rust code above is far more complex than the Zig code. First, it requires dependency on <code>syn</code> and <code>quote</code> crates (note that the <code>proc-macro</code> crate is provided by Rust’s compiler). Second, despite the fact that this is a simple example, procedural macros in Rust have their own domain-specific language (DSL) and the complexity can grow quickly as the problem becomes more complex.</p><h2>Conclusion</h2><p>Yeah, <strong>Zig is a great language and has a bright future ahead</strong>. <strong><code>comptime</code></strong> is a powerful feature that allows you to <strong>run almost <em>any</em> code at compile-time</strong>. It is built into the language and you don’t need to learn a new language to use it or bring external dependencies to make it work.</p><p>If you like to <strong>learn more about Zig</strong>, I recommend reading the <a href="https://ziglang.org/learn/" target="_blank">learn section of Zig’s documentation</a>. Also, to learn more about <strong>Zig’s <code>comptime</code></strong> feature, check <a href="https://ziglang.org/documentation/master/#comptime" target="_blank">Zig’s documentation on <code>comptime</code></a>.</p></div>
+  </div>
+  <hr>
+  <div id="prev-next">
+    <span>
+      <a href="/blog/2024-06-22-von-neumann/">←
+        <span>Von Neumann: the Sharpest Mind of the 20th Century</span></a>
+    </span>
+    <span></span>
+    <span></span>
+    <small>&nbsp; or &nbsp;</small>
+    <small>
+      <a href="/">Back to the Homepage</a>
+    </small>
+  </div>
+
+    </div>
+    <footer id="footer">
+      <small class="noupper" style="color:#606060;font-weight:normal;">
+        <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">
+          CC-BY-SA 4.0
+        </a>
+        &nbsp;
+        —
+        &nbsp;
+        <a href="https://github.com/storopoli" target="_blank">
+          Jose Storopoli, PhD
+        </a>
+        &nbsp;
+        —
+        &nbsp;
+        <i>made with &nbsp;
+          <a href="https://zine-ssg.io" target="_blank">
+            <img src="/zig-logo-light.svg" height="13">
+          </a></i>
+      </small>
+      
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+  <head id="head">
+    <meta charset="UTF-8">
+    <meta name="description" content="Jose Storopoli, PhD - personal website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@storopoli">
+    <meta name="twitter:author" content="@storopoli">
+    <meta name="twitter:description" content="Jose Storopoli, PhD - personal website">
+    <meta name="twitter:title" content="Word Embeddings | @stropoli">
+    <meta name="twitter:image" content="https://storopoli.io/pp.jpg">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Word Embeddings | @storopoli">
+    <meta property="og:image" content="https://storopoli.io/pp.jpg">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title id="title">
+      Word Embeddings
+      - @storopoli
+    </title>
+    <link rel="stylesheet" type="text/css" href="/main.css">
+    <link rel="stylesheet" type="text/css" href="/fonts.css">
+    <link rel="stylesheet" type="text/css" href="/fira_code.css">
+    <link rel="stylesheet" type="text/css" href="/highlight.css">
+    <link type="text/css" rel="stylesheet" href="/term-highlight.css">
+    
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css"
+    integrity="sha384-vKruj+a13U8yHIkAyGgK1J3ArTLzrFGBbBc0tDp4ad/EyewESeXE/Iv67Aj8gKZ0"
+    crossorigin="anonymous"
+  >
+
+  <!-- The loading of KaTeX is deferred to speed up page rendering -->
+  <script
+    defer
+    src="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.js"
+    integrity="sha384-PwRUT/YqbnEjkZO0zZxNqcxACrXe+j766U2amXcgMg5457rve2Y7I6ZJSm2A0mS4"
+    crossorigin="anonymous"
+  ></script>
+
+  <!-- To automatically render math in text elements, include the auto-render extension: -->
+  <script
+    defer
+    src="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/contrib/auto-render.min.js"
+    integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05"
+    crossorigin="anonymous"
+    onload="renderMathInElement(document.body);"
+  ></script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      renderMathInElement(document.body, {
+        delimiters: [
+          { left: "$$", right: "$$", display: true },
+          { left: "$", right: "$", display: false },
+        ],
+      });
+    });
+  </script>
+
+  </head>
+  <body>
+    <div id="content">
+      <style>
+        h1,
+        h2,
+        h3 {
+          text-align: center;
+        }
+
+        .profile-pic {
+          border-radius: 50%;
+          border: 5px solid lightblue;
+          margin-top: 1rem;
+        }
+      </style>
+      <div style="display:flex; flex-direction:column; align-items:center;">
+        <h1 id="header" class="noupper" style="margin-bottom:0;">
+          Jose Storopoli, PhD
+        </h1>
+        <div class="menu" style="display:flex; justify-content:center; ">
+          <a href="/">Home</a>
+          •
+          <a href="/blog/">Blog</a>
+          •
+          <a href="https://github.com/storopoli" target="_blank">
+            GitHub
+          </a>
+          •
+          <a href="/publickey.txt" target="_blank">
+            PGP
+          </a>
+          •
+          <a href="/index.xml" rel="alternate" type="application/rss+xml">
+            RSS
+          </a>
+        </div>
+      </div>
+      
+  <h1>Word Embeddings</h1>
+  <p class="post-byline">
+    <span>November 19, 2023</span>
+    •
+    <span>6</span>
+    min read • by
+    <b>Jose Storopoli, PhD</b>
+    <span></span>
+  </p>
+  <div id="post-description"></div>
+  <div>
+    <div class="toc block info">
+      <h1>&nbsp;Table of Contents</h1>
+      <div><ul>
+<li>
+<ul><li>
+Word Embeddings</li><li>Pre-Trained Word Embeddings</li><li>Julia Code</li><li>Conclusion</li></ul></ul></div>
+    </div>
+  </div>
+  <div>
+    <div class="block warning">
+      <h1>&nbsp;Math Equations</h1>
+      This post has <a href="https://katex.org/">KaTeX</a> enabled,
+      so if you want to view the rendered math formulas,
+      you'll have to unfortunately enable JavaScript.
+    </div>
+  </div>
+  <div id="content">
+    <div id="post-body"><p><figure><img src="/blog/2023-11-20-word_embeddings/euclid.jpg" alt="">
+<figcaption>Euclid of Alexandria</figcaption></figure></p><p>I wish I could go back in time and tell my younger self that you can make a machine understand human language with trigonometry. That would definitely have made me more aware and interested in the subject during my school years. I would have looked at triangles, circles, sines, cosines, and tangents in a whole different way. Alas, better late than never.</p><p>In this post, we’ll learn how to represent words using word embeddings, and how to use basic trigonometry to play around with them. Of course, we’ll use <a href="https://julialang.org" target="_blank">Julia</a>.</p><h2>Word Embeddings</h2><p><strong><a href="https://en.wikipedia.org/wiki/Word_embedding" target="_blank">Word embeddings</a> is a way to represent words as a real-valued vector that encodes the meaning of the word in such a way that words that are closer in the vector space are expected to be similar in meaning</strong>.</p><p>Ok, let’s unwrap the above definition. First, a <strong>real-valued vector</strong> is any vector which its elements belong to the real numbers. Generally we denote vectors with a bold lower-case letter, and we denote its elements (also called components) using square brackets. Hence, a vector $\bold{v}$ that has 3 elements, $1$, $2$, and $3$, can be written as</p><p>$$\bold{v} = \begin{bmatrix} 1 \\ 2 \\ 3 \end{bmatrix}$$</p><p>Next, what “close” means for vectors? We can use distance functions to get a measurable value. The most famous and commonly used distance function is the <strong>Euclidean distance</strong>, in honor of <a href="https://en.wikipedia.org/wiki/Euclid" target="_blank">Euclid</a>, the “father of geometry”, and the guy pictured in the image at the top of this post. The Euclidean distance is defined in trigonometry for 2-D and 3-D spaces. However, it can be generalized to any dimension $n > 1$ by using vectors.</p><p>Since every word is represented by an $n$-dimensional vector, we can use distances to compute a metric that represent similarity between vectors. And, more interesting, we can add and subtract words (or any other linear combination of one or more words) to generate new words.</p><p>Before we jump to code and examples, a quick note about how word embeddings are constructed. They are trained like a regular machine learning algorithm, where the cost function measures the difference between some vector distance between the vectors and a “semantic distance”. The goal is to iteratively find good vector values that minimize the cost. So, if a vector is close to another vector measured by a distance function, but far apart measured by some semantic distance on the words that these vectors represent, then the cost function will be higher. The algorithm cannot change the semantic distance, it is treated as a fixed value. However, it can change the vector elements’ values so that the vector distance function closely resembles the semantic distance function. Lastly, generally the dimensionality of the vectors used in word embeddings are high, $n > 50$, since it needs a proper amount of dimensions in order to represent all the semantic information of words with vectors.</p><h2>Pre-Trained Word Embeddings</h2><p>Generally we don’t train our own word embeddings from scratch, we use pre-trained ones. Here is a list of some of the most popular ones:</p><ul><li><a href="https://code.google.com/archive/p/word2vec/" target="_blank">Word2Vec</a>: One of the first public available word embeddings, made by Google in 2013. Only supports English.</li><li><a href="https://nlp.stanford.edu/projects/glove/" target="_blank">GloVe</a>: made by Stanford in 2014. Only supports English.</li><li><a href="https://fasttext.cc/" target="_blank">FastText</a>: From Facebook, released in 2016. Supports hundreds of languages.</li></ul><h2>Julia Code</h2><p>We will use the <a href="https://github.com/JuliaText/Embeddings.jl" target="_blank"><code>Embeddings.jl</code></a> package to easily load word embeddings as vectors, and the <a href="https://github.com/JuliaStats/Distances.jl" target="_blank"><code>Distances.jl</code></a> package for the convenience of several distance functions. This is a nice example of the Julia package ecosystem composability, where one package can define types, another can define functions, and another can define custom behavior of these functions on types that are defined in other packages.</p><pre><code class="python"><span class="variable">julia</span><span class="operator">&gt;</span> <span class="variable">using</span> <span class="variable">Embeddings</span>
+
+<span class="variable">julia</span><span class="operator">&gt;</span> <span class="variable">using</span> <span class="variable">Distances</span>
+</code></pre>
+<p>Let’s load the <a href="https://nlp.stanford.edu/projects/glove/" target="_blank">GloVe</a> word embeddings. First, let’s check what we have in store to choose from GloVe’s English language embeddings:</p><pre><code class="python"><span class="variable">julia</span><span class="operator">&gt;</span> <span class="function">language_files</span>(<span class="variable">GloVe</span>{:<span class="variable">en</span>})
+<span class="number">20</span><span class="operator">-</span><span class="variable">element</span> <span class="variable">Vector</span>{<span class="variable">String</span>}:
+ <span class="string">&quot;glove.6B/glove.6B.50d.txt&quot;</span>
+ <span class="string">&quot;glove.6B/glove.6B.100d.txt&quot;</span>
+ <span class="string">&quot;glove.6B/glove.6B.200d.txt&quot;</span>
+ <span class="string">&quot;glove.6B/glove.6B.300d.txt&quot;</span>
+ <span class="string">&quot;glove.42B.300d/glove.42B.300d.txt&quot;</span>
+ <span class="string">&quot;glove.840B.300d/glove.840B.300d.txt&quot;</span>
+ <span class="string">&quot;glove.twitter.27B/glove.twitter.27B.25d.txt&quot;</span>
+ <span class="string">&quot;glove.twitter.27B/glove.twitter.27B.50d.txt&quot;</span>
+ <span class="string">&quot;glove.twitter.27B/glove.twitter.27B.100d.txt&quot;</span>
+ <span class="string">&quot;glove.twitter.27B/glove.twitter.27B.200d.txt&quot;</span>
+ <span class="string">&quot;glove.6B/glove.6B.50d.txt&quot;</span>
+ <span class="string">&quot;glove.6B/glove.6B.100d.txt&quot;</span>
+ <span class="string">&quot;glove.6B/glove.6B.200d.txt&quot;</span>
+ <span class="string">&quot;glove.6B/glove.6B.300d.txt&quot;</span>
+ <span class="string">&quot;glove.42B.300d/glove.42B.300d.txt&quot;</span>
+ <span class="string">&quot;glove.840B.300d/glove.840B.300d.txt&quot;</span>
+ <span class="string">&quot;glove.twitter.27B/glove.twitter.27B.25d.txt&quot;</span>
+ <span class="string">&quot;glove.twitter.27B/glove.twitter.27B.50d.txt&quot;</span>
+ <span class="string">&quot;glove.twitter.27B/glove.twitter.27B.100d.txt&quot;</span>
+ <span class="string">&quot;glove.twitter.27B/glove.twitter.27B.200d.txt&quot;</span>
+</code></pre>
+<p>I’ll use the <code>&quot;glove.6B/glove.6B.50d.txt&quot;</code>. This means that it was trained with 6 billion tokens, and it provides embeddings with 50-dimensional vectors. The <code>load_embeddings</code> function takes an optional second positional argument as an <code>Int</code> to choose from which index of the <code>language_files</code> to use. Finally, I just want the words “king”, “queen”, “man”, “woman”; so I am passing these words as a <code>Set</code> to the <code>keep_words</code> keyword argument:</p><pre><code class="python"><span class="variable">julia</span><span class="operator">&gt;</span> <span class="variable">const</span> <span class="variable">glove</span> <span class="operator">=</span> <span class="function">load_embeddings</span>(<span class="variable">GloVe</span>{:<span class="variable">en</span>}, <span class="number">1</span>; <span class="variable">keep_words</span><span class="operator">=</span><span class="function">Set</span>([<span class="string">&quot;king&quot;</span>, <span class="string">&quot;queen&quot;</span>, <span class="string">&quot;man&quot;</span>, <span class="string">&quot;woman&quot;</span>]));
+<span class="variable">Embeddings</span>.<span class="property">EmbeddingTable</span>{<span class="variable">Matrix</span>{<span class="variable">Float32</span>}, <span class="variable">Vector</span>{<span class="variable">String</span>}}(<span class="variable">Float32</span>[<span class="operator">-</span><span class="number">0.094386</span> <span class="number">0.50451</span> <span class="operator">-</span><span class="number">0.18153</span> <span class="number">0.37854</span>; <span class="number">0.43007</span> <span class="number">0.68607</span> <span class="number">0.64827</span> <span class="number">1.8233</span>; … ; <span class="number">0.53135</span> <span class="operator">-</span><span class="number">0.64426</span> <span class="number">0.48764</span> <span class="number">0.0092753</span>; <span class="operator">-</span><span class="number">0.11725</span> <span class="operator">-</span><span class="number">0.51042</span> <span class="operator">-</span><span class="number">0.10467</span> <span class="operator">-</span><span class="number">0.60284</span>], [<span class="string">&quot;man&quot;</span>, <span class="string">&quot;king&quot;</span>, <span class="string">&quot;woman&quot;</span>, <span class="string">&quot;queen&quot;</span>])
+</code></pre>
+<p>Watch out with the order that we get back. If you see the output of <code>load_embeddings</code>, the order is <code>&quot;man&quot;, &quot;king&quot;, &quot;woman&quot;, &quot;queen&quot;]</code> Let’s see how a word is represented:</p><pre><code class="python"><span class="variable">julia</span><span class="operator">&gt;</span> <span class="variable">queen</span> <span class="operator">=</span> <span class="variable">glove</span>.<span class="property">embeddings</span>[:, <span class="number">4</span>]
+<span class="number">50</span><span class="operator">-</span><span class="variable">element</span> <span class="variable">Vector</span>{<span class="variable">Float32</span>}:
+  <span class="number">0.37854</span>
+  <span class="number">1.8233</span>
+ <span class="operator">-</span><span class="number">1.2648</span>
+  ⋮
+ <span class="operator">-</span><span class="number">2.2839</span>
+  <span class="number">0.0092753</span>
+ <span class="operator">-</span><span class="number">0.60284</span>
+</code></pre>
+<p>They are 50-dimensional vectors of <code>Float32</code>.</p><p>Now, here’s the fun part: let’s add words and check the similarity between the result and some other word. A classical example is to start with the word “king”, subtract the word “men”, add the word “woman”, and check the distance of the result to the word “queen”:</p><pre><code class="python"><span class="variable">julia</span><span class="operator">&gt;</span> <span class="variable">man</span> <span class="operator">=</span> <span class="variable">glove</span>.<span class="property">embeddings</span>[:, <span class="number">1</span>];
+
+<span class="variable">julia</span><span class="operator">&gt;</span> <span class="variable">king</span> <span class="operator">=</span> <span class="variable">glove</span>.<span class="property">embeddings</span>[:, <span class="number">2</span>];
+
+<span class="variable">julia</span><span class="operator">&gt;</span> <span class="variable">woman</span> <span class="operator">=</span> <span class="variable">glove</span>.<span class="property">embeddings</span>[:, <span class="number">3</span>];
+
+<span class="variable">julia</span><span class="operator">&gt;</span> <span class="function">cosine_dist</span>(<span class="variable">king</span> <span class="operator">-</span> <span class="variable">man</span> <span class="operator">+</span> <span class="variable">woman</span>, <span class="variable">queen</span>)
+<span class="number">0.13904202</span><span class="variable">f0</span>
+</code></pre>
+<p>This is less than 1/4 of the distance of “woman” to “king”:</p><pre><code class="python"><span class="variable">julia</span><span class="operator">&gt;</span> <span class="function">cosine_dist</span>(<span class="variable">woman</span>, <span class="variable">king</span>)
+<span class="number">0.58866215</span><span class="variable">f0</span>
+</code></pre>
+<p>Feel free to play around with others words. If you want suggestions, another classical example is:</p><pre><code class="python"><span class="function">cosine_dist</span>(<span class="variable">Madrid</span> <span class="operator">-</span> <span class="variable">Spain</span> <span class="operator">+</span> <span class="variable">France</span>, <span class="variable">Paris</span>)
+</code></pre>
+<h2>Conclusion</h2><p>I think that by allying interesting applications to abstract math topics like trigonometry is the vital missing piece in STEM education. I wish every new kid that is learning math could have the opportunity to contemplate how new and exciting technologies have some amazing simple math under the hood. If you liked this post, you would probably like <a href="https://en.wikipedia.org/wiki/Linear_algebra" target="_blank">linear algebra</a>. I would highly recommend <a href="https://math.mit.edu/~gs/" target="_blank">Gilbert Strang’s books</a> and <a href="https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab" target="_blank">3blue1brown series on linear algebra</a>.</p></div>
+  </div>
+  <hr>
+  <div id="prev-next">
+    <span>
+      <a href="/blog/2023-11-10-2023-11-13-soydev/">←
+        <span>What is soydev? And why do I hate it</span></a>
+    </span>
+    <span>&nbsp; • &nbsp;</span>
+    <span>
+      <a href="/blog/2023-11-23-lindley_paradox/"><span>Lindley&apos;s Paradox, or The consistency of Bayesian Thinking</span>
+        →</a>
+    </span>
+    <small>&nbsp; or &nbsp;</small>
+    <small>
+      <a href="/">Back to the Homepage</a>
+    </small>
+  </div>
+
+    </div>
+    <footer id="footer">
+      <small class="noupper" style="color:#606060;font-weight:normal;">
+        <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">
+          CC-BY-SA 4.0
+        </a>
+        &nbsp;
+        —
+        &nbsp;
+        <a href="https://github.com/storopoli" target="_blank">
+          Jose Storopoli, PhD
+        </a>
+        &nbsp;
+        —
+        &nbsp;
+        <i>made with &nbsp;
+          <a href="https://zine-ssg.io" target="_blank">
+            <img src="/zig-logo-light.svg" height="13">
+          </a></i>
+      </small>
+      
+    </footer>
+  </body>
+</html>

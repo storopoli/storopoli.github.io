@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+  <head id="head">
+    <meta charset="UTF-8">
+    <meta name="description" content="Jose Storopoli, PhD - personal website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@storopoli">
+    <meta name="twitter:author" content="@storopoli">
+    <meta name="twitter:description" content="Jose Storopoli, PhD - personal website">
+    <meta name="twitter:title" content="Some Intuitinos on Zero-Knowledge Proofs | @stropoli">
+    <meta name="twitter:image" content="https://storopoli.io/pp.jpg">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Some Intuitinos on Zero-Knowledge Proofs | @storopoli">
+    <meta property="og:image" content="https://storopoli.io/pp.jpg">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title id="title">
+      Some Intuitinos on Zero-Knowledge Proofs
+      - @storopoli
+    </title>
+    <link rel="stylesheet" type="text/css" href="/main.css">
+    <link rel="stylesheet" type="text/css" href="/fonts.css">
+    <link rel="stylesheet" type="text/css" href="/fira_code.css">
+    <link rel="stylesheet" type="text/css" href="/highlight.css">
+    <link type="text/css" rel="stylesheet" href="/term-highlight.css">
+    
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css"
+    integrity="sha384-vKruj+a13U8yHIkAyGgK1J3ArTLzrFGBbBc0tDp4ad/EyewESeXE/Iv67Aj8gKZ0"
+    crossorigin="anonymous"
+  >
+
+  <!-- The loading of KaTeX is deferred to speed up page rendering -->
+  <script
+    defer
+    src="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.js"
+    integrity="sha384-PwRUT/YqbnEjkZO0zZxNqcxACrXe+j766U2amXcgMg5457rve2Y7I6ZJSm2A0mS4"
+    crossorigin="anonymous"
+  ></script>
+
+  <!-- To automatically render math in text elements, include the auto-render extension: -->
+  <script
+    defer
+    src="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/contrib/auto-render.min.js"
+    integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05"
+    crossorigin="anonymous"
+    onload="renderMathInElement(document.body);"
+  ></script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      renderMathInElement(document.body, {
+        delimiters: [
+          { left: "$$", right: "$$", display: true },
+          { left: "$", right: "$", display: false },
+        ],
+      });
+    });
+  </script>
+
+  </head>
+  <body>
+    <div id="content">
+      <style>
+        h1,
+        h2,
+        h3 {
+          text-align: center;
+        }
+
+        .profile-pic {
+          border-radius: 50%;
+          border: 5px solid lightblue;
+          margin-top: 1rem;
+        }
+      </style>
+      <div style="display:flex; flex-direction:column; align-items:center;">
+        <h1 id="header" class="noupper" style="margin-bottom:0;">
+          Jose Storopoli, PhD
+        </h1>
+        <div class="menu" style="display:flex; justify-content:center; ">
+          <a href="/">Home</a>
+          •
+          <a href="/blog/">Blog</a>
+          •
+          <a href="https://github.com/storopoli" target="_blank">
+            GitHub
+          </a>
+          •
+          <a href="/publickey.txt" target="_blank">
+            PGP
+          </a>
+          •
+          <a href="/index.xml" rel="alternate" type="application/rss+xml">
+            RSS
+          </a>
+        </div>
+      </div>
+      
+  <h1>Some Intuitinos on Zero-Knowledge Proofs</h1>
+  <p class="post-byline">
+    <span>June 08, 2024</span>
+    •
+    <span>15</span>
+    min read • by
+    <b>Jose Storopoli, PhD</b>
+    <span></span>
+  </p>
+  <div id="post-description"></div>
+  <div>
+    <div class="toc block info">
+      <h1>&nbsp;Table of Contents</h1>
+      <div><ul>
+<li>
+<ul><li>
+What are ZKPs?</li><li>ZKPs Taxonomy</li><li>zk-SNARKs<ul><li>
+The first idea: Proving Knowledge of a Polynomial</li><li>The second idea: Proving Knowledge of a Polynomial without Revealing the Polynomial</li><li>The third idea: Representing Computations as Polynomials</li></ul></li><li>Remarks</li><li>Resources</li><li>References</li></ul></ul></div>
+    </div>
+  </div>
+  <div>
+    <div class="block warning">
+      <h1>&nbsp;Math Equations</h1>
+      This post has <a href="https://katex.org/">KaTeX</a> enabled,
+      so if you want to view the rendered math formulas,
+      you'll have to unfortunately enable JavaScript.
+    </div>
+  </div>
+  <div id="content">
+    <div id="post-body"><p><figure><img src="/blog/2024-06-08-zkp/zkp_meme.jpg" alt="">
+<figcaption>Zero-knowledge proofs and the meaning of life</figcaption></figure></p><p>Lately, I’ve been diving a little into the world of <strong>Zero-Knowledge Proofs</strong>. The idea is to prove that you know something without revealing what you know. More specifically, a <strong>Zero-Knowledge Proof</strong> is a cryptographic protocol that allows a <strong>prover</strong> to convince a <strong>verifier</strong> that a statement is true without revealing any information beyond the validity of the statement. In essence, by the end of the protocol, the verifier is convinced that the prover knows the secret, and the <strong>verifier hasn’t learned anything (zero-knowledge) about the secret</strong>.</p><p><strong>Zero-Knowledge Proofs</strong> (ZKPs) are kinda hot right now, since a lot of new Bitcoin innovations are being built on top of them. It allows for a higher level of privacy and potential scalability improvements in the Bitcoin network.</p><p>Zero-knowledge proofs are advantageous in a myriad of application, including (refer to <code>Petkus19</code>):</p><ul><li><p><strong>Proving statement on private data</strong>:</p><ul><li>Person $A$ has more than $X$ in his bank account</li><li>In the last year, a bank did not transact with an entity $Y$</li><li>Matching DNA without revealing full DNA</li><li>One has a credit score higher than $Z$</li></ul></li><li><p><strong>Anonymous authorization</strong>:</p><ul><li>Proving that requester $R$ has right to access web-site’s restricted area without revealing its identity (e.g., login, password)</li><li>Prove that one is from the list of allowed countries/states without revealing from which one exactly</li><li>Prove that one owns a monthly pass to a subway/metro without revealing card’s id</li></ul></li><li><p><strong>Anonymous payments</strong>:</p><ul><li>Payment with full detachment from any kind of identity</li><li>Paying taxes without revealing one’s earnings</li></ul></li><li><p><strong>Outsourcing computation</strong>:</p><ul><li>Outsource an expensive computation and validate that the result is correct without redoing the execution; it opens up a category of trustless computing</li><li>Changing a blockchain model from everyone computes the same to one party computes and everyone verifies</li></ul></li></ul><p>The idea behind this post is to give a general overview of Zero-Knowledge Proofs, while providing further resources, especially which papers to read, to dive deeper into the subject. As always, I’ll try to keep it simple and intuitive. However, as you might guess, the subject is quite complex, and I’ll try to simplify it as much as possible; but some mathematical background is necessary.</p><h2>What are ZKPs?</h2><p>Let’s formalize the concept of <strong>Zero-Knowledge Proofs</strong>. A formal definition of zero-knowledge has to use some computational model, and without loss of generality, we can use the <a href="https://en.wikipedia.org/wiki/Turing_machine" target="_blank">Turing Machine</a> model. So let’s create three Turing machines:</p><ul><li>$P$ (the <strong>prover</strong>),</li><li>$V$ (the <strong>verifier</strong>),</li><li>and $S$ (the <strong>simulator</strong>).</li></ul><p>Let’s also spicy things up a bit and introduce an <strong>adversary</strong> $A$, and assume that it is also a Turing machine. <strong>The secret we want to prove knowledge without revealing is $x$</strong>.</p><p>The prover $P$ wants to prove to the verifier $V$ that it knows the secret $x$. They both share a common simulator $S$. The adversary $A$ is trying to fool the verifier $V$ into believing that it knows the secret $x$, without actually knowing it.</p><p>The prover $P$ generates a proof $\pi = P(S, x)$, and sends it to the verifier $V$. The verifier $V$ then checks the proof $\pi$, and decides whether to accept or reject it.</p><p>The tuple $(P, V, S)$ is a <strong>Zero-Knowledge Proof</strong> if the following properties hold:</p><ol><li><p><strong>Completeness</strong>: If the statement is true, the verifier will accept the proof.</p><p>$$ \Pr\big[V(S, \pi) = \text{accept} \big] = 1. $$</p><p>Here $\Pr\big[V(S, \pi) = \text{accept} \big]$ denotes the probability that the verifier accepts the proof given a simulator $S$ and a proof $\pi$.</p></li><li><p><strong>Soundness</strong>: If the statement is true, no cheating prover can convince an honest verifier that it is true, except with some negligible probability [^negligible].</p><p>$$ \forall A, \forall x, \forall \pi: \Pr\big[V(A, S, \pi) = \text{accept} \big] < \text{negligible}. $$</p><p>Here $\Pr\big[V(A, S, \pi) = \text{accept} \big]$ denotes the probability that the verifier accepts the proof given an adversary $A$, a simulator $S$, and a proof $\pi$.</p></li><li><p><strong>Zero-Knowledge</strong>: If the statement is true, the verifier learns nothing about the secret $x$. A proof is zero-knowledge if there exists a simulator $S$ that can simulate the verifier’s view without knowing the secret $x$.</p><p>$$ \forall x: \text{View}_V\big[P(x) \leftrightarrow V(\pi)\big] = S(x, \pi). $$</p><p>Here $\text{View}_V$ is the view of the verifier $V$, and $\leftrightarrow$ denotes the interaction between the prover and the verifier.</p></li></ol><div class="block info"><p> A function $f$ is negligible if for every polynomial $p$, there exists an $N$ such that for all $n > N$, $$ f(n) < \frac{1}{p(n)}. $$ If you want to learn more about negligible functions, read Chapter 3, Section 3.1 of the book <a href="https://doi.org/10.1201/9781420010756" target="_blank">Introduction to Modern Cryptography</a> by Katz & Lindell.</p></div><p>If you come up from a scheme that satisfies these properties, congratulations, you have a <strong>Zero-Knowledge Proof</strong> scheme and you can name it whatever you want, just like a Pokemon!</p><h2>ZKPs Taxonomy</h2><p>We can classify <strong>Zero-Knowledge Proofs</strong> into two broad categories:</p><ol><li><p><strong>Interactive Zero-Knowledge Proofs</strong>: In this case, the prover and the verifier interact multiple times. The prover sends a proof to the verifier, and the verifier sends a challenge to the prover, and this interaction continues until the verifier is convinced. The Fiat-Shamir Heuristic can transform an interactive ZKP into a non-interactive ZKP.</p></li><li><p><strong>Non-Interactive Zero-Knowledge Proofs</strong>: In this case, the prover sends a proof to the verifier, and the verifier accepts or rejects the proof. No further interaction is needed.</p></li></ol><p>Additionally, the setup of the <strong>simulator $S$ with respect to the data it uses</strong> can be further classified into three categories. Generally speaking, the data used by $S$ is some random bits. In trusted setups, if the data is compromised, the security of the proof is also compromised. In other words, anyone with the hold of the data can prove anything to anyone. This is bad, and we want to avoid it.</p><ol><li><strong>Trusted Setup</strong>: $S$ uses data that must be kept secret.</li><li><strong>Trusted but Universal Setup</strong>: $S$ uses data that must be kept private, but it only uses for the initial setup. Future proofs can be verified without the need for the initial data, and can be considered transparent.</li><li><strong>Transparent Setup</strong>: $S$ uses no data at all. This is the best setup, as it doesn’t require any data to be used by $S$.</li></ol><p>Some of the most popular Zero-Knowledge Proof systems are:</p><ul><li><strong>zk-SNARKs</strong>: Zero-Knowledge Succinct Non-Interactive Argument of Knowledge. This is a non-interactive ZKP system with a trusted setup.</li><li><strong>Bulletproofs</strong>: A non-interactive ZKP system with a transparent setup.</li><li><strong>zk-STARKs</strong>: Zero-Knowledge Scalable Transparent Argument of Knowledge. This is a non-interactive ZKP system with a transparent setup, with an additional property of being (plausibly) post-quantum secure.</li></ul><h2>zk-SNARKs</h2><p><strong>zk-SNARKs</strong> are the most popular Zero-Knowledge Proof system. They are used in the Zcash protocol, and the defunct Tornado Cash smart contract. Ethereum also uses zk-SNARKs in its Layer 2 scaling solution, the zk-Rollups. <a href="https://bitvm.org/" target="_blank">BitVM</a> also uses a SNARK-based VM to run smart contracts on top of Bitcoin.</p><p>Let’s go over the concepts behind zk-SNARKs.</p><div class="block info"><p> most of this section is based on [Petkus19].</p></div><h3>The first idea: Proving Knowledge of a Polynomial</h3><p>First some polynomial primer. <strong>A polynomial $f(x)$ is a function that can be written as</strong>:</p><p>$$ f(x) = c_d x^d + \ldots + c_1 x^1 + c_0 x^0 $$</p><p>where $c_d, \ldots, c_1, c_0$ are the coefficients of the polynomial, and $d$ is the degree of the polynomial.</p><p>Now, the <a href="https://en.wikipedia.org/wiki/Fundamental_theorem_of_algebra" target="_blank">Fundamental Theorem of Algebra</a> states that <strong>a polynomial of degree $d$ can have at most $d$ (real-valued-only) roots</strong>.</p><div class="block info"><p> The “at most” is because we are talking about real-valued-only roots. If we consider complex roots, then a polynomial of degree $d$ has exactly $d$ roots.</p></div><p>This can be extended to the concept that <strong>two non-equal polynomials of degree $d$ can have at most $d$ points of intersection</strong>.</p><p>The idea of proving knowledge of a polynomial is to show that you know the polynomial, without revealing the polynomial itself.</p><p>This simple protocol can be done in four steps, note that both the prover and the verifier have knowledge of the polynomial:</p><ol><li>Verifier chooses a random value for $x$ and evaluates his polynomial locally</li><li>Verifier gives $x$ to the prover and asks to evaluate the polynomial in question</li><li>Prover evaluates his polynomial at $x$ and gives the result to the verifier</li><li>Verifier checks if the local result is equal to the prover’s result, and if so then the statement is proven with a high confidence</li></ol><p>How much is “high confidence”? Suppose that the verifier chooses an $x$ at random from a set of $2^{256}$ values, that is a 256-bit number. According to <a href="https://www.wolframalpha.com/input?i2d=true&i=Power%5B2%2C256%5D" target="_blank">Wolfram Alpha</a>, the decimal approximation is $\approx 1.16 \times 10^{77}$. This is almost the <a href="https://en.wikipedia.org/wiki/Observable_universe#Matter_content%E2%80%94number_of_atoms" target="_blank">number of atoms in the observable universe</a>! The number of points where evaluations are different is $10^{77} - d$, where $d$ is the degree of the polynomial. Therefore, we can assume with overwhelming probability that the prover knows the polynomial. This is due to the fact that an adversary has $\frac{d}{10^{77}}$ chance of guessing the polynomial[^birthday], which we can safely consider negligible.</p><div class="block info"><p> The <a href="https://en.wikipedia.org/wiki/Birthday_problem" target="_blank">Birthday paradox</a> states that any collision resistance scheme has a probability of $\frac{1}{2}$ of collision, hence we take the square root of the number of possible values. So, the security of the polynomial proof is $\sqrt{10^{77}} = 10^{38.5}$, which is still a huge number.</p></div><h3>The second idea: Proving Knowledge of a Polynomial without Revealing the Polynomial</h3><p>The protocol above has some implications, mainly that the protocol works only for a certain polynomial, and the verifier has to know the polynomial in advance. Which is not practical at all since we want to prove knowledge of a secret without revealing the secret itself.</p><p>We can do better, we can use the fact, also stated in the <a href="https://en.wikipedia.org/wiki/Fundamental_theorem_of_algebra" target="_blank">Fundamental Theorem of Algebra</a>, that any polynomial can be factored into linear polynomials, i.e. a set of degree-1 polynomials representing a line. We can represent any valid polynomial as a product of its linear-polynomial factors:</p><p>$$ (x - a_0) (x - a_1) \ldots (x - a_d) = 0 $$</p><p>where $a_0, \ldots, a_{d}$ are the roots of the polynomial. If you wanna prove knowledge of a polynomial, it is just a matter of proving knowledge of its roots. But how do we do that without disclosing the polynomial itself? This can be accomplished by proving that a polynomial $p(x)$ is the multiplication of the factors $t(x) = (x - a_0) \ldots (x - a_d)$, called the <strong>target polynomial</strong>, and some arbitrary polynomial $h(x)$, called the <strong>residual polynomial</strong>:</p><p>$$ p(x) = t(x) \cdot h(x). $$</p><p>The prover can show that exists some polynomial $h(x)$ such that $p(x)$ can be made equal to $t(x)$. You can find $h(x)$ by simply dividing $p(x)$ by $t(x)$:</p><p>$$ h(x) = \frac{p(x)}{t(x)}. $$</p><p>Now we can create a protocol that can work for any polynomial $p(x)$ with only three steps:</p><ol><li>Verifier samples a random value $r$, calculates $t = t(r)$ and gives $r$ to the prover</li><li>Prover calculates $h(x) = \frac{p(x)}{t(x)}$ and evaluates $p = p(r)$ and $h = h(r)$; the resulting values $p$, $h$ are provided to the verifier</li><li>Verifier then checks that $p = t \cdot h$, if so those polynomials are equal, meaning that $p(x)$ has $t(x)$ as a cofactor.</li></ol><p>Note that the verifier has no clue about the polynomial $p(x)$, and can be convinced that the prover knows the polynomial $p(x)$.</p><p>For example, let’s consider two polynomials $p(x)$ and $t(x)$ of degree $3$:</p><ul><li>$p(x) = x^3 - 3x^2 + 2x$</li><li>$t(x) = (x - 1) (x - 2)$</li></ul><p>An example protocol interaction in this case could be:</p><ol><li>Verifier samples a random value $23$, calculates $t = t(23) = (23 − 1)(23 − 2) = 462$ and gives $23$ to the prover</li><li>Prover calculates $h(x) = \frac{p(x)}{t(x)} = x$, evaluates $p = p(23) = 10626$ and $h = h(23) = 23$ and provides $p$, $h$ to the verifier</li><li>Verifier then checks that $p = t \cdot h$, i.e. $10626 = 462 \cdot 23$, which is true, and therefore the statement is proven</li></ol><p>Great! We can prove stuff without revealing the stuff itself! Noice! We know only need to find a trick to represent any sort of computation as a polynomial.</p><h3>The third idea: Representing Computations as Polynomials</h3><p>We can <strong>represent any computation as a polynomial by using <a href="https://en.wikipedia.org/wiki/Arithmetic_circuit" target="_blank">Arithmetic Circuits</a></strong>. An arithmetic circuit is a directed acyclic graph (DAG) where:</p><ul><li>Every indegree-zero node is an input gate that represents a variable $x_i$</li><li>Every node with indegree $>1$ is either:<ul><li>an addition gate, $+$, that represents the sum of its children</li><li>a multiplication gate, $\times$, that represents the product of its children</li></ul></li></ul><p>Here’s an example of an arithmetic circuit that represents the polynomial $p(x_1, x_2) = x_2^3 + x_1 x_2^2 + x_2^2 + x_1 x_2$:</p><pre><code>       +----+       +----+       +----+
+       | x₁ |       | x₂ |       | 1  |
+       +----+       +----+       +----+
+         |             |             |
+         |             |             |
+         |             +-------------+
+         |                           |
+         v                           v
+       +----+                     +----+
+       |  + |&lt;---------------------|  + |
+       +----+                     +----+
+         |                           |
+         |                           |
+         +-------------+-------------+
+                       |
+                       v
+                    +-----+
+                    |  ×  |
+                    +-----+
+</code></pre><p>In the circuit above, the input gates compute (from left to right) $x_{1},x_{2}$ and $1$, the sum gates compute $x_{1}+x_{2}$ and $x_{2}+1$, and the product gate computes $(x_{1}+x_{2})x_{2}(x_{2}+1)$ which evaluates to $x_{2}^{3}+x_{1}x_{2}^{2}+x_{2}^{2}+x_{1}x_{2}$.</p><p>The idea is to prove that the output of the circuit is equal to some target polynomial $t(x)$. This can be done by proving that the output of the circuit is equal to the target polynomial $t(x)$ multiplied by some arbitrary polynomial $h(x)$, as we did in the previous section.</p><h2>Remarks</h2><p>This is a very high-level overview of Zero-Knowledge Proofs. The subject is quite complex and requires a lot of mathematical background. I tried to simplify it as much as possible, to give a general intuition of how Zero-Knowledge Proofs work. Please check the resources below for more in-depth information.</p><h2>Resources</h2><div class="block info"><p> We have tons of papers on the subject. Here are some selected few.</p></div><p>The whole idea of ZKPs as discussed above in three properties (Completeness, Soundness, and Zero-Knowledge) was first conceived by <code>SMR85</code>. Later <code>Kil92</code> showed that some of the properties’ assumptions can be relaxed, more specifically using computational soundness instead of statistical soundness. <code>Mic94</code> applied the <a href="https://en.wikipedia.org/wiki/Fiat%E2%80%93Shamir_heuristic" target="_blank">Fiat-Shamir Heuristic</a> to <code>Kil92</code>’s contributions to show that you can create any non-interactive ZKP system into a non-interactive ZKP system using the <a href="https://en.wikipedia.org/wiki/Random_oracle_model" target="_blank">Random Oracle Model</a>.</p><p>Going to the zk-SNARKs side, the term was introduced by <code>Bit11</code> and the first protocol, the Pinocchio protocol, was introduced by <code>Gen12</code> and <code>Par13</code>. The Bulletproofs protocol was introduced by <code>Bunz18</code>, followed by the Bulletproofs++ protocol by <code>Eagen24</code>.</p><p>zk-STARKs were introduced by <code>Ben-Sasson19</code>.</p><p>Finally, if you want an intuitive but very comprehensive explanation of zk-SNARKs, then you should read <code>Petkus19</code>.</p><p>The <a href="https://rdi.berkeley.edu/" target="_blank">Blockchain Web3 MOOC from Berkeley University</a> provides a good introduction to Zero-Knowledge Proofs, while being quite accessible to beginners.</p><p>This <a href="https://youtu.be/iRQw2RpQAVc" target="_blank">video from YouTube</a> explains the math behind the Arithmetic Circuits and how to encode them as polynomials.</p><h2>References</h2><ul><li><code>SMR85</code>: <a href="https://epubs.siam.org/doi/10.1137/0218012" target="_blank">https://epubs.siam.org/doi/10.1137/0218012</a> “Goldwasser, S., Micali, S., & Rackoff, C. (1985). The knowledge complexity of interactive proof systems. SIAM Journal on computing, 18(1), 186-208.”</li><li><code>Kil92</code>: <a href="https://dl.acm.org/doi/abs/10.1145/129712.129782" target="_blank">https://dl.acm.org/doi/abs/10.1145/129712.129782</a> “Kilian, J. (1992). A note on efficient zero-knowledge proofs and arguments (extended abstract). In Proceedings of the twenty-fourth annual ACM symposium on Theory of computing (pp. 723-732).”</li><li><code>Mic94</code>: <a href="https://ieeexplore.ieee.org/abstract/document/365746/" target="_blank">https://ieeexplore.ieee.org/abstract/document/365746/</a> “Micali, S. (1994). CS proofs (extended abstract). In Proceedings 35th Annual Symposium on Foundations of Computer Science (pp. 436-445).”</li><li><code>Bit11</code>: <a href="https://eprint.iacr.org/2011/443" target="_blank">https://eprint.iacr.org/2011/443</a> “Bitansky, N., Canetti, R., & Goldwasser, S. (2011). From Extractable Collision Resistance to Succinct Non-Interactive Arguments of Knowledge, and Back Again. In Proceedings of the 3rd innovations in theoretical computer science conference (pp. 326-349).”</li><li><code>Gen12</code>: <a href="https://eprint.iacr.org/2012/215" target="_blank">https://eprint.iacr.org/2012/215</a> “Gennaro, R., Gentry, C., Parno, B., & Raykova, M. (2013). Quadratic span programs and succinct NIZKs without PCPs. In Advances in Cryptology–EUROCRYPT 2013: 32nd Annual International Conference on the Theory and Applications of Cryptographic Techniques, Athens, Greece, May 26-30, 2013. Proceedings 32 (pp. 626-645).”</li><li><code>Par13</code>: <a href="https://eprint.iacr.org/2013/279" target="_blank">https://eprint.iacr.org/2013/279</a> “Parno, B., Gentry, C., Howell, J., & Raykova, M. (2013). Pinocchio: Nearly practical verifiable computation. In Proceedings of the 2013 IEEE Symposium on Security and Privacy (SP) (pp. 238-252).”</li><li><code>Bunz18</code>: <a href="https://ieeexplore.ieee.org/document/8418611" target="_blank">https://ieeexplore.ieee.org/document/8418611</a> “Bünz, B., Bootle, J., Boneh, D., Poelstra, A., Wuille, P., & Maxwell, G. (2018). Bulletproofs: Short Proofs for Confidential Transactions and More. In Proceedings of the 2018 IEEE Symposium on Security and Privacy (SP) (pp. 315-334).”</li><li><code>Eagen24</code>: <a href="https://link.springer.com/chapter/10.1007/978-3-031-58740-5_9" target="_blank">https://link.springer.com/chapter/10.1007/978-3-031-58740-5_9</a> “Bulletproofs++: next generation confidential transactions via reciprocal set membership arguments. In Annual International Conference on the Theory and Applications of Cryptographic Techniques (pp. 249-279).”</li><li><code>Ben-Sasson19</code>: <a href="https://link.springer.com/chapter/10.1007/978-3-030-26954-8_23" target="_blank">https://link.springer.com/chapter/10.1007/978-3-030-26954-8_23</a> “Ben-Sasson, E., Bentov, I., Horesh, Y., & Riabzev, M. (2019). Scalable zero knowledge with no trusted setup. In Advances in Cryptology–CRYPTO 2019: 39th Annual International Cryptology Conference, Santa Barbara, CA, USA, August 18–22, 2019, Proceedings, Part III 39 (pp. 701-732).”</li><li><code>Petkus19</code>: <a href="https://arxiv.org/abs/1906.07221" target="_blank">https://arxiv.org/abs/1906.07221</a> “Petkus, M. (2019). Why and How zk-SNARK works. arXiv preprint 1906.07221.”</li></ul></div>
+  </div>
+  <hr>
+  <div id="prev-next">
+    <span>
+      <a href="/blog/2024-04-14-shamir-secret-sharing/">←
+        <span>Shamir&apos;s Secret Sharing</span></a>
+    </span>
+    <span>&nbsp; • &nbsp;</span>
+    <span>
+      <a href="/blog/2024-06-22-von-neumann/"><span>Von Neumann: the Sharpest Mind of the 20th Century</span>
+        →</a>
+    </span>
+    <small>&nbsp; or &nbsp;</small>
+    <small>
+      <a href="/">Back to the Homepage</a>
+    </small>
+  </div>
+
+    </div>
+    <footer id="footer">
+      <small class="noupper" style="color:#606060;font-weight:normal;">
+        <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">
+          CC-BY-SA 4.0
+        </a>
+        &nbsp;
+        —
+        &nbsp;
+        <a href="https://github.com/storopoli" target="_blank">
+          Jose Storopoli, PhD
+        </a>
+        &nbsp;
+        —
+        &nbsp;
+        <i>made with &nbsp;
+          <a href="https://zine-ssg.io" target="_blank">
+            <img src="/zig-logo-light.svg" height="13">
+          </a></i>
+      </small>
+      
+    </footer>
+  </body>
+</html>
