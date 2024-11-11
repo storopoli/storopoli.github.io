@@ -26,7 +26,7 @@ Lindley predicted in 1975 that "Bayesian methods will indeed become pervasive,
 enabled by the development of powerful computing facilities" (Lindley, 1975).
 You can find more about all of Lindley's achievements in his [obituary](https://www.theguardian.com/science/2014/mar/16/dennis-lindley).
 
-## Lindley's Paradox
+## [Lindley's Paradox]($section.id('lindleys-paradox'))
 
 Lindley's paradox is a counterintuitive situation in statistics
 in which the Bayesian and frequentist approaches to a hypothesis testing problem
@@ -64,7 +64,7 @@ and one of the many in which Bayesian emerges as the most coherent.
 Let's give a example and go over the analytical result with a ton of math,
 but also a computational result with [Julia](https://julialang.org).
 
-## Example
+## [Example]($section.id('example'))
 
 Here's the setup for the example.
 In a certain city 49,581 boys and 48,870 girls have been
@@ -90,12 +90,12 @@ We then set up our two competing hypotheses:
 1. $H_0$: $\theta = 0.5$.
 1. $H_a$: $\theta \ne 0.5$.
 
-### Analytical Solution
+### [Analytical Solution]($section.id('analytical-solutions'))
 
 This is a toy-problem and, like most toy problems,
 we can solve it analytically for both the frequentist and the Bayesian approaches.
 
-#### Analytical Solutions -- Frequentist Approach
+#### [Analytical Solutions -- Frequentist Approach]($section.id('analytical-solutions-frequentist'))
 
 The frequentist approach to testing $H_0$ is to compute a $p$-value,
 the probability of observing births of boys at least as large as 49,581
@@ -138,7 +138,7 @@ Hooray! We rejected the null hypothesis!
 Quick! Grab a frequentist celebratory cigar!
 But, wait. Let's check the Bayesian approach.
 
-#### Analytical Solutions -- Bayesian Approach
+#### [Analytical Solutions -- Bayesian Approach]($section.id('analytical-solutions-bayesian'))
 
 For the Bayesian approach, we need to set prior probabilities on both hypotheses.
 Since we do not favor one from another, let's set equal prior probabilities:
@@ -170,15 +170,15 @@ Again, we'll use the normal approximation:
 
 $$
 \begin{aligned}
-&P \left( \theta = 0.5 \mid \mu = 49,225.5, \sigma = \sqrt{24.612.75} \right) \\\
-&= \frac{
-\frac{1}{\sqrt{2 \pi \sigma^2}} e^{- \left( \frac{(\mu - \mu \cdot 0.5)}{2 \sigma} \right)^2} \cdot 0.5
-}
-{
-\frac{1}{\sqrt{2 \pi \sigma^2}} e^{ \left( -\frac{(\mu - \mu \cdot 0.5)}{2 \sigma} \right)^2} \cdot 0.5 +
-\int_0^1 \frac {1}{\sqrt{2 \pi \sigma^2} } e^{- \left( \frac{\mu - \mu \cdot \theta)}{2 \sigma} \right)^2}d \theta \cdot 0.5
-} \\\
-&= 0.9505
+  &P \left( \theta = 0.5 \mid \mu = 49,225.5, \sigma = \sqrt{24.612.75} \right) \\\
+  &= \frac{
+    \frac{1}{\sqrt{2 \pi \sigma^2}} e^{- \left( \frac{(\mu - \mu \cdot 0.5)}{2 \sigma} \right)^2} \cdot 0.5
+  }
+  {
+    \frac{1}{\sqrt{2 \pi \sigma^2}} e^{ \left( -\frac{(\mu - \mu \cdot 0.5)}{2 \sigma} \right)^2} \cdot 0.5 +
+    \int_0^1 \frac {1}{\sqrt{2 \pi \sigma^2} } e^{- \left( \frac{\mu - \mu \cdot \theta)}{2 \sigma} \right)^2}d \theta \cdot 0.5
+  } \\\
+  &= 0.9505
 \end{aligned}
 $$
 
@@ -195,7 +195,7 @@ over $H_a$.
 Quick! Grab the Bayesian celebratory cigar!
 The null is back on the game!
 
-### Computational Solutional
+### [Computational Solutional]($section.id('computational-solutions'))
 
 For the computational solution, we'll use [Julia](https://julialang.org)
 and the following packages:
@@ -203,7 +203,7 @@ and the following packages:
 - [`HypothesisTest.jl`](https://github.com/JuliaStats/HypothesisTests.jl)
 - [`Turing.jl`](https://turinglang.org/)
 
-#### Computational Solutions -- Frequentist Approach
+#### [Computational Solutions -- Frequentist Approach]($section.id('computational-solutions-frequentist'))
 
 We can perform a [`BinomialTest`](https://juliastats.org/HypothesisTests.jl/stable/nonparametric/#Binomial-test)
 with `HypothesisTest.jl`:
@@ -235,7 +235,7 @@ since `BinomialTest` do not support real numbers.
 But the results match with the analytical solution,
 we still reject the null.
 
-#### Computational Solutions -- Bayesian Approach
+#### [Computational Solutions -- Bayesian Approach]($section.id('computational-solutions-bayesian'))
 
 Now, for the Bayesian computational approach,
 I'm going to use a generative modeling approach,
@@ -300,7 +300,7 @@ We see that we fail to reject the null,
 $\theta = 0.5$ at $\alpha = 0.05$ which is in accordance with the analytical
 solution.
 
-## Why the Frequentist and Bayesian Approaches Disagree
+## [Why the Frequentist and Bayesian Approaches Disagree]($section.id('why-the-frequentist-and-bayesian-approaches-disagree'))
 
 Why do the approaches disagree?
 What is going on under the hood?
@@ -315,7 +315,7 @@ the $p$-value is pretty much a _proxy_ for sample size
 and have little to no utility on hypothesis testing.
 This is known as $p$-hacking.
 
-## References
+## [References]($section.id('references'))
 
 Lindley, Dennis V. "The future of statistics: A Bayesian 21st century".
 _Advances in Applied Probability_ 7 (1975): 106-115.

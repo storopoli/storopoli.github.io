@@ -22,7 +22,7 @@ In this post, we'll learn how to represent words using word embeddings,
 and how to use basic trigonometry to play around with them.
 Of course, we'll use [Julia](https://julialang.org).
 
-## Word Embeddings
+## [Word Embeddings]($section.id('word-embeddings'))
 
 **[Word embeddings](https://en.wikipedia.org/wiki/Word_embedding) is a way to
 represent words as a real-valued vector that encodes the meaning of the word
@@ -68,7 +68,7 @@ Lastly, generally the dimensionality of the vectors used in word embeddings
 are high, $n > 50$, since it needs a proper amount of dimensions in order to
 represent all the semantic information of words with vectors.
 
-## Pre-Trained Word Embeddings
+## [Pre-Trained Word Embeddings]($section.id('pre-trained-word-embeddings'))
 
 Generally we don't train our own word embeddings from scratch,
 we use pre-trained ones.
@@ -85,7 +85,7 @@ Here is a list of some of the most popular ones:
   From Facebook, released in 2016.
   Supports hundreds of languages.
 
-## Julia Code
+## [Julia Code]($section.id('julia-code'))
 
 We will use the [`Embeddings.jl`](https://github.com/JuliaText/Embeddings.jl)
 package to easily load word embeddings as vectors,
@@ -197,7 +197,7 @@ If you want suggestions, another classical example is:
 cosine_dist(Madrid - Spain + France, Paris)
 ```
 
-## Conclusion
+## [Conclusion]($section.id('conclusion'))
 
 I think that by allying interesting applications to abstract math topics
 like trigonometry is the vital missing piece in STEM education.

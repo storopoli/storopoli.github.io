@@ -63,7 +63,7 @@ If Python wasn't used so widely in production,
 I would definitely leave it alone.
 Don't get me wrong, Python is the second-best language for everything.
 
-## The curious case of the Python boolean
+## [The curious case of the Python boolean]($section.id('the-curious-case-of-the-python-boolean'))
 
 ![Python WTF?](non-zero-cost-abstraction.png)
 
@@ -158,12 +158,12 @@ $ cargo run --release
 Size of bool: 1 byte
 ```
 
-## More zero-costs abstractions
+## [More zero-costs abstractions]($section.id('more-zero-costs-abstractions'))
 
 Let's cover two more zero-costs abstractions, both in Julia and in Rust:
 **for-loops** and **enums**.
 
-### For-loops
+### [For-loops]($section.id('for-loops'))
 
 A friend and a Julia-advocate once told me that Julia's master plan is to secretly
 "make everyone aware about _compilers_".
@@ -338,7 +338,7 @@ in Julia are 64 bits and in Rust 32 bits.
 However, the machine code is **identical**:
 "move the value 55 into a `w` something register".
 
-### Enums
+### [Enums]($section.id('enums'))
 
 Another zero-cost abstraction, in Julia and Rust, is **enums**.
 
@@ -387,7 +387,7 @@ However, contrary to Julia, Rust compiler automatically detects the enum's
 variant space size and adjust accordingly.
 So, no need of overrides.
 
-## Conclusion
+## [Conclusion]($section.id('conclusion'))
 
 Zero-cost abstractions are a joy to have in a programming language.
 It enables you, as a programmer, to just focus on what's important:

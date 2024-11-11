@@ -1,5 +1,5 @@
 ---
-.title = "Some Intuitinos on Zero-Knowledge Proofs",
+.title = "Some Intuitions on Zero-Knowledge Proofs",
 .date = @date("2024-06-08T15:48:33"),
 .author = "Jose Storopoli, PhD",
 .layout = "post.shtml",
@@ -58,7 +58,7 @@ However, as you might guess, the subject is quite complex,
 and I'll try to simplify it as much as possible;
 but some mathematical background is necessary.
 
-## What are ZKPs?
+## [What are ZKPs?]($section.id('what-are-zkps'))
 
 Let's formalize the concept of **Zero-Knowledge Proofs**.
 A formal definition of zero-knowledge has to use some computational model,
@@ -121,7 +121,7 @@ congratulations, you have a **Zero-Knowledge Proof** scheme
 and you can name it whatever you want,
 just like a Pokemon!
 
-## ZKPs Taxonomy
+## [ZKPs Taxonomy]($section.id('zkps-taxonomy'))
 
 We can classify **Zero-Knowledge Proofs** into two broad categories:
 
@@ -161,7 +161,7 @@ Some of the most popular Zero-Knowledge Proof systems are:
   This is a non-interactive ZKP system with a transparent setup,
   with an additional property of being (plausibly) post-quantum secure.
 
-## zk-SNARKs
+## [zk-SNARKs]($section.id('zk-snarks'))
 
 **zk-SNARKs** are the most popular Zero-Knowledge Proof system.
 They are used in the Zcash protocol,
@@ -176,7 +176,7 @@ Let's go over the concepts behind zk-SNARKs.
 >[]($block.attrs('info'))
 >most of this section is based on [Petkus19].
 
-### The first idea: Proving Knowledge of a Polynomial
+### [The first idea: Proving Knowledge of a Polynomial]($section.id('the-first-idea'))
 
 First some polynomial primer.
 **A polynomial $f(x)$ is a function that can be written as**:
@@ -226,7 +226,7 @@ which we can safely consider negligible.
 >So, the security of the polynomial proof is $\sqrt{10^{77}} = 10^{38.5}$,
 >which is still a huge number.
 
-### The second idea: Proving Knowledge of a Polynomial without Revealing the Polynomial
+### [The second idea: Proving Knowledge of a Polynomial without Revealing the Polynomial]($section.id('the-second-idea'))
 
 The protocol above has some implications,
 mainly that the protocol works only for a certain polynomial,
@@ -289,7 +289,7 @@ Noice!
 We know only need to find a trick to represent
 any sort of computation as a polynomial.
 
-### The third idea: Representing Computations as Polynomials
+### [The third idea: Representing Computations as Polynomials]($section.id('the-third-idea'))
 
 We can **represent any computation as a polynomial by using [Arithmetic Circuits](https://en.wikipedia.org/wiki/Arithmetic_circuit)**.
 An arithmetic circuit is a directed acyclic graph (DAG) where:
@@ -335,7 +335,7 @@ This can be done by proving that the output of the circuit is equal to the targe
 multiplied by some arbitrary polynomial $h(x)$,
 as we did in the previous section.
 
-## Remarks
+## [Remarks]($section.id('remarks'))
 
 This is a very high-level overview of Zero-Knowledge Proofs.
 The subject is quite complex and requires a lot of mathematical background.
@@ -343,7 +343,7 @@ I tried to simplify it as much as possible,
 to give a general intuition of how Zero-Knowledge Proofs work.
 Please check the resources below for more in-depth information.
 
-## Resources
+## [Resources]($section.id('resources'))
 
 >[]($block.attrs('info'))
 >We have tons of papers on the subject.
@@ -378,7 +378,7 @@ This [video from YouTube](https://youtu.be/iRQw2RpQAVc)
 explains the math behind the Arithmetic Circuits
 and how to encode them as polynomials.
 
-## References
+## [References]($section.id('references'))
 
 - `SMR85`: https://epubs.siam.org/doi/10.1137/0218012 "Goldwasser, S., Micali, S., & Rackoff, C. (1985). The knowledge complexity of interactive proof systems. SIAM Journal on computing, 18(1), 186-208."
 - `Kil92`: https://dl.acm.org/doi/abs/10.1145/129712.129782 "Kilian, J. (1992). A note on efficient zero-knowledge proofs and arguments (extended abstract). In Proceedings of the twenty-fourth annual ACM symposium on Theory of computing (pp. 723-732)."

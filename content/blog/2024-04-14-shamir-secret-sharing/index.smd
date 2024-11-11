@@ -22,7 +22,7 @@ and describe the mathematical details behind it.
 The code for all the plots in this post can be found in
 [`storopoli/shamir-secret-sharing`](https://github.com/storopoli/shamir-secret-sharing).
 
-## Polynomial Interpolation
+## [Polynomial Interpolation]($section.id('polynomial-interpolation'))
 
 **If you have two points you can draw a _unique_ line that passes through them**.
 Suppose that you have the points $(3,3)$ and $(4,4)$.
@@ -56,7 +56,7 @@ $$ f(x) = ax^n + a_{n-1} x^{n-1} + \ldots + a_1 x + a_0 $$
 and we have $n$ points $(x_1, y_1)$, $(x_2, y_2)$, $\ldots$, $(x_n, y_n)$.
 Then, there is a unique polynomial $f(x)$ of degree $n-1$ such that $f(x_i) = y_i$ for $i = 1, 2, \ldots, n$.
 
-## Shamir's Secret Sharing
+## [Shamir's Secret Sharing]($section.id('sharing-secret'))
 
 Ok now let's connect this idea to Shamir's Secret Sharing.
 Suppose you encode a **secret $k$ as a number**.
@@ -88,7 +88,7 @@ In this setup we generate addresses from the extended public key (xpub) of a Bit
 Then, we split the private key into shares and distribute them to different people.
 Only if at least $T$ people come together, they can reconstruct the private key and spend the funds.
 
-## Rotating Shares
+## [Rotating Shares]($section.id('rotating-shares'))
 
 Note that there's nothing special about the points
 
@@ -119,7 +119,7 @@ This is shown in the image below:
 
 Here **all previous points have been replaced by new points**.
 
-## The Polynomial King
+## [The Polynomial King]($section.id('the-polynomial-king'))
 
 > I am the [~~Lizard~~ Polynomial King, I can do anything!](https://youtu.be/ashTaoGrR2o?t=642)
 >
@@ -136,7 +136,7 @@ Additionally, during a distributed share generation, an attacker could disrupt t
 >[]($block.attrs('info'))
 >Or force them to reuse nonces. Then, "poof", private keys are gone.
 
-## Conclusion
+## [Conclusion]($section.id('conclusion'))
 
 In this post, **we've seen how polynomial interpolation can be used to split a secret into multiple shares**.
 We've also seen how the **secret can be reconstructed if a certain number of shares are combined**.

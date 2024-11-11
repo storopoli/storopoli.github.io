@@ -19,7 +19,7 @@ and how it relates to **Bitcoin "seed phrases"**.
 >seed phrases are technically called "mnemonic phrases",
 >but I'll use the term "seed phrases" for the rest of the post.
 
-## Entropy
+## [Entropy]($section.id('entropy'))
 
 Before we go into passwords,
 I'll introduce the concept of **_Entropy_**.
@@ -60,7 +60,7 @@ and as $N$ approaches infinity,
 the sum of the logarithms approaches negative infinity.
 Then, multiplying by $-k$ yields positive infinity.
 
-### How the hell Physics came to Passwords?
+### [How the hell Physics came to Passwords?]($section.id('how-the-hell-physics-came-to-passwords'))
 
 There's once a great men called [Claude Shannon](https://en.wikipedia.org/wiki/Claude_Shannon),
 who single-handedly founded the field of [**Information Theory**](https://en.wikipedia.org/wiki/Information_theory),
@@ -130,7 +130,7 @@ $$H(X) = −\Sigma_{x \in X} P(x_i​) \log ​P(x_i​) = - \sum_{i=1}^6\left(\
 This means that the outcome of a fair 6-sided die has 2.58 bits of Entropy.
 we need $\operatorname{ceil}(2.58) = 3$ bits to encode the outcome of a fair 6-sided die.
 
-### Entropy and Passwords
+### [Entropy and Passwords]($section.id('entropy-and-passwords'))
 
 Ok now we come full circle.
 Let's talk, finally, about passwords.
@@ -198,7 +198,7 @@ So, the first password would be cracked in less than a second,
 while the second would take a few hours.
 This with just one 1.5k USD GPU.
 
-## Bitcoin Seed Phrases
+## [Bitcoin Seed Phrases]($section.id('bitcoin-seed-phrases'))
 
 Now that we understand Entropy and how it relates to passwords,
 let's talk about bitcoin seed phrases.
@@ -252,7 +252,7 @@ $$\frac{2^{253}}{10^{12}} \approx 1.45 \cdot 10^{64} \text{ seconds} \approx 1.6
 
 That's another huge number of years.
 
-## Seed Phrases and Passwords
+## [Seed Phrases and Passwords]($section.id('seed-phrases-and-passwords'))
 
 You can also use a seed phrase as a password.
 The bonus point is that you don't need to use the last word as a checksum,
@@ -272,7 +272,7 @@ Even if you know the dictionary set and the length of the password,
 i.e. the number of words in the seed phrase,
 it would take a lot of years to crack it.
 
-## Conclusion
+## [Conclusion]($section.id('conclusion'))
 
 Entropy is a measure of the amount of disorder in a system.
 In the context of passwords, it's a measure of how unpredictable a password is.

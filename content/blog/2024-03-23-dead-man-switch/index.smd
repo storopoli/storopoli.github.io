@@ -17,7 +17,7 @@ Don't worry, I got you covered.
 In this post,
 I'll introduce you to a **simple no-bullshit dead man's switch** written in Rust.
 
-## Dead Man's Switch
+## [Dead Man's Switch]($section.id('dead-mans-switch'))
 
 According to [Wikipedia](https://en.wikipedia.org/wiki/Dead_man%27s_switch):
 
@@ -68,7 +68,7 @@ users anymore.
 If people are paying for this, they can pay for a Linux server somewhere.
 But they would need a simple DMS to run on it.
 
-## How to Use It
+## [How to Use It]($section.id('how-to-use-it'))
 
 ># [Disclaimer]($block.attrs('info'))
 >Use at your own risk. Check the f\*\*\*\*(as in _friendly_) code.
@@ -240,7 +240,7 @@ even if you are already in the Dead Man's Timer.
 
 If both timers run out, the messages will be sent and DMS will exit.
 
-## The Implementation Details
+## [The Implementation Details]($section.id('the-implementation-details'))
 
 >For the stupid smelly nerds that want to go beyond the
 >["JUST MAKE A FUCKING .EXE AND GIVE IT TO ME"](https://github.com/sherlock-project/sherlock/issues/2019).
@@ -290,13 +290,13 @@ As we can see, it is divided into 4 modules:
 Feel free to dive in any of these files to understand the implementation details.
 I've made sure that the code is _both_ **well-tested** and **well-documented**.
 
-## Contributions are Welcome
+## [Contributions are Welcome]($section.id('contributions-are-welcome'))
 
 If you want to contribute to the project, feel free to open a pull request.
 I've marked a few issues as `good first issue` to help you get started.
 Check out the [GitHub repository](https://github.com/storopoli/dead-man-switch).
 
-## Conclusion
+## [Conclusion]($section.id('conclusion'))
 
 I've built a simple no-bullshit Dead Man's Switch so that any person can use it.
 Feel free to use it and share it with your friends.
