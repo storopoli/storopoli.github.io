@@ -12,6 +12,7 @@ extend-ignore-re = [
 "Strang" = "Strang"
 "ratatui" = "ratatui"
 "Noice" = "Noice"
+"Groth" = "Groth"
 
 [type.gitignore]
 extend-glob = [".gitignore"]
