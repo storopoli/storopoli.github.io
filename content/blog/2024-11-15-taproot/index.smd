@@ -172,7 +172,7 @@ We have 3 conditions in the example above.
 These are vanilla Pay-to-(Witness)-Script-Hash P2SH scripts,
 so you can have multisig, timelocks,
 etc. in these conditions.
-P2SH scripts are not revealed on-chain,
+P2SH scripts are not immediately revealed on-chain,
 you just commit to the hash of the script.
 They are only revealed when you spend from the address,
 where you need to reveal the script and Bitcoin
@@ -256,7 +256,7 @@ into 4MB chunks and encoding each chunk as a spending condition
 as a leaf in a Taproot Merkle tree.
 And we can pass state between these chunks by using one-time signatures,
 such as [Lamport Signatures](https://en.wikipedia.org/wiki/Lamport_signature).
-This involves encoding all the ellyptic curve operations and pairings
+This involves encoding all the elliptic curve operations and pairings
 required by the Groth16 verifier
 along with a way to express Lamport signature verification in Bitcoin script.
 But this is a topic for a future post.
@@ -264,7 +264,7 @@ But this is a topic for a future post.
 >[]($block.attrs('info'))
 >If you want to know more about how to encode a Groth16 verifier
 >using Bitcoin script, check the
->[alpenlabs blog](https://www.alpenlabs.io/blog).
+>[Alpen Labs blog](https://www.alpenlabs.io/blog/state-of-snark-verification-with-bitvm2).
 
 ## [Further Reading]($section.id('further-reading'))
 
