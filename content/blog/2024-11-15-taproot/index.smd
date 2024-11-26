@@ -277,6 +277,9 @@ to check all the technicalities of Taproot,
 such as the different ways to tweak the internal key,
 tagged hashes, and Taproot annexes.
 
+>[]($block.attrs('info'))
+>I would also recommend [base58's workshop on Taproot](https://base58.school/classes/taproot).
+
 Merkle trees were introduced by Ralph Merkle in 1979.
 If you want to know more about Merkle trees, check
 [Section 8.9 of Dan Boneh's textbook "A Graduate Course in Applied Cryptography"](https://toc.cryptobook.us/).
