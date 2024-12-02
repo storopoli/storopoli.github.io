@@ -21,7 +21,7 @@ So I decided to make a **Sudoku game for her, without ads or using any permissio
 It wouldn't even need to ask for the blessing of Google or [Tim Apple](https://youtu.be/XHVxm12NbrY)
 since it was a Progressive Web App (PWA) and it would work offline.
 
-You can play the game at [storopoli.com/sudoku](https://storopoli.com/sudoku)
+You can play the game at [sudoku.storopoli.com](https://sudoku.storopoli.com)
 or check the source code at [`storopoli/sudoku`](https://github.com/storopoli/sudoku).
 
 Here's a screenshot of the game:
