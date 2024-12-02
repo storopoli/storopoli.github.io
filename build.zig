@@ -4,7 +4,7 @@ const zine = @import("zine");
 pub fn build(b: *std.Build) !void {
     zine.website(b, .{
         .title = "Jose Storopoli, PhD",
-        .host_url = "https://storopoli.io",
+        .host_url = "https://storopoli.com",
         .layouts_dir_path = "layouts",
         .content_dir_path = "content",
         .assets_dir_path = "assets",

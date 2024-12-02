@@ -1,8 +1,8 @@
-# storopoli.io
+# storopoli.com
 
 ![CC-BI-NC-SA 4.0][cc-by-nc-sa-shield]
 
-This is my personal site at [storopoli.io](https://storopoli.io).
+This is my personal site at [storopoli.com](https://storopoli.com).
 
 It is built with [Zig](https://ziglang.org/)
 and [Zine](https://zine-ssg.io).
